@@ -1,0 +1,12 @@
+
+
+opportunity: a pending sale or deal.
+
+A lead is an unqualified contact, while a prospect is a qualified contact who has been moved into the sales process.
+customer is a contact whom with you have to close a deal.
+
+
+lead ------>  prospects ----------> customer
+
+
+
