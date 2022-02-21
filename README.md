@@ -18,6 +18,7 @@ its the worlds ***#No.1 CRM platform*** that enables businesses sell, service an
 - IAAS - 
 >_"Infrastructure as a service (IaaS) is a system of cloud computing that delivers virtualized computing resources over the internet."_
 
+<br/>
 
 originally, started in 1999 with sales cloud to help businesses increases their sales. now, salesforce is active in many more domains.
 it has applications that are focused on customer service, marketing, analytics, application development and automation.
@@ -37,6 +38,7 @@ it has applications that are focused on customer service, marketing, analytics, 
 
 ### Marketing Cloud
 - create personalised one-to-one customer journey maps.
+- run campaigns send emails etc...
 - powerful multichannel marketing campaigns that generate leads and drives sales.
 
 
@@ -45,11 +47,14 @@ it has applications that are focused on customer service, marketing, analytics, 
 
 
 ### Analytics Cloud 
+- allows to create highly visually appeling dashboard of the available data. helps in in-depth understanding and analysis of the trends and business.
+- provides BI platform that helps to visualise data.  
 - make smarter and quicker decisions 
 - get insights from big data.
 
 
 ### App Cloud 
+- build custom apps that will run on platform provided by salesform.
 - build modern employee and customer facing apps.
 
 
@@ -57,11 +62,24 @@ it has applications that are focused on customer service, marketing, analytics, 
 - connect all your data from anywhere and access it from anywhere.
 
 
+<br/>
 
 
 ## why use salesforce ?
 
+<br/>
+
 ### what is CRM ?
+CRM is defined as customer relationship management and is a software system that helps business owners nurture their relationships with their clientele. A CRM also assists with organization, efficiency, time management, and impressing clients.
+CRM system is any platforms built to manage marketing, sales, customer service, and support, all connected to help companies work more effectively. With a CRM system, businesses can analyze customer interactions and improve their customer relationships.
+
+<br/>
+
+### Why is CRM needed?
+_CRM solutions can help keep track of contacts within a business, to allow both sales and marketing teams to personalize communication._
+<br/>_So, if a contact has moved to a new job, your sales, service, and marketing teams know about it, allowing them to maintain and rebuild these important relationships._
+
+<br/>
 
 ### how was data managed back then with-out CRM ?
 it was done manually and stored in files.
@@ -75,13 +93,23 @@ hence, _came the CRM systems for the rescue._
 initially these CRM solutions were hosted on the company's own server.
 that proved to be costly and ineffective for the small companies or startups.
 
-
 hence, there was a need for an affordable and easy to use CRM software accessible from anywhere using web.
 this idea gave rise to Salesforce
 
 
+### Difference between CRM and ERP?
+
+"some ERP and CRM features may overlap"
+
+CRM goals:-
+- increase sales
+- improve customer relationships and prospects
 
 
+Businesses looking to automate core business processes typically look at two main software solutions, enterprise resource planning (ERP) and customer relationship management (CRM).
+While the entire organization will come to rely on both ERP and CRM systems, the fundamental difference between ERP and CRM is that ERP is primarily for financial data and the finance department, while CRM is customer data used by the sales and customer service departments.
+
+<br/>
 
 ## Salesforce Architecture
 
