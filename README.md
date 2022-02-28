@@ -26,7 +26,7 @@ it has applications that are focused on customer service, marketing, analytics, 
 <br/>
 
 ### Sales Cloud 
-- close deals ,  collaborate and sell as a team.
+- close deals , collaborate and sell as a team.
 - Manage contact and track opportunites.
 
 
@@ -71,13 +71,14 @@ it has applications that are focused on customer service, marketing, analytics, 
 
 ### what is CRM ?
 CRM is defined as customer relationship management and is a software system that helps business owners nurture their relationships with their clientele. A CRM also assists with organization, efficiency, time management, and impressing clients.
-CRM system is any platforms built to manage marketing, sales, customer service, and support, all connected to help companies work more effectively. With a CRM system, businesses can analyze customer interactions and improve their customer relationships.
+_"CRM system is any platforms built to manage marketing, sales, customer service, and support, all connected to help companies work more effectively. With a CRM system, businesses can analyze customer interactions and improve their customer relationships."_
 
 <br/>
 
 ### Why is CRM needed?
-_CRM solutions can help keep track of contacts within a business, to allow both sales and marketing teams to personalize communication._
-<br/>_So, if a contact has moved to a new job, your sales, service, and marketing teams know about it, allowing them to maintain and rebuild these important relationships._
+CRM helps businesses build a relationship with their customers that, in turn, creates loyalty and customer retention.
+_"CRM solutions can help keep track of contacts within a business, to allow both sales and marketing teams to personalize communication._
+<br/>_So, if a contact has moved to a new job, your sales, service, and marketing teams know about it, allowing them to maintain and rebuild these important relationships."_
 
 <br/>
 
@@ -87,14 +88,30 @@ Gradually, with the advent of computers companies stored and accessed their data
 However, as data started growing, this failed to serve the purpose.
 this approach was in-efficient for handling large amount of data.
 
-there was a requirement to store and analyze data in an effective way to improve customer Satisfaction.
+there was a requirement for a dedicated system to store and analyze data in an effective way to improve customer Satisfaction.
 hence, _came the CRM systems for the rescue._
 
 initially these CRM solutions were hosted on the company's own server.
 that proved to be costly and ineffective for the small companies or startups.
 
+<details>
+<summary> <b><em> tip: </em></b> </summary>
+<p>
+  
+Companies using big data in conjunction with CRM aim to have systems that can process data in real time and therefore connect with customers faster.
+<br/> collecting and analysing big data on their customer. Collecting and analyzing big data on their customers allows companies to augment service by examining customer sentiment.
+<br/> Big Objects is the Salesforce's big data solution that can meet your need for storing very large volumes of data (billions of records) in the Salesforce cloud.
+</p>
+</details>
+
 hence, there was a need for an affordable and easy to use CRM software accessible from anywhere using web.
-this idea gave rise to Salesforce
+this idea gave rise to Salesforce.
+
+***There are three main types of CRM systems:*** 
+- **stratergic** -
+- **collaborative** -
+- **analytical** -
+- **operational** -
 
 
 ### Difference between CRM and ERP?
