@@ -127,6 +127,12 @@ CRM goals:-
 Businesses looking to automate core business processes typically look at two main software solutions, enterprise resource planning (ERP) and customer relationship management (CRM).
 While the entire organization will come to rely on both ERP and CRM systems, the fundamental difference between ERP and CRM is that ERP is primarily for financial data and the finance department, while CRM is customer data used by the sales and customer service departments.
 
+
+
+
+### why Salesforce is ***``#1 CRM``***
+
+
 <br/>
 
 ## Salesforce Architecture
