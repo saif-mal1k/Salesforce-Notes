@@ -108,11 +108,12 @@ hence, there was a need for an affordable and easy to use CRM software accessibl
 this idea gave rise to Salesforce.
 
 ***There are three main types of CRM systems:*** 
-- **stratergic** -
-- **collaborative** -
-- **analytical** -
-- **operational** -
+- **stratergic CRM** - focus on acquiring and maintaining profitable customers.
+- **operational CRM** - focus on customer-oriented processes such as selling, marketing, and customer service.
+- **analytical CRM** - focus on gathering information (mining of the customer data) and using it tactically for future strategies.
+- **collaborative CRM** - focus on integration, so that every one is updared with latest information.
 
+<a href="https://www.zendesk.com/blog/3-types-crm-everything-need-know/" title="Read More on Zendesk"> Read More</a>
 
 ### Difference between CRM and ERP?
 
