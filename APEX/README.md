@@ -1,8 +1,15 @@
--/ Object Oriented
--/ Strongly typed
--/ Compiled 
--/ Case insensative
+
+# what is APEX ?
+- Object Oriented
+- Strongly typed
+- Case insensative
+- Compiled programming language
 
 
-X Multi-paradigm, support functional programming?
+<br/>
+
+## Life cycle
+- saved, compiled and executed on the servers of force.com 
+
+
 
