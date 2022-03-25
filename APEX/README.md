@@ -33,12 +33,6 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 - **upgrade are easy**, ``as there is just one big system serving all the customers.`` or ``you can just spin up with new compute nodes running the latest version of the software.`` _"that means zero down time"_  
 - **allows horizontal scaling**, that means if compute-node / resource seem insufficient you can just add one more.
 - **can personalise service**, cost effective.
-   
-  
-### How Can you connect customers to their data in a multi-tenet architecture, if every customer have their own database?
-
-  
-### How to built a low latency, highly available application that serves critical data?
 
   
 </p>
