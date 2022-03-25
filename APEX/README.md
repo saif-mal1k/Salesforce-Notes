@@ -4,7 +4,45 @@
 - Strongly typed
 - Case insensative
 - Compiled programming language
+<details>
+  <summary><b><em> multi-tenet </em></b></summary>
+<p>
+  
+### what is multi-tenet Architecture ?
 
+#### what is single-tenet architecture?
+Single-tenancy architecture is one in which a single instance of a software application and supporting infrastructure serves one customer. _tenet means:"cloud customer", here cloud costomer is a business that rely on aws / azure / GCP_
+in single tenet architecture a single compute-node serves a single tenet, these tenet are stateful("this means they have pre existing knowledge of the client they are serving").
+  
+***these ``single-tenet`` architectures were widely used in SaaS & PaaS models.***
+  
+#### problems with single-tenet architecture?
+- if a compute node goes down, that means an entire customer("here business") and all of their users were completely unable to access their instance.
+- **upgrade became impractical**, if a cloud service provide has tens of thousands of customers, that means they have tens of thousands of compute-nodes. to upgrade service style they will have to apply upgrade to every single one of them. _"upgrades are complex time consuming process, that leads to downtime."_
+- **requires vertical scaling**, that means a new customer need new set of resources.
+- **Can't Personalise services**, since each customer have a dedicated compute node, that means irregular customer that don't need extra resources, will be having same amount of resources as of customer who are regular and actually need it. _"this leads to inefficient utilisation of resources, that cost much to cloud service providers"_
+
+#### what is multi-tenet Architecture ?
+- in multi tenet architecture any customer can be served by any compute node, these tenet are stateless("this means they can figure out any of the information they need to know and apply"). 
+  
+***these ``multi-tenet`` architectures were widely used in SaaS & PaaS models.***
+
+  
+### why would you use one ? Advantages of multi-tenet architecture.
+- if a compute node goes down it won't effect any customer and their user.
+- **upgrade are easy**, ``as there is just one big system serving all the customers.`` or ``you can just spin up with new compute nodes running the latest version of the software.`` _"that means zero down time"_  
+- **allows horizontal scaling**, that means if compute-node / resource seem insufficient you can just add one more.
+- **can personalise service**, cost effective.
+   
+  
+### How Can you connect customers to their data in a multi-tenet architecture, if every customer have their own database?
+
+  
+### How to built a low latency, highly available application that serves critical data?
+
+  
+</p>
+</details>
 
 <br/>
 
