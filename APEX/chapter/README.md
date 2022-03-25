@@ -113,7 +113,7 @@ _Any valid 18-character Salesforce record ID._
 
 <b>Description</b>
 </td>
-<td width="310px">
+<td >
 
 <b>Example</b>
 </td>
@@ -130,9 +130,9 @@ _Any valid 18-character Salesforce record ID._
 </td>
 <td>
 
-<a href="#"><img src="images/List.png"></a>
+<a href="#"><img src="../images/List.png" width="90%"></a>
   
-<a href="#"><img src="images/List2.png"></a>
+<a href="#"><img src="../images/List2.png" width="90%"></a>
 </td>
 </tr>
 </tr>
@@ -169,14 +169,143 @@ _Any valid 18-character Salesforce record ID._
 </table>
 
 
+<br/>
+
+
+### Comparison Operator
+
+| Operator |	Description |	Syntax |	Result |
+|----------|--------------|--------|---------|
+| < |Less than |1 < 2 |TRUE|
+| <= |Less than or equal to |1 <= 2 , 3 <= 3 |TRUE|
+| == |Equal to |10 == 10 |TRUE|
+| != , <> |Not equal to |10 != 0 , 10 <> 11 |TRUE|
+| > | Greater than | 11 > 10 | TRUE|
+| >= | Greater than or equal to | 40 >=10 , 40 >= 40 | TRUE|
 
 
 
+### Conditional Statements
+
+#### if-else Statement
+```apex
+if(condition is true) {
+    //do this
+} else {
+    //do this
+}
+```
 
 
+#### if-else if Statement
+```apex
+String waterLevel = 'half';
+  
+if(waterLevel == 'empty') {
+    System.debug('Fill the tea kettle');
+    waterLevel = 'full';
+} else if(waterLevel == 'half') {
+    System.debug('Fill the tea kettle');
+    waterLevel = 'full';
+} else { /*This statement only runs if line 3 and line 6 result in false.*/
+    System.debug('The tea kettle is full');
+}
+```
 
 
+#### Switch Statements
+```apex
+switch on expression {
+    when value1 { //single value
+        //code block 1
+    }
+    when value2, value3 { //multiple values
+        //code block 2
+    }
+}
+```
 
+
+<br/>
+
+
+### Logical Operators
+<table>
+<tr>
+<td>Operator</td>
+<td>OR</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>Operator symbol</td>
+<td> || </td>
+<td>&amp;&amp;</td>
+</tr>
+<tr>
+<td>
+ Pseudocode	
+</td>
+<td>
+  
+```apex
+  If X or Y, do this.
+  Otherwise, do that.	
+```
+</td>
+<td>
+  
+```apex
+  If X and Y, do this.
+  Otherwise, do that.
+```
+</td>
+</tr>
+<tr>
+<td>
+APEX code
+</td>
+<td>
+  
+```
+if(X || Y) {
+//do this
+} else {
+//do this
+}
+```
+</td>
+<td>
+  
+```
+if(X && Y) {
+//do this
+} else {
+//do this
+}
+```
+</td>
+</tr>
+</table>
+
+
+<br/>
+
+
+### Looping
+
+#### while loop
+```apex
+While(condition) {
+    //run this block of code
+}
+```
+
+#### Do while loop
+```apex
+Do {
+    //run this block of code
+} while(condition);
+```
 
 
 
