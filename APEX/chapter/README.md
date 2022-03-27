@@ -13,6 +13,8 @@
 - <a href="#looping">Looping</a>
   - <a href="#while-loop">While Loop</a>
   - <a href="#do-while-loop">Do While Loop</a>
+  - <a href="#for-loop">for loop</a>
+
 
 <!--
 - <a href="#"></a> 
@@ -341,7 +343,24 @@ Do {
 ```
 
 
+#### For loop
+```apex  
+for (initialization; Boolean_exit_condition; increment) statement;
+```
+```apex  
+for (variable : array_or_set) statement;
+```
+```apex  
+for (variable : [inline_soql_query]) statement;
+```
 
+<br/>
+  
+***Note: 💡  All loops allow for loop control structures:-***
+```apex
+  break; exits the entire loop
+  continue; skips to the next iteration of the loop
+```
 
 
 
