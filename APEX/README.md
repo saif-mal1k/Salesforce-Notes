@@ -67,6 +67,10 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 - apex does not allow multi-threading.
 - as everything exist on servers of force.com , hence no need of managing environment or upgrading developer tools.
 
+
+<br/>
+
+## When to Use APEX ?
 ***tip 💡 :*** salesforce has a solution for almost any functionality you can think. so, Only Use APEX if the functionality can not be implemented using declarative approach("i.e using point and click tools").
 
 
