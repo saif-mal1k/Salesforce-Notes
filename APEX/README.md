@@ -1,9 +1,24 @@
 
 # what is APEX ?
-- Object Oriented
-- Strongly typed
-- Case insensative
-- Compiled programming language
+- ***Object Oriented***
+- ***Strongly typed***
+
+<details>
+  <summary><b><em> Case insensative </em></b></summary>
+<p>
+  
+_To avoid confusion with case-insensitive SOQL and SOSL queries, Apex is also case-insensitive.example_
+- Variable and method names are case-insensitive. 
+  - example: 
+- 
+  - 
+  
+---
+
+</p>
+</details>
+
+- ***Compiled programming language***
 <details>
   <summary><b><em> multi-tenet </em></b></summary>
 <p>
@@ -34,6 +49,8 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 - **allows horizontal scaling**, that means if compute-node / resource seem insufficient you can just add one more.
 - **can personalise service**, cost effective.
 
+ 
+---
   
 </p>
 </details>
