@@ -6,8 +6,9 @@
 <details>
   <summary><b><em> Case insensative </em></b></summary>
 <p>
-  
-_To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is also case-insensitive.example_
+
+---  
+_To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is also case-insensitive._
 - Variable and method names are case-insensitive. 
   - ***For example:*** 
     - ✔️ **``Integer I;``**  
@@ -20,8 +21,6 @@ _To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is
   - ***For example:*** 
     - ✔️ **``Account[] accts = [sELect ID From ACCouNT where nAme = 'fred'];``**  
   
-  
-  
 ---
 
 </p>
@@ -32,6 +31,7 @@ _To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is
   <summary><b><em> multi-tenet </em></b></summary>
 <p>
   
+---
 ### what is multi-tenet Architecture ?
 
 #### what is single-tenet architecture?
