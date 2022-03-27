@@ -158,6 +158,11 @@ _Any valid 18-character Salesforce record ID._
 <a href="#"><img src="../images/List.png" width="90%"></a>
   
 <a href="#"><img src="../images/List2.png" width="90%"></a>
+
+```apex
+Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  // list of integers
+```
 </td>
 </tr>
 </tr>
@@ -346,13 +351,72 @@ Do {
 ```apex  
 for (initialization; Boolean_exit_condition; increment) statement;
 ```
+<details>
+  <summary><b><em> example: </em></b></summary>
+<p>
+
+<table>
+<tr>
+<td>
+  
+```apex
+  for (Integer i = 0, j = 0; i < 10; i++) {
+      System.debug(i+1);
+  }
+```
+</td>
+</tr>  
+</table>
+</p>
+</details>
+  
 ```apex  
 for (variable : array_or_set) statement;
 ```
+<details>
+  <summary><b><em> example: </em></b></summary>
+<p>
+
+<table>
+<tr>
+<td>
+  
+```apex
+  Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+  for (Integer i : myInts) {
+      System.debug(i);
+  }
+```
+</td>
+</tr>  
+</table>
+</p>
+</details>
+  
+  
 ```apex  
 for (variable : [inline_soql_query]) statement;
 ```
+<details>
+  <summary><b><em> example: </em></b></summary>
+<p>
 
+<table>
+<tr>
+<td>
+  
+```apex
+  Collections can consist of lists, sets, or maps. 
+  Modifying a collection's elements while iterating through that collection is not supported and causes an error.
+  Do not directly add or remove elements while iterating through the collection that includes them.
+```
+</td>
+</tr>  
+</table>
+</p>
+</details>
+  
 <br/>
   
 ***Note: 💡  All loops allow for loop control structures:-***
