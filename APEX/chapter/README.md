@@ -2,6 +2,9 @@
 - <a href="#comments">Comments</a>
 - <a href="#data-types">Data types</a>
 - <a href="#collections">Collections</a>
+  - <a href="#collections">List</a>
+  - <a href="#collections">Set</a>
+  - <a href="#collections">Map</a>
 - <a href="#comparison-operator">Comparison Operator</a>
 - <a href="#conditional-statements">Conditional Statements</a>
   - <a href="#if-else-statement">If else Statements</a>
@@ -129,11 +132,11 @@ _Any valid 18-character Salesforce record ID._
 
 <b>Collections</b>
 </td>
-<td>
+<td width="300px">
 
 <b>Description</b>
 </td>
-<td >
+<td>
 
 <b>Example</b>
 </td>
@@ -168,7 +171,12 @@ _Any valid 18-character Salesforce record ID._
 </td>
 <td>
 
-<a href="#"><img src="images/set.png"></a>
+```apex
+  Set<String> My_String = new Set<String>();
+```  
+```apex
+  Set<String> My_String = new Set<String>{'a', 'b', 'c'};  
+```  
 </td>
 </tr>
 </tr>
@@ -183,7 +191,12 @@ _Any valid 18-character Salesforce record ID._
 </td>
 <td>
 
-<a href="#"><img src="images/map.png"></a>
+```apex
+  Map<key_datatype, value_datatype> map_name = new map<key_datatype, value_datatype>();
+```
+```apex
+  Map<Integer, String> My_Map = new Map<Integer, String>{1 => 'a', 2 => 'b', 3 => 'c'};
+```
 </td>
 </tr>
 </table>
