@@ -1,3 +1,22 @@
+## index
+- <a href="#comments">Comments</a>
+- <a href="#data-types">Data types</a>
+- <a href="#collections">Collections</a>
+- <a href="#comparison-operator">Comparison Operator</a>
+- <a href="#conditional-statements">Conditional Statements</a>
+  - <a href="#switch-statements">Switch Statements</a>
+- <a href="#logical-operators">Logical Operators</a>
+- <a href="#looping">Looping</a>
+  - <a href="#while-loop">While Loop</a>
+  - <a href="#do-while-loop">Do While Loop</a>
+
+<!--
+- <a href="#"></a> 
+-->
+
+
+<br/>
+
 ### Comments
 ```apex
   // this is single line comment
@@ -266,7 +285,7 @@ APEX code
 </td>
 <td>
   
-```
+```apex
 if(X || Y) {
 //do this
 } else {
@@ -276,7 +295,7 @@ if(X || Y) {
 </td>
 <td>
   
-```
+```apex
 if(X && Y) {
 //do this
 } else {
