@@ -25,7 +25,7 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 #### what is multi-tenet Architecture ?
 - in multi tenet architecture any customer can be served by any compute node, these tenet are stateless("this means they can figure out any of the information they need to know and apply"). 
   
-***these ``multi-tenet`` architectures were widely used in SaaS & PaaS models.***
+***these ``multi-tenet`` architectures are widely used in SaaS & PaaS models.***
 
   
 ### why would you use one ? Advantages of multi-tenet architecture.
