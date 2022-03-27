@@ -23,7 +23,7 @@
 
 <br/>
 
-### Comments
+## Comments
 ```apex
   // this is single line comment
 ```
@@ -35,7 +35,7 @@
 
 <br/>
 
-### Data Types
+## Data Types
 <table>
  <tr>
 <td width="155px">
@@ -127,7 +127,7 @@ _Any valid 18-character Salesforce record ID._
 <br/>
 
 
-### Collections
+## Collections
 <table>
  <tr>
 <td width="100px">
@@ -212,7 +212,7 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 <br/>
 
 
-### Comparison Operator
+## Comparison Operator
 
 | Operator |	Description |	Syntax |	Result |
 |----------|--------------|--------|---------|
@@ -226,7 +226,7 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   
 <br/>
   
-### Logical Operators
+## Logical Operators
 <table>
 <tr>
 <td>Operator</td>
@@ -287,9 +287,9 @@ if(X && Y) {
 
 <br/>
 
-### Conditional Statements
+## Conditional Statements
 
-#### if-else Statement
+### if-else Statement
 ```apex
 if(condition is true) {
     //do this
@@ -298,8 +298,9 @@ if(condition is true) {
 }
 ```
 
+<br/>  
 
-#### if-else if Statement
+### if-else if Statement
 ```apex
 String waterLevel = 'half';
   
@@ -314,8 +315,9 @@ if(waterLevel == 'empty') {
 }
 ```
 
+<br/>  
 
-#### Switch Statements
+### Switch Statements
 ```apex
 switch on expression {
     when value1 { //single value
@@ -330,24 +332,27 @@ switch on expression {
 
 <br/>
 
-### Looping
+## Looping
 
-#### while loop
+### while loop
 ```apex
 While(condition) {
     //run this block of code
 }
 ```
 
-#### Do while loop
+<br/>  
+  
+### Do while loop
 ```apex
 Do {
     //run this block of code
 } while(condition);
 ```
 
+<br/>
 
-#### For loop
+### For loop
 ```apex  
 for (initialization; Boolean_exit_condition; increment) statement;
 ```
