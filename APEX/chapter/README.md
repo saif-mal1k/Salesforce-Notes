@@ -6,10 +6,10 @@
   - <a href="#collections">Set</a>
   - <a href="#collections">Map</a>
 - <a href="#comparison-operator">Comparison Operator</a>
+- <a href="#logical-operators">Logical Operators</a>
 - <a href="#conditional-statements">Conditional Statements</a>
   - <a href="#if-else-statement">If else Statements</a>
   - <a href="#switch-statements">Switch Statements</a>
-- <a href="#logical-operators">Logical Operators</a>
 - <a href="#looping">Looping</a>
   - <a href="#while-loop">While Loop</a>
   - <a href="#do-while-loop">Do While Loop</a>
@@ -218,52 +218,9 @@ _Any valid 18-character Salesforce record ID._
 | > | Greater than | 11 > 10 | TRUE|
 | >= | Greater than or equal to | 40 >=10 , 40 >= 40 | TRUE|
 
-
-
-### Conditional Statements
-
-#### if-else Statement
-```apex
-if(condition is true) {
-    //do this
-} else {
-    //do this
-}
-```
-
-
-#### if-else if Statement
-```apex
-String waterLevel = 'half';
   
-if(waterLevel == 'empty') {
-    System.debug('Fill the tea kettle');
-    waterLevel = 'full';
-} else if(waterLevel == 'half') {
-    System.debug('Fill the tea kettle');
-    waterLevel = 'full';
-} else { /*This statement only runs if line 3 and line 6 result in false.*/
-    System.debug('The tea kettle is full');
-}
-```
-
-
-#### Switch Statements
-```apex
-switch on expression {
-    when value1 { //single value
-        //code block 1
-    }
-    when value2, value3 { //multiple values
-        //code block 2
-    }
-}
-```
-
-
 <br/>
-
-
+  
 ### Logical Operators
 <table>
 <tr>
@@ -325,6 +282,48 @@ if(X && Y) {
 
 <br/>
 
+### Conditional Statements
+
+#### if-else Statement
+```apex
+if(condition is true) {
+    //do this
+} else {
+    //do this
+}
+```
+
+
+#### if-else if Statement
+```apex
+String waterLevel = 'half';
+  
+if(waterLevel == 'empty') {
+    System.debug('Fill the tea kettle');
+    waterLevel = 'full';
+} else if(waterLevel == 'half') {
+    System.debug('Fill the tea kettle');
+    waterLevel = 'full';
+} else { /*This statement only runs if line 3 and line 6 result in false.*/
+    System.debug('The tea kettle is full');
+}
+```
+
+
+#### Switch Statements
+```apex
+switch on expression {
+    when value1 { //single value
+        //code block 1
+    }
+    when value2, value3 { //multiple values
+        //code block 2
+    }
+}
+```
+
+
+<br/>
 
 ### Looping
 
