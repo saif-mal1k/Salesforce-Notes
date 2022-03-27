@@ -4,6 +4,7 @@
 - <a href="#collections">Collections</a>
 - <a href="#comparison-operator">Comparison Operator</a>
 - <a href="#conditional-statements">Conditional Statements</a>
+  - <a href="#if-else-statement">If else Statements</a>
   - <a href="#switch-statements">Switch Statements</a>
 - <a href="#logical-operators">Logical Operators</a>
 - <a href="#looping">Looping</a>
