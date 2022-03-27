@@ -7,11 +7,20 @@
   <summary><b><em> Case insensative </em></b></summary>
 <p>
   
-_To avoid confusion with case-insensitive SOQL and SOSL queries, Apex is also case-insensitive.example_
+_To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is also case-insensitive.example_
 - Variable and method names are case-insensitive. 
-  - example: 
-- 
-  - 
+  - ***For example:*** 
+    - ✔️ **``Integer I;``**  
+    - ✔️ **``Integer i;  This would be an error.``**
+- References to object and field names are case-insensitive.
+  - ***For example:*** 
+    - ✔️ **``Account a1;``**  
+    - ✔️ **``ACCOUNT a2;``**
+- ``SOQL`` and ``SOSL`` statements are case- insensitive.
+  - ***For example:*** 
+    - ✔️ **``Account[] accts = [sELect ID From ACCouNT where nAme = 'fred'];``**  
+  
+  
   
 ---
 
