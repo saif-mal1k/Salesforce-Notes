@@ -1,6 +1,6 @@
 ## index
 - <a href="#comments">Comments</a>
-- <a href="#data-types">Data types</a>
+- <a href="#data-types">Primitive Data types</a>
 - <a href="#collections">Collections</a>
   - <a href="#collections">List</a>
   - <a href="#collections">Set</a>
