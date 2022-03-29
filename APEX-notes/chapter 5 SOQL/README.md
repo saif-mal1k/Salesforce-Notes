@@ -16,4 +16,43 @@ FROM objectType[,...]
       [ UPDATE {TRACKING|VIEWSTAT}[,...] ]
 ```
 
+***example:***
+```apex
+SELECT Name,Phone 
+FROM Account 
+WHERE (Name = 'SFDC Computing' AND NumberOfEmployees>25)
+ORDER BY Name
+LIMIT 10
+```
+
+
+<br/>
+
+## Soql with a varible
+```apex
+Account oneAccountOnly = [SELECT Name,Phone FROM Account LIMIT 1];
+```
+
+<br/>
+
+## Soql with a list
+```apex
+Account[] accts = [SELECT Name,Phone FROM Account 
+                   WHERE (Name='SFDC Computing' AND NumberOfEmployees>25)
+                   ORDER BY Name
+                   LIMIT 10];
+```
+
+<br/>
+
+## soql with for loop
+```apex
+for (variable : [soql_query]) {
+    code_block
+}
+```
+
+
+
+
 
