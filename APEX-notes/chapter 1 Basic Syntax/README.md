@@ -9,8 +9,9 @@
   - List methods
   - set methods
   - <a href="#map-methods">Map methods</a>
-- <a href="#comparison-operator">Comparison Operator</a>
-- <a href="#logical-operators">Logical Operators</a>
+- Operators 
+  - <a href="#comparison-operator">Comparison Operator</a>
+  - <a href="#logical-operators">Logical Operators</a>
 - <a href="#conditional-statements">Conditional Statements</a>
   - <a href="#if-else-statement">If else Statements</a>
   - <a href="#switch-statements">Switch Statements</a>
@@ -18,12 +19,14 @@
   - <a href="#while-loop">While Loop</a>
   - <a href="#do-while-loop">Do While Loop</a>
   - <a href="#for-loop">for loop</a>
+- <a href="#exception-handling">Exception Handling</a>
 
 
 <!--
 - <a href="#"></a> 
 -->
 
+<br/>
 
 <br/>
 
@@ -476,6 +479,22 @@ for (variable : [inline_soql_query]) statement;
   continue; skips to the next iteration of the loop
 ```
 
+<br/>
+  
+## Exception Handling
+```apex
+try {
+    // code that might have an error 
+} catch(Exception e) {
+    // print the exception
+    System.debug('An exception occurred: ' + e.getMessage());
+} finally {
+    // This gets executed after the exception is handled
+    System.debug('alert alert alert');
+}
+  
+```
+  
 
 
 
