@@ -5,6 +5,10 @@
   - <a href="#collections">List</a>
   - <a href="#collections">Set</a>
   - <a href="#collections">Map</a>
+- <a href="#methods-for-collections">Methods for collections</a>
+  - List methods
+  - set methods
+  - <a href="#map-methods">Map methods</a>
 - <a href="#comparison-operator">Comparison Operator</a>
 - <a href="#logical-operators">Logical Operators</a>
 - <a href="#conditional-statements">Conditional Statements</a>
@@ -211,6 +215,48 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 <br/>
 
+
+## methods for collections
+
+### Map methods
+- ***``clear()``***
+  - ``Removes all of the key-value mappings from the map.``
+- ***``clone()``***
+  - ``Makes a duplicate copy of the map.``
+- ***``containsKey(key)``***
+  - ``Returns true if the map contains a mapping for the specified key.``
+- ***``deepClone()``***
+  - ``Makes a duplicate copy of a map, including sObject records if this is a map with sObject record values.``
+- ***``equals(map2)``***
+  - ``Compares this map with the specified map and returns true if both maps are equal; otherwise, returns false.``
+- ***``get(key)``***
+  - ``Returns the value to which the specified key is mapped, or null if the map contains no value for this key.``
+- ***``getSObjectType()``***
+  - ``Returns the token of the sObject type that makes up the map values.``
+- ***``hashCode()``***
+  - ``Returns the hashcode corresponding to this map.``
+- ***``isEmpty()``***
+  - ``Returns true if the map has zero key-value pairs.``
+- ***``keySet()``***
+  - ``Returns a set that contains all of the keys in the map.``
+- ***``put(key, value)``***
+  - ``Associates the specified value with the specified key in the map.``
+- ***``putAll(fromMap)``***
+  - ``Copies all of the mappings from the specified map to the original map.``
+- ***``putAll(sobjectArray)``***
+  - ``Adds the list of sObject records to a map declared as Map<ID, sObject> or Map<String, sObject>.``
+- ***``remove(key)``***
+  - ``Removes the mapping for the specified key from the map, if present, and returns the corresponding value.``
+- ***``size()``***
+  - ``Returns the number of key-value pairs in the map.``
+- ***``toString()``***
+  - ``Returns the string representation of the map.``
+- ***``values()``***
+  - ``Returns a list that contains all the values in the map.``
+  
+  
+  
+<br/>
 
 ## Comparison Operator
 
@@ -446,6 +492,6 @@ for (variable : [inline_soql_query]) statement;
 
 references: 
 1. [built Apex coding skills](https://trailhead.salesforce.com/en/content/learn/trails/build-apex-coding-skills)
-
+2. [all map methods](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_map.htm#apex_System_Map_get)
 
 ---
