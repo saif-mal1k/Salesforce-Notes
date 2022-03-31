@@ -461,6 +461,12 @@ for (variable : [inline_soql_query]) statement;
 <td>
   
 ```apex
+for (variable : [soql_query]) {
+    //code_block
+}
+```
+  
+```apex
   Collections can consist of lists, sets, or maps. 
   Modifying a collection's elements while iterating through that collection is not supported and causes an error.
   Do not directly add or remove elements while iterating through the collection that includes them.
