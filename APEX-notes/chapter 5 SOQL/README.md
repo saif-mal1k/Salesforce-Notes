@@ -123,7 +123,14 @@ for (variable : [soql_query]) {
 }
 ```
 
+<br/>
 
+## 
+```apex
+SELECT Id , Name , (SELECT Id, Name FROM Contacts)  FROM Account
+```
 
-
+```apex
+SELECT Id , Name , AccountId  FROM Contact
+```
 
