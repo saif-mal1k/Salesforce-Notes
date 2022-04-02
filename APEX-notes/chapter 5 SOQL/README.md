@@ -1,5 +1,6 @@
 # SOQL (Salesforce Object Query Language):
 
+<!--
 ```apex
 SELECT fieldList [subquery][...]
 [TYPEOF typeOfField whenExpression[...] elseExpression END][...]
@@ -15,12 +16,13 @@ FROM objectType[,...]
 [FOR {VIEW  | REFERENCE}[,...] ]
       [ UPDATE {TRACKING|VIEWSTAT}[,...] ]
 ```
+-->
 
 <table>
 <tr> 
 <td width="400vw">
     
-***Structure:***    
+***clause:***    
 </td>
 <td>
 
@@ -125,12 +127,55 @@ for (variable : [soql_query]) {
 
 <br/>
 
-## 
-```apex
+
+## Important
+
+***``Account is Parent Object and Contact is child Object``***
+
+### Query related child object of parent object 
+**``query id and name of contacts that are related to account``**
+```soql
 SELECT Id , Name , (SELECT Id, Name FROM Contacts)  FROM Account
 ```
 
-```apex
+### Query related Parent object of child object
+**``query id and name of contact along with id of account they are related to``**
+
+```soql
+SELECT Id , Name , Account.Id  FROM Contact
+```
+```soql
 SELECT Id , Name , AccountId  FROM Contact
 ```
+
+<details>
+<summary><b><em>Question: Why do we run sub query to get related contacts of an account ? </em></b></summary>
+<p>
+    
+because a Parent can have many children, but a child can't have many parents. 
+    
+wait, what if a contact is related to more than one account? how to query all the related accounts of a contact??????????
+
+<br/>
+
+</p>
+</details>
+
+<br/>
+
+### Query only those Account which have related contact
+???
+
+***``???``***
+
+### Query records of a custom object
+???
+
+### Query records of a custom object that are related to another standard object
+???
+
+### Query records of a standard object that are related to another custom object
+???
+
+### 
 
