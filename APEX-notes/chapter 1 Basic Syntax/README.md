@@ -563,5 +563,6 @@ try {
 references: 
 1. [built Apex coding skills](https://trailhead.salesforce.com/en/content/learn/trails/build-apex-coding-skills)
 2. [all map methods](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_map.htm#apex_System_Map_get)
+3. [all List methods](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_list.htm?q=set#apex_System_List_add)
 
 ---
