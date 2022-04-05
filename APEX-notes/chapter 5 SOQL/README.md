@@ -177,5 +177,8 @@ wait, what if a contact is related to more than one account? how to query all th
 ### Query records of a standard object that are related to another custom object
 ???
 
-### 
-
+### query account that does not have related opportunity
+```
+[SELECT Id,Name FROM Account
+                     WHERE Id NOT IN (SELECT AccountId FROM Opportunity)]
+```
