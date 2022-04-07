@@ -92,7 +92,9 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 - apex does not create temp files so no need to worry about file handling.
 - apex does not allow multi-threading.
 - as everything exist on servers of force.com , hence no need of managing environment or upgrading developer tools.
-
+- Apex doesn't allow interfaces, doesn't allow access modifiers. 
+- Apex doesn't allow default parameters.
+- no concept of pointers and references.
 
 <br/>
 
