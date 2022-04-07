@@ -50,6 +50,13 @@ FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,D
 - SearchQuery is the text to search for (a single word or a phrase). 
 - **Text searches are case-insensitive.** For example, searching for ``Customer, customer, or CUSTOMER`` all return the same results.
 
+
+
+
+
+??????????????? completed from below reference
+
+
 <br/>
 
 <br/>
@@ -67,5 +74,7 @@ FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,D
 ***references:***
 
 1. [apex database SOSL](https://trailhead.salesforce.com/en/content/learn/modules/apex_database/apex_database_sosl)
+2. [SOQL & SOSL](https://developer.salesforce.com/docs/atlas.en-us.224.0.soql_sosl.meta/soql_sosl/)
+
 
 ---
