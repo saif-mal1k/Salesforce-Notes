@@ -188,13 +188,44 @@ wait, what if a contact is related to more than one account? how to query all th
 
 ### get List of Related opportunities of current Account
 ```apex
-        for(Account acc: accList){
-            if(acc.Phone != oldAccountMap.get(acc.Id).Phone){
-                
-                // get List of Related opportunities of current Account
-                List<Opportunity> relatedOppList = [SELECT Id , Phone__c FROM Opportunity Where AccountId=acc.Id];
-}
+for(Account acc: accList){
+    if(acc.Phone != oldAccountMap.get(acc.Id).Phone){                
+    // get List of Related opportunities of current Account
+    List<Opportunity> relatedOppList = [SELECT Id , Phone__c FROM Opportunity Where AccountId=acc.Id];
+    }
 }
 
 ```
+
+
+
+
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+
+
+
+---
+***resources:***
+
+1. [SOQL & SOSL](https://developer.salesforce.com/docs/atlas.en-us.224.0.soql_sosl.meta/soql_sosl/)
+
+---
 
