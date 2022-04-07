@@ -182,3 +182,19 @@ wait, what if a contact is related to more than one account? how to query all th
 [SELECT Id,Name FROM Account
                      WHERE Id NOT IN (SELECT AccountId FROM Opportunity)]
 ```
+
+
+
+
+### get List of Related opportunities of current Account
+```apex
+        for(Account acc: accList){
+            if(acc.Phone != oldAccountMap.get(acc.Id).Phone){
+                
+                // get List of Related opportunities of current Account
+                List<Opportunity> relatedOppList = [SELECT Id , Phone__c FROM Opportunity Where AccountId=acc.Id];
+}
+}
+
+```
+
