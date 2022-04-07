@@ -182,8 +182,16 @@ public class DML {
 }
 ```
   
+## what are governer limits in DML?
+- one by one you can insert only 200 records. In one execution of a program.
+- using list you can insert only 1000 records.
+In one execution of a program.
   
   
+<br/>
+  
+<br/>
+
 <br/>
   
 <br/>
