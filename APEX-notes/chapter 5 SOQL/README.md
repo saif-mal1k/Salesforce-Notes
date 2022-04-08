@@ -144,18 +144,18 @@ LIMIT 10
 - Other Clauses are Optional.
     
     
-
-
 <br/>
 
-## Soql with a varible
+# Create SOQL Queries in method in Apex Classes
+
+### Soql to fetch record in a varible
 ```apex
 Account oneAccountOnly = [SELECT Name,Phone FROM Account LIMIT 1];
 ```
 
 <br/>
 
-## Soql with a list
+### Soql to make a list of records
 ```apex
 Account[] accts = [SELECT Name,Phone FROM Account 
                    WHERE (Name='SFDC Computing' AND NumberOfEmployees>25)
@@ -165,7 +165,7 @@ Account[] accts = [SELECT Name,Phone FROM Account
 
 <br/>
 
-## soql with for loop
+### soql with for loop
 ```apex
 for (variable : [soql_query]) {
     code_block
@@ -174,6 +174,19 @@ for (variable : [soql_query]) {
 
 <br/>
 
+
+# Create Relationship Queries with Standard Objects:
+***To get records for a:***
+- **Child object**, and include fields from a related parent object, use a **child-to-parent** query.
+- **Parent object**, and include fields from a related child object, use a **parent-to-child** query.
+
+Note: ***Before we can decide which type of query to use, we need to know how our two objects, Contact and Account, are related. Which is the parent and which is the child?***
+- ***Master Detail Relationship***
+> ***A master-detail relationship is a one-to-many relationship. The master object (the parent) can have many detail objects (children), but each detail object (child) has only one master object (parent).***
+
+<br/>
+
+<br/>
 
 ## Important
 
