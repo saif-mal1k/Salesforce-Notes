@@ -95,6 +95,12 @@ public class point103 {
 }
 
 ``` 
+```apex
+// undelete employees that were deleted	
+List <employee__c> lst = [SELECT id,Account__c FROM Employee__c where IsDeleted=true ALL ROWS];
+undelete lst;	
+```	
+	
 </p>
 </details>
 
