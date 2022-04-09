@@ -81,7 +81,9 @@ FROM objectType[,...]
     ```
     WHERE LastName IN ('James', 'Barr', 'Nedaerk', 'Forbes')
     ```
-    
+    ```
+    WHERE Id IN (SELECT AccountId FROM Opportunity)
+    ```
 </p>    
 </details> 
 
@@ -181,7 +183,8 @@ for (variable : [soql_query]) {
 - **Parent object**, and include fields from a related child object, use a **parent-to-child** query.
 
 Note: ***Before we can decide which type of query to use, we need to know how our two objects, Contact and Account, are related. Which is the parent and which is the child?***
-- ***Master Detail Relationship***
+
+### ***Master Detail Relationship***
 > ***A master-detail relationship is a one-to-many relationship. The master object (the parent) can have many detail objects (children), but each detail object (child) has only one master object (parent).***
 
 <br/>
