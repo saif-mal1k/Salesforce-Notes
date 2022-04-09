@@ -79,7 +79,20 @@ delete contactsDel;
 <p>
 
 ```apex
-// add example
+//Delete account records where Phone =’654321’. Also try undeleting records. [Anonymous Window]
+
+public class point103 {
+    public static void method(){
+        List<account> accList = [select id,name from account where phone='654321'];
+        
+        delete accList;
+    }
+    public static void method2(){
+        List<account> accList = [SELECT Id, Name FROM Account WHERE phone='654321' ALL ROWS]; 
+        
+        undelete accList;
+    }
+}
 
 ``` 
 </p>
