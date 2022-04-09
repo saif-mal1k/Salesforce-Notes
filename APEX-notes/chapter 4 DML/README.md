@@ -99,11 +99,18 @@ delete contactsDel;
   
 <br/>
 
-- Each DML statement accepts either a single sObject or a list (or array) of sObjects. 
+- Each DML statement accepts either a single sObject or a list (or array) of sObjects.
+- List must not contain duplicate sObjects.
 - Operating on a list of sObjects is a more efficient way for processing records.
 
 <br/>
 
+## what are governer limits in DML?
+- one by one you can insert only 200 records. In one execution of a program.
+- using list you can insert only 1000 records. In one execution of a program.	
+	
+	
+	
 
 ### A program that explains it all...	
 	
@@ -182,10 +189,7 @@ public class DML {
 }
 ```
   
-## what are governer limits in DML?
-- one by one you can insert only 200 records. In one execution of a program.
-- using list you can insert only 1000 records.
-In one execution of a program.
+
   
   
 <br/>
