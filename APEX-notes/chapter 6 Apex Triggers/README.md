@@ -176,6 +176,77 @@ trigger HelloWorldTrigger on Account (before insert) {
 <br/>
 
 
+## Handler class for Trigger
+<details>
+<summary><b><em>Tip: 💡 : it is recommended to Organise code into ``2 separate files`` ``1 for Trigger`` and ``1 HandlerClass for Trigger``</b></em>.
+</summary>
+<p>
+  
+--- 
+  
+***example:***
+  
+<table>
+<tr>
+<td>
+  
+***Trigger***  
+</td>
+<td>
+  
+***Handler Class***
+</td>  
+</tr>  
+
+<tr>
+<td>
+
+<b><em>
+```apex
+trigger EmployeeTrigger on Employee__c (before delete) {
+	
+    if(Trigger.isDelete){
+        if(Trigger.isBefore){
+            EmployeeTriggerHandler.deleteEmployee(Trigger.Old);
+        }
+    }
+}  
+```  
+</em></b>
+  
+</td>
+<td>
+
+<b><em>  
+```apex  
+public class EmployeeTriggerHandler {
+    // Employee record cannot be deleted if active is true.
+    public static void deleteEmployee(List<Employee__c> empList){
+        List<employee__c> emp2Delete = new List<employee__c>();
+        for(Employee__c emp: empList){
+            if(emp.Active__c == true){
+                emp.addError('This Employee is Active. Hence, can\'t be deleted.');
+            }
+        }
+    }
+}  
+```  
+</em></b>
+  
+</td>  
+</tr>  
+  
+</table>
+
+---  
+  
+</p>
+</details>
+
+
+<br/>
+
+
 ## Using Trigger Exceptions
 - You sometimes need to add restrictions on certain database operations, such as preventing records from being saved when certain conditions are met. 
 - To prevent saving records in a trigger, call the ``addError()`` method on the sObject in question. 
