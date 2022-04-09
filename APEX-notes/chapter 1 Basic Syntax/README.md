@@ -6,7 +6,7 @@
   - <a href="#collections">Set</a>
   - <a href="#collections">Map</a>
 - <a href="#methods-for-collections">Methods for collections</a>
-  - List methods
+  - <a href="#list-methods">List methods</a>
   - set methods
   - <a href="#map-methods">Map methods</a>
 - Operators 
@@ -223,46 +223,66 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 ### List Methods
 ```apex
-add(listElement)
-Adds an element to the end of the list.
-add(index, listElement)
-Inserts an element into the list at the specified index position.
-addAll(fromList)
-Adds all of the elements in the specified list to the list that calls the method. Both lists must be of the same type.
-addAll(fromSet)
-Add all of the elements in specified set to the list that calls the method. The set and the list must be of the same type.
-clear()
-Removes all elements from a list, consequently setting the list's length to zero.
-clone()
-Makes a duplicate copy of a list.
-contains(listElement)
-Returns true if the list contains the specified element.
-deepClone(preserveId, preserveReadonlyTimestamps, preserveAutonumber)
-Makes a duplicate copy of a list of sObject records, including the sObject records themselves.
-equals(list2)
-Compares this list with the specified list and returns true if both lists are equal; otherwise, returns false.
-get(index)
-Returns the list element stored at the specified index.
-getSObjectType()
-Returns the token of the sObject type that makes up a list of sObjects.
-hashCode()
-Returns the hashcode corresponding to this list and its contents.
-indexOf(listElement)
-Returns the index of the first occurrence of the specified element in this list. If this list does not contain the element, returns -1.
-isEmpty()
-Returns true if the list has zero elements.
-iterator()
-Returns an instance of an iterator for this list.
-remove(index)
-Removes the list element stored at the specified index, returning the element that was removed.
-set(index, listElement)
-Sets the specified value for the element at the given index.
-size()
-Returns the number of elements in the list.
-sort()
-Sorts the items in the list in ascending order.
-toString()
-Returns the string representation of the list.  
+
+  add(listElement)
+//Adds an element to the end of the list.
+
+  add(index, listElement)
+//Inserts an element into the list at the specified index position.
+
+  addAll(fromList)
+//Adds all of the elements in the specified list to the list that calls the method. Both lists must be of the same type.
+
+  addAll(fromSet)
+//Add all of the elements in specified set to the list that calls the method. The set and the list must be of the same type.
+
+  clear()
+//Removes all elements from a list, consequently setting the list's length to zero.
+
+  clone()
+//Makes a duplicate copy of a list.
+
+  contains(listElement)
+//Returns true if the list contains the specified element.
+
+  deepClone(preserveId, preserveReadonlyTimestamps, preserveAutonumber)
+//Makes a duplicate copy of a list of sObject records, including the sObject records themselves.
+
+  equals(list2)
+//Compares this list with the specified list and returns true if both lists are equal; otherwise, returns false.
+
+  get(index)
+//Returns the list element stored at the specified index.
+
+  getSObjectType()
+//Returns the token of the sObject type that makes up a list of sObjects.
+
+  hashCode()
+//Returns the hashcode corresponding to this list and its contents.
+
+  indexOf(listElement)
+//Returns the index of the first occurrence of the specified element in this list. If this list does not contain the element, returns -1.
+
+  isEmpty()
+//Returns true if the list has zero elements.
+
+  iterator()
+//Returns an instance of an iterator for this list.
+
+  remove(index)
+//Removes the list element stored at the specified index, returning the element that was removed.
+
+  set(index, listElement)
+//Sets the specified value for the element at the given index.
+
+  size()
+//Returns the number of elements in the list.
+
+  sort()
+//Sorts the items in the list in ascending order.
+
+  toString()
+//Returns the string representation of the list.  
 ```  
   
   
