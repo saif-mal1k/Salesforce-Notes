@@ -20,7 +20,7 @@ FROM objectType[,...]
 
 ***syntax:***
 
-![example](https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/soql-for-admins/get-started-with-soql-queries/images/fc9bebc4207d1441a27d8cdaa11b4d6d_d-65-da-8-e-4-5253-4-bdf-a-23-c-917601911-ec-2.png)
+![example](../../images/one.webp)
 
 
 <table>
@@ -44,7 +44,7 @@ FROM objectType[,...]
 ```apex
 // what fields of record   
 ```
-![](https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/soql-for-admins/get-started-with-soql-queries/images/1ca7c9ee7641f4de3fc5de330ed8349c_754-b-81-a-2-4-e-40-475-f-adf-3-dc-1-ab-93464-ca.png)
+![example](../../images/two.webp)
 </p>    
 </details>  
     
@@ -55,7 +55,7 @@ FROM objectType[,...]
 ```apex
 // records FROM which object    
 ```
-![](https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/soql-for-admins/get-started-with-soql-queries/images/a9cf39cadaa634c9454285de17e7d33f_9-e-4-f-96-ca-ff-2-c-49-f-0-902-c-50072-cb-58067.png)
+![example](../../images/three.webp)
 </p>    
 </details> 
     
@@ -187,11 +187,80 @@ Note: ***Before we can decide which type of query to use, we need to know how ou
 ### ***Master Detail Relationship***
 > ***A master-detail relationship is a one-to-many relationship. The master object (the parent) can have many detail objects (children), but each detail object (child) has only one master object (parent).***
 
+<details>
+<summary> <em><b>For example,</b> Contact has an AccountId field with the data type Lookup(Account).</em></summary>
+<p>
+    
+---
+
+<div align="center"> 
+
+<a href="#"><img src="../../images/four.webp" width="700px"></a>    
+    
+<a href="#"><img src="../../images/five.webp" width="700px"></a>
+
+</div>
+
+---
+    
+</p>
+</details>
+
+
+<br/>
+
+### Create a Child to Parent Query:
+```apex
+// for every contact return the contact name and the parent account name.
+SELECT Name, Account.Name FROM Contact
+```
+
+<br/>
+
+### Create a Parent to Child Query:
+***requirement:***
+
+<a href="#"><img src="../../images/six.webp"></a>
+
+***solution:***
+
+<a href="#"><img src="../../images/seven.webp"></a>
+
+```apex
+SELECT Name, (SELECT Name FROM Contacts) FROM Account
+```
+
+***This query runs in three parts:***
+- The query selects an account and gets the account Name field. That’s the main query (the outer query).
+- Next, the query looks at the account’s related contacts, and gets the Name field for each. That’s the subquery (the inner query).
+- Then it moves on to the next account and repeats the process until it has selected all accounts.
+
+<br/>
+
+
+### Filtering with a sub-Query :
+```apex
+SELECT Name, (SELECT Name FROM Contacts) FROM Account WHERE Id IN (SELECT AccountId FROM Contact WHERE LastName = 'Forbes')
+```
+
+***This query does four things.***
+- The query finds contacts with the last name Forbes and returns the value of each contact’s AccountId field. (The WHERE clause subquery does that.)
+- Next, it finds the value of that AccountId in the Id field of an account and gets the name for that account. (The main WHERE clause does that.)
+- Then the query looks at the account’s related contacts, and gets the name of each contact. (The main query’s subquery does that.)
+- Finally, the main query returns the name of each account that has a related contact with the last name Forbes, and for each of those accounts, the names of all related contacts.
+
+
+<br/>
+
 <br/>
 
 <br/>
 
-## Important
+<br/>
+
+<br/>
+
+## Important Query Examples
 
 ***``Account is Parent Object and Contact is child Object``***
 
@@ -225,6 +294,8 @@ wait, what if a contact is related to more than one account? how to query all th
 </details>
 
 <br/>
+
+
 
 ### Query only those Account which have related contact
 ???
