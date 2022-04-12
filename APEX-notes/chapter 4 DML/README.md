@@ -128,7 +128,13 @@ undelete lst;
 - one by one you can insert only 200 records. In one execution of a program.
 - using list you can insert only 1000 records. In one execution of a program.	
 	
+***Tip 💡 :*** 
+- **_Never Use DML inside a loop_.**
+- **_Never Use SOQL inside a loop_.**
 	
+
+	
+<br/>	
 	
 
 ### A program that explains it all...	
