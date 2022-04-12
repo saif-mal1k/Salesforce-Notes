@@ -7,7 +7,7 @@
   - <a href="#collections">Map</a>
 - <a href="#methods-for-collections">Methods for collections</a>
   - <a href="#list-methods">List methods</a>
-  - set methods
+  - <a href="#set-methods">Set methods</a>
   - <a href="#map-methods">Map methods</a>
 - Operators 
   - <a href="#comparison-operator">Comparison Operator</a>
@@ -284,6 +284,67 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   toString()
 //Returns the string representation of the list.  
 ```  
+
+
+### Set Methods
+
+```apex
+  add(setElement)
+//Adds an element to the set if it is not already present.
+
+  addAll(fromList)
+//Adds all of the elements in the specified list to the set if they are not already present.
+
+  addAll(fromSet)
+//Adds all of the elements in the specified set to the set that calls the method if they are not already present.
+
+  clear()
+//Removes all of the elements from the set.
+
+  clone()
+//Makes a duplicate copy of the set.
+
+  contains(setElement)
+//Returns true if the set contains the specified element.
+
+  containsAll(listToCompare)
+//Returns true if the set contains all of the elements in the specified list. The list must be of the same type as the set that calls the method.
+
+  containsAll(setToCompare)
+//Returns true if the set contains all of the elements in the specified set. The specified set must be of the same type as the original set that calls the method.
+
+  equals(set2)
+//Compares this set with the specified set and returns true if both sets are equal; otherwise, returns false.
+
+  hashCode()
+//Returns the hashcode corresponding to this set and its contents.
+
+  isEmpty()
+//Returns true if the set has zero elements.
+
+  remove(setElement)
+//Removes the specified element from the set if it is present.
+
+  removeAll(listOfElementsToRemove)
+//Removes the elements in the specified list from the set if they are present.
+
+  removeAll(setOfElementsToRemove)
+//Removes the elements in the specified set from the original set if they are present.
+
+  retainAll(listOfElementsToRetain)
+//Retains only the elements in this set that are contained in the specified list.
+
+  retainAll(setOfElementsToRetain)
+//Retains only the elements in the original set that are contained in the specified set.
+
+  size()
+//Returns the number of elements in the set (its cardinality).
+
+  toString()
+//Returns the string representation of the set.
+
+```
+  
   
   
 ### Map methods
