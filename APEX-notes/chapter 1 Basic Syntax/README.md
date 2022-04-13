@@ -162,9 +162,9 @@ _Any valid 18-character Salesforce record ID._
 </td>
 <td>
 
-<a href="#"><img src="../images/List.png" width="90%"></a>
+<a href="#collections"><img src="../images/List.png" width="90%"></a>
   
-<a href="#"><img src="../images/List2.png" width="90%"></a>
+<a href="#collections"><img src="../images/List2.png" width="90%"></a>
 
 ```apex
 Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
