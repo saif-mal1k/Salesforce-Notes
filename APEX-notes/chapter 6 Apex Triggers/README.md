@@ -148,19 +148,19 @@ trigger HelloWorldTrigger on Account (before insert) {
 </tr>
 <tr>
 <td>new</td>
-<td>Returns a list of the new versions of the sObject records. This sObject list is only available in insert, update, and undelete triggers, and the records can only be modified in before triggers.</td>
+<td>Returns a list of the new versions of the sObject records. This sObject list is only available in <b>insert, update, and undelete triggers, and the records can only be modified in before triggers.</b></td>
 </tr>
 <tr>
 <td>newMap</td>
-<td>A map of IDs to the new versions of the sObject records.This map is only available in before update, after insert, after update, and after undelete triggers.</td>
+<td>A map of IDs to the new versions of the sObject records.This map is only available in <b>before update, after insert, after update, and after undelete triggers.</b></td>
 </tr>
 <tr>
 <td>old</td>
-<td>Returns a list of the old versions of the sObject records.This sObject list is only available in update and delete triggers.</td>
+<td>Returns a list of the old versions of the sObject records.This sObject list is only available in <b>update and delete triggers.</b></td>
 </tr>
 <tr>
 <td>oldMap</td>
-<td>A map of IDs to the old versions of the sObject records.This map is only available in update and delete triggers.</td>
+<td>A map of IDs to the old versions of the sObject records.This map is only available in <b>update and delete triggers.</b></td>
 </tr>
 <tr>
 <td>operationType</td>
