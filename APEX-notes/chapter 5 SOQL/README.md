@@ -254,6 +254,41 @@ SELECT Name, (SELECT Name FROM Contacts) FROM Account WHERE Id IN (SELECT Accoun
 
 <br/>
 
+
+# Working with Custom Objects:
+
+### Query Custom Objects
+```apex
+    SELECT Address__c, Picture__c, Broker__c FROM Property__c
+```
+
+
+### Create a Child-to-Parent Query
+```apex
+    SELECT Address__c, Picture__c, Broker__c.Name FROM Property__c
+```
+
+
+> ***Error Message:***  
+>  Didn’t understand relationship ‘Broker__c’ in field path. If you’re attempting to use a custom relationship, be sure to append the ‘\_\_r’ after the custom relationship name.
+
+
+>***solution:***  
+>  Use the Custom Relationship Name in the Query.
+```apex
+    SELECT Address__c, Picture__c, Broker__r.Name FROM Property__c
+```
+
+
+### Create a Parent-to-Child Query
+Requirement:
+“Get the names of all brokers with the address and price of all properties assigned to each broker.”
+
+```apex
+    SELECT Name, (SELECT Address__c, Price__c FROM Properties__r) FROM Broker__c
+```
+
+
 <br/>
 
 <br/>
