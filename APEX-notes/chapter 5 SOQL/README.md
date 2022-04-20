@@ -295,6 +295,65 @@ Requirement:
 
 <br/>
 
+
+# Aggregate Functions for SOQL Queries
+<div align="center">
+    
+    
+![image](https://user-images.githubusercontent.com/63545175/164174430-b51647c8-6c99-4118-9b76-664d2284df5e.png)
+    
+</div>
+
+<table class="featureTable sort_table">
+<tbody class="tbody">
+<tr>
+<td><strong>Aggregate Function</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr>
+<td>COUNT()</td>
+<td>Returns the number of rows that are associated with the field</td>
+<td>SELECT COUNT(Name)<br />FROM Broker__c</td>
+</tr>
+<tr>
+<td>COUNT_DISTINCT()</td>
+<td>Returns the number of unique rows that match the query criteria</td>
+<td>SELECT COUNT_DISTINCT(City__c)<br />FROM Property__c</td>
+</tr>
+<tr>
+<td>MIN()</td>
+<td>Returns the minimum value of a field</td>
+<td>SELECT MIN(Days_On_Market__c)<br />FROM Property__c</td>
+</tr>
+<tr>
+<td>MAX()</td>
+<td>Returns the maximum value of a field</td>
+<td>SELECT MAX(Beds__c)<br />FROM Property__c</td>
+</tr>
+<tr>
+<td>AVG()</td>
+<td>Returns the average value of a numeric field</td>
+<td>SELECT City__c, AVG(Days_On_Market__c)<br />FROM Property__c<br />GROUP BY City__c</td>
+</tr>
+<tr>
+<td>SUM()</td>
+<td>Returns the total value of a numeric field</td>
+<td>SELECT SUM(Price__c), Broker__r.Name<br />FROM Property__c<br />GROUP BY Broker__r.Name</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<br/>
+
+<br/>
+
+<br/>
+
+
 ## Important Query Examples
 
 ***``Account is Parent Object and Contact is child Object``***
