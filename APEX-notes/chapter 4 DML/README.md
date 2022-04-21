@@ -125,127 +125,53 @@ undelete lst;
 <br/>
 
 ## what are governer limits in DML?
-- one by one you can insert only 200 records. In one execution of a program.
-- using list you can insert only 1000 records. In one execution of a program.	
 	
-***Tip 💡 :*** 
+**In one execution of a program. there is a limit on &nbsp; *allowed.***
+	
+<b>	
+	
+```
+	Number of SOQL queries: 100
+
+	Number of query rows: 50000
+
+	Number of SOSL queries: 20
+
+	Number of DML statements: 150
+
+	Number of Publish Immediate DML: 150
+
+	Number of DML rows: 210000
+
+	Maximum CPU time: 10000
+
+	Maximum heap size: 6000000
+
+	Number of callouts: 100
+
+	Number of Email Invocations: 10
+
+	Number of future calls: 50
+
+	Number of queueable jobs added to the queue: 50
+
+	Number of Mobile Apex push calls: 10
+```
+
+</b>
+	
+***we can check them at the end in logs:***
+	
+![image](https://user-images.githubusercontent.com/63545175/164376057-f411de1d-07a3-4781-a55d-3cad48f0c4f3.png)
+
+	
+***Tip 💡 : best Practice*** 
 - **_Never Use DML inside a loop_.**
 - **_Never Use SOQL inside a loop_.**
-
-
-Number of SOQL queries: 1 out of 100
-
-Number of query rows: 0 out of 50000
-
-Number of SOSL queries: 0 out of 20
-
-Number of DML statements: 4 out of 150
-
-Number of Publish Immediate DML: 0 out of 150
-
-Number of DML rows: 20 out of 10000
-
-Maximum CPU time: 0 out of 10000
-
-Maximum heap size: 0 out of 6000000
-
-Number of callouts: 0 out of 100
-
-Number of Email Invocations: 0 out of 10
-
-Number of future calls: 0 out of 50
-
-Number of queueable jobs added to the queue: 0 out of 50
-
-Number of Mobile Apex push calls: 0 out of 10
-
-
-	
 
 	
 <br/>	
 	
-
-### A program that explains it all...	
-	
-```apex
-public class DML {
-    Public Static void insertphone(){
-        List<account> accList= new List<account>();
-   		for( integer i=1; i<=5 ;i++){
-            account acc=new account(Name='25/03 '+i,phone='123456');//25/03 
-        	accList.add(acc);
-      	}
-    	insert accList;//bulk of dml
-   
-        // now working on contact object.
-        list<contact> ConList=new List<contact>();
-        for(integer j=0; j<5 ;j++){
-            Contact con=new Contact(FirstName='25/03 ', LastName=''+j,AccountId=accList[j].Id);
-            ConList.add(con);
-        }
-        insert ConList;
-    }
-    public Static void upsertMethod(){
-        List<Account> acclist=new List<account>();
-        
-        Account acc=[SELECT id,phone from Account WHERE phone='123456' limit 1];
-        acc.Phone='654321';
-        
-        acclist.add(acc);//update
-        
-        for(integer i=0; i<5; i++){
-            Account acc2=new account(name='Test 25/03- 02 '+i,phone='12121212');//insert
-            acclist.add(acc2);
-        }
-        upsert accList;
-    }
-    public static void del(){
-         Account acc=[SELECT id, phone from account where phone='654321'];
-         delete acc;
-    }
-    Public static void Undel(){
-        Account acc=[SELECT id, phone from account where phone='654321' All Rows];
-        undelete acc;
-    }
-    Public Static void Createopp(){
-        List<Account> accList= new List<account>();
-        List<Opportunity> oppList= new List<Opportunity>();
-        AccList=[SELECT ID,Name from account where createddate=THIS_WEEK];
-        for(account acc : acclist){
-            Opportunity opp=new Opportunity(Accountid=acc.id ,name=acc.name , StageNAme='prospecting' ,closedate=system.today());
-            oppList.add(opp);
-		}
-        insert opplist;
-    }
-    public static void last7days(){
-        List<account> acclist=new List<account>();
-        acclist=[select id ,name,phone from account where createddate=LAST_N_DAYS:7];
-        For(account acc:acclist){
-            acc.phone='1234567890';
-           }
-        update acclist;
-    }
-    Public static void descriptionopp(){
-        list<opportunity> oppList=new List<opportunity>();
-        opplist =[select id ,name,stageName from opportunity where (stagename='closed won' or stagename='closed lost') And createddate=Last_n_days:3];
-        for(opportunity opp: opplist){
-            if(opp.StageName=='closed won'){
-                opp.Description='Opportunity is closed won';
-            }
-            else{
-                opp.Description='Opportunity is closed Lost';
-            }
-            
-        }
-        update opplist;
-    }
-}
-```
-  
-
-  
-  
 <br/>
   
 <br/>
