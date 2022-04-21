@@ -131,6 +131,35 @@ undelete lst;
 ***Tip 💡 :*** 
 - **_Never Use DML inside a loop_.**
 - **_Never Use SOQL inside a loop_.**
+
+
+Number of SOQL queries: 1 out of 100
+
+Number of query rows: 0 out of 50000
+
+Number of SOSL queries: 0 out of 20
+
+Number of DML statements: 4 out of 150
+
+Number of Publish Immediate DML: 0 out of 150
+
+Number of DML rows: 20 out of 10000
+
+Maximum CPU time: 0 out of 10000
+
+Maximum heap size: 0 out of 6000000
+
+Number of callouts: 0 out of 100
+
+Number of Email Invocations: 0 out of 10
+
+Number of future calls: 0 out of 50
+
+Number of queueable jobs added to the queue: 0 out of 50
+
+Number of Mobile Apex push calls: 0 out of 10
+
+
 	
 
 	
