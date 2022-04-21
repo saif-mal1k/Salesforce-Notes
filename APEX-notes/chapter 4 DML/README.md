@@ -170,10 +170,41 @@ undelete lst;
 - **_Never Use SOQL inside a loop_.**
 
 	
-<br/>	
+<br/>
+	
+<br/>
+	
+<br/>
+	
+	
+# Methods of ``Database Class``
+
+Apex contains the built-in Database class, which provides methods that perform DML operations.
+
+- Database.insert()
+- Database.update()
+- Database.upsert()
+- Database.delete()
+- Database.undelete()
+- Database.merge()
+	
+<br/>
+
+<b> <em>
+	
+> Unlike DML statements, Database methods have an optional allOrNone parameter that allows you to specify whether the operation should partially succeed. 
+> <br> When this parameter is set to false, if errors occur on a partial set of records, the successful records will be committed and errors will be returned for the failed records. Also, no exceptions are thrown with the partial success option.
+
+</em> </b>	
 	
 <br/>
   
+<br/>
+
+<br/>
+  
+<br/>
+	
 <br/>
 
 <br/>
