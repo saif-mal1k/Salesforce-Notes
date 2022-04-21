@@ -229,6 +229,8 @@ public class DML {
 ***references:***
 	
 1.**apex database:** https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_dml  
+	
+2.**governer limits:** https://developer.salesforce.com/docs/atlas.en-us.234.0.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_apexgov.htm
 
 ---
   
