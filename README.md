@@ -20,7 +20,7 @@ its the worlds ***#No.1 CRM platform*** that enables businesses sell, service an
 
 <br/>
 
-originally, started in 1999 with sales cloud to help businesses increases their sales. now, salesforce is active in many more domains.
+originally, started in 1999 with sales cloud to help businesses increase their sales. now, salesforce is active in many more domains.
 it has applications that are focused on customer service, marketing, analytics, application development and automation.
 
 <br/>
@@ -84,7 +84,7 @@ _"CRM solutions can help keep track of contacts within a business, to allow both
 
 ### how was data managed back then with-out CRM ?
 it was done manually and stored in files.
-Gradually, with the advent of computers companies stored and accessed their data using word documents and excel sheets. 
+Gradually, with the advent of computers companies storing and accessing their data using word documents and excel sheets. 
 However, as data started growing, this failed to serve the purpose.
 this approach was in-efficient for handling large amount of data.
 
@@ -99,7 +99,7 @@ that proved to be costly and ineffective for the small companies or startups.
 <p>
   
 Companies using big data in conjunction with CRM aim to have systems that can process data in real time and therefore connect with customers faster.
-<br/> collecting and analysing big data on their customer. Collecting and analyzing big data on their customers allows companies to augment service by examining customer sentiment.
+<br/> collecting and analysing big data on their customer. Collecting and analyzing big data on their customers allow companies to augment service by examining customer sentiments.
 <br/> Big Objects is the Salesforce's big data solution that can meet your need for storing very large volumes of data (billions of records) in the Salesforce cloud.
 </p>
 </details>
