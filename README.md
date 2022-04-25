@@ -3,7 +3,7 @@
 <br/>
 
 ## what is salesforce?
-salesforece makes cloud-based business applications that helps businesses connected to their customers, prospects, partners and more.
+salesforce makes cloud-based business applications that helps businesses connected to their customers, prospects, partners and more.
 its the worlds ***#No.1 CRM platform*** that enables businesses sell, service and market effectively and efficiently.
 
 <br/>
