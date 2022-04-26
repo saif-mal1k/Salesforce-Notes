@@ -117,15 +117,19 @@ this idea gave rise to Salesforce.
 
 ### Difference between CRM and ERP?
 
-"some ERP and CRM features may overlap"
+***some ERP and CRM features may overlap***
 
 CRM goals:-
 - increase sales
-- improve customer relationships and prospects
+- improve customer relationships and prospects.
+
+ERP goals:-
+- to improve communication across departments and optimize business processes by providing easy visibility of all operations. 
 
 
-Businesses looking to automate core business processes typically look at two main software solutions, enterprise resource planning (ERP) and customer relationship management (CRM).
-While the entire organization will come to rely on both ERP and CRM systems, the fundamental difference between ERP and CRM is that ERP is primarily for financial data and the finance department, while CRM is customer data used by the sales and customer service departments.
+> _Businesses looking to automate core business processes typically look at two main software solutions,_ **``enterprise resource planning (ERP) and customer relationship management (CRM).``**
+> <br/> 
+> While the entire organization will come to rely on both ERP and CRM systems, the fundamental difference between ERP and CRM is that ERP is primarily for financial data and the finance department, while CRM is customer data used by the sales and customer service departments.
 
 
 
