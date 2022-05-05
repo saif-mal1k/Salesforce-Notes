@@ -56,8 +56,20 @@
 
 
 
+<br/>
 
 
+<br/>
+
+
+## Setting up test data
+<em> "Test data is set up inside the test method, which can be time-consuming as you add more test methods. If you have many test methods, put test-data creation in a test utility class and call the utility class from multiple test methods" </em>
+
+### Test.startTest() and Test.stopTest()
+- The test method contains the ``Test.startTest()`` and ``Test.stopTest()`` method pair, which delimits a block of code that gets a fresh set of governor limits.  
+- To test that Apex code runs within governor limits, isolate data setup’s limit usage from your test’s. 
+- To isolate the data setup process’s limit usage, enclose the test call within the Test.startTest() and Test.stopTest() block. 
+- Also use this test block when testing asynchronous Apex. 
 
 
 
