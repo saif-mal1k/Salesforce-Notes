@@ -95,6 +95,82 @@ Batch Apex is used to run large jobs (think thousands or millions of records!) t
 - If one batch fails to process successfully, all other successful batch transactions aren’t rolled back.
 
 
+<br/>
+
+
+### Batch Apex Syntax
+To write a Batch Apex class, your class must implement the ``Database.Batchable`` interface and include the following three methods:
+
+**1. start**
+- Used to collect the records or objects to be passed to the interface method execute for processing. 
+- This method is called once at the beginning of a Batch Apex job and returns either a Database.QueryLocator object or an Iterable that contains the records or objects passed to the job.
+
+- Most of the time a QueryLocator does the trick with a simple SOQL query to generate the scope of objects in the batch job. But if you need to do something crazy like loop through the results of an API call or pre-process records before being passed to the execute method, you might want to check out the Custom Iterators link in the Resources section.
+
+- With the QueryLocator object, the governor limit for the total number of records retrieved by SOQL queries is bypassed and you can query up to 50 million records. However, with an Iterable, the governor limit for the total number of records retrieved by SOQL queries is still enforced.
+
+
+**2. execute**
+- Performs the actual processing for each chunk or “batch” of data passed to the method. 
+- ***The default batch size is 200 records. Batches of records are not guaranteed to execute in the order they are received from the start method.***
+
+- ***This method takes the following:***
+  - A reference to the Database.BatchableContext object.  
+  - A list of sObjects, such as ``List<sObject>``, or a list of parameterized types. If you are using a ``Database.QueryLocator``, use the returned list.
+
+
+**3. finish**
+- Used to execute post-processing operations (for example, sending an email) and is called once after all batches are processed.
+
+
+***syntax:***
+```apex
+public class MyBatchClass implements Database.Batchable<sObject> {
+    public (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) {
+        // collect the batches of records or objects to be passed to execute
+    }
+    public void execute(Database.BatchableContext bc, List<P> records){
+        // process each batch of records
+    }
+    public void finish(Database.BatchableContext bc){
+        // execute any post-processing operations
+    }
+}
+```
+
+### Invoking a Batch Apex
+```apex
+  MyBatchClass myBatchObject = new MyBatchClass();
+  Id batchId = Database.executeBatch(myBatchObject);
+```
+
+
+<br/>
+
+### Best Practices
+As with future methods, there are a few things you want to keep in mind when using Batch Apex. To ensure fast execution of batch jobs, minimize Web service callout times and tune queries used in your batch Apex code. The longer the batch job executes, the more likely other queued jobs are delayed when many jobs are in the queue. Best practices include:
+- Only use Batch Apex if you have more than one batch of records. If you don't have enough records to run more than one batch, you are probably better off using Queueable Apex.
+- Tune any SOQL query to gather the records to execute as quickly as possible.
+- Minimize the number of asynchronous requests created to minimize the chance of delays.
+- Use extreme care if you are planning to invoke a batch job from a trigger. You must be able to guarantee that the trigger won’t add more batch jobs than the limit.
+
+
+<br/>
+
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -129,7 +205,7 @@ Batch Apex is used to run large jobs (think thousands or millions of records!) t
 ***references:***
 
 1. Asynchronous apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/
-
+2. custom iterators : https://developer.salesforce.com/docs/atlas.en-us.224.0.apexcode.meta/apexcode/apex_classes_iterable.htm
 
 
 <br/>
