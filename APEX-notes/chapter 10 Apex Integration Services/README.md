@@ -115,6 +115,75 @@ if(response.getStatusCode() != 201) {
 <br/>
 
 
+<details>
+<summary> <b>full working example:</b> </summary>    
+<p>
+   
+    
+```apex
+public class AnimalLocator {
+    
+    public static String getAnimalNameById(Integer Idd){
+        
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals/'+Idd);
+        request.setMethod('GET');
+        HttpResponse response = http.send(request);
+        // If the request is successful, parse the JSON response.
+               
+        Map<String,Object> animal = new Map<String,Object>();
+        
+        if(response.getStatusCode() == 200) {
+            // Deserialize the JSON string into collections of primitive data types.
+            Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+            // Cast the values in the 'animals' key as a list
+            animal = (Map<String,Object>) results.get('animal');
+            
+        }
+        return (String) animal.get('name');
+        
+        
+    }
+}    
+```
+    
+```apex
+@isTest
+private class AnimalLocatorTest {
+    @isTest static void AnimalLocatorMock(){
+    Test.setMock(HttpCalloutMock.class, new AnimalLocatorMock());
+    string result = AnimalLocator.getAnimalNameById(3);
+    string expectedResult = 'chicken';
+    system.assertEquals(result, expectedResult );
+        
+    }
+    
+}
+```    
+    
+```apex
+@isTest
+global class AnimalLocatorMock implements HttpCalloutMock {
+    //implements this interface method
+    
+    global HTTPResponse respond(HTTPRequest request){
+        //create fake response
+        
+        HttpResponse response = new HttpResponse();
+        response.setHeader('Content-Type','application/json');
+        response.setBody('{"animals":["majestic badger","fluffy bunny","scary bear", "chicken"]}');
+        
+        response.setStatusCode(200);
+        return response;
+        
+    }
+
+}
+```    
+    
+<p>
+</details>
 
 
 
