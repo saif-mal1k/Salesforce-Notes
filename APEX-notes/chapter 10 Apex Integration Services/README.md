@@ -1,0 +1,169 @@
+## Make Callouts to External Services from Apex
+An Apex callout enables you to tightly integrate your Apex code with an external service. The callout makes a call to an external web service or sends an HTTP request from Apex code, and then receives the response.
+
+***Apex callouts come in two flavors.***
+
+- Web service callouts to SOAP web services use XML, and typically require a WSDL document for code generation.
+- HTTP callouts to services typically use REST with JSON.
+
+
+<br/>
+
+
+> **💡 Tip:** These two types of callouts are similar in terms of sending a request to a service and receiving a response. But while WSDL-based callouts apply to SOAP Web services, HTTP callouts can be used with any HTTP service, either SOAP or REST.
+
+
+<br/>
+
+
+**Note:** Whenever possible, use an HTTP service. These services are typically easier to interact with, require much less code, and utilize easily readable JSON.
+
+
+<br/>
+
+
+<br/>
+
+
+## HTTP Method	Description
+- **GET** 	  - Retrieve data identified by a URL.
+- **POST** 	  - Create a resource or post data to the server.
+- **DELETE** 	- Delete a resource identified by a URL.
+- **PUT** 	  - Create or replace the resource sent in the request body.
+
+
+<br/>
+
+A GET request means that the sender wants to obtain information about a resource from the server. 
+When the server receives and processes this request, it returns the request information to the recipient. 
+
+> **💡 Tip:** A GET request is similar to navigating to an address in the browser. When you visit a web page, the browser performs a GET request behind the scenes. 
+In the browser, the result of the navigation is a new HTML page that’s displayed. With a callout, the result is the response object.
+
+
+<br/>
+
+In addition to the HTTP method, each request sets a URl, which is the endpoint address at which the service is located. For example, an endpoint can be ``http://www.example.com/api/resource.``
+When the server processes the request, it sends a status code in the response. 
+
+***The status code indicates:***
+
+- 200  - If the request is successful. 
+- 404  - for file not found.
+- 500  - for an internal server error.
+
+
+<br/>
+
+
+### example of GET request : Retriving data from web
+
+```apex
+Http http = new Http();
+HttpRequest request = new HttpRequest();
+request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');
+request.setMethod('GET');
+HttpResponse response = http.send(request);
+// If the request is successful, parse the JSON response.
+if(response.getStatusCode() == 200) {
+    // Deserialize the JSON string into collections of primitive data types.
+    Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+    // Cast the values in the 'animals' key as a list
+    List<Object> animals = (List<Object>) results.get('animals');
+    System.debug('Received the following animals:');
+    for(Object animal: animals) {
+        System.debug(animal);
+    }
+}
+```
+
+***explanation:*** above code send GET request to a web service to get a list of animals. The service/server sends the response in JSON format. JSON is essentially a string, so the built-in JSONParser class converts it to an object. We can then use that object to write the name of each animal to the debug log.
+
+<br/>
+
+
+>***💡 Tip:*** For more complex JSON structures, you can use [JSON2Apex](https://json2apex.herokuapp.com/?_ga=2.2285616.1441678755.1652070025-1740883501.1634572155). This tool generates strongly typed Apex code for parsing a JSON structure.
+
+
+<br/>
+
+
+### example of PUT request : sending data to a service/server
+
+```apex
+Http http = new Http();
+HttpRequest request = new HttpRequest();
+request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');
+request.setMethod('POST');
+request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+// Set the body as a JSON object
+request.setBody('{"name":"mighty moose"}');
+HttpResponse response = http.send(request);
+// Parse the JSON response
+if(response.getStatusCode() != 201) {
+    System.debug('The status code returned was not expected: ' + response.getStatusCode() + ' ' + response.getStatus());
+} else {
+    System.debug(response.getBody());
+}
+```
+
+***explanation:*** This example sends a POST request to the web service to add an animal name. The new name is added to the request body as a JSON string. The request Content-Type header is set to let the service know that the sent data is in JSON format so that it can process the data appropriately. The service responds by sending a status code and a list of all animals, including the one you added. If the request was processed successfully, the status code returns 201, because a resource has been created. The response is sent to the debug log when anything other than 201 is returned.
+
+>***💡 Tip:***  when you buy something online or when you comment on your favorite post the browser is making POST request behind the scenes.
+
+
+<br/>
+
+
+
+
+
+
+
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+---
+
+***references:***
+
+1. Apex Integration Services : https://trailhead.salesforce.com/en/content/learn/modules/apex_integration_services
+
+
+
+---
+
