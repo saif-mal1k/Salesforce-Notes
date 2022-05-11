@@ -185,13 +185,12 @@ global class AnimalLocatorMock implements HttpCalloutMock {
 <p>
 </details>
 
-
-
-
-
-
+    
 <br/>
 
+    
+## Testing Callouts
+testing runtime allows you to “mock” the callout. Mock callouts allow you to specify the response to return in the test instead of actually calling the web service. You are essentially telling the runtime, “I know what this web service will return, so instead of calling it during testing, just return this data.” Using mock callouts in your tests helps ensure that you attain adequate code coverage and that no lines of code are skipped due to callouts.
 
 
 
