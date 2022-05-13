@@ -178,7 +178,7 @@ trigger HelloWorldTrigger on Account (before insert) {
 
 ## Handler class for Trigger
 <details>
-<summary><b><em>Tip: 💡 : it is recommended to Organise code into ``2 separate files`` ``1 for Trigger`` and ``1 HandlerClass for Trigger``</b></em>.
+	<summary><em><b>Tip:</b> 💡 : it is recommended to Organise code into <b>"2 separate files"</b> <b>"1 for Trigger"</b> and <b>"1 HandlerClass for Trigger"</b></em>.
 </summary>
 <p>
   
