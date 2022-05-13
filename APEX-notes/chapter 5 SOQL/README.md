@@ -84,6 +84,15 @@ FROM objectType[,...]
     ```
     WHERE Id IN (SELECT AccountId FROM Opportunity)
     ```
+    - <b> is equal to var ``idd`` </b> :
+    ```
+    WHERE id =: idd
+    ```
+    - <b> name contains subString </b> :
+    ```
+    WHERE name ='%test%'
+    ```
+    
 </p>    
 </details> 
 
