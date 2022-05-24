@@ -82,6 +82,15 @@ in above example message is a string, but there are a number of different attrib
                           'How are you?']"/>
 ```
 
+```
+    <aura:attribute name="newExpense" type="Expense__c"
+         default="{ 'sobjectType': 'Expense__c',
+                        'Name': '',
+                        'Amount__c': 0,
+                        'Client__c': '',
+                        'Date__c': '',
+                        'Reimbursed__c': false }"/>
+```
 
 
 <br/>
