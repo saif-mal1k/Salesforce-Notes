@@ -87,13 +87,7 @@
 
 you can click the CONTROLLER and HELPER items to add those resources to the bundle.
 
-```aura
-helloWorld — the component bundle
-helloWorld.cmp — the component’s definition
-helloWorldController.js — the component’s controller, or main JavaScript file
-helloWorldHelper.js — the component’s helper, or secondary JavaScript file
-helloWorld.css — the component’s styles
-```
+
 
 <br/>
 
