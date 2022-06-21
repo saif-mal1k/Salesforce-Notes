@@ -174,6 +174,19 @@ As with future methods, there are a few things you want to keep in mind when usi
 
 
 
+<br/>
+
+
+<br/>
+
+
+## Scheduled Apex:
+***Scheduled Apex has a number of items you need to be aware of, but in general:***
+- You can only have 100 scheduled Apex jobs at one time and there are maximum number of scheduled Apex executions per a 24-hour period. See Execution Governors and Limits in the Resources section for details.
+- Use extreme care if you’re planning to schedule a class from a trigger. You must be able to guarantee that the trigger won’t add more scheduled jobs than the limit.
+- Synchronous Web service callouts are not supported from scheduled Apex. To be able to make callouts, make an asynchronous callout by placing the callout in a method annotated with @future(callout=true) and call this method from scheduled Apex. However, if your scheduled Apex executes a batch job, callouts are supported from the batch class.
+
+
 
 
 
