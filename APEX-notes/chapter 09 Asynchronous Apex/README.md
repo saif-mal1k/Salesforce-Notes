@@ -161,6 +161,14 @@ As with future methods, there are a few things you want to keep in mind when usi
 <br/>
 
 
+## Queable Apex:
+
+***Queueable Apex is a great new tool but there are a few things to watch out for:***
+
+- The execution of a queued job counts once against the shared limit for asynchronous Apex method executions.
+- You can add up to 50 jobs to the queue with System.enqueueJob in a single transaction.
+- When chaining jobs, you can add only one job from an executing job with System.enqueueJob, which means that only one child job can exist for each parent queueable job. Starting multiple child jobs from the same queueable job is a no-no.
+- No limit is enforced on the depth of chained jobs, which means that you can chain one job to another job and repeat this process with each new child job to link it to a new child job. However, for Developer Edition and Trial orgs, the maximum stack depth for chained jobs is 5, which means that you can chain jobs four times and the maximum number of jobs in the chain is 5, including the initial parent queueable job.
 
 
 
