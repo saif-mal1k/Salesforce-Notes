@@ -227,6 +227,8 @@ As with future methods, there are a few things you want to keep in mind when usi
 
 1. Asynchronous apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/
 2. custom iterators : https://developer.salesforce.com/docs/atlas.en-us.224.0.apexcode.meta/apexcode/apex_classes_iterable.htm
+3. Queuable]Apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_queueable
+4. Schedulable Apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_scheduled
 
 
 <br/>
