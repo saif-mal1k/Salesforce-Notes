@@ -45,7 +45,7 @@ targetConfigs let you specify behavior specific to each type of Lightning page, 
 
 
 
-2. Deploy Your Files
+# 2. Deploy Your Files
 
  SFDX: Deploy this Source to Org 
 
