@@ -48,7 +48,7 @@ input {
 
   - <b>Lightning Component Library</b> The reference for both Aura and Lightning web components and how to use them is found at https://developer.salesforce.com/docs/component-library/overview/components. You can view the library through your org’s instance, too, at <b>http://<MyDomainName>.lightning.force.com/docs/component-library.</b> By viewing the library through your instance, you see only the correct version for your org. And, as you create your own custom components, they appear in the library too.
 
-- <b>GitHub</b> We share extensions, samples, and more through GitHub repos. Get a GitHub account to make sure you can take advantage of these offerings.
+- <b>GitHub</b> 
   - <b>Visual Studio Code</b> Salesforce Extension Pack We’ve focused on Visual Studio as a development tool, providing an integrated environment for you to build your components. The Salesforce Extension Pack for Visual Studio Code provides code-hinting, lint warnings, and built-in commands: https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode.
   - <b>Lightning Web Components</b> Recipes We provide a GitHub repo to help you see how Lightning web components work. You can clone, tinker, and publish this mix of samples to your own scratch org and see them in action. Get it at https://github.com/trailheadapps/lwc-recipes.
   - <b>E-Bikes Demo</b> This GitHub repo is another great way to see how Lightning web components work. The e-bikes demo is an end-to-end implementation of Lightning web components to create an app. Try this example in your own scratch org. Get it at https://github.com/trailheadapps/ebikes-lwc.
