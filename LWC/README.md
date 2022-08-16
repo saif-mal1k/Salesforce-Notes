@@ -67,6 +67,33 @@ input {
 <br/>
 
 
+- <b>LWC local Development Server Installation:</b>
+    - **Step 1:** 
+      <b>Install npm:</b> from https://nodejs.org/en/download/
+    - **Step 2:** 
+      Ensure there are no existing ``yarn.lock`` files or folders, navigate to the directory ``C:\Users\YOURUSER\AppData\Local\sfdx`` , There probably are NOT any ``yarn.lock`` files or folders, but after many failed installation attempts, this could be an issue, so it is best to check for this, and delete any you discover, before continuing with the installation.
+    - **Step 3:** 
+      <b>Run the command:</b> 
+      ```cmd
+      npm install --global windows-build-tools
+      ```
+      This will install Python 2.7 and build tools. I find that this tends to fail a lot, the python always installs fine, but build tools does not, sometimes it seems frozen on that step. If this happens CTRL + C out of the command, and open up the visual studio installer (search for it in the start menu), you should be able to click "repair" on the "Visual Studio Build Tools 2017" module. This will successfully install the required files in the correct directory.
+    - **Step 4:** 
+      By default, the npm command installs python in the .windows-build-tools folder in your user's directory, ``C:\Users\YOURUSER\.windows-build-tools``, move python folder from here to root of C drive. This will ensure that python is easily accessible to node-gyp.
+    - **Step 5:** 
+      Ensure build tools are successful installed, to do this go to ``C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools``, there should be 7 folders in here, if it is empty, build tools did not successfully install, again follow from step 3.
+    - **Step 6:** 
+      <b>Run this command:</b> 
+      ```cmd
+      npm install -g node-gyp
+      ```
+    - **Step 7:** 
+      <b>Run this command:</b> 
+      ```cmd
+      sfdx plugins:install @salesforce/lwc-dev-server
+      ```
+
+
 
 <br/>
 
@@ -83,7 +110,6 @@ input {
 
 ---
 ***references:***
-
 
 1. https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_introduction
 2. https://docs.google.com/presentation/d/1RRHZkXAvgli92IEUi4fjHjJDnbqIxdpwYFA-MyIkFM4/edit#slide=id.g120c732ab6a_3_242
