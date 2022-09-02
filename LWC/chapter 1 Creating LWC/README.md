@@ -41,6 +41,23 @@ export default class App extends LightningElement {
 }
 ```
 
+### xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>name of component</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+</LightningComponentBundle>
+```
+
 
 ### output:
 ![image](https://user-images.githubusercontent.com/63545175/174798154-2e0deeca-62b1-44c6-877d-7f7502513bc6.png)
