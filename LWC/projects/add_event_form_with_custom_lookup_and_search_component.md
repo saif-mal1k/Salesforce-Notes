@@ -1,4 +1,170 @@
-# component Name : customLookUp.html
+# parent component add Event form
+
+### html
+```html
+<template>
+    <lightning-card variant="Narrow" title="Event Information" icon-name="standard:event">
+        <div class="slds-m-around_small">
+            <template if:true={errors}>
+                {errors}
+            </template>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning-input type="text" required variant="standard" name="Name" value={eventRecord.Name} label="Name"
+                onchange={handleChange}>
+            </lightning-input>
+            <c-customlwclookup onselect={handleLookup} object-name="Event_Organizer__c" field-name="Name"
+                parentidfield="Event_Organizer__c" iconname="standard:people" label="Event Organizer">
+            </c-customlwclookup>
+            <br />
+            <lightning-input type="datetime" required variant="standard" name="Start_DateTime__c" label="Start Date"
+                value={eventRecord.Start_DateTime__c} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input type="datetime" variant="standard" value={eventRecord.End_Date_Time__c}
+                name="End_Date_Time__c" label="End Date" onchange={handleChange}>
+            </lightning-input>
+            <lightning-input type="number" required variant="standard" value={eventRecord.Max_Seats__c}
+                name="Max_Seats__c" label="Max Attendees" onchange={handleChange}>
+            </lightning-input>
+            <c-customlwclookup onselect={handleLookup} object-name="Location__c" field-name="Name"
+                parentidfield="Location__c" iconname="utility:location" label="Event Location"></c-customlwclookup>
+            <br />
+            <lightning-input-rich-text required type="number" variant="standard" value={eventRecord.Event_Detail__c}
+                name="Event_Detail__c" label="Event Details" onchange={handleChange}>
+            </lightning-input-rich-text>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel}>
+            </lightning-button>
+            &nbsp; &nbsp;
+            <lightning-button variant="brand" label="Add Event" title="Add Event" onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template> 
+```
+
+### js
+```js
+
+import { LightningElement, track } from 'lwc';
+import { createRecord } from 'lightning/uiRecordApi';
+import EVT_OBJECT from '@salesforce/schema/Event__c';
+import Name_F from '@salesforce/schema/Event__c.Name__c';
+import Event_Organizer__c from '@salesforce/schema/Event__c.Organizer__c';
+import Start_DateTime__c from '@salesforce/schema/Event__c.Start_Date_Time__c';
+import End_Date_Time__c from '@salesforce/schema/Event__c.End_Date_Time__c';
+import Max_Seats__c from '@salesforce/schema/Event__c.Max_Seats__c';
+import Location__c from '@salesforce/schema/Event__c.Location__c';
+import Event_Detail__c from '@salesforce/schema/Event__c.Event_Details__c';
+
+import { NavigationMixin } from 'lightning/navigation';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+
+export default class AddEvent extends NavigationMixin(LightningElement) {
+
+    @track eventRecord = {
+        Name: '',
+        Event_Organizer__c: '',
+        Start_DateTime__c: null,
+        End_Date_Time__c: null,
+        Max_Seats__c: null,
+        Location__c: '',
+        Event_Detail__c: ''
+    }
+
+    @track errors;
+
+    handleChange(event) {
+        let value = event.target.value;
+        let name = event.target.name;
+        this.eventRecord[name] = value;
+        // MaxFIT Campaign
+        // Name
+        // this.eventRecord[Name] = 'MaxFIT Campaign'
+    }
+    /*
+        Event__c newEvent = new event__c();
+        newEvent.Name = '';
+        newEvent.Location__c = '098203u84';
+    */
+
+    handleLookup(event) {
+        let selectedRecId = event.detail.selectedRecordId;
+        let parentField = event.detail.parentfield;
+        this.eventRecord[parentField] = selectedRecId;
+        // selectedRecId = aiwue7836734834
+        // Location__c
+        // this.eventRecord[Location__c] = selectedRecId;
+    }
+
+    handleClick() {
+        const fields = {};
+        fields[Name_F.fieldApiName] = this.eventRecord.Name;
+        fields[Event_Organizer__c.fieldApiName] = this.eventRecord.Event_Organizer__c;
+        fields[Start_DateTime__c.fieldApiName] = this.eventRecord.Start_DateTime__c;
+        fields[End_Date_Time__c.fieldApiName] = this.eventRecord.End_Date_Time__c;
+        fields[Max_Seats__c.fieldApiName] = this.eventRecord.Max_Seats__c;
+        fields[Location__c.fieldApiName] = this.eventRecord.Location__c;
+        fields[Event_Detail__c.fieldApiName] = this.eventRecord.Event_Detail__c;
+
+        const eventRecord = { apiName: EVT_OBJECT.objectApiName, fields };
+
+        createRecord(eventRecord)
+            .then((eventRec) => {
+                this.dispatchEvent(new ShowToastEvent({
+                    title: 'Record Saved',
+                    message: 'Event Draft is Ready',
+                    variant: 'success'
+                }));
+                this[NavigationMixin.Navigate]({
+                    type: 'standard__recordPage',
+                    attributes: {
+                        actionName: "view",
+                        recordId: eventRec.id
+                    }
+                });
+            }).catch((err) => {
+                this.errors = JSON.stringify(err);
+                this.dispatchEvent(new ShowToastEvent({
+                    title: 'Error Occured',
+                    message: this.errors,
+                    variant: 'error'
+                }));
+            });
+    }
+
+    handleCancel() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__objectPage',
+            attributes: {
+                actionName: "home",
+                objectApiName: "Event__c"
+            }
+        });
+    }
+}
+```
+
+### xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Add Event Record</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+</LightningComponentBundle>
+```
+
+
+## child component Name : customLookUp.html ``this component using below cmp1&cmp2``
 
 ### html
 ```html
@@ -131,7 +297,7 @@ public with sharing class CustomSearchController {
 
 ---
 
-## chld component 1 name: lwcrecordlist
+## chld cmp 1 name: lwcrecordlist
 
 ### html
 ```html
@@ -208,7 +374,7 @@ export default class Lwcrecordlist extends LightningElement {
 
 ---
 
-## child component 2 name: lwcsearchcomponent
+## child cmp 2 ame: lwcsearchcomponent
 
 ### html
 ```html
