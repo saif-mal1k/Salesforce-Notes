@@ -45,6 +45,7 @@
 
 <br/>
 
+## types of fields
 ***there are ``24`` types of fields***
 
 ---
@@ -87,6 +88,54 @@ Allows users to enter any combination of letters and numbers and store them in e
   - ``URL``	Allows users to enter any valid website address. When users click on the field, the URL will open in a separate browser window.
 
 --- 
+
+
+
+## types of object relationships
+
+***look up relationship***
+  - child declares lookup to parent object
+  - 0,1 to many
+  - SOQL 
+    - ***child to parent*** : SELECT id,name, parent__r.id FROM Child__c
+    - ***parent to child*** : SELECT id, name, (SELECT id,name FROM Childs__r) FROM parent__c  
+  - ex: in Account > Contact 
+    - Contact is child
+    - Contact has a look up to Account
+    - Contact can exist without Account
+    - Contact can access properties of parent Account
+
+***master detail relationship***
+  - child can not exist without parent
+  - 1 to many
+  - parent account(master) can have roll up summary
+  - When a user deletes the master record, all detail records are deleted.
+  - SOQL
+    - ***child to parent*** : SELECT id,name, parent__r.id FROM Child__c
+    - ***parent to child*** : SELECT id, name, (SELECT id,name FROM Childs__r) FROM parent__c
+  - ex: in Debit Card > transactions
+    - transaction is child
+    - transaction has a master-detail to debit-card
+    - transaction can not exist without debit-card
+
+
+``junction object`` a data architecture pattern
+  - many to many relationship
+  - Salesforce Junction Objects : https://www.youtube.com/watch?v=JJNaRJ88QvU ???
+  - ex: customer > C_D < Dish | Opportunity > Account < Contact
+    - 1 customer can have many dish and vice-versa.
+    - 1 opp can be related to many customer and vice-versa.
+
+<br/>
+
+## Schema builder
+![image](https://user-images.githubusercontent.com/63545175/188438845-725fc2c3-d0a8-4c56-a8ef-8a58e0926a7c.png)
+
+
+
+
+
+
 
 
 
