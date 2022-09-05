@@ -1,3 +1,12 @@
+## types of objects
+  - ***standard objects*** : _provided by salesforce._
+      - Account - are the companies you’re doing business with.
+      - Contacts - are the people who work at an Account.
+      - Leads - are potential prospects.
+      - Opportunities - are qualified leads that you’ve converted.
+  - ***custom objects*** : _created by admin._
+
+***Every standard and custom object has fields attached to it.***
 
 <table class="featureTable sort_table">
           <thead align="left" class="thead sorted">
