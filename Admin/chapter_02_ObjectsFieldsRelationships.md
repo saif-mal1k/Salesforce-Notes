@@ -46,7 +46,13 @@
 <br/>
 
 ## types of fields
-***there are ``24`` types of fields***
+***standard fields***
+  - when we create an object some fields (such as Name, CreatedById, OwnerId, LastModifiedById) are already created by salesforce those fields are known as standard fields.
+***custom fields***
+  - those fields that are created by admin are called custom fields.
+  - these fields have ``__c`` in their field name.
+
+***there are ``24`` data types for custom fields***
 
 ---
 
@@ -109,6 +115,7 @@ Allows users to enter any combination of letters and numbers and store them in e
   - child can not exist without parent
   - 1 to many
   - parent account(master) can have roll up summary
+  - ownership and sharing of detail record is determined by master record.
   - When a user deletes the master record, all detail records are deleted.
   - SOQL
     - ***child to parent*** : SELECT id,name, parent__r.id FROM Child__c
@@ -131,6 +138,28 @@ Allows users to enter any combination of letters and numbers and store them in e
 ## Schema builder
 ![image](https://user-images.githubusercontent.com/63545175/188438845-725fc2c3-d0a8-4c56-a8ef-8a58e0926a7c.png)
 
+![image](https://user-images.githubusercontent.com/63545175/188577290-c8692424-083c-4394-a675-0e47743dc97d.png)
+
+<table>
+<tr>
+<td>
+creating new object and adding fields  
+</td>
+<td>
+viewing and editing existing objects  
+</td>
+</tr>
+<tr>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/188579281-99e0529e-57e9-46ad-b8e6-5b0346217b94.png)
+</td>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/188579466-08547633-3779-469e-aa79-0749343d0b2b.png)
+</td>
+</tr>
+</table>
 
 
 
