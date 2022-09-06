@@ -1,8 +1,13 @@
+index
+  - lightning apps
+  - list views
+  - reports and dashboards
+
+  - salesforce mobile app customization
 
 
 ## Lightning Apps
 <img src="https://user-images.githubusercontent.com/63545175/188558672-ed6f5308-b44e-4b35-99cb-e64d32bc01e0.png" width="720px">
-
 
 ### app launcher
 ***view all*** <br/>
@@ -38,13 +43,18 @@
 
 <img src="https://user-images.githubusercontent.com/63545175/188560205-7a60f45f-e5c0-450d-b5c9-7ac2cc442a1f.png" width="480px">
 
+### kanban view
+<img src="https://user-images.githubusercontent.com/63545175/188627175-de2d43fb-86d7-42f8-b7b5-b545b661e31b.png" width="720px">
+
 
 ---
 
 <br/>
 
 
-## record highlights & compact layouts
+## record page layout & compact layout
+
+### compact layouts
 <table>
 <tr> 
 <td>
@@ -66,18 +76,14 @@ Mobile phone
 
 <img src="https://user-images.githubusercontent.com/63545175/188560891-aaffab0a-2e82-47bb-a825-590127eeacce.png" width="720px">
 
----
-
 <br/>
 
-## related & details page customization using page layout
+### related & details page customization using page layout
 <img src="https://user-images.githubusercontent.com/63545175/188566022-6a48832b-e06c-4aea-987c-e72f9edc40cf.png" width="720px">
 
----
-
 <br/>
 
-## components arrangement using Lightning app builder
+### components arrangement using Lightning app builder
 <img src="https://user-images.githubusercontent.com/63545175/188562675-bc096f0b-d2f7-4407-b8bd-b08d18971526.png" width="720px">
 
 ---
@@ -85,14 +91,19 @@ Mobile phone
 <br/>
 
 
+## reports and dashboards ????
+
+https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards?trail_id=force_com_admin_beginner
+
+
 
 ---
 
 ---
 
-# salesforce Mobile App Customization ???
+# salesforce Mobile App Customization ????
 
-https://trailhead.salesforce.com/content/learn/modules/salesforce1_mobile_app?trail_id=force_com_admin_beginner ???
+https://trailhead.salesforce.com/content/learn/modules/salesforce1_mobile_app?trail_id=force_com_admin_beginner ????
 
 
 
