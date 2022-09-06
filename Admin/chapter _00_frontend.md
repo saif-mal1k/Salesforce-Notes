@@ -8,7 +8,27 @@
 - **5. Org** :	_Short for “organization,” the place where all your data, configuration, and customization lives. You and your users log in to access it. You might also hear this called “your instance of Salesforce”_
 
 
+<br/>
 
+### types of orgs
+https://github.com/saif-mal1k/Salesforce-Notes/blob/main/Admin/Getting-Started.md
+
+
+<br/>
+
+### types of Apps
+***standard navigation***
+  - allows to access only one record.
+
+***Console navigation***
+  - allows to access multiple records on same page.
+  - easier to access related records.
+
+**tip:** _console navigation is mostly used in service centres._
+
+---
+
+<br/>
 
 ## roles
   - ***Admin*** - creates and manages projects objects.
