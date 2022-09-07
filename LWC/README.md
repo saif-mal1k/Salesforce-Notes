@@ -6,21 +6,55 @@
 
 <br/>
 
+<details>
+<summary> <b><em> example:</em></b></summary>
+<p>
+
+---
 
 ### html
 ```html
 <template>
-    <input value={message}></input>
+    <lightning-card title="HelloWorld">
+        <div class="slds-m-around_medium">
+            <p>Hello, {greeting}!</p>
+            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+        </div>
+    </lightning-card>
 </template>
 ```
 
 
 ### js
 ```
-import { LightningElement } from 'lwc';
-export default class App extends LightningElement {
-  message = 'Hello World';
+import { LightningElement,track } from 'lwc';
+
+export default class HelloWorld extends LightningElement {
+
+    @track greeting = 'World';
+    changeHandler(event){
+        this.greeting = event.target.value;
+    }
+
 }
+```
+
+
+### xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Hello World</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+</LightningComponentBundle>
 ```
 
 
@@ -31,6 +65,11 @@ input {
 }
 ```
 
+---
+
+</p>
+</details>
+
 
 <br/>
 
@@ -39,7 +78,7 @@ input {
 
 
 
-## Already Implemented solutions:-
+## Setup for lwc:-
 ***To develop Lightning web components efficiently, use the following tools and environments.***
 
 - <b>Dev Hub and Scratch Orgs</b> Scratch orgs are disposable Salesforce orgs to support development and testing. Dev Hub is a feature that manages your scratch orgs. Both are part of the Salesforce DX tool set. Salesforce DX is an integrated set of development tools built and supported by Salesforce.
