@@ -93,6 +93,19 @@ Allows users to enter any combination of letters and numbers and store them in e
   - ``Time``	Allows users to enter a local time. For example, "2:40 PM", "14:40", "14:40:00", and "14:40:50.600" are all valid times for this field.
   - ``URL``	Allows users to enter any valid website address. When users click on the field, the URL will open in a separate browser window.
 
+
+<br/>
+
+**💡 tip:** **when we have to use same picklist values more than once we can create ``picklist value set``.**
+
+<details>
+  <summary> <b>example</b> </summary>
+<p>
+  
+![image](https://user-images.githubusercontent.com/63545175/188811016-9fce4b52-0e55-4969-9e25-b4f476c8a92c.png)  
+</p>
+</details>
+
 --- 
 
 
