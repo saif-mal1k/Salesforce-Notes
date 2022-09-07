@@ -3,6 +3,11 @@
 
 <br/>
 
+### open setup type ``company information`` to view details about the company
+
+
+<br/>
+
 
 ### install apps from [appExchange](https://appexchange.salesforce.com/)
 
