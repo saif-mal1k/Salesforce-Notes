@@ -86,6 +86,9 @@ Mobile phone
 ### components arrangement using Lightning app builder
 <img src="https://user-images.githubusercontent.com/63545175/188562675-bc096f0b-d2f7-4407-b8bd-b08d18971526.png" width="720px">
 
+
+**💡 tip:** _using lightning app builder one can customize record page, home page , app page._
+
 ---
 
 <br/>
