@@ -63,8 +63,7 @@
   - it is a safe environment where you can practice the skills you’re learning before you take them to your real work.
   - these orgs are self destructive when not used for a long time.
 
+<br/>
 
-
-
-
+**💡 tip:** _sandboxes are not available for developer Ed Org & Trailhead Playground org. <br/> main purpose of sandbox is testing, development, tutorial. hence, sandbox not required for developer ed org, Trailhead playground org._
 
