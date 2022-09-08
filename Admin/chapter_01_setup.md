@@ -17,6 +17,8 @@
 <br/>
 
 ### top useful setup topics
+***in the quick find box, on setup page. type ____*** 
+
 **1	Company Information**	
   - At-a-glance view of your org
   - Find your org ID
