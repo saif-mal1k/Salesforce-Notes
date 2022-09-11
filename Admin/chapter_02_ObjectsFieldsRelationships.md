@@ -106,6 +106,55 @@ Allows users to enter any combination of letters and numbers and store them in e
 </p>
 </details>
 
+
+
+### Feed tracking vs feed history tracking
+<table>
+<tr>
+<td> 
+
+Feed tracking
+</td> 
+<td> 
+
+Feed History tracking
+</td>
+</tr>
+<tr>
+<td> 
+
+![image](https://user-images.githubusercontent.com/63545175/189525655-01ba4931-3d1b-4fbc-b892-8685183e5bb8.png)
+
+</td> 
+<td> 
+
+![image](https://user-images.githubusercontent.com/63545175/189525692-262679db-c952-465a-b929-7d11c5a31556.png)
+
+</td>
+</tr>
+<tr>
+<td> 
+
+- Using Feed Tracking, users can see updates for records they follow in their Chatter feed.We can track only up to 20 fields per object.
+- Auto-number, formula, and roll-up summary fields, Encrypted and read-only system fields can't be tracked.
+  
+</td> 
+<td> 
+
+- You can select certain fields to track and display the field history in the History related list of an object. 
+- The field history data is retained for up to 18 months.
+  
+</td>
+</tr>
+
+</table>
+
+
+
+
+<br/>
+
+
 --- 
 
 
