@@ -25,5 +25,32 @@
   
   
   
+
+<details>
+<summary>Create a preferable Jira using Email.</summary>
+<p>
+  
+
+</p>
+</details>
+  
+<details>
+<summary>If all child cases are escalated then only parent cases can be escalated.</summary>
+<p>
+  
+
+</p>
+</details>
+  
+<details>
+<summary>Create a lead record using google form.</summary>
+<p>
+  
+
+</p>
+</details>  
+  
+
+  
   
 
