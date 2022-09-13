@@ -2,22 +2,47 @@
 ## Scenerios  
 
 <details>
-<summary>Create a preferable Jira user story using Email.</summary>
+<summary><b>Create a preferable Jira user story using Email.</b></summary>
 <p>
+
+---
   
 
+---
+  
 </p>
 </details>
   
   
 <br/>
-  
-  
+
+
 <details>
-<summary>If all child cases are escalated then only parent cases can be escalated.</summary>
+<summary><b>when a customer select something, generate a payment link through stripe and send it to customer via email. without feeding stripe with products and their prices .</b></summary>
 <p>
+
+---
   
 
+---
+  
+</p>
+</details>
+
+
+<br/>
+
+
+  
+<details>
+<summary><b>If all child cases are escalated then only parent cases can be escalated.</b></summary>
+<p>
+
+---
+  
+
+---
+  
 </p>
 </details>
   
@@ -26,9 +51,11 @@
   
   
 <details>
-<summary>Create a lead record using google form.</summary>
+<summary><b>Create a lead record using google form.</b></summary>
 <p>
 
+---
+  
 ### 1. enable Web to lead  
   
 ### 2. create form that saves to sheet
@@ -83,6 +110,8 @@ SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1n5J3bnD4LkFwA6
 ```
   
 ### 4. create a trigger in App script, that run above code when a form is submitted
+  
+---
   
 </p>
 </details>  
