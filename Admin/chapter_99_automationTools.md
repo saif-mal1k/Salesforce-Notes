@@ -28,6 +28,19 @@
 <br/>
 
 
+<details>
+<summary>  workflow rules  </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/190586936-33563d21-4953-4655-bcb4-5e5ec1c6c445.png)
+
+![image](https://user-images.githubusercontent.com/63545175/190586892-15ef25d0-5e45-4a97-8c03-a680c2e066be.png)
+    
+    
+</p>    
+</details>
+
+
 
 
 
