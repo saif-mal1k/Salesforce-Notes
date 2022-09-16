@@ -1,6 +1,7 @@
 
 ***sales force provides two types of automation tools -***
 1. **Declarative tools**
+    - Approval process
     - Workflow rules
     - process builder
     - flow builder
@@ -40,8 +41,31 @@
 </p>    
 </details>
 
+<br/>
 
+<details>
+<summary>  process builder  </summary>
+<p>
 
+![image](https://user-images.githubusercontent.com/63545175/190596623-69aab532-3dd6-4bf2-890a-c47d595c6e30.png)
 
+![image](https://user-images.githubusercontent.com/63545175/190596637-631cd698-cbba-4cb7-adc3-50b821d164a9.png)
+    
+    
+</p>    
+</details>
+
+<br/>
+
+<details>
+<summary>  flow builder  </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/190598510-8df66212-9c86-475d-9f40-0db9bc96b860.png)
+    
+    
+    
+</p>    
+</details>
 
 
