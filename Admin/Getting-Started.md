@@ -8,14 +8,31 @@
 
 <br/>
 
-
-### install apps from [appExchange](https://appexchange.salesforce.com/)
+<details>
+<summary> <b> installation of apps from <a href="https://appexchange.salesforce.com/"> appExchange </a> </b> </summary>
+<p>
+  
+---
+  
+### what is AppExchange
+  - an online marketplace for salesforce apps, components and consulting services.
+  - link: https://appexchange.salesforce.com/
+  
+  
+---  
+  
+<p>
+</details>
 
 
 <br/>
 
 
-### production vs sandbox
+<details>
+<summary>  <b>types of org's</b>  </summary>
+<p>
+  
+---
 
 ***production***
   - production environment (Business logic + Live data)
@@ -66,4 +83,13 @@
 <br/>
 
 **💡 tip:** _sandboxes are not available for developer Ed Org & Trailhead Playground org. <br/> main purpose of sandbox is testing, development, tutorial. hence, sandbox not required for developer ed org, Trailhead playground org._
+
+---
+  
+</p>
+</details>
+  
+  
+  
+
 
