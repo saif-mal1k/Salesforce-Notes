@@ -24,6 +24,17 @@ index
   - See which apps are visible in Lightning Experience (2).
   - Easily manage apps (3).
 
+
+### Lightning App Builder
+<img src="https://user-images.githubusercontent.com/63545175/190569694-52156ff3-3b92-4ec8-a4cf-84830f244106.png" width="720px">
+
+  - allows to create & customize pages for lightning apps
+    - ``App page`` - one page app for lightning experience and the mobile app.
+    - ``Home page`` - every app have 1 HOME page, app builder allows to customize default one and also allows to create a custom one for the app.
+    - ``Record page`` - customize lightning experience record pages.
+
+
+
 ---
 
 <br/>
