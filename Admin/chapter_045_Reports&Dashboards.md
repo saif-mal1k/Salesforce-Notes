@@ -22,7 +22,7 @@ When Sita asked Maria which products are top sellers, Maria created a report tha
 </details>
 
 
-## What is a report type?
+### What is a report type?
   - Salesforce provides a set of predefined standard report types. but, sometimes You might need to create a custom report type.
   - ``You can’t edit standard report types.``
   - The report type determines which fields and records are available for use when creating a report. 
@@ -30,7 +30,7 @@ When Sita asked Maria which products are top sellers, Maria created a report tha
 ***This is based on the relationships between a primary object and its related objects.***
 
 <details>
-<summary> Primary object with related object— </summary> 
+<summary> <b>Primary object with related object—</b> </summary> 
 <p> 
 
 Records returned are only those where the primary object has at least one related object record. In our example of Opportunities with Products, the only records that would be displayed on the report would be opportunities that have at least one related product record.
@@ -38,12 +38,35 @@ Records returned are only those where the primary object has at least one relate
 </details>
 
 <details>  
-<summary> Primary object with or without related object— </summary> 
+<summary> <b>Primary object with or without related object—</b> </summary> 
 <p>  
 
 Records returned are those where the primary object may or may not have a related object record. If we were to create a custom report type, Opportunities with or without Products, then opportunities would be displayed whether or not they have a related product record.
 </p>
 </details>
+
+
+<table>
+<tr>
+<td> standard report types are available on frontend, on reports tab </td>
+<td> if you want to create reports for custom objects, goto setup search report types create a report type </td>
+</tr>
+<tr>
+<td>  
+![image](https://user-images.githubusercontent.com/63545175/190896886-694c272f-5235-4440-a1b6-f61a94b64dc4.png)
+</td>
+<td>
+![image](https://user-images.githubusercontent.com/63545175/190897709-3c0f57d0-38ab-4302-b4c8-c24f52c0f4fc.png)
+  
+</td>
+</tr>
+</table>
+
+### report format
+***there are 3 types of report format***
+![image](https://user-images.githubusercontent.com/63545175/190897788-3686dd04-1629-491a-9e62-500d4c9a4825.png)
+
+
 
 <br/>
 
