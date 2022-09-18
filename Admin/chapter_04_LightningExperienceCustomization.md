@@ -1,8 +1,6 @@
 index
   - lightning apps
   - list views
-  - reports and dashboards
-
   - salesforce mobile app customization
 
 
@@ -104,14 +102,6 @@ Mobile phone
 
 <br/>
 
-
-## reports and dashboards ????
-
-https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards?trail_id=force_com_admin_beginner
-
-
-
----
 
 ---
 
