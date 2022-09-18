@@ -5,8 +5,10 @@
     - **Object level** - Control Access to Objects
     - **Field level** - Control Access to Fields
     - **Record level** - Control Access to Records
-      - Role Hierarchy
+      - OWD
+      - Role Hierarchy - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
       - Sharing Rules
+      - Manual sharing, through frontend
 
 <br/>
 
@@ -58,10 +60,18 @@
   - control access to records for users, even if user has object level access
   - ex: a user can view his own records, but not others
   - to manage record level access -
-    - Org wide defaults
-    - Role Hierarchies
-    - Sharing rules
-    - Manual Sharing
+    - **Org wide defaults** - 
+      - specify the default level of access users have to each others’ records.
+    - **Role Hierarchies** - 
+      - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
+      - Role hierarchies don’t have to match your organization chart exactly. 
+      - Instead, each role in the hierarchy must represent a level of data access that a user or group of users needs.
+    - **Sharing rules** - 
+      - Sharing rules are exceptions to OWD for particular groups of users.
+      - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
+      - They can’t be stricter than your organization-wide default settings.
+    - **Manual Sharing** - 
+      - allows owners of particular records to share them with other users. 
 
 
 
