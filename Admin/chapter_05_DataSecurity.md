@@ -20,6 +20,70 @@
     - limit IP through which users can login
     - limit time during which user can login
 
+<details>
+<summary>  <b> IMPLEMENTATION </b>  </summary>
+<p>  
+
+
+<table>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/190951004-9d7fb6dc-d5f3-4d6d-bc8b-29f9ee413b8d.png)
+</td>
+<td>  
+
+
+  - Manage Users
+  - create Users
+  - Deactivate User
+</td>
+</tr>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/190951169-2e688cb8-569a-4b64-a908-fc2cd06cbadc.png)
+</td>
+<td>  
+
+  - set Password Policies
+</td>
+</tr>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/190951591-a9483c83-8180-4c31-beb4-799bed8b0a7e.png)
+</td>
+<td>  
+
+  - Specify trusted IP ranges
+</td>
+</tr>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/190951967-be0d56ed-3732-476d-9fdc-4bf473705551.png)
+</td>
+<td>  
+
+  - Restrict Login Access by IP Address Using Profiles
+</td>
+</tr>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/190952172-642dd8d6-5971-41fc-a635-b462e25ea151.png)
+</td>
+<td>  
+
+  - Restrict Login Access by Time
+</td>
+</tr>
+</table> 
+  
+</p>  
+</details>
+
 
 <br/>
 
