@@ -92,9 +92,50 @@
   - control access to standard and custom objects.
   - i.e control permissions to create, read, edit, delete any records on an object.
   - _controlled through_ 
-    - **profiles** - to manage the objects that users can access and the permissions they have for each object. 
+    - **profiles** - to manage the objects that users can access and the permissions they have for each object.
+      - ``The settings`` in a user’s profile determine whether the user can see a particular app, tab, field, or record type.
+      - ``The permissions`` in a user’s profile determine whether the user can create or edit records of a given type, run reports, and customize the app.
     - **permission sets & permission set groups** - to extend access and permissions without modifying users' profiles.
 
+
+<details>
+<summary>  <b> IMPLEMENTATION </b>  </summary>
+<p>  
+
+---
+
+### Create , Assign a Profile
+_After you've created a profile, customize it to match the needs of a specific set of users, and then assign the profile to those users._
+  - Make sure the Enhanced Profile User Interface is enabled in User Management Settings.
+  - From Setup, in the Quick Find box, enter **Profiles**, and then select **Profiles**.
+  - Click the name of the profile that you want to customize.
+  - Edit the profile, setting the most restrictive settings and permissions you can for this user type. (Don’t worry about blocking the user from doing things they need to do. We'll open up more possibilities for them later, when we give them permission sets.)
+  - From Setup, in the Quick Find box, enter **Users**, and then select **Users**.
+  - Click **Edit** next to the user that you want to assign the profile to.
+  - In the **Profile** dropdown, select the profile that you just set up. Then, click **Save**.
+  
+<br/>
+  
+### Create , Assign a Permission Set
+
+  - From Setup, in the Quick Find box, enter Permission Sets, and then select Permission Sets.
+  - Click **Clone** next to the set you want to copy. A cloned **permission set** has the same user license as the original. To create a set with a different license, click New (1) instead.Locate the New **Permission Set** button.
+
+![image](https://user-images.githubusercontent.com/63545175/190956581-8a174551-af20-4dd6-9606-162ee1e3553d.png)
+
+  - Enter a label and a description. The API name is a unique name used by the API and managed packages. It automatically replicates the label, but you can modify it.
+  - _If this is a new permission set, select a user license option._
+    - If you plan to assign this permission set to multiple users with different licenses, select --None--.
+    - If only users with one type of license will use this permission set, select that user license.
+  - Click **Save** to go back to the permission set overview page.
+  - In the **permission set** toolbar, click Manage **Assignments**, then click **Add Assignments**.
+  - Select the users to assign to this permission set and click **Assign**. Review the messages on the Assignment Summary page. If any users weren’t assigned, the Message column tells you why.
+  - Click **Done** to return to a list of the users assigned to the permission set.
+  
+---
+  
+</p>  
+</details>
 
 <br/>
 
@@ -105,7 +146,7 @@
     - read - allows user to view only
     - edit - allows user to view and update and delete
     - if nothing is selected, field wont be visible to user.
-  - controlled through 
+  - _controlled through_ 
     - **profiles** - to manage the objects that users can access and the permissions they have for each object. 
     - **permission sets** - provides additional permissions, on top of the permissions users get through their profiles.
 
@@ -117,11 +158,41 @@
 </p>
 </details>
 
+<details>
+<summary> <b> IMPLEMENTATION </b> </summary>  
+<p>
+
+---
+  
+### Restrict Field Access with a Profile
+  - From Setup, in the Quick Find box, enter Profiles, and then **select Profiles.**
+  - Select the profile you want to change.
+  - Click **Object** Settings and select the object for which you want to update the field settings.
+  - Click **Edit.**
+  - Under **Field Permissions**, for each field, specify the kind of access you want for users with this profile, and save your settings.  
+  
+<br/>
+  
+### Add Field Access with a Permission Set
+  - From Setup, in the Quick Find box, enter **Permission Sets**, and then select **Permission Sets**.
+  - Select a permission set and click **Object Settings**.
+  - Click the object you're working with, then click **Edit**. In this example, we're modifying the Candidate object.
+  - Under **Field Permissions**, specify the kinds of access your interviewers need, then save this permission set.
+
+![image](https://user-images.githubusercontent.com/63545175/190957328-45611ed7-aece-4239-aa6f-c341a162c3d4.png)
+  
+  - Click **Manage Assignments** and select the users who you expect to need the permissions you’ve just specified. Click **Add Assignments** and **Done**, and you're done!
+  
+
+</p>
+</details>
+
 <br/>
 
 
 ## Record Level Security
   - control access to records for users, even if user has object level access
+  - When object-level permissions conflict with record-level permissions, the most restrictive settings win.
   - ex: a user can view his own records, but not others
   - to manage record level access -
     - **Org wide defaults** - 
@@ -135,7 +206,84 @@
       - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
       - They can’t be stricter than your organization-wide default settings.
     - **Manual Sharing** - 
-      - allows owners of particular records to share them with other users. 
+      - allows owners of particular records to share them with other users.
+
+
+<details>
+<summary> <b>IMPLEMENTATION</b> </summary>  
+<p>
+
+---  
+  
+### OWD 
+  
+<table>  
+<tr>
+<td>
+
+<image src="https://user-images.githubusercontent.com/63545175/190958557-3c956f50-c0b0-4708-b1d3-be5c631bdf6d.png" width="480px">
+</td>
+<td>
+  
+  - ***Private*** 
+    - Only the record owner, and users above that role in the hierarchy, can view, edit, and report on those records.
+  - ***Public Read Only***
+    - All users can view and report on records, but only the owner, and users above that role in the hierarchy, can edit them.
+  - ***Public Read/Write***
+    - All users can view, edit, and report on all records.
+  - ***Controlled by Parent*** 
+    - A user can view, edit, or delete a record if she can perform that same action on the object it belongs to.
+
+</td>
+</tr>  
+</table>
+  
+### Set Your Org-Wide Sharing Defaults
+  
+<table>  
+<tr>
+<td>
+
+<image src="https://user-images.githubusercontent.com/63545175/190959075-ea204842-fa6e-4cb5-b7e7-cbe5cca3cd13.png" width="780px">
+</td>
+<td>
+  
+_Use org-wide defaults to specify the baseline level of access that the most restricted user should have._
+  - From Setup, in the Quick Find box, enter Sharing Settings, and then select Sharing Settings.
+  - Click Edit in the Organization-Wide Defaults area. 
+  - For each object, select the default internal access and default external access.
+  - To disable automatic access using your hierarchies, deselect Grant Access Using Hierarchies for any custom object that doesn't have a default access of Controlled by Parent.
+
+</td>
+</tr>  
+</table>
+  
+<br/>
+  
+### setting up roles
+***role hierarchies don't have to match your org chart. Each role in the hierarchy just represents a level of data access that a user or group of users needs.***
+
+<table>  
+<tr>
+<td>
+
+<image src="https://user-images.githubusercontent.com/63545175/190960002-5a5911fd-938d-4f08-894e-2ccae6d31063.png" width="780px">
+</td>
+<td>
+  
+> - Use the **Grant Access Using Hierarchies** checkbox to disable access to records to users above the record owner in the hierarchy for custom objects. 
+> - If you deselect this checkbox for a custom object, only the record owner and users granted access by the org-wide defaults receive access to the records.
+
+> - Even if **Grant Access Using Hierarchies** is deselected, some users—such as those with the “View All” and “Modify All” object permissions and the “View All Data” and “Modify All Data” system permissions—can still access records they don’t own.
+
+</td>
+</tr>  
+</table>  
+  
+---
+  
+</p>
+</details>
 
 
 
