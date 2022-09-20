@@ -66,6 +66,46 @@ Records returned are those where the primary object may or may not have a relate
 
 <br/>
 
+<details>
+<summary> <b> CREATING REPORT TYPE FOR CUSTOM OBJECT & SELECTING FIELDS FOR REPORTING </b> </summary>
+<p>
+
+<table>
+<tr>  
+<td>
+  
+![image](https://user-images.githubusercontent.com/63545175/191184012-a40591d3-2e4d-4bca-ae3b-effa15e07524.png)
+</td>
+</tr>  
+<tr>  
+<td>
+  
+![image](https://user-images.githubusercontent.com/63545175/191184089-e885c02e-e33b-41c3-a382-8620ef1de97e.png)
+</td>
+</tr>  
+<tr>  
+<td>
+  
+![image](https://user-images.githubusercontent.com/63545175/191184184-aee798c6-3e77-4530-8007-69c53a5d1919.png)
+</td>
+</tr>  
+<tr>  
+<td>
+  
+![image](https://user-images.githubusercontent.com/63545175/191184137-667ff0fc-46ac-4e4e-bd9e-47b45c16baf9.png)
+</td>
+</tr>  
+</table>  
+  
+</p>  
+</details>
+
+
+<br/>
+
+
+<br/>
+
 
 ### Report format
 ***there are 3 types of report format***
