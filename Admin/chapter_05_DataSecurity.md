@@ -79,6 +79,22 @@
   - Restrict Login Access by Time
 </td>
 </tr>
+<tr>
+<td>  
+
+![image](https://user-images.githubusercontent.com/63545175/191441198-bc20594a-c5f5-4697-a04a-1f9870ac6f46.png)  
+  
+![image](https://user-images.githubusercontent.com/63545175/191440992-795b7aee-0366-4dd2-b496-02539e5acae8.png)  
+  
+![image](https://user-images.githubusercontent.com/63545175/191440866-d461514c-7715-47cb-8eb7-e9a33f95ef22.png)
+
+</td>
+<td>  
+  
+  - allowing IOS/Android apps, access to salesforce
+  - making Admin to allow access to connected apps.
+</td>
+</tr>
 </table> 
   
 </p>  
