@@ -24,7 +24,8 @@
 <summary>  <b> IMPLEMENTATION </b>  </summary>
 <p>  
 
-
+---
+  
 <table>
 <tr>
 <td>  
@@ -79,6 +80,19 @@
   - Restrict Login Access by Time
 </td>
 </tr>
+</table> 
+  
+
+<br/>
+  
+## use cases
+
+<details>
+<summary>  <b> allowing connected apps </b>  </summary>
+<p>  
+
+
+<table>
 <tr>
 <td>  
 
@@ -99,6 +113,25 @@
   
 </p>  
 </details>
+
+<br/>
+
+<details>
+<summary>  <b> Set Login Access Policies <em>("to allow admin to login as any user")</em> </b>  </summary>
+<p>  
+
+- From Setup, enter Login Access Policies in the Quick Find box, and select Login Access Policies.
+- Select the Enabled checkbox next to Administrators Can Log in as Any User.
+- Click Save.
+
+</p>  
+</details>
+
+---
+  
+</p>  
+</details>
+
 
 
 <br/>
@@ -148,7 +181,6 @@ _After you've created a profile, customize it to match the needs of a specific s
   - Select the users to assign to this permission set and click **Assign**. Review the messages on the Assignment Summary page. If any users weren’t assigned, the Message column tells you why.
   - Click **Done** to return to a list of the users assigned to the permission set.
   
----
   
 </p>  
 </details>
