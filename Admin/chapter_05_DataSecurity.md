@@ -243,16 +243,17 @@ _After you've created a profile, customize it to match the needs of a specific s
   - When object-level permissions conflict with record-level permissions, the most restrictive settings win.
   - ex: a user can view his own records, but not others
   - to manage record level access -
-    - **Org wide defaults** - 
-      - specify the default level of access users have to each others’ records.
+    - **sharing settings** -
+      - **Org wide defaults** - 
+        - specify the default level of access users have to each others’ records.
+      - **Sharing rules** - 
+        - Sharing rules are exceptions to OWD for particular groups of users.
+        - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
+        - They can’t be stricter than your organization-wide default settings.
     - **Role Hierarchies** - 
       - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
       - Role hierarchies don’t have to match your organization chart exactly. 
       - Instead, each role in the hierarchy must represent a level of data access that a user or group of users needs.
-    - **Sharing rules** - 
-      - Sharing rules are exceptions to OWD for particular groups of users.
-      - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
-      - They can’t be stricter than your organization-wide default settings.
     - **Manual Sharing** - 
       - allows owners of particular records to share them with other users.
 
@@ -306,6 +307,9 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 </tr>  
 </table>
   
+### Sharing rules
+***inside sharing settings, under owd you'll find sharing rules for each object.***
+  
 <br/>
   
 ### setting up roles
@@ -313,7 +317,7 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 
 <table>  
 <tr>
-<td>
+<td width="480px">
 
 <image src="https://user-images.githubusercontent.com/63545175/190960002-5a5911fd-938d-4f08-894e-2ccae6d31063.png" width="780px">
 </td>
@@ -327,6 +331,11 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 </td>
 </tr>  
 </table>  
+  
+  
+### Manual sharing
+***when a user himself shares his records with someone else it comes under manual sharing.***  
+
   
 ---
   
