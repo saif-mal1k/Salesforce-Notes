@@ -396,6 +396,7 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 ***references***
 
 1. https://trailhead.salesforce.com/content/learn/modules/data_security
+2. https://trailhead.salesforce.com/content/learn/projects/protect-your-data-in-salesforce?trail_id=learn-admin-essentials
  
 
 
