@@ -36,8 +36,6 @@ https://github.com/saif-mal1k/Salesforce-Notes/blob/main/Admin/Getting-Started.m
 
 
 
-## sales cloud
-***When a Lead is converted, an Account and Contact along with the Opportunity are automatically created.***
 
 
 
