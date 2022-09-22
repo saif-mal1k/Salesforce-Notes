@@ -107,6 +107,13 @@ Allows users to enter any combination of letters and numbers and store them in e
 </details>
 
 
+<br/>
+
+### Duplicate rules using Matching rules
+- A duplicate rule **defines what happens when a user views a record with duplicates** or **starts creating a duplicate record.**
+
+<br/>
+
 
 ### Feed tracking vs feed history tracking
 <table>
@@ -196,6 +203,9 @@ Feed History tracking
     - 1 opp can be related to many customer and vice-versa.
 
 <br/>
+
+
+---
 
 ## Schema builder
 ![image](https://user-images.githubusercontent.com/63545175/188438845-725fc2c3-d0a8-4c56-a8ef-8a58e0926a7c.png)
