@@ -1,6 +1,4 @@
-
-## import Data
-  - before importing data must be converted to .csv format.
+## Data import, Export
 
 ***Salesforce offers two main methods for importing data.***
   - **Data import wizard** 
@@ -15,7 +13,11 @@
     - can import up to five million records at a time.
     - accessible through ui as well as cli.
 
-**📝 note:** 
+
+<br/>
+
+
+**📝 note: Things to know before importing data** 
   - the number of records you can import may depends on
     - your permissions.
     - the overall data storage limits for your organization.
@@ -31,8 +33,13 @@
     - Records that fail validation aren’t imported. 
     - Consider deactivating the appropriate validation rules before running an import if they affect the records you are importing.
 
+
+<br/>
+
+---
+
 ***Data import wizard***
-  - Trigger workflow rules and processes for new and updated records
+  - Trigger workflow rules and processes for new and updated records ?
     - while chosing data **Data Import wizard** asks ``Trigger workflow rules and processes ?`` choose respective option.
   - csv file has a limit of 700 columns in 1 row.
  
@@ -51,11 +58,11 @@
 </p>
 </details>
 
-***Data loader***
 
 <br/>
 
-**💡 tip:** 
+
+***Data loader*** 
   - Data Loader uses the SOAP API to process records. For faster processing, you can configure it to use the Bulk API instead. 
     - The Bulk API is optimized to load a large number of records simultaneously. 
     - It is faster than the SOAP API due to parallel processing and fewer network round-trips.
@@ -63,7 +70,13 @@
 ***important: before import first test through small test file***
 
 
+---
+
 <br/>
+
+
+## Import Data
+  - before importing data must be converted to .csv format.
 
 
 ## Export Data ???
