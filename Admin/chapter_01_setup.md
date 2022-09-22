@@ -34,7 +34,23 @@
   - Manage who can see what with user profiles
   - Create custom profiles
 
-**4	View Setup Audit Trail**	
+<details>
+<summary> <b> 4	View Setup Audit Trail </b> </summary>
+<p>
+  
+---
+  
+- accessible under Settings category in security section in setup window.
+- ***shows info about all the changes made in last six months***
+- shows which user changed what in the org.
+
+![image](https://user-images.githubusercontent.com/63545175/190562878-49eddf32-35a5-46c4-ac99-6d8e642a0a03.png)
+  
+---
+  
+</p>
+</details>
+
   - See 6 months of change history in your org
   - Find out who made changes and when
   - Tool for troubleshooting org configuration issues
