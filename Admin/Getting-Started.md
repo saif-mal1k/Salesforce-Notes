@@ -34,12 +34,12 @@
   
 ---
 
-***production***
+### Production org 
   - production environment (Business logic + Live data)
   - production org is the main org of company.
   - for login to production org you go to login.salesforce.com
   
-***sandbox***
+### Sandbox org
   - testing environment (Business logic + sample data)
   - sandbox org is an identical copy of production metadata or metadata and data.
   - sandbox org are designed for development, testing and training activities.
@@ -63,13 +63,14 @@
       - data space: same as prod
       - file space: same as prod
 
-![image](https://user-images.githubusercontent.com/63545175/188425382-ba91e673-3531-4f71-b748-cea87f5a42c7.png)
+  
+<image src="https://user-images.githubusercontent.com/63545175/191734866-a14f8ee4-8d8e-4c67-8927-f093d1c2ad9b.png" width="720px">
 
 
 
 <br/>
 
-### developer edition org
+### Developer Edition org
   - developer environment (Business logic for development or enhancement)
   - they are provided for free to developers to test and understand new functionalities.
   - login is similar as production org (you go to login.salesforce.com)
