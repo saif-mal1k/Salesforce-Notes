@@ -48,6 +48,7 @@
 ## types of fields
 ***standard fields***
   - when we create an object some fields (such as Name, CreatedById, OwnerId, LastModifiedById) are already created by salesforce those fields are known as standard fields.
+
 ***custom fields***
   - those fields that are created by admin are called custom fields.
   - these fields have ``__c`` in their field name.
