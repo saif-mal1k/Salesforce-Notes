@@ -59,25 +59,9 @@
 <br/>
 
 
-### view setup audit trails
-- accessible under Settings category in security section in setup window.
-- ***shows info about all the changes made in last six months***
-- shows which user changed what in the org.
-
-![image](https://user-images.githubusercontent.com/63545175/190562878-49eddf32-35a5-46c4-ac99-6d8e642a0a03.png)
 
 
-<br/>
 
-
-### Duplicate rules using Matching rules
-- A duplicate rule **defines what happens when a user views a record with duplicates** or **starts creating a duplicate record.**
-
-<br/>
-
-### Sharing rules
-- Use sharing rules to extend sharing access to users in public groups, roles, or territories. 
-- Sharing rules give particular users greater access by making automatic exceptions to your org-wide sharing settings.
 
 
 
