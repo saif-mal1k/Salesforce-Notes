@@ -1,5 +1,33 @@
 
-***tip:** when a lead is created no related Account, Contact & Opportunity gets created. Only when a lead is Converted, only then related Account, Contact & Opportunity gets created.*
+<details>
+<summary> <b> BASIC terms and knowledge </b> </summary>  
+<p>
+
+---  
+  
+opportunity: a pending sale or deal.
+
+A lead is an unqualified contact, while a prospect is a qualified contact who has been moved into the sales process.
+customer is a contact whom with you have to close a deal.
+
+
+lead ------>  prospects ----------> customer  
+  
+  
+---  
+  
+</p>  
+</details>
+
+
+
+<br/>
+
+
+
+
+
+**💡 tip:** _when a lead is created no related Account, Contact & Opportunity gets created. Only when a lead is Converted, only then related Account, Contact & Opportunity gets created._
 
 
 <br/>
