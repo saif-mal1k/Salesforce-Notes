@@ -90,14 +90,6 @@
 
 <br/>
 
-## roles
-  - ***Admin*** - creates and manages projects objects.
-  - ***sales manager*** - creates and manages accessible records.
-
-
-
-
-
 
 
 
