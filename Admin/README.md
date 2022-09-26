@@ -100,6 +100,12 @@
 <br/>
 
 
+### order of execution
+
+![image](https://user-images.githubusercontent.com/63545175/192210689-09b14d82-89d4-48e9-8c3b-b60094e1c9d7.png)
+
+
+
 
   
   
