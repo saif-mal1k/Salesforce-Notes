@@ -107,6 +107,19 @@ Allows users to enter any combination of letters and numbers and store them in e
 </p>
 </details>
 
+<br/>
+
+**💡 tip:** **when we have to create dependent fields values in picklist**(_ex: state depend on country_) **we can create ``field dependencies``.**
+
+<details>
+  <summary> <b>example</b> </summary>
+<p>
+  
+![image](https://user-images.githubusercontent.com/63545175/192217480-905bf50c-7067-475b-a223-3eaa3ca94dfb.png)
+</p>
+</details>
+
+
 
 <br/>
 
