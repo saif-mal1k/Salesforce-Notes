@@ -247,6 +247,7 @@ _After you've created a profile, customize it to match the needs of a specific s
       - **Org wide defaults** - 
         - specify the default level of access users have to each others’ records.
         - ex: ``Private``, ``Public Read Only``, ``Public Read/Write``, ``Public Read/Write/Transfer``(_available for Lead & Case_), ``Controlled by Parent``(_available for child in a master detail relationship_).
+        - ``Private`` means records will be accessible to record owners only and soon.
       - **Sharing rules** - 
         - Sharing rules are exceptions to OWD for particular groups of users.
         - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
