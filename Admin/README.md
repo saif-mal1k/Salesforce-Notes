@@ -73,12 +73,18 @@
 ### Signup and Create an account on [developer.salesforce.com](https://www.developer.salesforce.com)
 
 
-<br/>
+<details>
+<summary>  Changing org url <b> My Domain </b>  </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/192521568-6e40fb7d-0aec-454b-a74c-32c35916b438.png)
+
+</p>
+</details>
+
 
 ### open setup type ``company information`` to view details about the company
 
-
-<br/>
 
 <details>
 <summary> <b> installation of apps from <a href="https://appexchange.salesforce.com/"> appExchange </a> </b> </summary>
