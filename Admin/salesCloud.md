@@ -45,6 +45,13 @@ https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-f
 
 
 
+### ``sales process`` to control opportunity stage picklist values
+- open setup type in ``Sales Process``
+
+
+### ``lead process`` to control lead status picklist
+- open setup type in ``Lead Process``
+
 
 
 
