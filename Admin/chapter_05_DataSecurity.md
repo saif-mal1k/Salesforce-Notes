@@ -5,11 +5,6 @@
     - **Object level** - Control Access to Objects
     - **Field level** - Control Access to Fields
     - **Record level** - Control Access to Records
-      - OWD
-      - Role Hierarchy - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
-      - Sharing Rules
-      - Manual sharing, through frontend
-
 <br/>
 
 
@@ -339,6 +334,41 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 ***when a user himself shares his records with someone else it comes under manual sharing.***  
 
   
+---
+  
+</p>
+</details>
+
+
+<details>
+<summary> <b>Questions & Answers</b> </summary>  
+<p>
+
+---
+
+<details>
+<summary> <b> What is Grant Access Using Hierarchies? </b> </summary>
+<p>
+  
+Say there are three roles:
+  
+```
+    Role A
+        Role B
+            Role C
+```
+  
+- ``Role A`` is higher in hierarchy, ``Role B`` is in middle and ``Role C`` is lower in hierarchy
+
+- If the ``Role A`` user through Manual Sharing or Sharing Rules, shares the record to ``Role C`` user who is in lower hierarchy, then the ``Role B`` user who is above in hierarchy to ``Role C`` user can see the records, if we enable Grant Access Using Hierarchies at OWD in sharing settings else if Grant Access using Hierarchies is disabled ``Role B`` user cannot see the record.
+  
+- By default grant access using hierarchy is enabled, it allows roles higher in hierarchy to access records accessible to roles lower in hierarchy.
+
+---
+  
+</p>
+</details>  
+
 ---
   
 </p>
