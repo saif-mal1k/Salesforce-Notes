@@ -209,12 +209,41 @@ Feed History tracking
     - transaction can not exist without debit-card
 
 
-``junction object`` a data architecture pattern
+***``junction object`` a data architecture pattern***
   - many to many relationship
   - Salesforce Junction Objects : https://www.youtube.com/watch?v=JJNaRJ88QvU ???
   - ex: customer > C_D < Dish | Opportunity > Account < Contact
     - 1 customer can have many dish and vice-versa.
     - 1 opp can be related to many customer and vice-versa.
+
+<details>
+<summary> <b> more examples: </b> </summary>  
+<p>  
+  
+---
+  
+### customer > Order < product  
+  - 1 ---> many,many <--- 0,1
+  - every time an order is created the product will show up in customer related list and customer will show up in product related list.
+  - if customer is deleted all orders will get deleted, if product is deleted no order will be deleted
+  - ❌ junction
+                          
+### teacher > course < student
+  - many ---> 1,1 <--- many
+  - if course is deleted records of both students and teachers will be deleted.
+  - ❌ not junction
+
+### Correct junction
+  - 1 ---> many,many <--- 1
+  - only master detail relationship
+  - ✅ junction
+                      
+                       
+---
+                       
+</p>  
+</details>
+
 
 <br/>
 
