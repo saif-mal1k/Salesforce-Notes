@@ -91,7 +91,8 @@ https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-f
 
 ***references***
 
-- https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-for-your-team?trail_id=learn-admin-essentials
+  - https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-for-your-team?trail_id=learn-admin-essentials
+  - https://trailhead.salesforce.com/users/strailhead/trailmixes/sales-cloud
 
 
 
