@@ -105,8 +105,45 @@
 
 <br/>
 
+<details>
+<summary> <h3> order of execution </h3> </summary>
+<p>
 
-### order of execution
+<table>
+<tr>
+<td>
+
+	- 1. System Validation Rules
+	- 2. Apex Before Triggers
+	- 3. Custom Validation Rules
+	- 4. Duplicate Rules
+	- 5. Apex After Triggers
+
+</td>
+<td>
+
+	- 6. Assignment Rules
+	- 7. Auto-Response Rules
+
+</td>
+<td>
+
+	- 8. Workflow Rules
+	- 9. Processes
+	- 10. Flows
+
+</td>
+<td>
+
+	- 10. Escalation Rules
+	- 11. Roll-Up Summary Fields
+	- 12. Criteria based sharing rules
+
+</td>
+</tr>
+</table>
+</p>
+</details>
 
 ![image](https://user-images.githubusercontent.com/63545175/192946302-886d6927-644a-4225-a40c-7955c99f16a3.png)
 
