@@ -30,15 +30,15 @@
   - username & passwords in sandbox are same as in production org (username will have .nameofthesandbox at the end)
   - there are 4 types of sandbox
     - ***developer sandbox***
-      - identical copy of prod metadata and, no data
+      - includes a copy of your production org’s configuration (metadata), no data
       - data space: 200 MB
       - file space: 200 MB
     - ***developer pro sandbox***
-      - identical copy of prod metadata and, no data
+      - includes a copy of your production org’s configuration (metadata), no data
       - data space: 1 GB
       - file space: 1 GB
     - ***partial copy sandbox***
-      - identical copy of prod metadata and, sample data (10k records per object)
+      - includes a copy of prod org's metadata and, sample data (10k records per object)
       - data space: 5 GB
       - file space: 5 GB
     - ***full copy sandbox***
