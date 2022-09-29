@@ -90,6 +90,23 @@
 
 <br/>
 
+### types of tabs
+<details>
+<summary>  <b> custom object tabs, Web tabs, Visualforce tabs, Lightning Component tabs, Lightning Page tabs </b>  </summary>
+<p>
+  
+---
+
+![image](https://user-images.githubusercontent.com/63545175/193032535-2856f6a1-9276-484d-a053-850af20a288e.png)
+
+---
+  
+</p>
+</details>
+
+
+<br/>
+
 
 
 
