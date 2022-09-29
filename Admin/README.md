@@ -82,6 +82,19 @@
 </p>
 </details>
 
+<details>
+<summary> <b> Restrict User Email Domains </b>  </summary>
+<p>
+
+	- From Setup, in the Quick Find box, enter Allowed Email Domains, and then select Allowed Email Domains.
+	- Click New Allowed Email Domain.
+	- Enter a Domain.
+		- You can enter a top-level domain, such as companya.org, or a subdomain, such as user.companya.org.
+	- Click Save.
+
+</p>
+</details>
+
 
 ### open setup type ``company information`` to view details about the company
 
