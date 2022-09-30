@@ -42,6 +42,21 @@
             </tr>
           </tbody>
         </table>
+        
+        
+
+<details>
+<summary>  <b> limitations on object </b>  </summary>
+<p>
+  
+---
+  
+![image](https://user-images.githubusercontent.com/63545175/193260103-49f0daae-6431-4a0c-8703-e2e81122092e.png)
+
+---  
+  
+</p>  
+</details>
 
 <br/>
 
