@@ -256,6 +256,27 @@ _After you've created a profile, customize it to match the needs of a specific s
 
 
 <details>
+<summary>  <b> &nbsp; &nbsp; Restriction rules, Scoping rules </b>  </summary>  
+<p>  
+
+---
+
+***Restriction rules:** Use restriction rules when you want certain users to only see a specific set of records.*
+  
+![image](https://user-images.githubusercontent.com/63545175/193261080-8cddab61-24bb-4d22-b5c3-043d1af659ad.png)
+
+
+***Scoping rules:** Use scoping rules to control the records that your users see based on criteria you select. Users can still access the records allowed by your sharing settings.*
+
+![image](https://user-images.githubusercontent.com/63545175/193261894-84fe2ad9-2b3e-4de8-9517-17d5e185abdd.png)  
+  
+---  
+  
+</p>  
+</details>  
+
+
+<details>
 <summary> <b>IMPLEMENTATION</b> </summary>  
 <p>
 
