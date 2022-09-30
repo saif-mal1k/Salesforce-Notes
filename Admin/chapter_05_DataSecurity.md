@@ -354,23 +354,6 @@ _Use org-wide defaults to specify the baseline level of access that the most res
 </tr>  
 </table>  
   
-  
-### Manual sharing
-***when a user himself shares his records with someone else it comes under manual sharing.***  
-
-  
----
-  
-</p>
-</details>
-
-
-<details>
-<summary> <b>Questions & Answers</b> </summary>  
-<p>
-
----
-
 <details>
 <summary> <b> What is Grant Access Using Hierarchies? </b> </summary>
 <p>
@@ -393,13 +376,17 @@ Say there are three roles:
   
 </p>
 </details>  
+  
+<br/>
+  
+### Manual sharing
+***when a user himself shares his records with someone else it comes under manual sharing.***  
 
+  
 ---
   
 </p>
 </details>
-
-
 
 
 <br/>
