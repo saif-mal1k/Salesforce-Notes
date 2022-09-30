@@ -256,18 +256,22 @@ _After you've created a profile, customize it to match the needs of a specific s
 
 
 <details>
-<summary>  <b> &nbsp; &nbsp; &nbsp; &nbsp; ➤ Restriction rules, Scoping rules </b>  </summary>  
+<summary>  <b> &nbsp; &nbsp; &nbsp; ➤ &nbsp; Restriction rules, Scoping rules </b>  </summary>  
 <p>  
 
 ---
 
 ***Restriction rules:** Use restriction rules when you want certain users to only see a specific set of records.*
   
+_"When a restriction rule is applied to a user, the data that they had read access to via your sharing settings is further scoped to only records matching the record criteria that you set. This behavior is similar to how you can filter results in a list view or report, except that it’s permanent."_
+  
 ![image](https://user-images.githubusercontent.com/63545175/193261080-8cddab61-24bb-4d22-b5c3-043d1af659ad.png)
 
 
 ***Scoping rules:** Use scoping rules to control the records that your users see based on criteria you select. Users can still access the records allowed by your sharing settings.*
 
+_"With scoping rules you can set criteria to help your users see only records that are relevant to them. Scoping rules don’t restrict the record access that your users already have. They scope the records that your users see. Your users can still open and report on all records that they have access to per your sharing settings."_  
+  
 ![image](https://user-images.githubusercontent.com/63545175/193261894-84fe2ad9-2b3e-4de8-9517-17d5e185abdd.png)  
   
 ---  
@@ -459,7 +463,8 @@ Say there are three roles:
 
 1. https://trailhead.salesforce.com/content/learn/modules/data_security
 2. https://trailhead.salesforce.com/content/learn/projects/protect-your-data-in-salesforce?trail_id=learn-admin-essentials
- 
+3. https://help.salesforce.com/s/articleView?id=sf.security_data_access.htm&type=5
+4. https://trailhead.salesforce.com/content/learn/modules/permission-set-groups?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
 
 
 
