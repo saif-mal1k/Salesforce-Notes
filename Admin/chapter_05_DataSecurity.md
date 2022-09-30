@@ -256,7 +256,7 @@ _After you've created a profile, customize it to match the needs of a specific s
 
 
 <details>
-<summary>  <b> &nbsp; &nbsp; Restriction rules, Scoping rules </b>  </summary>  
+<summary>  <b> &nbsp; &nbsp; &nbsp; &nbsp; ➤ Restriction rules, Scoping rules </b>  </summary>  
 <p>  
 
 ---
