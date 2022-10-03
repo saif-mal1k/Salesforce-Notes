@@ -197,7 +197,7 @@ Feed History tracking
 
 ## types of object relationships
 
-***look up relationship***
+### ***look up relationship***
   - child declares lookup to parent object
   - 0,1 to many
   - SOQL 
@@ -209,13 +209,17 @@ Feed History tracking
     - Contact can exist without Account
     - Contact can access properties of parent Account
 
-***master detail relationship***
+<br/>
+
+### ***master detail relationship***
   - child can not exist without parent
   - 1 to many
-  - parent account(master) can have roll up summary
-  - ownership and sharing of detail record is determined by master record.
-  - When a user deletes the master record, all detail records are deleted.
-  - SOQL
+  - _important_
+    - one object can have max 2 master detail relationships
+    - parent account(master) can have roll up summary
+    - ownership and sharing of detail record is determined by master record.
+    - When a user deletes the master record, all detail records are deleted.
+  - _SOQL_
     - ***child to parent*** : SELECT id,name, parent__r.id FROM Child__c
     - ***parent to child*** : SELECT id, name, (SELECT id,name FROM Childs__r) FROM parent__c
   - ex: in Debit Card > transactions
@@ -223,10 +227,13 @@ Feed History tracking
     - transaction has a master-detail to debit-card
     - transaction can not exist without debit-card
 
+<br/>
 
-***``junction object`` a data architecture pattern***
+### ***``junction object`` a data architecture pattern***
   - many to many relationship
-  - Salesforce Junction Objects : https://www.youtube.com/watch?v=JJNaRJ88QvU ???
+  - _SOQL_
+    - ***child to parent*** : ????
+    - ***parent to child*** : ????
   - ex: customer > C_D < Dish | Opportunity > Account < Contact
     - 1 customer can have many dish and vice-versa.
     - 1 opp can be related to many customer and vice-versa.
@@ -237,18 +244,18 @@ Feed History tracking
   
 ---
   
-### customer > Order < product  
+#### customer > Order < product  
   - 1 ---> many,many <--- 0,1
   - every time an order is created the product will show up in customer related list and customer will show up in product related list.
   - if customer is deleted all orders will get deleted, if product is deleted no order will be deleted
   - ❌ junction
                           
-### teacher > course < student
+#### teacher > course < student
   - many ---> 1,1 <--- many
   - if course is deleted records of both students and teachers will be deleted.
   - ❌ not junction
 
-### Correct junction
+#### Correct junction
   - 1 ---> many,many <--- 1
   - only master detail relationship
   - ✅ junction
@@ -261,7 +268,13 @@ Feed History tracking
 
 
 <br/>
-
+  
+  
+### relationship limit, relationship conversion, self relationship ????
+https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5 ????  
+  
+  
+<br/>
 
 ---
 
