@@ -140,6 +140,8 @@
       - ``The settings`` in a user’s profile determine whether the user can see a particular app, tab, field, or record type.
       - ``The permissions`` in a user’s profile determine whether the user can create or edit records of a given type, run reports, and customize the app.
     - **permission sets & permission set groups** - to extend access and permissions without modifying users' profiles.
+      - permission set - extend access and permissions without modifying users' profiles, we need to assign user to this permission set to provide these additional permissions.
+      - permission set group - if a user needs to be assigned to multiple permission sets, we can just create a permission set group and assign user to it.  
 
 
 <details>
@@ -162,20 +164,52 @@ _After you've created a profile, customize it to match the needs of a specific s
   
 ### Create , Assign a Permission Set
 
-  - From Setup, in the Quick Find box, enter Permission Sets, and then select Permission Sets.
-  - Click **Clone** next to the set you want to copy. A cloned **permission set** has the same user license as the original. To create a set with a different license, click New (1) instead.Locate the New **Permission Set** button.
-
 ![image](https://user-images.githubusercontent.com/63545175/190956581-8a174551-af20-4dd6-9606-162ee1e3553d.png)
+  
+  - Click **Clone** next to the set you want to copy. 
+    - A cloned **permission set** has the same user license as the original. 
+  
+  - To create a set with a different license, click **New**.
+    - Locate the New **Permission Set** button.
 
-  - Enter a label and a description. The API name is a unique name used by the API and managed packages. It automatically replicates the label, but you can modify it.
   - _If this is a new permission set, select a user license option._
     - If you plan to assign this permission set to multiple users with different licenses, select --None--.
     - If only users with one type of license will use this permission set, select that user license.
-  - Click **Save** to go back to the permission set overview page.
-  - In the **permission set** toolbar, click Manage **Assignments**, then click **Add Assignments**.
-  - Select the users to assign to this permission set and click **Assign**. Review the messages on the Assignment Summary page. If any users weren’t assigned, the Message column tells you why.
-  - Click **Done** to return to a list of the users assigned to the permission set.
+
+![image](https://user-images.githubusercontent.com/63545175/193504473-159880bb-90e7-4e0e-bd8d-06481f57f976.png)
   
+  - _to manage assignments_
+    - Click **Save** to go back to the permission set overview page.
+    - In the **permission set** toolbar, click Manage **Assignments**, then click **Add Assignments**.  
+    - Select the users to assign to this permission set and click **Assign**. 
+    - Review the messages on the Assignment Summary page. 
+    - If any users weren’t assigned, the Message column tells you why.
+    - Click **Done** to return to a list of the users assigned to the permission set.
+  
+<br/>
+  
+  
+### permission set vs permission set group
+
+<table>
+<tr>  
+<td>
+  
+![image](https://user-images.githubusercontent.com/63545175/193506836-ef70b079-dc20-43ac-b091-c0a24d7a6a76.png)  
+  
+</td>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/193506797-b9a9c8aa-78cf-46f2-83f6-d1e5711a168c.png)  
+  
+</td>  
+</tr>
+</table>
+  
+  
+
+
+---  
   
 </p>  
 </details>
