@@ -9,32 +9,81 @@
 	- sandbox
 	- production
 	- developer edition
-	- trailhead playground 
+	- trailhead playground
+	
 - apps , app exchange
 	- standard navigation
 	- console navigation
-- objects
-	- types
-		- standard
-		- custom
-	- types of object relationships
-		- 1 => many	- master-detail
-		- 0,1 => many	- lookup
-		- many => many	- junction object
-	- schema builder
-- records
-	record types
-- fields
-	- 18 types
-- data 
-	- duplicate rules using matching rules
+	
+- configuration & setup
+	- salesforce platform basics
+	- prepare org for users
+	- user management
+	- view and manage users
+- Data security
+	- control access to org
+		- Restrict Login Hours and IP Ranges
+	- control access to object
+		- profiles
+		- permission sets
+			- Create New Users and Allow a User to Delete Accounts
+		- permission set groups
+	- control access to fields
+	- control access to records
+		- Sharing settings
+			- OWD
+			- define sharing rules
+		- create a role hierarchy
+		- manual sharing
+		- filteration methods
+			- restriction rules
+			- scoping rules
+- Object manager & Lightning App Builder
+	- types of objects
+	- types of objects relationships
+		- look up (0,1 - many)
+		- master details (1 - many)
+		- junction object (many - many)
+		- considerations for creating relationships
+			- relationship limits ????
+			- Converting relationship ????
+				- lookup -> masterdetail
+				- masterdetail -> lookup
+			- self relationships ????
+			- impact of relationships on objects
+	- working with Schema Builder
+- Fields
+	- types of fields
+	- feed tracking vs feed history tracking
+	- implement roolup summary
 	- validation rules
-- data security
-	- org level
-	- object level
-	- field level
-	- record level
-- automation tools
+	- field dependencies
+	- notes on changing field types ????
+
+- Duplicate Rules & Matching rules
+
+- Record types
+
+- Customization
+	- create and customize lightning apps
+	- create and customize lightning record pages
+		- compact layout
+		- quick actions
+		- create custom buttons and links
+		- record types
+	- create and customize list view
+	
+- Data Management
+	- Data import wizard
+	- Data loader
+
+- Reports & dashboards
+	- types of reports
+	- report types
+		- types of report types
+	- access level for Reports and Dashboards folders
+	
+- Process Automation
 	- declarative
 		- Approval process
 		- workflow
@@ -42,19 +91,41 @@
 		- flow
 	- programmatic
 		- apex triggers
+	
 
+- Sales Cloud
+	- account & contacts and their relationship
+	- Leads & opportunity for lightning experience
+		- lead conversion
+		- selling as a team & splitting the credit
+	- kanban view
+	- creating price book & tracking product
+	- Configure Quotes for Your Customers and Track Contracts
+	- Campaigns
+		- organising campaigns
+		- reports on campaigns
+	- creating sales process to edit opportunity picklist
+	- customizing lead path
+	- web to lead conversion
 
-<br/>
-
-
-- sales cloud 
-	- sales process
-	- web to lead
-- service cloud
+- Service Cloud
 	- web to case
 	- email to case
 	- case escalation rules
-- community cloud
+	- Automate case management
+	- create a process for managing cases
+	- case queues and assignment rules
+	- case escalation rules
+	- Enable Entitlements and Set Up Service Contracts
+	- Create an Entitlement Process
+	- Create Service Contracts with Entitlements
+
+- Community cloud
+
+
+			
+
+
 
 ---
 
