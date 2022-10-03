@@ -146,6 +146,19 @@ https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_t
 ### Duplicate rules using Matching rules
 - A duplicate rule **defines what happens when a user views a record with duplicates** or **starts creating a duplicate record.**
 
+<details> 
+<summary> <b> IMPLEMENTATION ???? </b>  </summary>  
+<p>
+  
+---
+  
+https://trailhead.salesforce.com/content/learn/modules/sales_admin_duplicate_management?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential  
+  
+---
+  
+</p>
+</details>
+
 <br/>
 
 
