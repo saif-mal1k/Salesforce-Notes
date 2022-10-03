@@ -129,6 +129,20 @@ Records returned are those where the primary object may or may not have a relate
 <br/>
 
 
+## Comparison of Access Levels for Report and Dashboard Folders
+| access to | VIEW | 	EDIT	| MANAGE |
+|-------|--------|--------|--------|
+| View reports or dashboards in the folder| 	Yes| 	Yes| 	Yes| 
+| See who has what level of access to the folder| 	Yes| 	Yes| 	Yes| 
+| Save a report or dashboard in the folder| 	| 	Yes| 	Yes| 
+| Rename a report or dashboard in the folder| 	| 	Yes| 	Yes| 
+| Delete a report or dashboard from the folder| 	| 	Yes| 	Yes| 
+| Share a folder| 	| 	| 	Yes| 
+| Change the folder’s name| 	| 	| 	Yes| 
+| Change the folder’s sharing settings| 	| 	| 	Yes| 
+| Delete a folder| 	| 	| 	Yes| 
+
+
 <br/>
 
 
