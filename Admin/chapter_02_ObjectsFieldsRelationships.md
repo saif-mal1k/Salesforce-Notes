@@ -112,6 +112,11 @@ Allows users to enter any combination of letters and numbers and store them in e
 
 <br/>
 
+### changing field types ????
+https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_types.htm&type=5 ????
+
+<br/>
+
 **💡 tip:** **when we have to use same picklist values more than once we can create ``picklist value set``.**
 
 <details>
