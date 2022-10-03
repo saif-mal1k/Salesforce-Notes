@@ -23,11 +23,32 @@ lead ------>  prospects ----------> customer
 
 <br/>
 
+## understanding Account, Contacts and their relationship ????
+
+https://trailhead.salesforce.com/content/learn/modules/accounts_contacts_lightning_experience?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential ????
 
 
+<br/>
+
+## learning leads and opportunities ????
+https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential ????
+
+<br/>
+
+## understandin product quotes and contracts ????
+https://trailhead.salesforce.com/content/learn/modules/sales_admin_products_quotes_contracts?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential ????
+
+<br/>
 
 
 **💡 tip:** _when a lead is created no related Account, Contact & Opportunity gets created. Only when a lead is Converted, only then related Account, Contact & Opportunity gets created._
+
+
+<br/>
+
+## adding team members to ``opportunity team`` & spliting opportunity revenue using ``opportunity splits``
+![image](https://user-images.githubusercontent.com/63545175/193563982-fdd2beeb-58f6-4848-bf1a-167ee647bac3.png)
+![image](https://user-images.githubusercontent.com/63545175/193563996-374f9a83-a479-4a5f-bd78-a56759fabfad.png)
 
 
 <br/>
@@ -52,6 +73,12 @@ https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-f
 ### ``lead process`` to control lead status picklist
 - open setup type in ``Lead Process``
 
+
+<br/>
+
+
+## managing campaigns ????
+https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential ????
 
 
 
