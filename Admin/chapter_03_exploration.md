@@ -59,6 +59,17 @@
 <br/>
 
 
+### chatter administration for lightning customization ????
+https://trailhead.salesforce.com/content/learn/modules/lex_implementation_chatter?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
+
+
+<br/>
+
+
+### salesforce mobile app customization ????
+https://trailhead.salesforce.com/content/learn/modules/salesforce1_mobile_app?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential 
+
+
 
 
 
