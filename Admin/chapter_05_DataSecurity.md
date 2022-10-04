@@ -279,7 +279,7 @@ _After you've created a profile, customize it to match the needs of a specific s
         - ``Private`` means records will be accessible to record owners only and soon.
       - **Sharing rules** - 
         - Sharing rules are exceptions to OWD for particular groups of users.
-        - Sharing rules give access to users so they can get to records they don’t own or can’t normally see.
+        - Sharing rules give access of records(``Based on group membership`` | ``Based on criteria``) to users so they can get to records they don’t own or can’t normally see.
         - They can’t be stricter than your organization-wide default settings.
     - **Role Hierarchies** - 
       - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
