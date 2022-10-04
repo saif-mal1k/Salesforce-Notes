@@ -1,5 +1,14 @@
 
 ### Approval Process ????
+<details>
+<summary> <b> example </b> </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/193795169-de7b529e-4a79-426d-a35f-069f5164ec5d.png)
+    
+</p>
+</details>
+    
 https://trailhead.salesforce.com/content/learn/modules/business_process_automation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
 
 https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approval-process?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
