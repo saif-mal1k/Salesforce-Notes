@@ -122,6 +122,13 @@
 </p>  
 </details>
 
+<br/>
+
+### **db freeze & deactivate**
+``"Freezing"`` only stops the user from being able to login. When you ``"deactivate,"`` it frees up that salesforce license to be given to another user.
+
+<br/>
+
 ---
   
 </p>  
