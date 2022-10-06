@@ -153,6 +153,8 @@ LIMIT 10
     
 - **The SELECT clause and the FROM clause are required.**    
 - Other Clauses are Optional.
+
+💡💡💡💡💡 <b>tip:</b> always apply null check before making use list returned through SOQL. 
     
     
 <br/>
@@ -186,7 +188,22 @@ for (variable : [soql_query]) {
 <br/>
 
 
-# Create Relationship Queries with Standard Objects:
+### Filtering with a sub-Query :
+```apex
+SELECT Name, (SELECT Name FROM Contacts) FROM Account WHERE Id IN (SELECT AccountId FROM Contact WHERE LastName = 'Forbes')
+```
+
+***This query does four things.***
+- The query finds contacts with the last name Forbes and returns the value of each contact’s AccountId field. (The WHERE clause subquery does that.)
+- Next, it finds the value of that AccountId in the Id field of an account and gets the name for that account. (The main WHERE clause does that.)
+- Then the query looks at the account’s related contacts, and gets the name of each contact. (The main query’s subquery does that.)
+- Finally, the main query returns the name of each account that has a related contact with the last name Forbes, and for each of those accounts, the names of all related contacts.
+
+
+<br/>
+
+
+# working with Standard Objects:
 ***To get records for a:***
 - **Child object**, and include fields from a related parent object, use a **child-to-parent** query.
 - **Parent object**, and include fields from a related child object, use a **parent-to-child** query.
@@ -246,20 +263,6 @@ SELECT Name, (SELECT Name FROM Contacts) FROM Account
 
 <br/>
 
-
-### Filtering with a sub-Query :
-```apex
-SELECT Name, (SELECT Name FROM Contacts) FROM Account WHERE Id IN (SELECT AccountId FROM Contact WHERE LastName = 'Forbes')
-```
-
-***This query does four things.***
-- The query finds contacts with the last name Forbes and returns the value of each contact’s AccountId field. (The WHERE clause subquery does that.)
-- Next, it finds the value of that AccountId in the Id field of an account and gets the name for that account. (The main WHERE clause does that.)
-- Then the query looks at the account’s related contacts, and gets the name of each contact. (The main query’s subquery does that.)
-- Finally, the main query returns the name of each account that has a related contact with the last name Forbes, and for each of those accounts, the names of all related contacts.
-
-
-<br/>
 
 <br/>
 
@@ -363,7 +366,11 @@ Requirement:
 <br/>
 
 
-## Important Query Examples
+<details>
+<summary> <h2> Important Query Examples </h2> </summary>
+<p>
+
+---
 
 ***``Account is Parent Object and Contact is child Object``***
 
@@ -435,6 +442,12 @@ for(Account acc: accList){
 ```
 
 
+
+
+---
+
+</p>
+</details>
 
 
 
