@@ -59,5 +59,6 @@ https://trailhead.salesforce.com/content/learn/projects/set-up-case-escalation-e
 
   - https://trailhead.salesforce.com/content/learn/projects/create-a-process-for-managing-support-cases?trail_id=learn-admin-essentials
   - https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-service-cloud-consultant-credential
+  - https://trailhead.salesforce.com/content/learn/superbadges/superbadge-service-cloud-admin-specialist
 
 
