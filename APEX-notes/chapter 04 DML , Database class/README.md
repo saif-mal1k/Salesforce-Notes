@@ -110,7 +110,13 @@ undelete lst;
 <p>
 
 ```apex
+
+/* Use merge when duplicate leads, contacts and accounts are there into one record, 
+   others are deleted and related records are reparented. */
+
 // add example 
+
+
 ``` 
 </p>
 </details>
@@ -120,6 +126,7 @@ undelete lst;
 
 - Each DML statement accepts either a single sObject or a list (or array) of sObjects.
 - List must not contain duplicate sObjects.
+- always perform DML in bulk.
 - Operating on a list of sObjects is a more efficient way for processing records.
 
 <br/>
@@ -194,11 +201,34 @@ Apex contains the built-in Database class, which provides methods that perform D
 	
 > Unlike DML statements, Database methods have an optional allOrNone parameter that allows you to specify whether the operation should partially succeed. 
 > <br> When this parameter is set to false, if errors occur on a partial set of records, the successful records will be committed and errors will be returned for the failed records. Also, no exceptions are thrown with the partial success option.
+> <br/> every method return list containing success or failure information of each record.
 
 </em> </b>	
+
+- **example**
+	- ``Database.SaveResult results[] = Database.insert(recordList, false);``
+	- ``Database.UpsertResult results [ ] = Database.upsert(recordList, false);``
+	- ``Database.DeleteResult results [ ] = Database.delete(recordList, false);``
 	
+
 <br/>
-  
+
+Note: by default **allOrNone** parameter is true, hence these all are same:
+```apex
+
+  insert contactList; 
+	// OR
+	
+  Database.insert(contactList) 
+	// OR
+	
+  Database.insert(contactList, true);
+
+```
+
+all will throw an exceptions if a failure occurs.
+
+
 <br/>
 
 <br/>
