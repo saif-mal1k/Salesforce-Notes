@@ -10,6 +10,32 @@ List<List<SObject>> searchList = [FIND 'SFDC' IN ALL FIELDS
                                       RETURNING Account(Name), Contact(FirstName,LastName)];
 ```
 
+
+<br/>
+
+### executing SOSL in Query Editor
+```
+FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,Department)
+```
+
+> ***Note 💡:*** _The search query in the Query Editor and the API must be enclosed within curly brackets ({Wingo}). In contrast, in Apex the search query is enclosed within single quotes ('Wingo')._
+
+<details>
+<summary> <b> Output of SOSL query </b> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/194244331-54396259-8c6d-4022-888c-dc942ded4084.png)
+
+---
+
+</p>
+</details>
+
+
+<br/>
+
 <br/>
 
 ## Differences and Similarities Between SOQL and SOSL
@@ -22,16 +48,8 @@ List<List<SObject>> searchList = [FIND 'SFDC' IN ALL FIELDS
 
 <br/>
 
-
-## executing SOSL in Query Editor
-```
-FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,Department)
-```
-
-> ***Note 💡:*** _The search query in the Query Editor and the API must be enclosed within curly brackets ({Wingo}). In contrast, in Apex the search query is enclosed within single quotes ('Wingo')._
-
-
 <br/>
+
 
 ## SOSL Syntax
 **SOSL allows you to specify the following search criteria:**
@@ -48,13 +66,15 @@ FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,D
 ```
 
 - SearchQuery is the text to search for (a single word or a phrase). 
+- single word should be enclosed in single quotes, phrase should be enclosed in double quotes.
 - **Text searches are case-insensitive.** For example, searching for ``Customer, customer, or CUSTOMER`` all return the same results.
-
-
-
-
-
-??????????????? completed from below reference
+- SearchGroup is optional, Default is ALL FIELDS.
+  - _choose from_ 
+    - ALL FIELDS
+    - NAME FIELDS
+    - EMAIL FIELDS
+    - PHONE FIELDS
+    - SIDEBAR FIELDS
 
 
 <br/>
