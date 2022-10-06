@@ -92,7 +92,16 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 </p>
 </details>
 
+- ***apex code can only be written in developer org or sandbox org, not in production org***
+
+
+
 <br/>
+
+
+
+
+
 
 ## Life cycle
 - APEX is saved, compiled and executed on the servers of force.com 
