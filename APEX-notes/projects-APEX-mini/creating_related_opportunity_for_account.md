@@ -11,7 +11,7 @@ public class MyFirstDemo {
                 opp.Name = acc.Name;
                 opp.closeDate = System.today();
                 opp. StageName 'Prospecting'; 
-                opp.AccountId = acc.Id;
+                opp.AccountId = acc.Id;   //important to make it related
                 oppToBeCreated.add(opp);
             }
         }
