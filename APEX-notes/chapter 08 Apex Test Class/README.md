@@ -17,42 +17,37 @@
 ## importance of Apex Units tests
 - Ensuring that your Apex classes and triggers work as expected.
 - Having a suite of regression tests that can be rerun every time classes and triggers are updated to ensure that future updates you make to your app don’t break existing functionality.
-- Meeting the code coverage requirements for deploying Apex to production or distributing Apex to customers via packages.
+- 💡 all tests must pass with at least 75% code coverage, for deploying Apex to production or distributing Apex to customers via packages on AppExchange. also, each trigger must have some coverage. 
 
 
 <br/>
 
 
-> ***💡 tip:*** Salesforce runs all Apex tests on your behalf through a process called Apex Hammer. The Hammer process runs in the current version and next release and compares the test results. This process ensures that the behavior in your custom code hasn’t been altered as a result of service upgrades. The Hammer process picks orgs selectively and doesn’t run in all orgs.
+> ***💡 tip:*** Salesforce runs all Apex tests on your behalf through a process called Apex Hammer. The Hammer process compares the test results in current version and new release. This process ensures that the behavior in your custom code hasn’t been altered as a result of service upgrades. The Hammer process picks orgs selectively and doesn’t run in all orgs.
 
 
 <br/>
 
 
-> ***💡 tip:*** Before you can deploy your code or package it for the Lightning Platform AppExchange, at least 75% of Apex code must be covered by tests, and all those tests must pass. In addition, each trigger must have some coverage. 
-
-
 <br/>
 
 
-### Test method Syntax
-```apex
-  @isTest static void testName() {
-      // code_block
-  }
-```
-
-***Test methods are written in Test classes as:-***
+## Example of a test class
 ```apex
   @isTest
   private class MyTestClass {
+  
+      //test method syntax
       @isTest static void testName() {
           // code_block
+          System.assertEquals(expectedValue, actualValue, 'msg if assert Fails');
       }
+      
   }
 ```
 
-**Note:** Test classes can be either private or public. If you’re using a test class for unit testing only, declare it as private. Public test classes are typically used for test data factory classes,
+> - The verifications are done by calling the ``System.assertEquals()`` method, which takes two parameters: the first is the ``expected value``, and the second is the ``actual value``. third parameter is ``optional string`` i.e logged if the assertion fails.
+> - Test classes can be either ``private`` or ``public``. If you’re using a test class for unit testing only, declare it as private. Public test classes are typically used for test data factory classes, 
 
 
 
@@ -62,7 +57,7 @@
 <br/>
 
 
-## Setting up test data
+# Setting up test data
 <em> "Test data is set up inside the test method, which can be time-consuming as you add more test methods. If you have many test methods, put test-data creation in a test utility class and call the utility class from multiple test methods" </em>
 
 ### Test.startTest() and Test.stopTest()
@@ -76,12 +71,16 @@
 <br/>
 
 
-<br/>
-
+## using @testSetup
+- You can have only one test setup method per test class.
+- If an error occurs(_i.e caused by DML operation or an assertion failure_) in test setup method, the entire test class fails, and no further tests in the class are executed.
+- test setup methods aren’t supported in classes that are using @isTest(SeeAllData=true) annotation.
 
 <details>
-<summary>EXAMPLE</summary>
+<summary>example</summary>
 <p>
+
+---
 
 #### Example of @testSetup
   
@@ -132,25 +131,73 @@ private class CommonTestSetup {
 
 }
 ```
-  
+
+---
+ 
 </p>
 </details>
 
 
-<br/>
-
 
 <br/>
 
 
-## @testSetup
-https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_testsetup_using.htm
+## using TestDataFactory
 
+<details>
+<summary>example</summary>
+<p>
 
+---
 
+### test Data factory
+```apex
 
+@isTest
+public class TestDataFactory {
+    public static void createTestRecords(Integer numAccts, Integer numContactsPerAcct) {
+        List<Account> accts = new List<Account>();
+        
+        for(Integer i=0;i<numAccts;i++) {
+            Account a = new Account(Name='TestAccount' + i);
+            accts.add(a);
+        }
+        insert accts;
+        
+        List<Contact> cons = new List<Contact>();
+        for (Integer j=0;j<numAccts;j++) {
+            Account acct = accts[j];            
+            // For each account just inserted, add contacts
+            for (Integer k=numContactsPerAcct*j;k<numContactsPerAcct*(j+1);k++) {
+                cons.add(new Contact(firstname='Test'+k,
+                                     lastname='Test'+k,
+                                     AccountId=acct.Id));
+            }
+        }
+        // Insert all contacts for all accounts
+        insert cons;
+    }
+}
 
+```
 
+### using factory from test class
+```apex
+
+@isTest
+private class MyTestClass {
+    @isTest static void testmethod test1() {
+        TestDataFactory.createTestRecords(5,3);
+        // Run some tests
+    }
+}
+
+```
+
+---
+ 
+</p>
+</details>
 
 
  
@@ -174,8 +221,10 @@ https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_te
 
 
 ---
+***references***
 
-***1. apex_testing***  https://trailhead.salesforce.com/en/content/learn/modules/apex_testing
+- ***1. apex_testing***  https://trailhead.salesforce.com/en/content/learn/modules/apex_testing
+- ***2. test setup*** https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_testsetup_using.htm
 
 
 
