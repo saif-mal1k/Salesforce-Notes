@@ -32,6 +32,8 @@
 
 <br/>
 
+<br/>
+
 
 ## Trigger Syntax
 ```apex
@@ -78,6 +80,8 @@ trigger ContextExampleTrigger on Account (before insert, after insert, after del
 </p>
 </details>
 
+
+<br/>
 
 <br/>
 
@@ -176,6 +180,8 @@ trigger HelloWorldTrigger on Account (before insert) {
 
 <br/>
 
+<br/>
+
 
 ## Handler class for Trigger
 <details>
@@ -247,6 +253,7 @@ public class EmployeeTriggerHandler {
 
 <br/>
 
+<br/>
 
 ## Using Trigger Exceptions
 - You sometimes need to add restrictions on certain database operations, such as preventing records from being saved when certain conditions are met. 
@@ -280,6 +287,8 @@ trigger AccountDeletion on Account (before delete) {
 	- If a DML statement in Apex spawned the trigger, any error rolls back the entire operation. However, the runtime engine still processes every record in the operation to compile a comprehensive list of errors.
 	- If a bulk DML call in the Lightning Platform API spawned the trigger, the runtime engine sets the bad records aside. The runtime engine then attempts a partial save of the records that did not generate errors.
 
+
+<br/>
 
 <br/>
 
@@ -321,6 +330,70 @@ trigger CalloutTrigger on Account (before insert, before update) {
 </details>
 
 
+<br/>
+
+<br/>
+
+
+## prevention of Recursion in Triggers
+- ***when there is DML operation in trigger handler on same object whose record triggered trigger there are chances of recursion***
+- the DML operation in trigger handler again triggers the execution of trigger handler class.\
+
+![image](https://user-images.githubusercontent.com/63545175/194317865-6ac0172f-7e14-4b8d-9e2f-be4a025f48cb.png)
+
+
+<details>
+<summary> <b> code having recursion </b> </summary>
+<p>
+
+```apex
+public class AccountTriggerHandler {
+	public static void updateAccount (List<Account> accList, Map<Id, Account> oldMap) {
+		List<Account> accsToBeUpdated = new List<Account>();
+		for (Account acc : accList) {
+			Account a = new Account(); 
+			a.Id acc.Id; 
+			a.Description = 'Test'; 
+			accsToBeUpdated.add(a);
+		}
+		if(!accsToBeUpdated.isEmpty()) { 
+			update accsToBeUpdated;
+		}
+	}
+}
+```
+
+</p>
+</details>
+
+#### prevention
+```apex
+
+trigger AccountTrigger on Account (after update) {
+	if (Trigger.isAfter){
+		if (Trigger.isUpdate) {
+			if (!preventRecursion.firstCall){
+				preventRecursion.firstCall = true;
+				AccountTriggerHandler.updateAccount(Trigger.new, Trigger.oldMap);
+			}
+		}
+	}
+}
+
+```
+
+
+<br/>
+
+
+<Br/>
+
+
+<br/>
+
+
+## importat triggers and order of execution ????
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_order_of_execution.htm ????
 
 
 
@@ -360,8 +433,9 @@ trigger CalloutTrigger on Account (before insert, before update) {
 
 ---
 ***references:***
-1. [Apex Triggers](https://trailhead.salesforce.com/content/learn/modules/apex_triggers)
-
+- [Apex Triggers](https://trailhead.salesforce.com/content/learn/modules/apex_triggers)
+- https://www.udemy.com/course/salesforce-platform-developer-masterclass-apex-lightning-visualforce/learn/lecture/30167580#overview
+- https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_order_of_execution.htm
 
 
 ---
