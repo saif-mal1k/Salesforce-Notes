@@ -1,6 +1,7 @@
 
 # what is APEX ?
 - ***Object Oriented***
+- ***Compiled programming language***
 - ***Strongly typed***
 
 <details>
@@ -26,7 +27,20 @@ _To avoid confusion with case-insensitive ``SOQL`` and ``SOSL`` queries, Apex is
 </p>
 </details>
 
-- ***Compiled programming language***
+<details>
+  <summary><b><em> Integrated with Database </em></b></summary>
+<p>
+
+---
+
+provides direct access to records & fields
+
+---
+
+</p>
+</details>
+
+
 <details>
   <summary><b><em> multi-tenet </em></b></summary>
 <p>
@@ -61,6 +75,20 @@ in single tenet architecture a single compute-node serves a single tenet, these 
  
 ---
   
+</p>
+</details>
+
+<details>
+  <summary><b><em> Called through web service request, triggers</em></b></summary>
+<p>
+
+---
+
+- web service request
+- triggers
+
+---
+
 </p>
 </details>
 
