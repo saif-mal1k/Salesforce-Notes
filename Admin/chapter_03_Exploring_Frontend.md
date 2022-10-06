@@ -56,6 +56,17 @@
 </table>
 
 
+
+<br/>
+
+
+## groups on frontend aka ("Collaboration space")
+
+![image](https://user-images.githubusercontent.com/63545175/191426260-1d49d37f-a54a-474d-8c5f-26e59d400e30.png)
+
+> Note: _these group are completely different from ``Public group`` on setup._ 
+
+
 <br/>
 
 
