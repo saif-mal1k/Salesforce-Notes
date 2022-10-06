@@ -2,6 +2,7 @@
 - Triggers can be defined for standard objects, custom objects, and some standard child objects. 
 - Triggers are active by default when created. 
 - Salesforce automatically fires active triggers when the specified database events occur.
+- Triggers execute on batches of 200 records at a time. So if 400 records cause a trigger to fire, the trigger fires twice, once for each 200 records. 
 
 - ***The events you can specify are:***
   - ``before insert``
@@ -276,8 +277,8 @@ trigger AccountDeletion on Account (before delete) {
 </details>
 
 - Calling ``addError()`` in a trigger causes the entire set of operations to roll back, except when bulk DML is called with partial success.
-- If a DML statement in Apex spawned the trigger, any error rolls back the entire operation. However, the runtime engine still processes every record in the operation to compile a comprehensive list of errors.
-- If a bulk DML call in the Lightning Platform API spawned the trigger, the runtime engine sets the bad records aside. The runtime engine then attempts a partial save of the records that did not generate errors.
+	- If a DML statement in Apex spawned the trigger, any error rolls back the entire operation. However, the runtime engine still processes every record in the operation to compile a comprehensive list of errors.
+	- If a bulk DML call in the Lightning Platform API spawned the trigger, the runtime engine sets the bad records aside. The runtime engine then attempts a partial save of the records that did not generate errors.
 
 
 <br/>
