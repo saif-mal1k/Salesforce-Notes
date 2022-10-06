@@ -4,7 +4,6 @@
     - email template
     - classic letterhead
     - classic email template
-  - groups aka ("collobaration space")
   - Public groups
 
 
@@ -16,16 +15,6 @@
 
 
 
-
-<br/>
-
-
-## groups on frontend aka ("Collaboration space")
-
-![image](https://user-images.githubusercontent.com/63545175/191426260-1d49d37f-a54a-474d-8c5f-26e59d400e30.png)
-
-
-
 <br/>
 
 
@@ -34,6 +23,7 @@
 
 ![image](https://user-images.githubusercontent.com/63545175/191175088-314c10ba-3c8f-49ba-b927-243b0f1067d4.png)
 
+> **note**: _``public group`` are used in various settings for example Sharing settings._
 
 <br/>
 
