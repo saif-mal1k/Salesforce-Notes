@@ -201,7 +201,98 @@ private class MyTestClass {
 </details>
 
 
+<br/>
  
+ 
+<br/>
+ 
+ 
+# testing callouts 
+
+<details>
+<summary> <b> &nbsp; callout code  </b> </summary>
+<p>
+
+---
+
+```apex
+public class SMSUtils {
+    // Call async from triggers, etc, where callouts are not permitted.
+    @future(callout=true)
+    public static void sendSMSAsync(String fromNbr, String toNbr, String m) {
+        String results = sendSMS(fromNbr, toNbr, m);
+        System.debug(results);
+    }
+    // Call from controllers, etc, for immediate processing
+    public static String sendSMS(String fromNbr, String toNbr, String m) {
+        // Calling 'send' will result in a callout
+        String results = SmsMessage.send(fromNbr, toNbr, m);
+        insert new SMS_Log__c(to__c=toNbr, from__c=fromNbr, msg__c=results);
+        return results;
+    }
+}
+```
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <b> &nbsp; mocking callout for test  </b> </summary>
+<p>
+
+---
+
+```apex
+@isTest
+public class SMSCalloutMock implements HttpCalloutMock {
+    public HttpResponse respond(HttpRequest req) {
+        // Create a fake response
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('{"status":"success"}');
+        res.setStatusCode(200);
+        return res;
+    }
+}
+```
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <b> &nbsp; test class  </b> </summary>
+<p>
+
+---
+
+```apex
+@IsTest
+private class Test_SMSUtils {
+  @IsTest
+  private static void testSendSms() {
+    Test.setMock(HttpCalloutMock.class, new SMSCalloutMock());
+    Test.startTest();
+      SMSUtils.sendSMSAsync('111', '222', 'Greetings!');
+    Test.stopTest();
+    // runs callout and check results
+    List<SMS_Log__c> logs = [select msg__c from SMS_Log__c];
+    System.assertEquals(1, logs.size());
+    System.assertEquals('success', logs[0].msg__c);
+  }
+}
+```
+
+---
+
+</p>
+</details>
+
 
 <br/>
 
