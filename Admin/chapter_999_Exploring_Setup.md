@@ -13,6 +13,8 @@
 
 ## Email
 
+### types of email templates
+
 
 
 <br/>
