@@ -148,7 +148,7 @@ undelete lst;
 
 	Number of Publish Immediate DML: 150
 
-	Number of DML rows: 210000
+	Number of DML rows: 10000
 
 	Maximum CPU time: 10000
 
