@@ -99,8 +99,88 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 <br/>
 
 
+<br/>
+
+<details>
+<summary> <b> <h3> What APEX can do ? </h3> </b> </summary>
+<p>
+
+---
+
+- APEX can be used to stop a functionality to an action, or to add more functionality. but it can't modify standard salesforce functionality.
 
 
+---
+
+</p>
+</details>
+
+
+
+
+<details>
+<summary> <b> <h3> What APEX can not do ? </h3> </b> </summary>
+<p>
+
+---
+
+- APEX executes, exist only on the servers of force.com and not on client or developer system.
+- APEX can't modify standard salesforce functionality. 
+- there is no standard input and output, generally, Record and field values are taken as input from Objects and Output is the result that is reflected from from operations that are performed using APEX.
+- apex does not create temp files so no need to worry about file handling.
+- apex does not allow multi-threading.
+- as everything exist on servers of force.com , hence no need of managing environment or upgrading developer tools.
+- Apex doesn't allow interfaces, doesn't allow access modifiers. 
+- Apex doesn't allow default parameters.
+- no concept of pointers and references.
+
+---
+
+</p>
+</details>
+
+
+
+
+<details>
+<summary> <b> <h3> When to Use APEX ? </h3> </b> </summary>
+<p>
+
+---
+
+***tip 💡 :*** salesforce has a solution for almost any functionality you can think. so, Only Use APEX if the functionality can not be implemented using declarative approach("i.e using point and click tools").
+
+---
+
+</p>
+</details>
+
+
+
+
+<details>
+<summary> <b> <h3> Methods of Invoking Apex </h3> </b> </summary>
+<p>
+
+---
+
+| Method| 	Description| 
+|-------|--------------|
+| Database Trigger| 	Invoked for a specific event on a custom or standard object.| 
+| Anonymous Apex| 	Code snippets executed on the fly in Dev Console & other tools.| 
+|Asynchronous Apex|	Occurs when executing a future or queueable Apex, running a batch job, or scheduling Apex to run at a specified interval.| 
+| Web Services| 	Code that is exposed via SOAP or REST web services.| 
+| Email Services| 	Code that is set up to process inbound email.| 
+| Visualforce or Lightning Pages| 	Visualforce controllers and Lightning components can execute Apex code automatically or when a user initiates an action, such as clicking a button. Lightning components can also be executed by Lightning processes and flows.| 
+
+
+---
+
+</p>
+</details>
+
+
+<br/>
 
 
 ## Life cycle
@@ -114,28 +194,5 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 </table>
 
 
-<br/>
-
-## What APEX can do ?
-- APEX can be used to stop a functionality to an action, or to add more functionality. but it can't modify standard salesforce functionality.
-
-
-<br/>
-
-## What APEX can not do ?
-- APEX executes, exist only on the servers of force.com and not on client or developer system.
-- APEX can't modify standard salesforce functionality. 
-- there is no standard input and output, generally, Record and field values are taken as input from Objects and Output is the result that is reflected from from operations that are performed using APEX.
-- apex does not create temp files so no need to worry about file handling.
-- apex does not allow multi-threading.
-- as everything exist on servers of force.com , hence no need of managing environment or upgrading developer tools.
-- Apex doesn't allow interfaces, doesn't allow access modifiers. 
-- Apex doesn't allow default parameters.
-- no concept of pointers and references.
-
-<br/>
-
-## When to Use APEX ?
-***tip 💡 :*** salesforce has a solution for almost any functionality you can think. so, Only Use APEX if the functionality can not be implemented using declarative approach("i.e using point and click tools").
 
 
