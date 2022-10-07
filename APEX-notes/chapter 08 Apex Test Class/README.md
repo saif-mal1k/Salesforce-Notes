@@ -24,6 +24,7 @@
 
 
 > ***💡 tip:*** Salesforce runs all Apex tests on your behalf through a process called Apex Hammer. The Hammer process compares the test results in current version and new release. This process ensures that the behavior in your custom code hasn’t been altered as a result of service upgrades. The Hammer process picks orgs selectively and doesn’t run in all orgs.
+> <br/> ***💡 tip:*** While testing triggers, instead of calling methods from trigger handler just perform DML operation.
 
 
 <br/>
