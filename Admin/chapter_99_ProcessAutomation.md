@@ -174,8 +174,12 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 <br/>
     
     
-## which flow to use when ....
-
+<details> 
+<summary> <h2> which flow to use when .... </h2> </summary>
+<p>
+    
+---
+    
 <table>
 <tr> <td> <b> FLOW STARTS OR TRIGGERS </b> </td> <td> <b> FLOW TYPE TO USE </b> </td> <td> <b> FOR EXAMPLE, YOU WANT SOMETHING TO HAPPEN… </b> </td> </tr>
 <tr> <td> When a record is created </td>	<td> Record-Triggered </td> <td> When a new case is created. </td> </tr>
@@ -191,6 +195,12 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 <tr> <td> When called by Apex code </td>	<td> Autolaunched </td> <td> When an Apex class is triggered by a change to an opportunity’s stage, which triggers an autolaunched flow. </td> </tr>
 <tr> <td> When a platform event message is received </td>	<td> Platform Event–Triggered </td> <td> When an integrated printer is out of ink, it publishes a platform event message. </td> </tr>
 </table>
+    
+---
+
+</p>    
+    
+</details>  
     
 <br/>
     
