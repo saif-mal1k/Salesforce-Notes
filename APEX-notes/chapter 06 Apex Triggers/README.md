@@ -392,8 +392,36 @@ trigger AccountTrigger on Account (after update) {
 <br/>
 
 
-## importat triggers and order of execution ????
-https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_order_of_execution.htm ????
+## important triggers and order of execution 
+
+- // **initial steps**
+	- system validation
+	- custom validation
+
+	- Executes record-triggered flows that are configured to run before the record is saved.
+	- Executes **``all before triggers.``**
+	
+	- system validation
+	- duplicate rules (if duplicate block further action)
+
+- // **Saves the record to the database, but doesn't commit yet.**
+	- Executes **``all after triggers.``**
+	- Executes assignment rules.
+	- Executes auto-response rules.
+
+	- workflow rules
+	- Escalation rules
+	- salesforce flows
+
+	- Executes record-triggered flows that are configured to run after the record is saved.
+	- Executes entitlement rules.
+	- Executes Criteria Based Sharing evaluation.
+
+- // **Commits all DML operations to the database.**
+	- Enqueued asynchronous Apex jobs, including queueable jobs and future methods
+	- Asynchronous paths in record-triggered flows
+
+
 
 
 
