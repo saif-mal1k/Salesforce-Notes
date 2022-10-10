@@ -185,9 +185,7 @@ To write a Batch Apex class, your class must implement the ``Database.Batchable`
 - Used to collect the records or objects to be passed to the interface method execute for processing. 
 - This method is called once at the beginning of a Batch Apex job and returns either a Database.QueryLocator object or an Iterable that contains the records or objects passed to the job.
 
-- Most of the time a QueryLocator does the trick with a simple SOQL query to generate the scope of objects in the batch job. But if you need to do something crazy like loop through the results of an API call or pre-process records before being passed to the execute method, you might want to check out the Custom Iterators link in the Resources section.
-
-- With the QueryLocator object, the governor limit for the total number of records retrieved by SOQL queries is bypassed and you can query up to 50 million records. However, with an Iterable, the governor limit for the total number of records retrieved by SOQL queries is still enforced.
+- With the ``QueryLocator object``, the governor limit for the total number of records retrieved by SOQL queries is bypassed and you can ``query up to 50 million records.`` However, with an Iterable, the governor limit for the total number of records retrieved by SOQL queries is still enforced.
 
 
 **2. execute**
@@ -203,7 +201,9 @@ To write a Batch Apex class, your class must implement the ``Database.Batchable`
 - Used to execute post-processing operations (for example, sending an email) and is called once after all batches are processed.
 
 
-***syntax:***
+<br/>
+
+### syntax of batch apex
 ```apex
 public class MyBatchClass implements Database.Batchable<sObject> {
     public (Database.QueryLocator | Iterable<sObject>) start(Database.BatchableContext bc) {
@@ -221,19 +221,143 @@ public class MyBatchClass implements Database.Batchable<sObject> {
 ### Invoking a Batch Apex
 ```apex
   MyBatchClass myBatchObject = new MyBatchClass();
-  Id batchId = Database.executeBatch(myBatchObject);
+  
+  Id batchId = Database.executeBatch(myBatchObject, 100);  
+  //second parameter is optional and used to change the default batch size
 ```
 
+### Batch Apex Example
+```apex
+
+public class UpdateContactAddresses implements
+    Database.Batchable<sObject>, Database.Stateful {
+    // instance member to retain state across transactions
+    public Integer recordsProcessed = 0;
+    public Database.QueryLocator start(Database.BatchableContext bc) {
+        return Database.getQueryLocator(
+            'SELECT ID, BillingStreet, BillingCity, BillingState, ' +
+            'BillingPostalCode, (SELECT ID, MailingStreet, MailingCity, ' +
+            'MailingState, MailingPostalCode FROM Contacts) FROM Account ' +
+            'Where BillingCountry = \'USA\''
+        );
+    }
+    public void execute(Database.BatchableContext bc, List<Account> scope){
+        // process each batch of records
+        List<Contact> contacts = new List<Contact>();
+        for (Account account : scope) {
+            for (Contact contact : account.contacts) {
+                contact.MailingStreet = account.BillingStreet;
+                contact.MailingCity = account.BillingCity;
+                contact.MailingState = account.BillingState;
+                contact.MailingPostalCode = account.BillingPostalCode;
+                // add contact to list to be updated
+                contacts.add(contact);
+                // increment the instance member counter
+                recordsProcessed = recordsProcessed + 1;
+            }
+        }
+        update contacts;
+    }
+    public void finish(Database.BatchableContext bc){
+        System.debug(recordsProcessed + ' records processed. Shazam!');
+        // Each batch Apex invocation creates an AsyncApexJob record that can be used to track job’s progress.
+        AsyncApexJob job = [SELECT Id, Status, NumberOfErrors,
+            JobItemsProcessed,
+            TotalJobItems, CreatedBy.Email
+            FROM AsyncApexJob
+            WHERE Id = :bc.getJobId()];
+        // call some utility to send email
+        EmailUtils.sendMessage(job, recordsProcessed);
+    }
+}
+
+```
+
+<details>
+<summary> <b>  testing Batch Apex </b> </summary>
+<p>
+
+---
+
+```apex
+@isTest
+private class UpdateContactAddressesTest {
+    @testSetup
+    static void setup() {
+        List<Account> accounts = new List<Account>();
+        List<Contact> contacts = new List<Contact>();
+        // insert 10 accounts
+        for (Integer i=0;i<10;i++) {
+            accounts.add(new Account(name='Account '+i,
+                billingcity='New York', billingcountry='USA'));
+        }
+        insert accounts;
+        // find the account just inserted. add contact for each
+        for (Account account : [select id from account]) {
+            contacts.add(new Contact(firstname='first',
+                lastname='last', accountId=account.id));
+        }
+        insert contacts;
+    }
+    @isTest static void test() {
+        Test.startTest();
+        UpdateContactAddresses uca = new UpdateContactAddresses();
+        Id batchId = Database.executeBatch(uca);
+        Test.stopTest();
+        // after the testing stops, assert records were updated properly
+        System.assertEquals(10, [select count() from contact where MailingCity = 'New York']);
+    }
+}
+```
+
+---
+
+</p>
+</details>
 
 <br/>
 
 ### Best Practices
-As with future methods, there are a few things you want to keep in mind when using Batch Apex. To ensure fast execution of batch jobs, minimize Web service callout times and tune queries used in your batch Apex code. The longer the batch job executes, the more likely other queued jobs are delayed when many jobs are in the queue. Best practices include:
-- Only use Batch Apex if you have more than one batch of records. If you don't have enough records to run more than one batch, you are probably better off using Queueable Apex.
-- Tune any SOQL query to gather the records to execute as quickly as possible.
-- Minimize the number of asynchronous requests created to minimize the chance of delays.
-- Use extreme care if you are planning to invoke a batch job from a trigger. You must be able to guarantee that the trigger won’t add more batch jobs than the limit.
 
+<details> 
+<summary> <b> &nbsp; &nbsp; ensure fast execution of batch jobs. </b> </summary>
+<p>
+
+---
+
+To ensure fast execution of batch jobs, ``minimize Web service callout times`` and ``tune queries`` used in your batch Apex code. The longer the batch job executes, the more likely other queued jobs are delayed when many jobs are in the queue.
+
+---
+
+</p>
+</details>
+
+- **Minimize the number of asynchronous requests created** to minimize the chance of delays.
+- **Only use ``Batch Apex if you have more than one batch of records``. else use ``Queueable Apex``.**
+<details> 
+<summary> <b> &nbsp; &nbsp; Use extreme care if you are planning to invoke a batch job from a trigger.</b> </summary>
+<p>
+
+---
+
+You must be able to guarantee that the trigger won’t add more batch jobs than the limit.
+
+---
+
+</p>
+</details>
+
+
+<br/>
+
+
+<br/>
+
+<div align="center">
+
+``----``
+
+</div>
 
 <br/>
 
