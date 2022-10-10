@@ -92,7 +92,7 @@ in single tenet architecture a single compute-node serves a single tenet, these 
 </p>
 </details>
 
-- ***apex code can only be written in developer org or sandbox org, not in production org***
+**💡 note: *apex code can only be written in developer org or sandbox org, not in production org***
 
 
 
