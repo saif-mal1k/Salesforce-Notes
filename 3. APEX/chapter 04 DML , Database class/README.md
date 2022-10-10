@@ -113,6 +113,9 @@ undelete lst;
 
 /* Use merge when duplicate leads, contacts and accounts are there into one record, 
    others are deleted and related records are reparented. */
+   
+/* it can merge up to three records of the same object type into one of the records.
+   It will then delete the other records and reparent any related records. */   
 
 // add example 
 
