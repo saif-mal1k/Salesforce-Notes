@@ -104,6 +104,87 @@ FIND {recycled materials} RETURNING Material__c, ContentVersion, FeedItem
 
 ```
 
+<br/>
+
+## optimizing result using RETURNING FieldSpec
+
+<table>
+<thead>
+     <tr>
+      <th>Step</th>
+      <th>Goal</th>
+      <th>Example</th>
+     </tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td><b>Specify the object</b> to return.</td>
+<td>
+       
+```apex
+FIND {Cloud Kicks} RETURNING Account
+```
+
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><b>Specify the field</b> to return.</td>
+<td>
+       
+```apex
+FIND {Cloud Kicks} RETURNING Account(Name, Industry)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><b>Order the results</b> by field in ascending order, which is the default.</td>
+<td>
+       
+```apex
+FIND {Cloud Kicks} RETURNING Account (Name, Industry ORDER BY Name)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Set the <b>max</b> number of <b>records returned</b></td>
+<td>
+       
+```apex
+FIND {Cloud Kicks} RETURNING Account (Name, Industry ORDER BY Name LIMIT 10)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Set the starting </b>row offset<b> into the results.</td>
+<td>
+
+```apex
+FIND {Cloud Kicks} RETURNING Account (Name, Industry ORDER BY Name LIMIT 10 OFFSET 25)
+```
+
+</td>
+</tr>
+</tbody>
+</table>
+   
+   
+   
+   
+   
+   
 
 <br/>
 
@@ -123,6 +204,7 @@ FIND {recycled materials} RETURNING Material__c, ContentVersion, FeedItem
 
 1. [apex database SOSL](https://trailhead.salesforce.com/en/content/learn/modules/apex_database/apex_database_sosl)
 2. [SOQL & SOSL](https://developer.salesforce.com/docs/atlas.en-us.224.0.soql_sosl.meta/soql_sosl/)
+3. https://trailhead.salesforce.com/content/learn/modules/search_solution_basics?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 
 
 ---
