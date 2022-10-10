@@ -77,6 +77,34 @@ FIND {Wingo} IN ALL FIELDS RETURNING Account(Name), Contact(FirstName,LastName,D
     - SIDEBAR FIELDS
 
 
+### searching with in single object
+```apex
+
+  FIND {term} RETURNING ObjectTypeName
+
+```
+
+```apex
+// example
+FIND {march 2016 email} RETURNING Campaign
+
+```
+
+
+### searching with in multiple objects
+```apex
+
+  FIND {term} RETURNING ObjectTypeName1, ObjectTypeName2, ObjectTypeNameYouGetTheIdea
+
+```
+
+```apex
+// example
+FIND {recycled materials} RETURNING Material__c, ContentVersion, FeedItem  
+
+```
+
+
 <br/>
 
 <br/>
