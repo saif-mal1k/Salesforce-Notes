@@ -273,6 +273,13 @@ public class UpdateContactAddresses implements
 
 ```
 
+**Invoking through Debug console**
+```apex
+UpdateContactAddresses ucaProcess = new UpdateContactAddresses();
+Id batchId = Database.executeBatch(ucaProcess);
+```
+
+
 <details>
 <summary> <b>  testing Batch Apex </b> </summary>
 <p>
@@ -365,16 +372,24 @@ You must be able to guarantee that the trigger won’t add more batch jobs than 
 <br/>
 
 
-## Queable Apex:
-
-***Queueable Apex is a great new tool but there are a few things to watch out for:***
-
+## Queable Apex: ????
 - The execution of a queued job counts once against the shared limit for asynchronous Apex method executions.
-- You can add up to 50 jobs to the queue with System.enqueueJob in a single transaction.
+- You can add maximum 50 jobs to the queue with System.enqueueJob in a single transaction.
 - When chaining jobs, you can add only one job from an executing job with System.enqueueJob, which means that only one child job can exist for each parent queueable job. Starting multiple child jobs from the same queueable job is a no-no.
 - No limit is enforced on the depth of chained jobs, which means that you can chain one job to another job and repeat this process with each new child job to link it to a new child job. However, for Developer Edition and Trial orgs, the maximum stack depth for chained jobs is 5, which means that you can chain jobs four times and the maximum number of jobs in the chain is 5, including the initial parent queueable job.
 
 
+### syntax of Queable Apex
+```apex
+   
+public class SomeClass implements Queueable {
+    public void execute(QueueableContext context) {
+        // awesome code here
+    }
+}    
+    
+```
+    
 
 
 
@@ -384,7 +399,7 @@ You must be able to guarantee that the trigger won’t add more batch jobs than 
 <br/>
 
 
-## Scheduled Apex:
+## Scheduled Apex: ????
 ***Scheduled Apex has a number of items you need to be aware of, but in general:***
 - You can only have 100 scheduled Apex jobs at one time and there are maximum number of scheduled Apex executions per a 24-hour period. See Execution Governors and Limits in the Resources section for details.
 - Use extreme care if you’re planning to schedule a class from a trigger. You must be able to guarantee that the trigger won’t add more scheduled jobs than the limit.
@@ -394,7 +409,14 @@ You must be able to guarantee that the trigger won’t add more batch jobs than 
 
 
 
-
+<br/>
+    
+<br/>
+    
+    
+## Monitor Apex Jobs
+1. goto setup
+2. type ``Apex Jobs``
 
 
 
@@ -431,7 +453,7 @@ You must be able to guarantee that the trigger won’t add more batch jobs than 
 
 1. Asynchronous apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/
 2. custom iterators : https://developer.salesforce.com/docs/atlas.en-us.224.0.apexcode.meta/apexcode/apex_classes_iterable.htm
-3. Queuable]Apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_queueable
+3. Queuable Apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_queueable
 4. Schedulable Apex : https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_scheduled
 
 
