@@ -62,7 +62,7 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 
 
 <details>
-<summary>  <h3> &nbsp; workflow rules </h3> </summary>
+<summary>  <h3> &nbsp; Workflow rules </h3> </summary>
 <p>
 
 ![image](https://user-images.githubusercontent.com/63545175/190586936-33563d21-4953-4655-bcb4-5e5ec1c6c445.png)
@@ -76,7 +76,7 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 
 
 <details>
-<summary>  <h3> &nbsp; process builder </h3> </summary>
+<summary>  <h3> &nbsp; Process Builder </h3> </summary>
 <p>
 
 ![image](https://user-images.githubusercontent.com/63545175/190596623-69aab532-3dd6-4bf2-890a-c47d595c6e30.png)
@@ -90,15 +90,13 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 
 
 <details>
-<summary>  <h3> &nbsp; flow builder </h3> </summary>
+<summary>  <h3> &nbsp; Flow Builder </h3> </summary>
 <p>
 
 ---    
     
 ![image](https://user-images.githubusercontent.com/63545175/190598510-8df66212-9c86-475d-9f40-0db9bc96b860.png)
-    
-<br/>
-    
+        
 ## types of flows
     
 <table class="featureTable sort_table">
@@ -202,9 +200,14 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
     
 </details>  
     
-<br/>
     
-## things flow can do 
+    
+<details> 
+<summary> <h2> things flow can do .... </h2> </summary>
+<p>
+    
+---
+ 
 - create, update, delete records
 - send an email
 - Collect input from external users with an online form	
@@ -215,9 +218,69 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
 - Run another flow in the context of the current flow	
 - Access external systems	
 - Call a custom invocable action	
-- Send outbound messages	
+- Send outbound messages
+
+---
+
+</p>    
     
-<br/>
+</details>  
+    
+
+<details> 
+<summary> <h2> notes on Record Triggered Flows </h2> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/194802509-eec80dd4-2ae5-4aad-b2ad-7eb7fbb179a0.png)
+
+### Fast Fields Update
+- updates fields on the record that triggered the flow
+- **runs before** the record is saved 
+    
+### Actions and Related Records
+- update any record and perform action
+- **runs after** record is saved
+    
+![image](https://user-images.githubusercontent.com/63545175/194803392-4c71b417-56ef-4e78-a749-701846d12368.png)
+
+### run asynchronously 
+- divide flow into 2 scheduled paths ``run immediately`` & ``run asynchronously``
+    
+![image](https://user-images.githubusercontent.com/63545175/194803371-c26ca62f-8382-4de2-98a8-2e1d91b2ea2c.png)
+
+### scheduled paths
+- a path that executes on a scheduled time
+
+
+
+---
+
+</p>
+</details>
+
+
+
+<details> 
+<summary> <h2> Flow trigger Explorer </h2> </summary>
+<p>
+
+---
+
+### open flow trigger explorer
+![image](https://user-images.githubusercontent.com/63545175/194803966-2d9a2ae2-7539-4dc7-b625-3f2875d33c4f.png)
+
+### explore flow trigger explorer
+![image](https://user-images.githubusercontent.com/63545175/194803910-cf295c64-164c-4723-8a84-aedebb3c8156.png)
+
+### reorder flows
+![image](https://user-images.githubusercontent.com/63545175/194804243-8e7a2ee2-0447-4b61-a2d4-185ab8191d3f.png)
+
+---
+
+</p>
+</details>
     
     
 ## types of elements
@@ -280,7 +343,7 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
     
     
 <details>
-<summary> <b> example </b>   </summary>  
+<summary> <b> which flow element to use when ... </b>   </summary>  
 <p>    
   
 ---
