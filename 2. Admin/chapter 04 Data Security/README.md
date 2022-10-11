@@ -287,6 +287,7 @@ _After you've created a profile, customize it to match the needs of a specific s
       - **Sharing rules** - 
         - Sharing rules are exceptions to OWD for particular groups of users.
         - Sharing rules give access of records(``Based on group membership`` | ``Based on criteria``) to users so they can get to records they don’t own or can’t normally see.
+        - sharing rules based on criteria can't use formula fields & lookUp fields.
         - They can’t be stricter than your organization-wide default settings.
     - **Role Hierarchies** - 
       - give access for users higher in the hierarchy to all records owned by users below them in the hierarchy.
