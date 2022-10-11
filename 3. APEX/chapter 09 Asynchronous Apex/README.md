@@ -64,6 +64,8 @@ when time permits such as some sort of resource-intensive calculation or process
 
 This is somewhat of an edge-case but you may occasionally run across this issue. See [sObjects That Cannot Be Used Together in DML Operations](https://developer.salesforce.com/docs/atlas.en-us.224.0.apexcode.meta/apexcode/apex_dml_non_mix_sobjects.htm?_ga=2.211739987.738253428.1664772222-1022251765.1662354198) for more details.
 
+The Mixed DML error is generated – when a User performs DML actions on Setup and non-Setup Objects in the same transaction -because some sObjects affect the user's access to records in the org.
+
 ---
 
 </p>
