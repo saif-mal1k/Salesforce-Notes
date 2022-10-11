@@ -1,4 +1,4 @@
-## types of objects
+# types of objects
   - ***standard objects*** : _provided by salesforce._
       - Account - are the companies you’re doing business with.
       - Contacts - are the people who work at an Account.
@@ -60,7 +60,7 @@
 
 <br/>
 
-## types of fields
+# types of fields
 ***standard fields***
   - when we create an object some fields (such as Name, CreatedById, OwnerId, LastModifiedById) are already created by salesforce those fields are known as standard fields.
 
@@ -110,25 +110,11 @@ Allows users to enter any combination of letters and numbers and store them in e
   - ``URL``	Allows users to enter any valid website address. When users click on the field, the URL will open in a separate browser window.
 
 
-<br/>
-
-### changing field types ????
-https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_types.htm&type=5 ????
 
 <br/>
 
-**💡 tip:** **when we have to use same picklist values more than once we can create ``picklist value set``.**
 
-<details>
-  <summary> <b>example</b> </summary>
-<p>
-  
-![image](https://user-images.githubusercontent.com/63545175/188811016-9fce4b52-0e55-4969-9e25-b4f476c8a92c.png)  
-</p>
-</details>
-
-<br/>
-
+## field dependencies
 **💡 tip:** **when we have to create dependent fields values in picklist**(_ex: state depend on country_) **we can create ``field dependencies``.**
 
 <details>
@@ -140,10 +126,41 @@ https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_t
 </details>
 
 
+<br/>
+
+
+## picklist value set
+**💡 tip:** **when we have to use same picklist values more than once we can create ``picklist value set``.**
+
+<details>
+  <summary> <b>example</b> </summary>
+<p>
+  
+![image](https://user-images.githubusercontent.com/63545175/188811016-9fce4b52-0e55-4969-9e25-b4f476c8a92c.png)  
+</p>
+</details>
+
 
 <br/>
 
-### Duplicate rules using Matching rules
+
+## changing field types ????
+https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_types.htm&type=5 ????
+
+
+<br/>
+
+
+## Validation rules
+- validation rules fires on both insertion & updation also.
+- if we wan't validation rule to throw error only for new records or updated records we can use IsNew() or IsChanged() functions in formula respectively.
+
+
+
+<br/>
+
+
+## Duplicate rules using Matching rules
 - A duplicate rule **defines what happens when a user views a record with duplicates** or **starts creating a duplicate record.**
 
 <details> 
@@ -162,7 +179,7 @@ https://trailhead.salesforce.com/content/learn/modules/sales_admin_duplicate_man
 <br/>
 
 
-### Feed tracking vs feed history tracking
+## Feed tracking vs feed history tracking
 <table>
 <tr>
 <td> 
@@ -213,7 +230,7 @@ Feed History tracking
 
 
 
-## types of object relationships
+# types of object relationships
 
 ### ***look up relationship***
   - child declares lookup to parent object
@@ -296,7 +313,7 @@ https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm
 
 ---
 
-## Schema builder
+# Schema builder
 ![image](https://user-images.githubusercontent.com/63545175/188438845-725fc2c3-d0a8-4c56-a8ef-8a58e0926a7c.png)
 
 ![image](https://user-images.githubusercontent.com/63545175/188577290-c8692424-083c-4394-a675-0e47743dc97d.png)
