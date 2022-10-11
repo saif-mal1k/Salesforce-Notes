@@ -398,7 +398,7 @@ trigger AccountTrigger on Account (after update) {
 	- system validation
 	- custom validation
 
-	- Executes record-triggered flows that are configured to run before the record is saved.
+	- _Executes ``record-triggered flows`` that are ``configured to run`` **``before``** the record is saved._
 	- Executes **``all before triggers.``**
 	
 	- system validation
@@ -413,7 +413,7 @@ trigger AccountTrigger on Account (after update) {
 	- Escalation rules
 	- salesforce flows
 
-	- Executes record-triggered flows that are configured to run after the record is saved.
+	- _Executes ``record-triggered flows`` that are ``configured to run`` **``after``** the record is saved._
 	- Executes entitlement rules.
 	- Executes Criteria Based Sharing evaluation.
 
