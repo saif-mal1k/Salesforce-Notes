@@ -19,6 +19,9 @@
 | Queueable Apex |	Similar to future methods, but provide additional job chaining and allow more complex data types to be used. |	Performing sequential processing operations with external Web services. | 
 | Scheduled Apex |	Schedule Apex to run at a specified time.	| Daily or weekly tasks. |
 
+<br/>
+
+> The **maximum number of asynchronous Apex method executions (batch Apex, future methods, Queueable Apex, and scheduled Apex) per a 24-hour period is 250,000** or the number of ``salesforce user licenses`` or ``App Subscription user licences`` in your org multiplied by 200, whichever is greater.
 
 <br/>
 
@@ -146,7 +149,7 @@ This is more efficient than creating a future request for each record.
 - You can’t call a future method from a future method. Nor can you invoke a trigger that calls a future method while running a future method. See the link in the Resources for preventing recursive future method calls.
 - The getContent() and getContentAsPDF() methods can’t be used in methods with the future annotation.
 - there is a limit of **50 future calls per Apex invocation.**
-- The maximum number of **future method invocations per a 24-hour period is 250,000** or the number of ``salesforce user licenses`` or ``App Subscription user licences`` in your org multiplied by 200, whichever is greater. 
+
 
 
 <br/>
@@ -375,8 +378,8 @@ You must be able to guarantee that the trigger won’t add more batch jobs than 
 
 
 ## Queable Apex: ????
-- The execution of a queued job counts once against the shared limit for asynchronous Apex method executions.
 - You can add maximum 50 jobs to the queue with System.enqueueJob in a single transaction.
+- The execution of a queued job counts once against the shared limit for asynchronous Apex method executions.
 - When chaining jobs, you can add only one job from an executing job with System.enqueueJob, which means that only one child job can exist for each parent queueable job. Starting multiple child jobs from the same queueable job is a no-no.
 - No limit is enforced on the depth of chained jobs, which means that you can chain one job to another job and repeat this process with each new child job to link it to a new child job. However, for Developer Edition and Trial orgs, the maximum stack depth for chained jobs is 5, which means that you can chain jobs four times and the maximum number of jobs in the chain is 5, including the initial parent queueable job.
 
@@ -402,13 +405,74 @@ public class SomeClass implements Queueable {
 
 
 ## Scheduled Apex: ????
-***Scheduled Apex has a number of items you need to be aware of, but in general:***
-- You can only have 100 scheduled Apex jobs at one time and there are maximum number of scheduled Apex executions per a 24-hour period. See Execution Governors and Limits in the Resources section for details.
+- You can only have 100 scheduled Apex jobs at one time.
+- You can schedule your class to run either programmatically or from the Apex Scheduler UI.
 - Use extreme care if you’re planning to schedule a class from a trigger. You must be able to guarantee that the trigger won’t add more scheduled jobs than the limit.
 - Synchronous Web service callouts are not supported from scheduled Apex. To be able to make callouts, make an asynchronous callout by placing the callout in a method annotated with @future(callout=true) and call this method from scheduled Apex. However, if your scheduled Apex executes a batch job, callouts are supported from the batch class.
 
 
+### syntax of Scheduled Apex
+```apex
 
+public class SomeClass implements Schedulable {
+    public void execute(SchedulableContext ctx) {
+        // awesome code here
+    }
+}
+
+```
+
+
+### scheduled Apex example
+```apex
+
+public class RemindOpptyOwners implements Schedulable {
+    public void execute(SchedulableContext ctx) {
+        List<Opportunity> opptys = [SELECT Id, Name, OwnerId, CloseDate
+            FROM Opportunity
+            WHERE IsClosed = False AND
+            CloseDate < TODAY];
+        // Create a task for each opportunity in the list
+        TaskUtils.remindOwners(opptys);
+    }
+}
+
+```
+
+
+### Scheduling Schedulable Apex
+<table>
+<tr>
+<td>
+
+Scheduling through UI
+</td>
+<td>
+
+Scheduling programmatically
+</td>
+</tr>
+<tr>
+<td>
+
+- From Setup, enter ``Apex`` in the Quick Find box, 
+- then select ``Apex Classes``.
+- Click ``Schedule Apex``.
+
+</td>
+<td>
+
+```apex
+
+RemindOpptyOwners reminder = new RemindOpptyOwners();
+// Seconds Minutes Hours Day_of_month Month Day_of_week optional_year
+String sch = '0 0 11 12 10 ? 2022';
+String jobID = System.schedule('Remind Opp Owners', sch, reminder);
+
+```
+</td>
+</tr>
+</table>
 
 
 <br/>
@@ -417,9 +481,12 @@ public class SomeClass implements Queueable {
     
     
 ## Monitor Apex Jobs
-1. goto setup
-2. type ``Apex Jobs``
+- **through UI ``Apex Jobs in setup``**
+    - 1. goto setup
+    - 2. type ``Apex Jobs``
+- **through programming**
 
+> <b>note:</b>  When you submit your job by invoking the System.enqueueJob method, the method returns the ID of the AsyncApexJob record. You can use this ID to identify your job and monitor its progress, either through the Salesforce user interface in the Apex Jobs page, or programmatically by querying your record from AsyncApexJob.
 
 
 
