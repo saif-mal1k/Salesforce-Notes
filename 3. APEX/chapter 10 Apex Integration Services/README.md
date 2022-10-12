@@ -223,40 +223,134 @@ https://trailhead.salesforce.com/content/learn/modules/apex_integration_services
 - You can expose your Apex classes and methods so that external applications can access your code and your application through the REST architecture.
 - @RestResource annotation is used to expose a class as REST resource.
 - We have to add annotations to methods to expose them through REST like @HttpPost,@HttpGet etc.
+- each exposed method must be defined as global static with added annotation to associate it with an HTTP method.
+    
+***syntax:***
+```apex
+    
+@RestResource(urlMapping='/Account/*')
+global with sharing class MyRestResource {
+    @HttpGet
+    global static Account getRecord() {
+        // Add your code
+    }
+}    
+        
+```
+    
+***annotations:***
+    
+<table class="featureTable sort_table">
+  <thead align="left" class="thead sorted">
+    <tr>
+      <th>Annotation</th>
+      <th>Action</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <tr>
+      <td><code>@HttpGet</code></td>
+      <td>Read</td>
+      <td>Reads or retrieves records.</td>
+    </tr>
+    <tr>
+      <td><code>@HttpPost</code></td>
+      <td>Create</td>
+      <td>Creates records.</td>
+    </tr>
+    <tr>
+      <td><code>@HttpDelete</code></td>
+      <td>Delete</td>
+      <td>Deletes records.</td>
+    </tr>
+    <tr>
+      <td><code>@HttpPut</code></td>
+      <td>Upsert</td>
+      <td>Typically used to update existing records or create records.</td>
+    </tr>
+    <tr>
+      <td><code>@HttpPatch</code></td>
+      <td>Update</td>
+      <td>Typically used to update fields in existing records.</td>
+    </tr>
+  </tbody>
+</table>
 
-### @HttpDelete: 
-- used at the method level and enables you to expose an Apex method as a REST resource. 
-- This method is called when an HTTP DELETE request is sent, and deletes the specified resource.
-- To use this annotation, your Apex method must be defined as global static.
 
-### @HttpGet:
-- used at the method level and enables you to expose an Apex method as a REST resource. 
-- This method is called when an HTTP GET request is sent, and returns the specified resource.
-- To use this annotation, your Apex method must be defined as global static.
-Methods annotated with @HttpGet are also called if the HTTP request uses the HEAD request method.
-
-
-### @HttpPatch
-- used at the method level and enables you to expose an Apex method as a REST resource. 
-- This method is called when an HTTP PATCH request is sent, and updates the specified resource.
-- only updates existing records can't create new one.
-- To use this annotation, your Apex method must be defined as global static.
-
-### @HttpPost 
-- used at the method level and enables you to expose an Apex method as a REST resource. 
-- This method is called when an HTTP POST request is sent, and creates a new resource.
-- can create new records.
-- To use this annotation, your Apex method must be defined as global static.
-
-
-### @HttpPut 
-- used at the method level and enables you to expose an Apex method as a REST resource.
-- This method is called when an HTTP PUT request is sent, and creates or updates the specified resource.
-- can create as well as update new records.
-- To use this annotation, your Apex method must be defined as global static.
-
-
-
+<br/>
+    
+    
+### example:
+```apex
+     
+@RestResource(urlMapping='/Cases/*')
+global with sharing class CaseManager {
+    @HttpGet
+    global static Case getCaseById() {
+        RestRequest request = RestContext.request;
+        // grab the caseId from the end of the URL
+        String caseId = request.requestURI.substring(
+          request.requestURI.lastIndexOf('/')+1);
+        Case result =  [SELECT CaseNumber,Subject,Status,Origin,Priority
+                        FROM Case
+                        WHERE Id = :caseId];
+        return result;
+    }
+    @HttpPost
+    global static ID createCase(String subject, String status,
+        String origin, String priority) {
+        Case thisCase = new Case(
+            Subject=subject,
+            Status=status,
+            Origin=origin,
+            Priority=priority);
+        insert thisCase;
+        return thisCase.Id;
+    }   
+    @HttpDelete
+    global static void deleteCase() {
+        RestRequest request = RestContext.request;
+        String caseId = request.requestURI.substring(
+            request.requestURI.lastIndexOf('/')+1);
+        Case thisCase = [SELECT Id FROM Case WHERE Id = :caseId];
+        delete thisCase;
+    }     
+    @HttpPut
+    global static ID upsertCase(String subject, String status,
+        String origin, String priority, String id) {
+        Case thisCase = new Case(
+                Id=id,
+                Subject=subject,
+                Status=status,
+                Origin=origin,
+                Priority=priority);
+        // Match case by Id, if present.
+        // Otherwise, create new case.
+        upsert thisCase;
+        // Return the case ID.
+        return thisCase.Id;
+    }
+    @HttpPatch
+    global static ID updateCaseFields() {
+        RestRequest request = RestContext.request;
+        String caseId = request.requestURI.substring(
+            request.requestURI.lastIndexOf('/')+1);
+        Case thisCase = [SELECT Id FROM Case WHERE Id = :caseId];
+        // Deserialize the JSON string into name-value pairs
+        Map<String, Object> params = (Map<String, Object>)JSON.deserializeUntyped(request.requestbody.tostring());
+        // Iterate through each parameter field and value
+        for(String fieldName : params.keySet()) {
+            // Set the field and value on the Case sObject
+            thisCase.put(fieldName, params.get(fieldName));
+        }
+        update thisCase;
+        return thisCase.Id;
+    }    
+}    
+    
+```    
+    
 <br/>
 
 
