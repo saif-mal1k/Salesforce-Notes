@@ -207,15 +207,53 @@ complete apex integration services from here
 https://trailhead.salesforce.com/content/learn/modules/apex_integration_services/apex_integration_webservices    
 
 
+<br/>
 
 
+---
+
+---
+
+---
+
+---
 
 
+# Exposing Apex class & methods as REST web service
+- You can expose your Apex classes and methods so that external applications can access your code and your application through the REST architecture.
+- @RestResource annotation is used to expose a class as REST resource.
+- We have to add annotations to methods to expose them through REST like @HttpPost,@HttpGet etc.
+
+### @HttpDelete: 
+- used at the method level and enables you to expose an Apex method as a REST resource. 
+- This method is called when an HTTP DELETE request is sent, and deletes the specified resource.
+- To use this annotation, your Apex method must be defined as global static.
+
+### @HttpGet:
+- used at the method level and enables you to expose an Apex method as a REST resource. 
+- This method is called when an HTTP GET request is sent, and returns the specified resource.
+- To use this annotation, your Apex method must be defined as global static.
+Methods annotated with @HttpGet are also called if the HTTP request uses the HEAD request method.
 
 
+### @HttpPatch
+- used at the method level and enables you to expose an Apex method as a REST resource. 
+- This method is called when an HTTP PATCH request is sent, and updates the specified resource.
+- only updates existing records can't create new one.
+- To use this annotation, your Apex method must be defined as global static.
+
+### @HttpPost 
+- used at the method level and enables you to expose an Apex method as a REST resource. 
+- This method is called when an HTTP POST request is sent, and creates a new resource.
+- can create new records.
+- To use this annotation, your Apex method must be defined as global static.
 
 
-
+### @HttpPut 
+- used at the method level and enables you to expose an Apex method as a REST resource.
+- This method is called when an HTTP PUT request is sent, and creates or updates the specified resource.
+- can create as well as update new records.
+- To use this annotation, your Apex method must be defined as global static.
 
 
 
