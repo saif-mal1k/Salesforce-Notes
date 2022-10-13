@@ -25,17 +25,50 @@ An Apex callout enables you to tightly integrate your Apex code with an external
 <br/>
 
 
-## HTTP Method	Description
-- **GET** 	  - Retrieve data identified by a URL.
-- **POST** 	  - Create a resource or post data to the server.
-- **DELETE** 	- Delete a resource identified by a URL.
-- **PUT** 	  - Create or replace the resource sent in the request body.
+## Authorize Endpoint Addresses
+- before making callout to an external site, it is important to authorized the site(_endpoint_) in salesforce org.
+- authorise the site(_endpoint_) in the list of approved sites for your org on the ``Remote Site Settings`` page.
+
+![image](https://user-images.githubusercontent.com/63545175/195506195-c4ab0901-890f-4895-9a14-460d0af099d9.png)
+
+
+
 
 
 <br/>
 
-A GET request means that the sender wants to obtain information about a resource from the server. 
-When the server receives and processes this request, it returns the request information to the recipient. 
+
+## HTTP Method	Description
+<table class="featureTable sort_table">
+  <!--<caption><span>Some Common HTTP Methods</span></caption>-->
+  <thead align="left" class="thead sorted">
+    <tr>
+      <th>HTTP Method</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <tr>
+      <td>GET</td>
+      <td>Retrieve data identified by a URL.</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>Create a resource or post data to the server.</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>Delete a resource identified by a URL.</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>Create or replace the resource sent in the request body.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br/>
 
 > **💡 Tip:** A GET request is similar to navigating to an address in the browser. When you visit a web page, the browser performs a GET request behind the scenes. 
 In the browser, the result of the navigation is a new HTML page that’s displayed. With a callout, the result is the response object.
@@ -47,10 +80,14 @@ In addition to the HTTP method, each request sets a URl, which is the endpoint a
 When the server processes the request, it sends a status code in the response. 
 
 ***The status code indicates:***
+| range | class | example |
+|-------------|-------|---------|
+| 100 – 199 | Informational responses| - |
+| 200 – 299 | Successful responses | **``200``**  - ``If the request is successful.`` |
+| 300 – 399 | Redirection messages | - |
+| 400 – 499 | Client error responses | **``404``**  - ``for file not found.`` |
+| 500 – 599 | Server error responses | **``500``**  - ``for an internal server error.`` |
 
-- 200  - If the request is successful. 
-- 404  - for file not found.
-- 500  - for an internal server error.
 
 
 <br/>
@@ -116,7 +153,7 @@ if(response.getStatusCode() != 201) {
 
 
 <details>
-<summary> <b>full working example:</b> </summary>    
+<summary> <b>full working example: (with test)</b> </summary>    
 <p>
    
     
@@ -280,8 +317,12 @@ global with sharing class MyRestResource {
 
 <br/>
     
+<details>
+<summary> <h3> example: </h3> </summary>
+<p>
+
+---
     
-### example:
 ```apex
      
 @RestResource(urlMapping='/Cases/*')
@@ -350,6 +391,12 @@ global with sharing class CaseManager {
 }    
     
 ```    
+
+---
+    
+</p>
+</details>
+  
     
 <br/>
 
