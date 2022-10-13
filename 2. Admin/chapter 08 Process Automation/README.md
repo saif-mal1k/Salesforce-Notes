@@ -1,19 +1,129 @@
 
-### Approval Process ????
+### Approval Process 
+
+<details>
+<summary> <h4> <code>approval process management</code> </h4> </summary>
+<p>
+
+<details>
+<summary> <h3> <em> what can be edited in approval process </em> </h3> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/195577829-4bc08298-ed72-4269-9802-88b170666249.png)
+
+---
+
+</p>
+</details>
+
+
+- **Initial submission actions**
+- **Approval steps**
+    - step ( allow all records | allow records that meet criteria )
+        - approval action
+        - rejection action
+- **Final approval actions**
+- **Final Rejection actions**
+- **Recall actions**
+    - task
+    - email alert
+    - field update
+    - outbound msg
+
+
+<details>
+<summary> <h3> <em> adding submit for approval (button & lightning action) on record page </em> </h3> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/195575717-fe6fd1bf-1c59-48cf-9397-be244b25f168.png)
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <h3> <em> adding items to approve list on home page of approvers </em> </h3> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/195575252-5b034bdb-4826-4403-9c02-7b324ab0318b.png)
+
+--- 
+
+</p>
+
+</details>
+
+
+<details>
+<summary> <h3> <em> order approval processes | manage active & inactive approval processes </em> </h3> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/195580321-c0cd9b71-35d9-424f-a6ac-f9f19b147a09.png)
+
+--- 
+
+</p>
+
+</details>
+
+---
+
+</p>
+</details>
+
+
+
+<details>
+<summary> <h4> <code>approval process Troubleshooting </code> </h4> </summary>
+<p>
+
+<details>
+<summary> <h3> <em> topic </em> </h3> </summary>
+<p>
+
+---
+
+
+---
+
+</p>
+</details>
+
+
+---
+
+</p>
+</details>
+
+
+
+
+
+
+
 <details>
 <summary> <b> example </b> </summary>
 <p>
+
 
 ![image](https://user-images.githubusercontent.com/63545175/193795169-de7b529e-4a79-426d-a35f-069f5164ec5d.png)
     
 </p>
 </details>
-    
-https://trailhead.salesforce.com/content/learn/modules/business_process_automation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
 
-https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approval-process?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
+---
 
-
+<br/>
 
 
 <br/>
@@ -427,4 +537,23 @@ https://trailhead.salesforce.com/content/learn/projects/build-a-discount-approva
     
 </p>    
 </details>
+
+
+
+
+<br/>
+
+
+<br/>
+
+
+
+---
+***references:***
+- https://trailhead.salesforce.com/content/learn/modules/business_process_automation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
+- https://trailhead.salesforce.com/content/learn/superbadges/superbadge_ap_specialist?trailmix_creator_id=saif-malik&trailmix_slug=to-do
+
+
+
+
 
