@@ -404,6 +404,117 @@ global with sharing class CaseManager {
 <br/>
 
 
+## Security Considerations for Apex Web Services
+- Unlike Salesforce APIs, Apex web service methods run with system privileges and don't respect the user's object and field permissions. 
+- However, Apex web service methods enforce sharing rules when declared with the with sharing keyword.
+    
+    
+<br/>
+
+
+## things I've not tested
+<table>
+<tr> 
+<td>
+
+Curl
+</td>
+<td>
+
+js
+</td>
+<td>
+
+apex
+</td>
+</tr>
+<tr> 
+<td>
+
+```curl
+curl -v https://login.salesforce.com/services/oauth2/token -d "grant_type=password" -d "client_id=<your_consumer_key>" -d "client_secret=<your_consumer_secret>" -d "username=<your_username>" -d "password=<your_password_and_security_token>" -H "X-PrettyPrint:1"
+```
+</td>
+<td>
+
+```js
+fetch('https://login.salesforce.com/services/oauth2/token', {
+    method: 'POST',
+    headers: {
+        'X-PrettyPrint': '1',
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'grant_type=password&client_id=<your_consumer_key>&client_secret=<your_consumer_secret>&username=<your_username>&password=<your_password_and_security_token>'
+});
+```
+</td>
+<td>
+
+```apex
+HttpRequest req = new HttpRequest();
+req.setMethod('POST');
+req.setEndPoint('https://login.salesforce.com/services/oauth2/token');
+req.setHeader('Content-Type', 'application/x-www-form-urlencoded');
+req.setHeader('X-PrettyPrint', '1');
+req.setBody('grant_type=password&client_id=<your_consumer_key>&client_secret=<your_consumer_secret>&username=<your_username>&password=<your_password_and_security_token>');
+
+Http http = new Http();
+HTTPResponse res = http.send(req);
+system.debug(res.getStatusCode());
+system.debug(res.getStatus());
+system.debug(res.getBody());
+```
+
+</td>
+</tr>
+<tr> 
+<td>
+
+```curl
+curl https://yourInstance.my.salesforce.com/services/apexrest/Cases/R3C0RD1D -H "Authorization: Bearer 535510N1D" -H "X-PrettyPrint:1"
+```
+</td>
+<td>
+
+```js
+fetch('https://yourInstance.my.salesforce.com/services/apexrest/Cases/R3C0RD1D', {
+    headers: {
+        'Authorization': 'Bearer 535510N1D',
+        'X-PrettyPrint': '1'
+    }
+});
+```
+</td>
+<td>
+
+```apex
+HttpRequest req = new HttpRequest();
+req.setMethod('GET');
+req.setEndPoint('https://yourInstance.my.salesforce.com/services/apexrest/Cases/R3C0RD1D');
+req.setHeader('Authorization', 'Bearer 535510N1D');
+req.setHeader('X-PrettyPrint', '1');
+
+Http http = new Http();
+HTTPResponse res = http.send(req);
+system.debug(res.getStatusCode());
+system.debug(res.getStatus());
+system.debug(res.getBody());
+```
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+<br/>
+
+
 <br/>
 
 
