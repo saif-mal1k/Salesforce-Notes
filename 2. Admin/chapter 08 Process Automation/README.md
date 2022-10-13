@@ -42,7 +42,7 @@
 ![image](https://user-images.githubusercontent.com/63545175/195575717-fe6fd1bf-1c59-48cf-9397-be244b25f168.png)
     
 - Submit for Approval button is available when record is not already submitted for approval and gets hidden after the record is submitted for approval.
-
+- make sure to add approval history related list
 ---
 
 </p>
