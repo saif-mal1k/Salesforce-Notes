@@ -47,6 +47,23 @@
 
 </p>
 </details>
+    
+    
+<details>
+<summary> <h3> <em> making sure submit for approval (button & lightning action) on record page is visible to required users </em> </h3> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/195773530-c3a35962-0780-4d03-91c9-02031816ca54.png)
+    
+- click on highlights pane, then click submit for approval action.
+- edit filter for component visiblity.
+    
+---
+
+</p>
+</details>    
 
 
 <details>
@@ -89,19 +106,62 @@
 <summary> <h4> <code>approval process Troubleshooting </code> </h4> </summary>
 <p>
 
-<details>
-<summary> <h3> <em> topic </em> </h3> </summary>
-<p>
-
 ---
 
+- Users with these permissions can respond to approval requests, even if they aren’t designated approvers.
+    - “Modify All Data”
+    - “Modify All” for an object    
+- Make sure that the assigned approver has access to read the records for the approval requests.
+    - example: a user who can’t view expense records can’t view expense approval requests.    
+- Approval processes that let users select an approver manually also let users select themselves as the approver.
+   
 
----
+- ensure submit for approval button & lightning action in record page layout, also add approval history related list.
+- on record page, Submit for Approval button is available when record is not already submitted for approval and gets hidden after the record is submitted for approval.
+    
+- ERROR: ``no applicable approval process was found`` occurs, if
+    - approval process is not active
+    - approval process entry criteria is not met
+        - try to dry run, to debug the process    
+    
+- Admin Permissions
+    - Users with one of these permissions are considered approval admins.
+        - Modify All object-level permission for the given object
+        - Modify All Data user permission
+    - Approval admins can:
+        - Approve or reject pending approval requests without being part of the approval process
+        - Edit records that have been locked for approval    
+    
+- Activating Approval Processes
+    - An approval process must have at least one step before you can activate it.
+    - Before you activate your approval process, test it in your Salesforce sandbox.
+    - After an approval process is activated, you can’t add, delete, or change the order of the steps or change its reject or skip behavior, even if the process is inactive.    
+    
+    
 
-</p>
-</details>
-
-
+| IF... | 	THE DESIGNATED APPROVER IS... | 
+|-------|---------------------------------|
+| The user’s manager originally responded to the approval request. |	The manager |
+| The user’s manager originally responded to the approval request. Since then, the user’s manager has changed.	| The original manager, The new manager isn’t a designated approver for this step. |
+| A user with the “Modify All Data” permission originally responded to the approval request.	 | The user with the “Modify All Data” permission, That user replaces the user’s manager in the list of designated approvers for this step.   |
+    
+    
+|PER-ORG LIMIT|	VALUE|
+|-------------|------|
+|Active approval processes|	1,000|
+|Total approval processes|	2,000|
+|Active approval processes per object|	300|
+|Total approval processes per object|	500|
+|Steps per approval process|	30|
+|Approvers per step|	25|
+|Initial submission actions per approval process|	40|
+|Final approval actions per approval process|	40|
+|Final rejection actions per approval process|	40|
+|Recall actions per approval process|	40|
+|Maximum characters in approval request comments	| 4,000    |
+    
+    
+    
 ---
 
 </p>
