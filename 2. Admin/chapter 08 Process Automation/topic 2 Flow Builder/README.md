@@ -191,7 +191,66 @@
 </details>
 
 <br/>
-    
+
+<details>
+<summary> <h2> Creating new Resources </h2> </summary>
+<p>
+
+---
+
+<table>
+<tr>
+<td colspan="2">
+
+![image](https://user-images.githubusercontent.com/63545175/195826349-23f01f78-778e-4b6f-959e-a02b77b4d4cf.png)
+
+
+</td>
+</tr>
+<tr>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/195826374-efad9d9b-3b3c-4374-b251-fcf882efe512.png)
+
+</td>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/195826467-041fcc0c-a537-4c8e-bba2-d4b910891256.png)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+![image](https://user-images.githubusercontent.com/63545175/195826503-9f6f10ea-714a-40b4-ac61-5a96df4971e0.png)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+![image](https://user-images.githubusercontent.com/63545175/195826532-98110860-4a5f-400a-bee0-b198bff18f88.png)
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+![image](https://user-images.githubusercontent.com/63545175/195826932-15ad72b0-9604-4d14-ac46-1559699ec428.png)
+
+</td>
+</tr>
+</table>
+
+---
+
+</p>
+
+</details>
+
+
+<br/>
+
     
 ## Types of flow elements
 <table class="featureTable sort_table">
@@ -338,6 +397,13 @@
 </p>    
 </details>
 
+<br/>
+
+
+### connecting autolaunched flow to a button on record page ????
+https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calculate_implement?trail_id=automate_business_processes
+
+
 
 
 
@@ -350,4 +416,6 @@
 
 ---
 ***references:***
-- https://trailhead.salesforce.com/content/learn/modules/business_process_automation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
+- https://trailhead.salesforce.com/content/learn/trails/build-flows-with-flow-builder
+- https://trailhead.salesforce.com/content/learn/modules/business_process_automation
+- https://trailhead.salesforce.com/content/learn/trails/automate_business_processes
