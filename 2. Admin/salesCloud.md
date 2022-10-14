@@ -20,6 +20,10 @@ lead ------>  prospects ----------> customer
 </details>
 
 
+## basics ????
+https://trailhead.salesforce.com/content/learn/trails/discover-sales-cloud?trailmix_creator_id=ballen4&trailmix_slug=beginning-admin 
+
+
 
 <br/>
 
