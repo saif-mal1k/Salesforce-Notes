@@ -2,7 +2,7 @@
 ### Approval Process 
 
 <details>
-<summary> <h4> <code>approval process management</code> </h4> </summary>
+<summary> <h2> <code>approval process management</code> </h2> </summary>
 <p>
 
 <details> 
@@ -116,8 +116,12 @@
 
 
 
+<br/>
+
+
+
 <details>
-<summary> <h4> <code>approval process Troubleshooting </code> </h4> </summary>
+<summary> <h2> <code>approval process Troubleshooting </code> </h2> </summary>
 <p>
 
 ---
@@ -186,10 +190,12 @@
 </p>
 </details>
 
+
 <br/>
 
+
 <details>
-<summary> <b> org limits for approval process </b> </summary>
+<summary> <h3><b> Org limits for approval process </b></h3> </summary>
 <p>
 
 |PER-ORG LIMIT|	VALUE|
@@ -209,12 +215,13 @@
 </p>
 </details>
 
----
-
-<br/>
 
 
 <br/>
+
+
+<br/>
+
 
 <br/>
 
