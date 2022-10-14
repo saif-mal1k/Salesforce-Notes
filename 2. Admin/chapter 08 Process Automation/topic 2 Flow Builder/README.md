@@ -403,7 +403,11 @@
 ### connecting autolaunched flow to a button on record page ????
 https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calculate_implement?trail_id=automate_business_processes
 
+<br/>
 
+
+### security in flow ????
+very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_security.htm&type=5 
 
 
 
