@@ -104,6 +104,10 @@
 </p>
 
 </details>
+    
+- [let users respond to approval request by email](https://help.salesforce.com/s/articleView?id=sf.approvals_email_parent.htm&type=5&language=en_US)    
+- [let user respond to approval request from chatter](https://help.salesforce.com/s/articleView?id=sf.approvals_chatter.htm&type=5&language=en_US)
+    
 
 ---
 
