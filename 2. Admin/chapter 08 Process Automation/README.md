@@ -5,6 +5,16 @@
 <summary> <h4> <code>approval process management</code> </h4> </summary>
 <p>
 
+<details> 
+<summary> example of approval process </summary>
+<p>
+    
+![image](https://user-images.githubusercontent.com/63545175/193795169-de7b529e-4a79-426d-a35f-069f5164ec5d.png)
+
+</p>
+</details>    
+  
+    
 <details>
 <summary> <h3> <em> what can be edited in approval process </em> </h3> </summary>
 <p>
@@ -146,6 +156,38 @@
 | A user with the “Modify All Data” permission originally responded to the approval request.	 | The user with the “Modify All Data” permission, That user replaces the user’s manager in the list of designated approvers for this step.   |
     
     
+<br/>    
+
+<details>
+<summary> <h3> creating a deligate user for approver </h3> </summary>
+<p>
+    
+---
+    
+***goto approval step, under select approver. tick mark ``The approver's delegate may also approve this request.``***
+![image](https://user-images.githubusercontent.com/63545175/195781874-3d508489-a90c-4410-8ba9-0aa833c98292.png)
+    
+***setting up delegate user***   
+![image](https://user-images.githubusercontent.com/63545175/195781880-ab41c75e-15c5-4043-89f1-36cc1d281c7f.png)    
+    
+***to allow delegated user to receive email notification, goto delegate user's setting at the bottom.  make sure ``Receive Approval Request Emails: if im approver or delegated approver``.***    
+
+---
+
+</p>
+</details>    
+    
+---
+
+</p>
+</details>
+
+<br/>
+
+<details>
+<summary> <b> org limits for approval process </b> </summary>
+<p>
+
 |PER-ORG LIMIT|	VALUE|
 |-------------|------|
 |Active approval processes|	1,000|
@@ -158,28 +200,8 @@
 |Final approval actions per approval process|	40|
 |Final rejection actions per approval process|	40|
 |Recall actions per approval process|	40|
-|Maximum characters in approval request comments	| 4,000    |
-    
-    
-    
----
-
-</p>
-</details>
-
-
-
-
-
-
-
-<details>
-<summary> <b> example </b> </summary>
-<p>
-
-
-![image](https://user-images.githubusercontent.com/63545175/193795169-de7b529e-4a79-426d-a35f-069f5164ec5d.png)
-    
+|Maximum characters in approval request comments	| 4,000    |    
+        
 </p>
 </details>
 
