@@ -414,12 +414,39 @@ very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_
 <br/>
 
 
+## Best Practices & things to remember
+- Scheduled Paths are used in Record-Triggered Flows to automate steps at a designated time.
+- A record must be created or updated to set it on a Scheduled Path.
+- Scheduled Paths can be based on any date or date/time field on the object.
+- Loops look through a collection and apply changes to individual items
+- Decision elements are not required in loops
+- _Keep data elements outside of the loop to increase efficiency_
+- All new Flow Builder automations should be tested with debug
+- **Reveal outcomes:** see what happens at each step of the flow
+- **Execute as another user:** see what happens when another user runs the flow
+- Debug in a **sandbox org** and use ``rollback mode`` to protect data integrity
+
+
 <br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+
+
 
 
 
 ---
 ***references:***
+- **https://trailhead.salesforce.com/users/amshirbhate/trailmixes/flow**
 - https://trailhead.salesforce.com/content/learn/trails/build-flows-with-flow-builder
 - https://trailhead.salesforce.com/content/learn/modules/business_process_automation
 - https://trailhead.salesforce.com/content/learn/trails/automate_business_processes
