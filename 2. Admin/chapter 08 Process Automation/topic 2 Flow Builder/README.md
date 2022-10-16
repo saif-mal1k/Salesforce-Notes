@@ -424,6 +424,7 @@ very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_
 - All new Flow Builder automations should be tested with debug
 - **Reveal outcomes:** see what happens at each step of the flow
 - **Execute as another user:** see what happens when another user runs the flow
+    - in setup type, goto ``Process Automation Settings`` check ``Let admins debug flows as other users``
 - Debug in a **sandbox org** and use ``rollback mode`` to protect data integrity
 
 
