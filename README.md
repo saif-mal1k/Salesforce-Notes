@@ -25,3 +25,20 @@ its the worlds ***#No.1 CRM platform*** that enables businesses sell, service an
 originally, started in 1999 with sales cloud to help businesses increases their sales. now, salesforce is active in many more domains.
 it has applications that are focused on customer service, marketing, analytics, application development and automation.
 
+
+<br/>
+
+
+
+### top apps owned by salesforce
+- **Quip** - salesforce provide virtual collaboration app called [Quip](https://quip.com/). it has task manager, teams chat, folders, document editor.  
+- **slack** -  
+- **Tableau Software** -  interactive data visualization software company.
+- **Pardot** - software as a service (SaaS) marketing automation platform.
+- **MuleSoft** - provides integration software for connecting applications, data and devices.
+- **Heroku** - cloud platform as a service supporting several programming languages.
+
+
+
+
+
