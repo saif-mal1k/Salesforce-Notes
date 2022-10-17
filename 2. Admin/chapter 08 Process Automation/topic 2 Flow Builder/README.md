@@ -409,6 +409,10 @@ https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calc
 ### security in flow ????
 very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_security.htm&type=5 
 
+<br/>
+
+### Automate surveys ????
+very short complete quick: https://trailhead.salesforce.com/content/learn/modules/automated-survey-invitations-with-flows
 
 
 <br/>
