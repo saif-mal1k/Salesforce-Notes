@@ -55,7 +55,7 @@
         <td style="width:32.0233%;vertical-align:top">
           <ul>
             <li>Data change</li>
-            <li>Time</li>
+            <li>Schedule / Time</li>
             <li>Platform event</li>
           </ul>
         </td>
