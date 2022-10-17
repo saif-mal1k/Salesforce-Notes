@@ -123,6 +123,7 @@ https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_
 ***references***
 
   - https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-for-your-team?trail_id=learn-admin-essentials
+  - https://trailhead.salesforce.com/content/learn/modules/sales-cloud-platform-quick-look?trail_id=go-digital-fast-with-the-salesforce-customer-360
   - https://trailhead.salesforce.com/users/strailhead/trailmixes/sales-cloud
 
 
