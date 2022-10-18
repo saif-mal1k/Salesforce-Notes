@@ -162,6 +162,19 @@
 - a path that executes on a scheduled time
 
 
+<br/>
+
+
+### when creating related records
+**Field: WhatId**
+The ``WhatId`` field can refer to the ID of any related non-human object. It represents something other than a person, such as an account, opportunity, campaign, case, or custom object. To refer to a person object, such as contact, use ``WhoId``.
+
+**Value: $Record > Id**
+Remember, data from the record that triggered the flow is stored in the $Record variable. To reference the record itself, drill down from $Record to the Id field.
+
+
+
+
 
 ---
 
