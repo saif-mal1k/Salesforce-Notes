@@ -134,79 +134,12 @@
     
 </details>  
     
-
-<details> 
-<summary> <h2> Notes on Record Triggered Flows </h2> </summary>
-<p>
-
----
-
-![image](https://user-images.githubusercontent.com/63545175/194802509-eec80dd4-2ae5-4aad-b2ad-7eb7fbb179a0.png)
-
-### Fast Fields Update
-- updates fields on the record that triggered the flow
-- **runs before** the record is saved 
     
-### Actions and Related Records
-- update any record and perform action
-- **runs after** record is saved
-    
-![image](https://user-images.githubusercontent.com/63545175/194803392-4c71b417-56ef-4e78-a749-701846d12368.png)
-
-### run asynchronously 
-- divide flow into 2 scheduled paths ``run immediately`` & ``run asynchronously``
-    
-![image](https://user-images.githubusercontent.com/63545175/194803371-c26ca62f-8382-4de2-98a8-2e1d91b2ea2c.png)
-
-### scheduled paths
-- a path that executes on a scheduled time
-
-
 <br/>
 
-
-### when creating related records
-**Field: WhatId**
-The ``WhatId`` field can refer to the ID of any related non-human object. It represents something other than a person, such as an account, opportunity, campaign, case, or custom object. To refer to a person object, such as contact, use ``WhoId``.
-
-**Value: $Record > Id**
-Remember, data from the record that triggered the flow is stored in the $Record variable. To reference the record itself, drill down from $Record to the Id field.
-
-
-
-
-
----
-
-</p>
-</details>
-
-
-
-<details> 
-<summary> <h2> Flow trigger Explorer </h2> </summary>
-<p>
-
----
-
-### open flow trigger explorer
-![image](https://user-images.githubusercontent.com/63545175/194803966-2d9a2ae2-7539-4dc7-b625-3f2875d33c4f.png)
-
-### explore flow trigger explorer
-![image](https://user-images.githubusercontent.com/63545175/194803910-cf295c64-164c-4723-8a84-aedebb3c8156.png)
-
-### reorder flows
-![image](https://user-images.githubusercontent.com/63545175/194804243-8e7a2ee2-0447-4b61-a2d4-185ab8191d3f.png)
-
----
-
-</p>
-</details>
-
-<br/>
 
 <details>
-<summary> <h2> Creating new Resources </h2> </summary>
+<summary> <h2> Types of Flow Resources </h2> </summary>
 <p>
 
 ---
@@ -217,6 +150,25 @@ Remember, data from the record that triggered the flow is stored in the $Record 
 
 ![image](https://user-images.githubusercontent.com/63545175/195826349-23f01f78-778e-4b6f-959e-a02b77b4d4cf.png)
 
+</td>
+</tr>
+<tr>
+<td>
+
+![image](https://user-images.githubusercontent.com/63545175/196615927-fece3545-018a-4c2e-92dd-0f4307153490.png)
+
+</td>
+<td>
+
+- **Variable :** Store a value that can be used and changed throughout the flow.
+- **Constant :** Store a value that can be used but not changed throughout the flow.
+- **Formula :** Calculate a value when the formula is used in the flow.
+- **Text template :** Store text that can be used and changed throughout the flow.
+- **Choice :** create a choice option to be used in a screen component.
+- **Collection Choice Set :** Generate a set of choices from a collection of records.
+- **Record Choice Set :** Generate a set of choices using a filtered list of records.
+- **Picklist Choice Set :** Generate a set of choices by using the values of a picklist or a multi-select picklist.
+- **Stage :** Identify different phases in the flow to track users progess.
 
 </td>
 </tr>
@@ -233,21 +185,12 @@ Remember, data from the record that triggered the flow is stored in the $Record 
 </td>
 </tr>
 <tr>
-<td colspan="2">
-
-![image](https://user-images.githubusercontent.com/63545175/195826503-9f6f10ea-714a-40b4-ac61-5a96df4971e0.png)
-
-</td>
-</tr>
-<tr>
-<td colspan="2">
+<td>
 
 ![image](https://user-images.githubusercontent.com/63545175/195826532-98110860-4a5f-400a-bee0-b198bff18f88.png)
 
 </td>
-</tr>
-<tr>
-<td colspan="2">
+<td>
 
 ![image](https://user-images.githubusercontent.com/63545175/195826932-15ad72b0-9604-4d14-ac46-1559699ec428.png)
 
@@ -404,13 +347,78 @@ Remember, data from the record that triggered the flow is stored in the $Record 
 </p>    
 </details>
     
+<details> 
+<summary> <h2> Notes on Record Triggered Flows </h2> </summary>
+<p>
+
+---
+
+![image](https://user-images.githubusercontent.com/63545175/194802509-eec80dd4-2ae5-4aad-b2ad-7eb7fbb179a0.png)
+
+### Fast Fields Update
+- updates fields on the record that triggered the flow
+- **runs before** the record is saved 
     
-   
+### Actions and Related Records
+- update any record and perform action
+- **runs after** record is saved
     
-</p>    
-</details>
+![image](https://user-images.githubusercontent.com/63545175/194803392-4c71b417-56ef-4e78-a749-701846d12368.png)
+
+### run asynchronously 
+- divide flow into 2 scheduled paths ``run immediately`` & ``run asynchronously``
+    
+![image](https://user-images.githubusercontent.com/63545175/194803371-c26ca62f-8382-4de2-98a8-2e1d91b2ea2c.png)
+
+### scheduled paths
+- a path that executes on a scheduled time
+
 
 <br/>
+
+
+### when creating related records
+**Field: WhatId**
+The ``WhatId`` field can refer to the ID of any related non-human object. It represents something other than a person, such as an account, opportunity, campaign, case, or custom object. To refer to a person object, such as contact, use ``WhoId``.
+
+**Value: $Record > Id**
+Remember, data from the record that triggered the flow is stored in the $Record variable. To reference the record itself, drill down from $Record to the Id field.
+
+
+
+
+
+---
+
+</p>
+</details>
+
+
+<br/>
+
+
+<details> 
+<summary> <h2> Flow trigger Explorer </h2> </summary>
+<p>
+
+---
+
+### open flow trigger explorer
+![image](https://user-images.githubusercontent.com/63545175/194803966-2d9a2ae2-7539-4dc7-b625-3f2875d33c4f.png)
+
+### explore flow trigger explorer
+![image](https://user-images.githubusercontent.com/63545175/194803910-cf295c64-164c-4723-8a84-aedebb3c8156.png)
+
+### reorder flows
+![image](https://user-images.githubusercontent.com/63545175/194804243-8e7a2ee2-0447-4b61-a2d4-185ab8191d3f.png)
+
+---
+
+</p>
+</details>
+
+<br/>    
+   
 
 
 ### connecting autolaunched flow to a button on record page ????
