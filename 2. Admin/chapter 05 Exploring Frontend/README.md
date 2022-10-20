@@ -40,10 +40,7 @@
 </td>
 <td width="480px">
   
-![image](https://user-images.githubusercontent.com/63545175/190562053-ec678832-20ca-4e19-a29e-0c5194500b17.png)
-
-![image](https://user-images.githubusercontent.com/63545175/196883942-c0b7d92c-ba28-49a7-bbf2-f782bc0db033.png)
-
+![image](https://user-images.githubusercontent.com/63545175/196913013-d86e0974-571f-4c62-b238-4bceffd1a962.png)
 
 </td>
 </tr>
@@ -51,10 +48,16 @@
 <td width="480px">
 
 ![image](https://user-images.githubusercontent.com/63545175/190561948-9c6f5bc2-3f74-4f3c-91c6-f8ee20353536.png)
+
+![image](https://user-images.githubusercontent.com/63545175/196910394-3cc41b5b-00d8-4e1b-8656-a0da90203592.png)
+
 </td>
 <td width="480px">
   
 ![image](https://user-images.githubusercontent.com/63545175/190562259-3c575c4c-7ce0-475d-b045-30d1af72b860.png)
+
+![image](https://user-images.githubusercontent.com/63545175/196883942-c0b7d92c-ba28-49a7-bbf2-f782bc0db033.png)
+
 </td>
 </tr>
 </table>
