@@ -1,6 +1,31 @@
 
 # Flow Builder   
+
+<details> 
+<summary> <h2> Things flow can do .... </h2> </summary>
+<p>
     
+---
+ 
+- create, update, delete records
+- send an email
+- Collect input from external users with an online form	
+- Collect input from internal users with a form placed on a Lightning page or launched by a button
+- Send a custom notification	
+- Send a survey	
+- Submit a record for approval	
+- Run another flow in the context of the current flow	
+- Access external systems	
+- Call a custom invocable action	
+- Send outbound messages
+
+---
+
+</p>    
+    
+</details>  
+    
+
 ![image](https://user-images.githubusercontent.com/63545175/190598510-8df66212-9c86-475d-9f40-0db9bc96b860.png)
         
 <br/>
@@ -74,14 +99,11 @@
 </td>
       </tr>
     </tbody>
-  </table>
-    
-    
-<br/>
-    
+</table>
+       
     
 <details> 
-<summary> <h2> Which flow to use when .... </h2> </summary>
+<summary> <b> Which flow to use when .... </b> </summary>
 <p>
     
 ---
@@ -108,38 +130,12 @@
     
 </details>  
     
-    
-    
-<details> 
-<summary> <h2> Things flow can do .... </h2> </summary>
-<p>
-    
----
- 
-- create, update, delete records
-- send an email
-- Collect input from external users with an online form	
-- Collect input from internal users with a form placed on a Lightning page or launched by a button
-- Send a custom notification	
-- Send a survey	
-- Submit a record for approval	
-- Run another flow in the context of the current flow	
-- Access external systems	
-- Call a custom invocable action	
-- Send outbound messages
 
----
-
-</p>    
-    
-</details>  
-    
-    
 <br/>
 
-
+    
 <details>
-<summary> <h2> Types of Flow Resources </h2> </summary>
+<summary> <h2> types of Flow Resources </h2> </summary>
 <p>
 
 ---
@@ -204,11 +200,8 @@
 
 </details>
 
-
-<br/>
-
     
-## Types of flow elements
+## &nbsp; types of Flow Elements
 <table class="featureTable sort_table">
     <thead class="thead sorted">
       <tr>
@@ -262,10 +255,7 @@
       </tr>
     </tbody>
   </table>
-    
-    
-<br/>
-    
+        
     
 <details>
 <summary> <b> Which flow element to use when ... </b>   </summary>  
@@ -346,9 +336,15 @@
     
 </p>    
 </details>
-    
+
+
+<br/>
+
+
+## Record Triggered Flows
+
 <details> 
-<summary> <h2> Notes on Record Triggered Flows </h2> </summary>
+<summary> <h3> Optimise the flow for <code> Fast Fields Update </code>, <code> Actions and Related Records </code>. <br/> Run Immediately, Run Asynchronously and Scheduled paths. </h3> </summary>
 <p>
 
 ---
@@ -377,28 +373,14 @@
 <br/>
 
 
-### when creating related records
-**Field: WhatId**
-The ``WhatId`` field can refer to the ID of any related non-human object. It represents something other than a person, such as an account, opportunity, campaign, case, or custom object. To refer to a person object, such as contact, use ``WhoId``.
-
-**Value: $Record > Id**
-Remember, data from the record that triggered the flow is stored in the $Record variable. To reference the record itself, drill down from $Record to the Id field.
-
-
-
-
-
 ---
 
 </p>
 </details>
 
 
-<br/>
-
-
 <details> 
-<summary> <h2> Flow trigger Explorer </h2> </summary>
+<summary> <h3> Record Triggered Flow: <code>Flow trigger Explorer</code> </h3> </summary>
 <p>
 
 ---
@@ -417,22 +399,40 @@ Remember, data from the record that triggered the flow is stored in the $Record 
 </p>
 </details>
 
+
+<details> 
+<summary> <h3> create <code>related</code> records </h3> </summary>
+<p>
+
+---
+
+**Field: WhatId**
+The ``WhatId`` field can refer to the ID of any related non-human object. It represents something other than a person, such as an account, opportunity, campaign, case, or custom object. To refer to a person object, such as contact, use ``WhoId``.
+
+**Value: $Record > Id**
+Remember, data from the record that triggered the flow is stored in the $Record variable. To reference the record itself, drill down from $Record to the Id field.
+
+---
+
+</p>
+</details>
+
 <br/>    
    
 
-
+## Auto launched Flow
 ### connecting autolaunched flow to a button on record page ????
 https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calculate_implement?trail_id=automate_business_processes
 
 <br/>
 
 
-### security in flow ????
+## security in flow ????
 very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_security.htm&type=5 
 
 <br/>
 
-### Automate surveys ????
+## Automate surveys ????
 very short complete quick: https://trailhead.salesforce.com/content/learn/modules/automated-survey-invitations-with-flows
 
 
