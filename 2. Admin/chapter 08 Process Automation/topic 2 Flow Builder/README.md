@@ -430,6 +430,21 @@ https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calc
 ## security in flow ????
 very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_security.htm&type=5 
 
+![image](https://user-images.githubusercontent.com/63545175/196874109-ec539e9c-1105-4651-a382-ae4a3264e1ac.png)
+
+- this option is available while saving flow under **``show advanced``** button.
+    - the default ``User or system context`` : how the flow is launched determines whether the flow runs in the context of the user or the system. 
+    - If you choose ``system context with sharing`` : the flow respects record level security.
+        - org-wide default settings, 
+        - role hierarchies, 
+        - sharing rules, 
+        - manual sharing, 
+        - teams, and territories. 
+        - >_**Note:** it doesn't respect object permissions, field-level access, or other permissions of the running user._
+    - If you choose ``system context without sharing`` : the flow can access all data.
+
+
+
 <br/>
 
 ## Automate surveys ????
