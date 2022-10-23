@@ -136,12 +136,24 @@ input {
 <br/>
       
 ### first time setup
+``
+    Open VS Code
+``
+
     - 1. press ctrl+shift+p
     - 2. select sfdx: create project
     - 3. do 1 select sfdx: authorize an org
     - 4. do 1 select sfdx: create lightning web component
     - 5. right click on the component code
     - 6. select sfdx: preview component locally 
+
+
+<br/>
+
+
+> tip: 
+> - ``sfdx: open Default Org`` to open connected org direct from VS Code.
+
 
 
 <br/>
