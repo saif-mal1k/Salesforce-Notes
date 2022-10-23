@@ -155,6 +155,19 @@ input {
 > - ``sfdx: open Default Org`` to open connected org direct from VS Code.
 
 
+<br/>
+
+<br/>
+
+
+### how to edit lwc from chrome
+- install [Salesforce LWC Editor](https://chrome.google.com/webstore/detail/salesforce-lwc-editor/ehkpneicmpbdejpoancidgkejlkahjgo)
+- login to salesforce org
+- launch extension 
+
+<img src="https://user-images.githubusercontent.com/63545175/197392338-5100b6df-bc0a-481a-9cf7-d9f07dfa2cf0.png" width="360px">
+
+
 
 <br/>
 
