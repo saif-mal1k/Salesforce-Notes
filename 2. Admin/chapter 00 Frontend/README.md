@@ -29,25 +29,24 @@
   - for login in sandbox org you go to test.salesforce.com
   - username & passwords in sandbox are same as in production org (username will have .nameofthesandbox at the end)
   - there are 4 types of sandbox
-    - ***developer sandbox***
+    - ***developer sandbox*** : _Development, Unit testing_
       - includes a copy of your production org’s configuration (metadata), no data
       - data space: 200 MB
       - file space: 200 MB
-    - ***developer pro sandbox***
+    - ***developer pro sandbox*** : _Integration testing, Quality Assurance_
       - includes a copy of your production org’s configuration (metadata), no data
       - data space: 1 GB
       - file space: 1 GB
-    - ***partial copy sandbox***
+    - ***partial copy sandbox*** : _User Acceptance Testing, Staging_
       - includes a copy of prod org's metadata and, sample data (10k records per object)
       - data space: 5 GB
       - file space: 5 GB
-    - ***full copy sandbox***
+    - ***full copy sandbox*** : _Training, Deployment_
       - exact copy of production
       - data space: same as prod
       - file space: same as prod
 
-  
-<image src="https://user-images.githubusercontent.com/63545175/191734866-a14f8ee4-8d8e-4c67-8927-f093d1c2ad9b.png" width="720px">
+![image](https://user-images.githubusercontent.com/63545175/198032578-571b9e52-0440-4cbd-9b23-3d4fa5186122.png)
 
 
 
