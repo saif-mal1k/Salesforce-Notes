@@ -312,6 +312,8 @@ _"When a restriction rule is applied to a user, the data that they had read acce
 
 ***Scoping rules:** Use scoping rules to control the records that your users see based on criteria you select. Users can still access the records allowed by your sharing settings.*
 
+- Scoping rules are available on  Lead, Account, Contact, Opportunity, Case, Event, and Task objects. 
+
 _"With scoping rules you can set criteria to help your users see only records that are relevant to them. Scoping rules don’t restrict the record access that your users already have. They scope the records that your users see. Your users can still open and report on all records that they have access to per your sharing settings."_  
   
 ![image](https://user-images.githubusercontent.com/63545175/193261894-84fe2ad9-2b3e-4de8-9517-17d5e185abdd.png)  
