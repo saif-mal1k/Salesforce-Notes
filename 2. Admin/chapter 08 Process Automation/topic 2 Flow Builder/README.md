@@ -368,7 +368,7 @@ https://trailhead.salesforce.com/content/learn/projects/flow_calculate/flow_calc
 ## Record Triggered Flows
 
 <details> 
-<summary> <h3> Optimise the flow for <code> Fast Fields Update </code>, <code> Actions and Related Records </code>. <br/> Run Immediately, Run Asynchronously and Scheduled paths. </h3> </summary>
+<summary> <h3> Optimise the flow for <code> Fast Fields Update </code>, <code> Actions and Related Records </code>. <br/> <em> Run Immediately, Run Asynchronously and Scheduled paths. </em> </h3> </summary>
 <p>
 
 ---
