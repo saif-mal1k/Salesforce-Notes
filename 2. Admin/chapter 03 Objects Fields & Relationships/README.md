@@ -155,7 +155,8 @@ https://help.salesforce.com/s/articleView?id=sf.notes_on_changing_custom_field_t
 - validation rules fires on both insertion & updation also.
 - if we wan't validation rule to throw error only for new records or updated records we can use IsNew() or IsChanged() functions in formula respectively.
 
-
+> **Note:** When writing a validation rule, your condition formula should return “true” for your error condition. 
+> <br/> ex: ``Trip_End_Date__c < Trip_Start_Date__c``
 
 <br/>
 
