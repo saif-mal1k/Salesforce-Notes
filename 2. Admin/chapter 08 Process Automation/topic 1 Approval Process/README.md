@@ -136,6 +136,8 @@
 
 - ensure submit for approval button & lightning action in record page layout, also add approval history related list.
 - on record page, Submit for Approval button is available when record is not already submitted for approval and gets hidden after the record is submitted for approval.
+- A record can be in only one approval process at a time.
+
     
 - ERROR: ``no applicable approval process was found`` occurs, if
     - approval process is not active
