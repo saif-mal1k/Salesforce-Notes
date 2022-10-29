@@ -15,6 +15,20 @@
 </tr>
 </table>
 
+<details>
+<summary> adding more navigation items on record page </summary>
+<p>
+
+- goto edit page
+- click on nav item ``such as activity i.e also nav item``
+
+![image](https://user-images.githubusercontent.com/63545175/198821365-a6958219-6b78-4f6d-8323-14669ab46247.png)
+
+---
+
+</p>
+</details>
+
 
 <br/>
 
