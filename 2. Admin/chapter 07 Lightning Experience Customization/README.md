@@ -55,6 +55,21 @@ index
 ### kanban view
 <img src="https://user-images.githubusercontent.com/63545175/188627175-de2d43fb-86d7-42f8-b7b5-b545b661e31b.png" width="720px">
 
+<br/>
+
+<details> 
+<summary> <b> there is no option to select fields to display for recently viewed. but you can do that from setup ... </b> </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/198876759-968f1422-85f9-41f2-b14e-9fa45fd2ab87.png)
+
+**goto setup**
+
+![image](https://user-images.githubusercontent.com/63545175/198876822-8bd7f50a-485d-45a4-8704-2998c95b065f.png)
+
+
+</p>
+</details>
 
 ---
 
