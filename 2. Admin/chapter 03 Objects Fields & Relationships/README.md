@@ -207,8 +207,10 @@ Feed History tracking
 <tr>
 <td> 
 
-- Using Feed Tracking, users can see updates for records they follow in their Chatter feed.We can track only up to 20 fields per object.
+- Using Feed Tracking, users can see updates for records they follow in their Chatter feed. We can track only up to 20 fields per object.
 - Auto-number, formula, and roll-up summary fields, Encrypted and read-only system fields can't be tracked.
+
+> **note:** In lightning app builder, chatter components are available only to objects that have their feed tracking enabled.
   
 </td> 
 <td> 
