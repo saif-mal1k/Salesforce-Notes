@@ -7,6 +7,7 @@
     - related lists & details page customization using ``page layouts`` 
     - fields and components arrangement using ``lightning app builder``
     - fields and components visiblity in ``lightning app builder``
+    - in ``lightning app builder`` chatter components are available only to objects that have their feed tracking enabled.
   - [salesforce mobile app customization ??](#salesforce-mobile-app-customization-)
 
 
