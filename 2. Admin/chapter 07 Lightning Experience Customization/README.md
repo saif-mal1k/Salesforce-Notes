@@ -1,8 +1,22 @@
-index
-  - lightning apps
-  - list views
-  - salesforce mobile app customization
+**INDEX**
+  - [lightning apps](#lightning-apps)
+    - app manager
+    - lightning app builder 
+  - [list views](#list-views)
+  - [record page layout & compact layout](#record-page-layout--compact-layout)
+    - related lists & details page customization using ``page layouts`` 
+    - fields and components arrangement using ``lightning app builder``
+    - fields and components visiblity in ``lightning app builder``
+  - [salesforce mobile app customization ??](#salesforce-mobile-app-customization-)
 
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
 
 ## Lightning Apps
 <img src="https://user-images.githubusercontent.com/63545175/188558672-ed6f5308-b44e-4b35-99cb-e64d32bc01e0.png" width="720px">
@@ -102,16 +116,22 @@ Mobile phone
 
 <br/>
 
-### related & details page customization using page layout
+### related lists & details page customization using page layout
 <img src="https://user-images.githubusercontent.com/63545175/188566022-6a48832b-e06c-4aea-987c-e72f9edc40cf.png" width="720px">
 
 <br/>
 
-### components arrangement using Lightning app builder
+### fields & components arrangement using Lightning app builder
 <img src="https://user-images.githubusercontent.com/63545175/188562675-bc096f0b-d2f7-4407-b8bd-b08d18971526.png" width="720px">
 
 
 **💡 tip:** _using lightning app builder one can customize record page, home page , app page._
+
+<br/>
+
+### fields & component visiblity in Lightning app builder
+![image](https://user-images.githubusercontent.com/63545175/198877608-3f4a2b7e-f6c5-476b-8e60-fd49bbed4633.png)
+
 
 ---
 
