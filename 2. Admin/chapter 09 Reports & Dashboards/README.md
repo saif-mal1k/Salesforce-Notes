@@ -29,7 +29,11 @@ When Sita asked Maria which products are top sellers, Maria created a report tha
 <table>
 <tr>
 <td> standard report types are available on frontend, on reports tab </td>
-<td> if you want to create reports for custom objects, goto setup search report types create a custom report type </td>
+<td> 
+
+if you want to create custom report type for an object, goto setup search report types create a custom report type.
+
+</td>
 </tr>
 <tr>
 <td>  
@@ -41,12 +45,20 @@ When Sita asked Maria which products are top sellers, Maria created a report tha
 ![image](https://user-images.githubusercontent.com/63545175/190897709-3c0f57d0-38ab-4302-b4c8-c24f52c0f4fc.png)
 </td>
 </tr>
+<tr>
+<td colspan="2">
+
+> **Note:** _when creating an object, there is an option ``allow reports``. when checked it creates report type but i.e also standard type._
+> <br/> custom report types are build arround the relationship between two objects.
+
+</td>
+</tr>
 </table>
 
   - ``You can’t edit standard report types.``
   - The report type determines which fields and records are available for use when creating a report. 
  
-***This is based on the relationships between a primary object and its related objects.***
+***Custom Report type is based on the relationships between a primary object and its related objects.***
 
 <details>
 <summary> <b>Primary object with related object—</b> </summary> 
