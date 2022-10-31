@@ -396,7 +396,7 @@ trigger AccountTrigger on Account (after update) {
 <br/>
 
 
-## important triggers and order of execution 
+## [important triggers and order of execution](https://user-images.githubusercontent.com/63545175/198989798-1361dc94-3e8f-479c-8048-825a72a42c1d.png "https://architect.salesforce.com/1/asset/immutable/s/e6cf2ac/assets/images/Salesforce-Order-Of-Execution-Diagram.png")
 
 - // **initial steps**
 	- system validation
