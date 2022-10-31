@@ -1,3 +1,10 @@
+
+## create aura (``Component``, ``App``, ``Event``, ``Interface``)
+
+<details>
+<summary> <h3> Using Developer Console </h3> </summary>
+<p>
+ 
 ### 1. open developer console
 
 ![image](https://user-images.githubusercontent.com/63545175/169679382-41e48abc-bd73-4867-bd44-c8374c1b8af4.png)
@@ -93,7 +100,37 @@ you can click the CONTROLLER and HELPER items to add those resources to the bund
 
 - components can contain components
 
+</p>
+</details>
 
+
+
+
+<br/>
+
+
+
+
+
+<details>
+<summary> <h3> Using VS Code </h3> </summary> 
+<p>
+ 
+### Creating Component 
+- create project using ``SFDX: create a project``
+- press ``ctrl + shift + p``
+![image](https://user-images.githubusercontent.com/63545175/198950763-8497339b-be8d-4d61-b81f-a90ac67f1dbf.png)
+
+<br/>
+ 
+### Deploying to org 
+ 
+ 
+ 
+</p>
+</details> 
+ 
+ 
 
 
 <br/>
