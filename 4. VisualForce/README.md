@@ -16,6 +16,8 @@ Visualforce is a ``web development framework`` based on standard web technology 
 <br/>
 
 
+
+
 ## Visualforce vs Aura
 - **visualforce page is stored in salesforce as a single entity ``ApexPage``, it is represented by two files(**_``yourPageName.page`` i.e code for the page & ``yourPageName.page-meta.xml`` i.e page metadata_**). an individual page or component might have dependencies that are referenced but they are not included in page.**
 
@@ -99,10 +101,20 @@ You can have Aura components (4) running in a Visualforce page (3) using LC4VF. 
 
  
 
-<br/>
+
+
 
 
 <br/>
+
+
+
+
+<br/>
+
+
+
+
 
 ## Visualforce vs LWC
 
