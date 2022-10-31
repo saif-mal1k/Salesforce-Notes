@@ -1,37 +1,32 @@
-## What Is the Lightning Component Framework?
-The Lightning Component framework is a UI framework for developing web apps for mobile and desktop devices. 
-It’s a modern framework for building single-page applications with dynamic, responsive user interfaces for Lightning Platform apps. 
-It uses JavaScript on the client side and Apex on the server side.
 
-<img src="https://user-images.githubusercontent.com/63545175/169451424-0cd16f30-cdb9-4432-949e-ce43174c33a3.png" width="640px">
-
-
-<br/>
-
-
-## Where You Can Use Lightning Components
-
-- Add Apps to the Lightning Experience App Launcher
-- Add Apps to Lightning Experience and Salesforce App Navigation
-- Add Lightning Components to Lightning Pages
-- Add Lightning Components to Lightning Experience Record Pages
-- Launch a Lightning Component as a Quick Action
-- Create Stand-Alone Apps
-
-
-<br/>
-  
-
-<br/>
   
 ## Aura component  
-**an aura component is represented by multiple files(**_cmpName.auradoc, cmpName.cmp, cmpName.cmp-meta.xml, cmpName.css, cmpName.design, cmpName.svg, cmpNameController.js, cmpNameHelper.js, cmpNameRenderer.js_**). an individual component is stored as a bundle(folder) that includes all resource without dependencies.**
+- **an aura component is represented by multiple files(**_cmpName.auradoc, cmpName.cmp, cmpName.cmp-meta.xml, cmpName.css, cmpName.design, cmpName.svg, cmpNameController.js, cmpNameHelper.js, cmpNameRenderer.js_**).**  
+- **an individual component is stored as a bundle(folder) that includes all resource without dependencies.** 
+- **aura components are (intended to be) loosely coupled. The mechanism for this loose coupling is [Events](# "Events are fired from JavaScript controller actions that are typically triggered by a user interacting with the user interface.").**
+
+
+<table>
+<tr>
+<td> 
 
 ![image](https://user-images.githubusercontent.com/63545175/198946787-7f6f72c1-317c-4cbc-9fe5-d958be77b9a4.png)  
+</td>
+<td>
+
+- an aura component is (_intended to be_):
+  - **highly cohesive**: complete in itself.
+  - **loosely coupled**: less dependencies. (_mechanism is [Events](# "Events are fired from JavaScript controller actions that are typically triggered by a user interacting with the user interface.")_)
+  - **useful in composition**: multiple components complete an app.
+  
+</td>
+</table>
+
   
 ![image](https://user-images.githubusercontent.com/63545175/198949983-b93bb74f-7e98-4ad5-8040-19fdb754b3f8.png)
   
-  
+
+
   
   
 <br/>
