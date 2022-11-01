@@ -71,6 +71,18 @@ input {
 </details>
 
 
+
+<br/>
+
+### [copy lightning components from blueprints](https://www.lightningdesignsystem.com/components/cards/)
+
+
+<br/>
+
+
+<br/>
+
+
 <br/>
 
 
