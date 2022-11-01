@@ -16,8 +16,21 @@
 ![image](https://user-images.githubusercontent.com/63545175/192206233-a14feddd-7429-4240-90f9-08050d3e186b.png)
 
 
+<br/>
 
 
+---
+
+
+<br/>
+
+
+<br/>
+
+
+## Static resources
+very short complete soon
+https://help.salesforce.com/s/articleView?id=sf.pages_static_resources.htm&type=5 ????
 
 
 
