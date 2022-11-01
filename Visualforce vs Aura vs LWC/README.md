@@ -281,6 +281,10 @@ There are actions and functions for viewing, creating, editing, and so on. Use t
 <br/>
 
 
+- [Develop for Lightning Experience](https://trailhead.salesforce.com/content/learn/trails/lex_dev)
+- [Make the Move to Lightning Experience](https://trailhead.salesforce.com/content/learn/trails/lex_admin_migration)
+
+
 <br/>
 
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_navigation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
