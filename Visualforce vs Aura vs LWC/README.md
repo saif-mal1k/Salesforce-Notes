@@ -205,6 +205,60 @@ Aura component controllers run on the client side. And sometimes on the server s
 
 
 
+<br/>
+
+## Lightning Navigation using ``sforce.one`` object
+- (JavaScript Utility Object) (used for Navigation)
+ - sforce.one is automatically injected into page when it runs in Lightning Experience or the Salesforce app. 
+ - it is available in JavaScript debugger console and web developer resources list. 
+ - sforce.one is primarily used to fire navigation events. 
+
+> **imp-Note:** ``sforce.one`` is available in lightning pages only, there’s no way to get sforce.one in for Visualforce pages in Salesforce Classic.
+
+
+### methods provided by ``sforce.one`` object
+| Function |	Description |
+|----------|-------------|
+| ``back([refresh ])`` |	Navigates to the previous state that’s saved in the sforce.one history. It’s equivalent to clicking a browser’s Back button. |
+| ``navigateToSObject(recordId [, view ])`` |	Navigates to an sObject record, specified by recordId . |
+| ``navigateToURL(url [, isredirect ])`` |	Navigates to the specified URL. |
+| ``navigateToFeed(subjectId, type )``	| Navigates to the feed of the specified type, scoped to the subjectId .|
+| ``navigateToFeedItemDetail(feedItemId )`` |	Navigates to the specific feed item, feedItemId, and any associated comments.|
+| ``navigateToRelatedList(relatedListId, parentRecordId )`` |	Navigates to a related list for the parentRecordId .|
+| ``navigateToList(listViewId, listViewName, scope )`` |	Navigates to the list view that’s specified by the listViewId, which is the ID of the list view to be displayed.|
+| ``createRecord(entityName [, recordTypeId ])`` |	Opens the page to create a new record for the specified entityName, for example, “Account” or “MyObject__c”.|
+| ``editRecord(recordId )`` |	Opens the page to edit the record specified by recordId .|
+
+
+**Don’t use static URLs to Salesforce resources.** 
+There are actions and functions for viewing, creating, editing, and so on. Use them, rather than URL strings.
+
+> **example:** That is, if adding a link to edit a Contact record, don’t create the link by building a string with a static pattern like link = '/' + accountId + '/e'. It is not best approach:
+
+- In Visualforce markup, use ``{!URLFOR($Action.Contact.Edit, recordId)}``
+- In JavaScript, use ``navigateToSObject(recordId)``
+
+
+<br/>
+
+
+## know what theme current user is using
+- `$User.UIThemeDisplayed` : tells the current user experience context when used in Visualforce markup.
+- `UITheme.getUITheme()` : tells the current user experience context when used in a JavaScript static resource.
+- `UserInfo.getUiThemeDisplayed()` : tells the current user experience context when used in Apex.
+
+***types of themes available in salesforce:***
+
+```
+  Theme1—Obsolete Salesforce theme
+  Theme2—Salesforce Classic 2005 user interface theme
+  Theme3—Salesforce Classic 2010 user interface theme
+  Theme4d—Modern “Lightning Experience” Salesforce theme
+  Theme4t—Salesforce mobile app theme
+  Theme4u—Lightning Console theme
+  PortalDefault—Salesforce Customer Portal theme
+  Webstore—Salesforce AppExchange theme
+```
 
 
 <br/>
@@ -223,7 +277,15 @@ Aura component controllers run on the client side. And sometimes on the server s
 ***references:***
 - A “session” for our purposes here is basically some kind of token that your browser re-uses from request to request so that you don’t need to enter your username and password for every request. You often need to access the current session using the global variable $Api.Session_ID .
 - $Api.Session_ID returns different values depending on the domain of the request. This is because the session ID varies during a session whenever you cross a hostname boundary, such as .salesforce.com to .force.com. Normally Salesforce transparently handles session hand-off between domains, but if you’re passing the session ID around yourself, be aware that you might need to re-access $Api.Session_ID from the right domain to ensure a valid session ID.
-- 
+
+<br/>
+
+
+<br/>
+
+- https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_navigation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
+- https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_concepts?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
+- https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 
 
 
