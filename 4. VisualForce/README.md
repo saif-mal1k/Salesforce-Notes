@@ -84,6 +84,30 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 <br/>
 
 
+## what things visualforce can't access when used in lightning page
+
+### to navigate from current page to another
+- ``a visualforce page can't access`` **``window.location()``** ``javascript object in lightning experience`` because visualforce page is rendered inside iframe in Lightning Experience Container. it is available to visualforce in salesforce classic because there visualforce page is rendered inside Visualforce container. 
+- ``sforce.one`` is available in lightning pages only, there’s no way to get sforce.one in for Visualforce pages in Salesforce Classic.
+
+> **alternate:** Create a link using the expression ``{!URLFOR($Action.Contact.Edit, recordId)}`` works in both lightning and classic.
+
+
+<br/> 
+
+
+
+## Best Practices
+- Visualforce pages use the same visual styling in both Salesforce Classic and Lightning Experience.
+  - You can easily add a stylesheet specific to Lightning Experience to your Visualforce pages.
+  - The Lightning Design System is the best way to add the Lightning Experience visual design to your pages.
+- If you're creating new Visualforce pages for Lightning Experience from scratch, 
+  - you should use the Lightning Design system it includes CSS stylesheets, icons and fonts.
+  - By default, built-in Visualforce components always use Salesforce Classic visual design.
+
+
+
+
 <br/>
 
 
@@ -103,9 +127,6 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 ***references:***
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_intro?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 
-<br/>
 
-- https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_concepts?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
-- https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 
 
