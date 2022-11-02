@@ -1,4 +1,42 @@
 
+## What Is the Lightning Component Framework?
+The Lightning Component framework is a UI framework for developing web apps for mobile and desktop devices. 
+It’s a modern framework for building single-page applications with dynamic, responsive user interfaces for Lightning Platform apps. 
+It uses JavaScript on the client side and Apex on the server side.
+
+<img src="https://user-images.githubusercontent.com/63545175/169451424-0cd16f30-cdb9-4432-949e-ce43174c33a3.png" width="640px">
+
+
+### Where to Use Lightning Components
+
+- Add Apps to the Lightning Experience App Launcher
+- Add Apps to Lightning Experience and Salesforce App Navigation
+- Add Lightning Components to Lightning Pages
+- Add Lightning Components to Lightning Experience Record Pages
+- Launch a Lightning Component as a Quick Action
+- Create Stand-Alone Apps
+
+
+<br/>
+
+
+## Lightning Experience
+Lightning Experience is something you use directly, Lightning Components are something you build apps with.
+Lightning Experience is (mostly) buid with Lightning Components.
+
+### why Lightning components
+- **Component Set** : Salesforce provides a number of components to bootstrap your app development. 
+- **Rapid Development** : The simple markup and pre-made components mean that you can get applications out the door faster than ever. Particularly if you’re comfortable with Visualforce markup, learning component markup is a breeze. 
+- **Performance** : The component framework leverages a stateful client (using JavaScript) and a stateless server (using Apex). This structure allows the client to call the server only when absolutely necessary. With fewer calls to the server, apps are more responsive and efficient. 
+- **Event-Driven Architecture** : Events are key to the Lightning component framework. Components listen to application and component events and respond accordingly. - 
+- **Device-Aware and Cross-Browser Compatibility** : A huge advantage of Lightning components is that developers don’t have to worry about compatibility across devices and browsers.
+
+
+
+<br/>
+
+
+
 ## Visualforce vs Aura
 - **visualforce page is stored in salesforce as a single entity ``ApexPage``, it is represented by two files(**_``yourPageName.page`` i.e code for the page & ``yourPageName.page-meta.xml`` i.e page metadata_**). an individual page or component might have dependencies that are referenced but they are not included in page.**
 
@@ -10,10 +48,21 @@
 <br/>
 
 ### Server-side rendering vs Client-side rendering 
-| Visualforce Request Cycle |	Lightning Components Request Cycle |
+| Visualforce Request Cycle |	Aura Components Request Cycle |
 |---------------------------|-------------------------------|
 | ![image](https://user-images.githubusercontent.com/63545175/198947561-1fbf144d-bf11-4824-b309-4cd91351a2ac.png) | ![image](https://user-images.githubusercontent.com/63545175/198947576-1b1359e4-83cc-462e-a6e8-b1a32c2265da.png) |
 | User requests a page. <br/> The server executes the page’s underlying code and sends the resulting HTML to the browser. <br/> The browser displays the HTML. <br/> When the user interacts with the page, return to step one | The user requests an application or a component. <br/> The application or component bundle is returned to the client. <br/> The browser loads the bundle. <br/> The JavaScript application generates the UI. <br/> When the user interacts with the page, the JavaScript application modifies the user interface as needed (return to previous step). |
+
+<br/>
+
+### Visualforce Controllers vs Aura Components Controllers
+- ***Visualforce*** controllers run on the server side, and are written in Apex.
+- ***Aura Component*** controllers run on the client side. And sometimes on the server side, too. they are written in JavaScript. And sometimes also in Apex.
+
+| Visualforce Controller Architecture |	Aura Components Controller Architecture |
+|-------------------------------------|-----------------------------------------|
+| ![image](https://user-images.githubusercontent.com/63545175/198980044-e8949b81-b745-46ff-802e-cbdf7623a135.png) | ![image](https://user-images.githubusercontent.com/63545175/198980074-67ef3520-bc54-4708-afb9-8c33f7136825.png) |
+
 
 <br/>
 
@@ -26,6 +75,8 @@
 - for Aura components based apps. There’s only one “page” for the entire app!. Once loaded, the JavaScript runs and updates the user interface of the “page”.
 - Through javascript SPA knows which components to load for each state, and those components know how to draw, or render, themselves.
 - **example:** Instead of navigating from page to page, users navigate from state to state. A state represents a mode that your app is currently in. The list view state, the view record state, and so on.
+
+<br/>
 
 ### page vs component
 - ***A Visualforce page is, intended to stand alone. you can access it with a unique, permanent URL.***
@@ -41,6 +92,8 @@
 </p>
 </details>
 
+<br/>
+
 ### page-centric vs app-centric
 ***page-centric***
 - The traditional Salesforce experience(Salesforce Classic) is an example of a **page-centric** web application model. 
@@ -54,41 +107,81 @@
 
 > **note:** generally a combination of both ``page-centric`` & ``app-centric`` is used to for better UX.
 
-<br/>
-
-
-## What Is the Lightning Component Framework?
-The Lightning Component framework is a UI framework for developing web apps for mobile and desktop devices. 
-It’s a modern framework for building single-page applications with dynamic, responsive user interfaces for Lightning Platform apps. 
-It uses JavaScript on the client side and Apex on the server side.
-
-<img src="https://user-images.githubusercontent.com/63545175/169451424-0cd16f30-cdb9-4432-949e-ce43174c33a3.png" width="640px">
 
 
 <br/>
 
 
-### Where You Can Use Lightning Components
+## summarised Comparison
+<table>
+<tr>
+<td>
 
-- Add Apps to the Lightning Experience App Launcher
-- Add Apps to Lightning Experience and Salesforce App Navigation
-- Add Lightning Components to Lightning Pages
-- Add Lightning Components to Lightning Experience Record Pages
-- Launch a Lightning Component as a Quick Action
-- Create Stand-Alone Apps
+<details>
+<summary> <b> Classic Visualforce </b>  </summary>
+<p>
+
+- Visualforce pages are just HTML pages with extra tags resolved by the server. 
+
+</p>
+</details> 
+ 
+</td>
+<td>
+
+<details>
+<summary> <b> Visualforce as a JavaScript Application Container </b>  </summary>
+<p>
+ 
+- Visualforce pages are just HTML pages with extra [tags](#summarised-comparison "remember tags are resolved, not JS") resolved by the server. 
+- As a result, you can use an empty Visualforce page as a container for a JavaScript application. 
+- In this scenario, you don’t use Visualforce tags to build your user interface. 
+- Instead, you load your JavaScript application in an empty page. 
+- Then the user interface is generated on the client-side by the JavaScript application. 
+- These applications are generally referred to as single-page applications, or SPAs, and are often built using third-party frameworks like AngularJS or React.
+
+</p>
+</details> 
+ 
+</td>
+<td> 
+ 
+**Lightning Components** 
+- _Aura_ , _LWC_.
+ 
+</td> 
+</tr>
+<tr>
+<td>
+ 
+**UI generation**
+- Server-side
+ 
+**Data & Business Logic**
+- Apex standard or custom controller
+ 
+</td>
+<td>
+ 
+**UI Generation**
+- Client-side (mostly JavaScript)
+
+**Data and Business Logic**
+- Remote Objects or JavaScript Remoting, Apex controller 
+</td>
+<td> 
+ 
+**UI Generation**
+- Client-side (JavaScript)
+ 
+**Data and Business Logic**
+- Lightning Data Service, Apex 
+</td> 
+</tr> 
+</table>
 
 
-## Lightning Experience
-Lightning Experience is something you use directly, Lightning Components are something you build apps with.
-Lightning Experience is (mostly) buid with Lightning Components.
-
-### why Lightning components
-- **Component Set** : Salesforce provides a number of components to bootstrap your app development. 
-- **Rapid Development** : The simple markup and pre-made components mean that you can get applications out the door faster than ever. Particularly if you’re comfortable with Visualforce markup, learning component markup is a breeze. 
-- **Performance** : The component framework leverages a stateful client (using JavaScript) and a stateless server (using Apex). This structure allows the client to call the server only when absolutely necessary. With fewer calls to the server, apps are more responsive and efficient. 
-- **Event-Driven Architecture** : Events are key to the Lightning component framework. Components listen to application and component events and respond accordingly. - 
-- **Device-Aware and Cross-Browser Compatibility** : A huge advantage of Lightning components is that developers don’t have to worry about compatibility across devices and browsers.
-
+<br/>
 
 
 <br/>
@@ -112,15 +205,14 @@ Lightning for Outlook and Lightning for Gmail
 Stand-alone my.app
 ```
 
-note that Different environments offer different services.
+> **note** that Different environments offer different services.
 
 - For example, the one.app container (Lightning Experience and the Salesforce app) provides a number of services, including handling events to go to a record, create or edit a record, open a URL, and so on.
 
 - For example, if you use the force:createRecord event to create new records, that works great in Lightning Experience, but if you use that component in a stand-alone app, or Lightning Out, it stops working, because there’s nothing to handle that event.
 
-> **Note:** if you fire an event in a container where nothing is listening, does it have an effect? answer is No.
+> **Note:** if an event is fired in a container where nothing is listening, does it have an effect? answer is No.
 
-<br/>
 
 ### Container Containment (a.k.a., The “Russian Doll” Situation)
 A container has boundaries. A container keeps inside things in, and outside things out.
@@ -128,26 +220,6 @@ A container has boundaries. A container keeps inside things in, and outside thin
 > **example:** You can have Aura components (4) running in a Visualforce page (3) using LC4VF. Then you can use LAB to add the Visualforce page to a Lightning Page (2), then add that Lightning Page to Lightning Experience (1). 
 
 an Aura component's code can access only the services of the container it’s running inside of, even if that container is inside of another container.
-
- 
-
-<br/>
-
-## Visualforce Controllers vs Aura Controllers
-***Visualforce***
-Visualforce controllers run on the server side, and are written in Apex.
-
-***Aura Component***
-Aura component controllers run on the client side. And sometimes on the server side, too. they are written in JavaScript. And sometimes also in Apex.
-
-| Visualforce Controller Architecture |	Aura Components Controller Architecture |
-|-------------------------------------|-----------------------------------------|
-| ![image](https://user-images.githubusercontent.com/63545175/198980044-e8949b81-b745-46ff-802e-cbdf7623a135.png) | ![image](https://user-images.githubusercontent.com/63545175/198980074-67ef3520-bc54-4708-afb9-8c33f7136825.png) |
-
-
-
-
-
 
 
 
@@ -226,71 +298,6 @@ Aura component controllers run on the client side. And sometimes on the server s
 
 <br/>
 
-
-## summarised Comparison
-<table>
-<tr>
-<td>
- 
-**Classic Visualforce**
-- Visualforce pages are just HTML pages with extra tags resolved by the server. 
- 
-</td>
-<td>
-
-<details>
-<summary> <b> Visualforce as a JavaScript Application Container </b>  </summary>
-<p>
- 
-- Visualforce pages are just HTML pages with extra [tags](#summarised-comparison "remember tags are resolved, not JS") resolved by the server. 
-- As a result, you can use an empty Visualforce page as a container for a JavaScript application. 
-- In this scenario, you don’t use Visualforce tags to build your user interface. 
-- Instead, you load your JavaScript application in an empty page. 
-- Then the user interface is generated on the client-side by the JavaScript application. 
-- These applications are generally referred to as single-page applications, or SPAs, and are often built using third-party frameworks like AngularJS or React.
-
-</p>
-</details> 
- 
-</td>
-<td> 
- 
-**Lightning Components** 
-- _Aura_ , _LWC_.
- 
-</td> 
-</tr>
-<tr>
-<td>
- 
-**UI generation**
-- Server-side
- 
-**Data & Business Logic**
-- Apex standard or custom controller
- 
-</td>
-<td>
- 
-**UI Generation**
-- Client-side (mostly JavaScript)
-
-**Data and Business Logic**
-- Remote Objects or JavaScript Remoting, Apex controller 
-</td>
-<td> 
- 
-**UI Generation**
-- Client-side (JavaScript)
- 
-**Data and Business Logic**
-- Lightning Data Service, Apex 
-</td> 
-</tr> 
-</table>
-
-
-<br/>
 
 ## Lightning Navigation using ``sforce.one`` object
 - (JavaScript Utility Object) (used for Navigation)
