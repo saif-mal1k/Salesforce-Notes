@@ -9,8 +9,8 @@
 
 <br/>
 
-### client side rendring vs server side rendering
-| Visualforce Request Cycle |	Aura Components Request Cycle |
+### Server-side rendering vs Client-side rendering 
+| Visualforce Request Cycle |	Lightning Components Request Cycle |
 |---------------------------|-------------------------------|
 | ![image](https://user-images.githubusercontent.com/63545175/198947561-1fbf144d-bf11-4824-b309-4cd91351a2ac.png) | ![image](https://user-images.githubusercontent.com/63545175/198947576-1b1359e4-83cc-462e-a6e8-b1a32c2265da.png) |
 | User requests a page. <br/> The server executes the page’s underlying code and sends the resulting HTML to the browser. <br/> The browser displays the HTML. <br/> When the user interacts with the page, return to step one | The user requests an application or a component. <br/> The application or component bundle is returned to the client. <br/> The browser loads the bundle. <br/> The JavaScript application generates the UI. <br/> When the user interacts with the page, the JavaScript application modifies the user interface as needed (return to previous step). |
@@ -32,10 +32,8 @@
 - ***An Aura component, is intended to be a part of a page. You can’t access an individual component at a specific URL.***
 
 
-<br/>
-
 <details>
-<summary> Question: if Visualforce page also have components(Visualforce components) how is it different ? </summary>
+<summary>  Question: if Visualforce page also have components(Visualforce components) how is it different ?  </summary>
 <p>
 
 
@@ -43,6 +41,18 @@
 </p>
 </details>
 
+### page-centric vs app-centric
+***page-centric***
+- The traditional Salesforce experience(Salesforce Classic) is an example of a **page-centric** web application model. 
+- It’s great for basic functionality, but it’s challenging to deliver the new, more dynamic experience that users expect. 
+- Fundamentally, this is because it relies on the server to generate a new page every time you interact with the application.
+
+***app-centric***
+- **app-centric** model uses JavaScript on the client-side to deliver a more interactive experience. 
+- JavaScript is used to create, modify, transform, and animate the user interface rather than completely replacing it a page at a time. 
+- This model is more interactive, and fluid. it is also called ``Lightning Experience``.
+
+> **note:** generally a combination of both ``page-centric`` & ``app-centric`` is used to for better UX.
 
 <br/>
 
@@ -68,6 +78,16 @@ It uses JavaScript on the client side and Apex on the server side.
 - Create Stand-Alone Apps
 
 
+## Lightning Experience
+Lightning Experience is something you use directly, Lightning Components are something you build apps with.
+Lightning Experience is (mostly) buid with Lightning Components.
+
+### why Lightning components
+- **Component Set** : Salesforce provides a number of components to bootstrap your app development. 
+- **Rapid Development** : The simple markup and pre-made components mean that you can get applications out the door faster than ever. Particularly if you’re comfortable with Visualforce markup, learning component markup is a breeze. 
+- **Performance** : The component framework leverages a stateful client (using JavaScript) and a stateless server (using Apex). This structure allows the client to call the server only when absolutely necessary. With fewer calls to the server, apps are more responsive and efficient. 
+- **Event-Driven Architecture** : Events are key to the Lightning component framework. Components listen to application and component events and respond accordingly. - 
+- **Device-Aware and Cross-Browser Compatibility** : A huge advantage of Lightning components is that developers don’t have to worry about compatibility across devices and browsers.
 
 
 
@@ -201,8 +221,73 @@ Aura component controllers run on the client side. And sometimes on the server s
 | LWC | Developing for Lightning Experience	| Lightning Experience was built with Lightning Components. these custom components(_UI elements_) can be added to any page using Lightning App Builder.|
 | LWC | Developing for mobile app | Visualforce can be a poor match for mobile apps with limited, high-latency network connections and limited compute resources. Lightning Components, by contrast, was designed specifically to handle this context.|
 | Visualforce | Building a Page-Centric Experience with Limited Client-Side Logic | Use Visualforce pages to ensure development velocity and manageability.|
-| Visualforce | Building an Interactive Experience with JavaScript and I Need a Third-Party Framework | Use a Visualforce page as a container for your third-party framework such as React |
+| Visualforce | Building an Interactive Experience with JavaScript and I Need a Third-Party Framework | Use a Visualforce page as a container for your third-party framework such as React.|
 
+
+<br/>
+
+
+## summarised Comparison
+<table>
+<tr>
+<td>
+ 
+**Classic Visualforce**
+- Visualforce pages are just HTML pages with extra tags resolved by the server. 
+ 
+</td>
+<td>
+
+<details>
+<summary> <b> Visualforce as a JavaScript Application Container </b>  </summary>
+<p>
+ 
+- Visualforce pages are just HTML pages with extra [tags](#summarised-comparison "remember tags are resolved, not JS") resolved by the server. 
+- As a result, you can use an empty Visualforce page as a container for a JavaScript application. 
+- In this scenario, you don’t use Visualforce tags to build your user interface. 
+- Instead, you load your JavaScript application in an empty page. 
+- Then the user interface is generated on the client-side by the JavaScript application. 
+- These applications are generally referred to as single-page applications, or SPAs, and are often built using third-party frameworks like AngularJS or React.
+
+</p>
+</details> 
+ 
+</td>
+<td> 
+ 
+**Lightning Components** 
+- _Aura_ , _LWC_.
+ 
+</td> 
+</tr>
+<tr>
+<td>
+ 
+**UI generation**
+- Server-side
+ 
+**Data & Business Logic**
+- Apex standard or custom controller
+ 
+</td>
+<td>
+ 
+**UI Generation**
+- Client-side (mostly JavaScript)
+
+**Data and Business Logic**
+- Remote Objects or JavaScript Remoting, Apex controller 
+</td>
+<td> 
+ 
+**UI Generation**
+- Client-side (JavaScript)
+ 
+**Data and Business Logic**
+- Lightning Data Service, Apex 
+</td> 
+</tr> 
+</table>
 
 
 <br/>
@@ -260,6 +345,15 @@ There are actions and functions for viewing, creating, editing, and so on. Use t
   Webstore—Salesforce AppExchange theme
 ```
 
+<br/>
+
+
+
+
+
+
+
+
 
 <br/>
 
@@ -290,7 +384,6 @@ There are actions and functions for viewing, creating, editing, and so on. Use t
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_navigation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_concepts?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
-
 
 
 
