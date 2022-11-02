@@ -102,7 +102,11 @@ https://trailhead.salesforce.com/content/learn/modules/lex_implementation_chatte
 https://trailhead.salesforce.com/content/learn/modules/salesforce1_mobile_app?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential 
 
 
+<br/>
 
+
+### Lightning Experience features ????
+https://trailhead.salesforce.com/content/learn/modules/lex_migration_whatsnew
 
 
 
