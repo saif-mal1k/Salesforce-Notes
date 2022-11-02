@@ -162,6 +162,13 @@ Generic sObject datatype is used to declare the variables which can store any ty
 
 <br/>
 
+### Blob
+The Blob is a collection of Binary data which is stored as object. This will be used when we want to store the attachment in salesforce into a variable. This data type converts the attachments into a single object. If the blob is to be converted into a string, then we can make use of the toString and the valueOf methods for the same.
+
+
+
+<br/>
+
 
 ### Collections
 <table>
