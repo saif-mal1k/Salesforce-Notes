@@ -1,5 +1,8 @@
+# Enhance salesforce with code
+https://help.salesforce.com/s/articleView?id=sf.extend_code_overview.htm&type=5 ????
 
-# Custom MetaData types & Custom Settings
+
+## Custom MetaData types & Custom Settings
 - custom meta data can be deployed from sandbox to production, but custom settings can't be.
 
 ????
@@ -8,6 +11,9 @@
 ### Custom meta data
 ![image](https://user-images.githubusercontent.com/63545175/192206321-41615613-e6ed-4de6-8d67-7f73bf19af48.png)
 
+https://trailhead.salesforce.com/content/learn/trails/configure-your-app-with-custom-metadata-types ????
+
+https://help.salesforce.com/s/articleView?id=sf.custommetadatatypes_overview.htm&type=5 ????
 
 <br/>
 
@@ -28,9 +34,11 @@
 <br/>
 
 
-# Static resources
+## Static resources
+- used mostly with visualforce
 very short complete soon
 https://help.salesforce.com/s/articleView?id=sf.pages_static_resources.htm&type=5 ????
+
 
 
 <br/>
@@ -41,7 +49,7 @@ https://help.salesforce.com/s/articleView?id=sf.pages_static_resources.htm&type=
 
 <br/>
 
-# Custom Labels ????
+## Custom Labels ????
 
 small topic, not big complete quick
 
