@@ -105,8 +105,25 @@ https://trailhead.salesforce.com/content/learn/modules/salesforce1_mobile_app?tr
 <br/>
 
 
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+---
+
+<br/>
+
+## Lightning Experience
 ### Lightning Experience features ????
-https://trailhead.salesforce.com/content/learn/modules/lex_migration_whatsnew
+https://trailhead.salesforce.com/content/learn/modules/lex_migration_whatsnew ????
+
+
+### Learn to Work in Lightning Experience ????
+https://trailhead.salesforce.com/content/learn/trails/lex_user_learn_fundamentals ????
 
 
 
