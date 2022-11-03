@@ -284,9 +284,7 @@ an Aura component's code can access only the services of the container it’s ru
   
 <br/>
 
-
-<br/>
-
+### what is better
 
 | Tool | Job | why |
 |------|-----|----------------|
@@ -294,6 +292,9 @@ an Aura component's code can access only the services of the container it’s ru
 | LWC | Developing for mobile app | Visualforce can be a poor match for mobile apps with limited, high-latency network connections and limited compute resources. Lightning Components, by contrast, was designed specifically to handle this context.|
 | Visualforce | Building a Page-Centric Experience with Limited Client-Side Logic | Use Visualforce pages to ensure development velocity and manageability.|
 | Visualforce | Building an Interactive Experience with JavaScript and I Need a Third-Party Framework | Use a Visualforce page as a container for your third-party framework such as React.|
+
+
+<br/>
 
 
 <br/>
@@ -381,16 +382,15 @@ There are actions and functions for viewing, creating, editing, and so on. Use t
 
 <br/>
 
-
 - [Develop for Lightning Experience](https://trailhead.salesforce.com/content/learn/trails/lex_dev)
 - [Make the Move to Lightning Experience](https://trailhead.salesforce.com/content/learn/trails/lex_admin_migration)
+- [Visualforce & Lightning Experience](https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce)
 
 
 <br/>
 
-- https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_navigation?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_concepts?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
-- https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
+
 
 
 
