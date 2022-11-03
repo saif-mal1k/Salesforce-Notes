@@ -103,6 +103,7 @@
 </p>
 </details>
 
+> **Note:** _custom objects can have tabs, but no option to create tabs for those standard objects that aren't having one._
 
 <br/>
 
