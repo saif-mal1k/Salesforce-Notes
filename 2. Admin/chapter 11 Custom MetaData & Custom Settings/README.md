@@ -28,10 +28,26 @@
 <br/>
 
 
-## Static resources
+# Static resources
 very short complete soon
 https://help.salesforce.com/s/articleView?id=sf.pages_static_resources.htm&type=5 ????
 
+
+<br/>
+
+---
+
+<br/>
+
+<br/>
+
+# Custom Labels ????
+
+small topic, not big complete quick
+
+![image](https://user-images.githubusercontent.com/63545175/199650719-8833d61f-1a7c-4ff6-9685-0c688b27a08a.png)
+
+https://help.salesforce.com/s/articleView?id=sf.cl_about.htm&type=5 ????
 
 
 
