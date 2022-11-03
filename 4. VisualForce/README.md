@@ -1,4 +1,8 @@
 # visualforce
+
+![image](https://user-images.githubusercontent.com/63545175/199729399-312bc998-d5ac-4f32-9305-d7c7a69b0ecc.png)
+
+
 Visualforce is a ``web development framework`` based on standard web technology of JS framework, it is designed primarily ``to build page-centric mobile and desktop apps``, that can align with the ``styling of Lightning Experience.`` 
 
 - Visualforce pages (and Visualforce components) are stored on Salesforce as a single entity, an ``ApexPage``. 
@@ -44,10 +48,10 @@ The largest difference between Visualforce in Lightning Experience and Visualfor
 
 <br/>
 
-## The Outer Lightning Experience Container
+## The Outer Lightning Experience Container (when using on Lightning page)
 The Lightning Experience container is a “single-page application,” or SPA, which is accessed at the /lightning URL. The /lightning page loads, its code starts up, and that application code takes over the environment.
 
-### important notes
+#### important notes
 - Lightning Experience, or /lightning, is in charge of the request.  Visualforce page is not. Visualforce page needs to work within constraints that Lightning Experience imposes upon it. Lightning Experience is the parent context, and Visualforce page is the child context.
 
 ***some of the constraints are:***
@@ -59,7 +63,7 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 
 
 
-## Impact of this outer container
+### Impact of this outer container
 
 - **Security**
   - Session maintenance and renewal
@@ -84,9 +88,9 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 <br/>
 
 
-## what things visualforce can't access when used in lightning page
+### What things visualforce can't access when used in lightning page
 
-### to navigate from current page to another
+#### to navigate from current page to another
 - ``a visualforce page can't access`` **``window.location()``** ``javascript object in lightning experience`` because visualforce page is rendered inside iframe in Lightning Experience Container. it is available to visualforce in salesforce classic because there visualforce page is rendered inside Visualforce container. 
 - ``sforce.one`` is available in lightning pages only, there’s no way to get sforce.one in for Visualforce pages in Salesforce Classic.
 
@@ -95,6 +99,8 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 
 <br/> 
 
+
+<br/> 
 
 
 ## Best Practices
@@ -125,6 +131,8 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 
 ---
 ***references:***
+- [Visualforce Basics](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals?trail_id=force_com_dev_beginner)
+
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_intro?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
 
 
