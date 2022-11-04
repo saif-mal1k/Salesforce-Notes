@@ -131,6 +131,7 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 
 ---
 ***references:***
+- [Quick Start: Visualforce](https://trailhead.salesforce.com/content/learn/projects/quickstart-visualforce)
 - [Visualforce Basics](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals?trail_id=force_com_dev_beginner)
 
 - https://trailhead.salesforce.com/content/learn/modules/lex_dev_visualforce/lex_dev_visualforce_intro?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential
