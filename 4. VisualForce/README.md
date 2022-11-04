@@ -20,6 +20,19 @@ Visualforce is a ``web development framework`` based on standard web technology 
 <br/>
 
 
+### Languages used with Visualforce
+| Language |	Purpose |
+|----------|----------|
+| Apex | used to manipulate, modify, and display data that exists within your organization.|
+| HTML | used to define elements on a web page.|
+| CSS |	Describes how elements on a web page look and are displayed.|
+| JavaScript (JS) |	used to extend page functionality and special effects to a web page.|
+
+
+
+<br/>
+
+
 ## Where to use Visualforce
 - Add a Visualforce Page as a Component in the Lightning App Builder
 - Add a Visualforce Page to the Navigation Bar
@@ -62,8 +75,9 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 <br/>
 
 
-
-### Impact of this outer container
+<details>
+<summary> <h3> Impact of this outer container </h3> </summary>
+<p>
 
 - **Security**
   - Session maintenance and renewal
@@ -83,18 +97,28 @@ The Lightning Experience container is a “single-page application,” or SPA, w
 > outer javascript context i.e Lightning Experience Container won't affect javascript context of visualforce page i.e in iframe. and vice-versa.
 > <br/> for talking to and fro there are APIs available in Visualforce pages, primarily for navigation. also window.postMessage can be used to send a message to receiving code in the other frame.
 
+---
+
+</p>
+</details>
 
 
-<br/>
 
 
-### What things visualforce can't access when used in lightning page
+<details>
+<summary> <h3> What things visualforce can't access when used in lightning page </h3> </summary>
+<p>
 
 #### to navigate from current page to another
 - ``a visualforce page can't access`` **``window.location()``** ``javascript object in lightning experience`` because visualforce page is rendered inside iframe in Lightning Experience Container. it is available to visualforce in salesforce classic because there visualforce page is rendered inside Visualforce container. 
 - ``sforce.one`` is available in lightning pages only, there’s no way to get sforce.one in for Visualforce pages in Salesforce Classic.
 
 > **alternate:** Create a link using the expression ``{!URLFOR($Action.Contact.Edit, recordId)}`` works in both lightning and classic.
+
+---
+
+</p>
+</details>
 
 
 <br/> 
