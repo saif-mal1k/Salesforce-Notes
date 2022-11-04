@@ -1,6 +1,14 @@
+# Adding functionality using Controller
+- the controller contains the logic to be executed when a button is clicked. 
+- A controller also typically interacts with the model (the database)—making available data that the view might want to display, or pushing changes back to the database.
+- Most standard and all custom objects have standard controllers that can be used to interact with the data associated with the object,
+- standard controllers can be extended to add new functionality, custom controllers can be created from scratch. 
+
+<br/>
 
 
-## Adding functionality( Standard Controller vs Custom Controller )
+
+## Standard Controller vs Custom Controller 
 <table>
 <tr>
 <td>
@@ -84,6 +92,11 @@
   
 <br/>  
 
+
+> **Note:**
+> - If you want to use the standard controller to reference a specific record, it needs to know the record identifier, or ID, of the record to work with. It uses the ID to retrieve the data, and to save it back to the database when the record’s data is changed.
+    
+<br/>    
     
 > **Note:** 
 > - custom controllers can be defined to run in system mode and bypass all securities. so that no permissions or field-level security is applied.
@@ -94,4 +107,39 @@ For example, if you are using a custom controller and want to honor sharing rule
 public with sharing class ContactPagination{
 }
 ```
+
+
+<br/>
+
+
+### all standard components ????
+https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_compref.htm?_ga=2.78623645.865651692.1667559514-1022251765.1662354198
+
+
+
+
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+---
+***references:***
+- [Visualforce Basics | Use Standard Controllers](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_standard_controllers?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
+
+
 
