@@ -75,7 +75,7 @@
 </tr>  
 </table> 
 
-
+> ``<apex:pageBlock title="Contact Details">`` creates a block with specified title, generally it is accompanied by ``<apex:pageBlockSection>`` this contains data that is supposed to be in a block.
 
 
 <br/>
