@@ -1,5 +1,5 @@
 
-## form using visualforce 
+## Form using visualforce
 
 - Visualforce enables to create pages that can create new records, or retrieve a record, edit its values, and save the changes back to the database.
 - it is easy to create a record editing page using ``a standard controller`` with the ``<apex:form> component`` and some ``form elements``.
@@ -63,4 +63,4 @@
 
 --- 
 ***references:***
-- [Visualforce Basics | Input Data Using Forms](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_forms?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
+- [Visualforce Basics | Input Data Using Forms](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_forms?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
