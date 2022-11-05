@@ -1,113 +1,66 @@
 
-# testing Displayed Data
-- If you want to use the standard controller to reference a specific record, it needs to know the record identifier, or ID, of the record to work with. It uses the ID to retrieve the data, and to save it back to the database when the record’s data is changed.
-- ***example:*** ``https://MyDomainName.lightning.force.com/apex/AccountSummary?core.apexpages.request.devconsole=1``**``&id=001D000000JRBes``**
+## Form using visualforce
 
+- Visualforce enables to create pages that can create new records, or retrieve a record, edit its values, and save the changes back to the database.
+- it is easy to create a record editing page using ``a standard controller`` with the ``<apex:form> component`` and some ``form elements``.
 
-## <apex:detail /> tag
-<table>
-<tr>
-<td>
-  
-```vfp
-<apex:page standardController="Contact">
-    
-    <apex:detail />
-    
-</apex:page>  
-```  
-
-</td>
-<td>
-  
-![image](https://user-images.githubusercontent.com/63545175/199980260-4c0ed3dd-55ce-49d5-b55c-7e8a00dcd0fc.png)  
-</td>  
-</tr>  
-</table>  
-
-
-### to display specific related lists
-- by default all related lists are displayed.
-  - **to Hide related Lists use:** ``<apex:detail relatedList="false"/>`` 
-- or to specify which related list to display, pageSize is optional
- 
-<table>
-<tr>
-<td>
-  
-```vfp
-<apex:page standardController="Contact">  
-    <apex:detail relatedList="false"/>   
-    <apex:relatedList list="Opportunities" pageSize="5"/>  
-</apex:page> 
-``` 
-</td>
-<td>
-  
-![image](https://user-images.githubusercontent.com/63545175/199985760-a1bb6f5a-4cda-4200-8c61-de2b55419952.png)
-</td>  
-</tr>  
-</table>  
-
-
-### to display specific fields
-<table>
-<tr>
-<td>
-  
-```vfp
-<apex:page standardController="Contact">  
-    <apex:pageBlock title="Contact Details">
-        <apex:pageBlockSection>
-            <apex:outputField value="{! Contact.FirstName }"/>
-            <apex:outputField value="{! Contact.LastName }"/>
-            <apex:outputField value="{! Contact.Email }"/>
-            <apex:outputField value="{! Contact.Phone }"/>
-        </apex:pageBlockSection>
-    </apex:pageBlock> 
-</apex:page> 
-``` 
-</td>
-<td>
-
-![image](https://user-images.githubusercontent.com/63545175/199986474-1967c826-ca18-43ef-9502-ed4cb3b211ef.png)  
-</td>  
-</tr>  
-</table> 
-
-> ``<apex:pageBlock title="Contact Details">`` creates a block with specified title, generally it is accompanied by ``<apex:pageBlockSection>`` this contains data that is supposed to be in a block.
+***_***
+- use standard controller to use functionality such as save, edit, del.
+- Use <apex:form> and <apex:inputField> to create a page to edit data.
+- Combine <apex:commandButton> with the ``save action built into the standard controller`` to create a new record, or save changes to an existing one.
 
 
 <br/>
 
 
+### Example creating new Account
+```vfp
+<apex:page standardController="Account">
+    <apex:form>
+        <apex:pageBlock title="Create Account">
+            <apex:pageMessages/>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{! Account.Name }"/>
+                <apex:inputField value="{! Account.Phone }"/>
+                <apex:inputField value="{! Account.Industry }"/>
+                <apex:inputField value="{! Account.AnnualRevenue }"/>
+            </apex:pageBlockSection>       
+            <apex:pageBlockButtons>
+                <apex:commandButton action="{! save }" value="Save" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+```
+
+![image](https://user-images.githubusercontent.com/63545175/200106226-469e6bb8-d454-4ea9-a39a-e854f676e306.png)
+
+
+
+<br/>
+
 <br/>
 
 
-## Display in tabular format
-```
-<apex:page standardController="Contact">  
-    <apex:pageBlock title="Contact Details">
-        <apex:pageBlockSection>
-            <apex:outputField value="{! Contact.FirstName }"/>
-            <apex:outputField value="{! Contact.LastName }"/>
-            <apex:outputField value="{! Contact.Email }"/>
-            <apex:outputField value="{! Contact.Phone }"/>
-        </apex:pageBlockSection>
-    </apex:pageBlock> 
-    
-    <apex:pageBlock title="Contacts">
-        <apex:pageBlockTable value="{!contact.cases}" var="case">
-            <apex:column value="{!case.type}"/>
-            <apex:column value="{!case.status}"/>
-            <apex:column value="{!case.origin}"/>
-        </apex:pageBlockTable>
-    </apex:pageBlock>
-</apex:page> 
-```
+[Using Input Components in a Page](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_quick_start_input_components.htm?_ga=2.40811307.865651692.1667559514-1022251765.1662354198) ????
 
-![image](https://user-images.githubusercontent.com/63545175/199988166-d349d0b4-1bc2-45bf-8256-a41fddd86820.png)
+[Using Standard Controller Actions](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_controller_std_actions.htm?_ga=2.40811307.865651692.1667559514-1022251765.1662354198) ????
+
+[Valid Values for the $Action Global Variable](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_variables_global_action_valid_values.htm?_ga=2.42031148.865651692.1667559514-1022251765.1662354198) ????
 
 
+<br/>
 
-  
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+--- 
+***references:***
+- [Visualforce Basics | Input Data Using Forms](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_forms?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
