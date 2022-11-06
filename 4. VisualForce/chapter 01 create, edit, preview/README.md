@@ -71,6 +71,13 @@
 </td>
 </tr>
 </table>    
-  
-  
+
+
+<br/>
+
+## Visualforce tags & Components
+[all standard components](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_compref.htm?_ga=2.78623645.865651692.1667559514-1022251765.1662354198) ????
+
+
+
   
