@@ -4,7 +4,7 @@
 - ***example:*** ``https://MyDomainName.lightning.force.com/apex/AccountSummary?core.apexpages.request.devconsole=1``**``&id=001D000000JRBes``**
 
 
-## <apex:detail /> tag
+## ``<apex:detail />`` tag
 <table>
 <tr>
 <td>
@@ -194,6 +194,99 @@
 </p>
 </details>
 
+<br/>
+
+## List of Accounts with link to account details page
+```
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <apex:form >
+        <apex:pageBlock title="Accounts List" id="accounts_list">
+            Filter:
+            <apex:selectList value="{! filterId }" size="1">
+                <apex:selectOptions value="{! listViewOptions }"/>
+                <apex:actionSupport event="onchange" reRender="accounts_list"/>
+            </apex:selectList>
+            
+            <!--Accounts List using apex:repeat-->
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Website</th>
+                    <th>Phone</th>
+                </tr>
+                <apex:repeat value="{! accounts }" var="account">
+                    <tr>
+                        <td>
+                            <apex:outputLink value="{! URLFOR($Action.Account.View, account.Id) }">
+                                {! account.Name }
+                            </apex:outputLink>
+                        </td>
+                        <td>{! account.Type }</td>
+                        <td>{! account.Website }</td>
+                        <td>{! account.Phone }</td>
+                    </tr>
+                </apex:repeat>
+            </table>
+            
+            <!-- Pagination -->
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        Page: <apex:outputText value=" {!PageNumber} of {! CEILING(ResultSize / PageSize) }"/>      
+                    </td>
+                    <td align="center">
+                        <!-- Previous page -->
+                        <!-- active -->
+                        <apex:commandLink action="{! Previous }" value="« Previous"
+                                          rendered="{! HasPrevious }"/>
+                        <!-- inactive (no earlier pages) -->
+                        <apex:outputText style="color: #ccc;" value="« Previous"
+                                         rendered="{! NOT(HasPrevious) }"/>
+                        &nbsp;&nbsp;
+                        <!-- Next page -->
+                        <!-- active -->
+                        <apex:commandLink action="{! Next }" value="Next »"
+                                          rendered="{! HasNext }"/>
+                        <!-- inactive (no more pages) -->
+                        <apex:outputText style="color: #ccc;" value="Next »"
+                                         rendered="{! NOT(HasNext) }"/>
+                    </td>
+                    <td align="right">
+                        Records per page:
+                        <apex:selectList value="{! PageSize }" size="1">
+                            <apex:selectOption itemValue="5" itemLabel="5"/>
+                            <apex:selectOption itemValue="20" itemLabel="20"/>
+                            <apex:actionSupport event="onchange" reRender="contacts_list"/>
+                        </apex:selectList>                    
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+```
+
+<details>
+<summary> <B> Output: </b> </summary>
+<p>
+
+![image](https://user-images.githubusercontent.com/63545175/200155840-f7787024-1ef9-40fa-9e9d-b47c3a0e9981.png)
+
+</p>
+</details>
+
+> Note: the position of ``<apex:repeat>`` it is there because, whatever(tags/data) inside ``<apex:repeat>`` will repeat for each record in iterable
+> <br/> when ``<apex:outputLink>`` is combined with URL Action, it act as dynamic url, 
+```
+<apex:outputLink value="{! URLFOR($Action.Account.View, account.Id) }">
+     {! account.Name }
+</apex:outputLink> 
+```
+
+
+
+
 
 
 
@@ -213,5 +306,7 @@
 ---
 ***references:***
 - [all standard components ????](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_compref.htm?_ga=2.78623645.865651692.1667559514-1022251765.1662354198)
+
+- [Visualforce Basics | Use Standard List Controllers](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_standard_list_controllers?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
 
 
