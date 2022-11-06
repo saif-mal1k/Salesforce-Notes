@@ -29,7 +29,7 @@
 <td>
 
 - A custom controller is a custom Apex class written by developer to add logic to a page.
-- these classes are written to access other objects and fields to create a list of records from multiple objects or update fields across multiple objects.
+- these classes are written to access other objects and fields to create a list of records from multiple objects or update fields across multiple objects or to make a callout to an external web service.
 </td>
 </tr>
 
@@ -46,15 +46,23 @@
 </td>
 <td>
 
+***to use custom controller***
+- reference the name of the controller class in the ``<apex:page>``  ``controller`` attribute.
 
+**example:**    
+```html
+<apex:page Controller="ContactControllerApexVfpCls">
+```
 </td>
 </tr>    
 </table>
 
 
 <br/>
-    
-### example visualforce page, using standard controller
+ 
+<details>
+<summary> <h3> Example visualforce page, using standard controller </h3> </summary>
+<p>
 
 ```html
 <apex:page standardController="Contact">
@@ -87,14 +95,88 @@
         
     </body>
 </apex:page>    
-```    
-    
+```
+
+***Output:***
+![image](https://user-images.githubusercontent.com/63545175/200169200-dfd010aa-7bd9-43de-b43c-86a6066f3f94.png)
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <h3> Example visualforce page, using custom controller </h3> </summary>
+<p>
+
+<table>
+<tr>
+<td>
+
+***visualforce page***
+```html
+<apex:page controller="contactsControllerApexVfpCls">
+  <apex:form>
+    <apex:pageBlock title="Contacts List" id="contacts_list">
+      <!-- Contacts List -->
+      <apex:pageBlockTable value="{! contacts }" var="ct">
+        <apex:column>
+          <apex:outputLink 
+            value="{! URLFOR($Action.Contact.View, ct.Id) }">
+              {! ct.Id }
+          </apex:outputLink>
+        </apex:column>
+        <apex:column value="{! ct.FirstName }"/>
+        <apex:column value="{! ct.LastName }"/>
+        <apex:column value="{! ct.Title }"/>
+        <apex:column value="{! ct.Email }"/>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>    
+```
+</td>
+<td>
+
+***Apex Custom Controller Class***
+```apex
+public class contactsControllerApexVfpCls {
+   private String sortOrder = 'LastName';
+   public List<Contact> getContacts() {
+      List<Contact> results = Database.query(
+         'SELECT Id, FirstName, LastName, Title, Email ' +
+         'FROM Contact ' +
+         'ORDER BY ' + sortOrder + ' ASC ' +
+         'LIMIT 10'
+      );
+      return results;
+   }    
+}
+```
+</td>
+<tr>
+<td colspan="2">
+
+***Output:***
+![image](https://user-images.githubusercontent.com/63545175/200169114-41835052-f96e-4faf-af6e-c28931b2604c.png)
+</td>
+</tr>
+</table>
+
+---
+
+</p>
+</details>
+
   
 <br/>  
 
 
 > **Note:**
 > - If you want to use the standard controller to reference a specific record, it needs to know the record identifier, or ID, of the record to work with. It uses the ID to retrieve the data, and to save it back to the database when the record’s data is changed.
+> - ***example:*** ``https://MyDomainName.lightning.force.com/apex/AccountSummary?core.apexpages.request.devconsole=1``**``&id=001D000000JRBes``**
+
     
 <br/>    
     
@@ -112,8 +194,6 @@ public with sharing class ContactPagination{
 <br/>
 
 
-### all standard components ????
-https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_compref.htm?_ga=2.78623645.865651692.1667559514-1022251765.1662354198
 
 
 
@@ -140,6 +220,8 @@ https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_c
 ---
 ***references:***
 - [Visualforce Basics | Use Standard Controllers](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_standard_controllers?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
+- [Visualforce Basics | Create & Use Custom Controllers](https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_custom_controllers?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
+- [Creating Custom Controller](https://developer.salesforce.com/docs/atlas.en-us.224.0.pages.meta/pages/pages_quick_start_controller.htm?_ga=2.41000875.865651692.1667559514-1022251765.1662354198)
 
 
 
