@@ -51,7 +51,7 @@ Lightning Experience is (mostly) buid with Lightning Components.
 | Visualforce Request Cycle |	Aura Components Request Cycle |
 |---------------------------|-------------------------------|
 | ![image](https://user-images.githubusercontent.com/63545175/198947561-1fbf144d-bf11-4824-b309-4cd91351a2ac.png) | ![image](https://user-images.githubusercontent.com/63545175/198947576-1b1359e4-83cc-462e-a6e8-b1a32c2265da.png) |
-| User requests a page. <br/> The server executes the page’s underlying code and sends the resulting HTML to the browser. <br/> The browser displays the HTML. <br/> When the user interacts with the page, return to step one | The user requests an application or a component. <br/> The application or component bundle is returned to the client. <br/> The browser loads the bundle. <br/> The JavaScript application generates the UI. <br/> When the user interacts with the page, the JavaScript application modifies the user interface as needed (return to previous step). |
+| User requests a page. <br/> The server executes the page’s underlying code and sends the resulting HTML to the browser. <br/> The browser displays the HTML. <br/> When the user interacts with the page, (return to step one). | The user requests an application or a component. <br/> The application or component bundle is returned to the client. <br/> The browser loads the bundle. <br/> The JavaScript application generates the UI. <br/> When the user interacts with the page, the JavaScript application modifies the user interface as needed, (return to previous step). |
 
 <br/>
 
@@ -234,7 +234,7 @@ an Aura component's code can access only the services of the container it’s ru
 
 
 
-## Visualforce vs LWC
+## Visualforce vs LWC | what is better
 
 <table>
 <tr>
@@ -284,9 +284,7 @@ an Aura component's code can access only the services of the container it’s ru
   
 <br/>
 
-### what is better
-
-| Tool | Job | why |
+| Tool to use | for Job | why ? |
 |------|-----|----------------|
 | LWC | Developing for Lightning Experience	| Lightning Experience was built with Lightning Components. these custom components(_UI elements_) can be added to any page using Lightning App Builder.|
 | LWC | Developing for mobile app | Visualforce can be a poor match for mobile apps with limited, high-latency network connections and limited compute resources. Lightning Components, by contrast, was designed specifically to handle this context.|
@@ -301,7 +299,7 @@ an Aura component's code can access only the services of the container it’s ru
 
 
 ## Lightning Navigation using ``sforce.one`` object
-- (JavaScript Utility Object) (used for Navigation)
+-  ``sforce.one`` is a **JavaScript Utility Object** i.e **used for Navigation**.
  - sforce.one is automatically injected into page when it runs in Lightning Experience or the Salesforce app. 
  - it is available in JavaScript debugger console and web developer resources list. 
  - sforce.one is primarily used to fire navigation events. 
