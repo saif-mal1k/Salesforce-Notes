@@ -1,5 +1,13 @@
 # Attributes and Expressions
 
+
+## what is an attribute ?
+- a component’s attribute is defined using ``<aura:attribute/>`` tag. 
+    - it **requires values for the ``name`` and ``type`` attributes**, and accepts these optional attributes: default, description, required
+- they can be read and their values can be used in different ways using expressions.
+- they can be changed over the course of component’s lifecycle, in response to actions the user takes, or events that happen elsewhere, and so on. 
+
+
 <b>example:</b>
 
 ```aura
