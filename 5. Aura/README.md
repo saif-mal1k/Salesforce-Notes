@@ -2,7 +2,8 @@
   
 ## Aura component  
 - **an aura component is represented by multiple files(**_cmpName.auradoc, cmpName.cmp, cmpName.cmp-meta.xml, cmpName.css, cmpName.design, cmpName.svg, cmpNameController.js, cmpNameHelper.js, cmpNameRenderer.js_**).**  
-- **an individual component is stored as a bundle(folder) that includes all resource without dependencies.** 
+- **an individual component is stored as a bundle(folder) that includes all resource without dependencies.**
+-  Resources in a bundle are auto-wired together via a naming scheme for each resource type. meaning that a component definition can reference its controller, helper, etc., and those resources can reference the component definition.
 - **aura components are (intended to be) loosely coupled. The mechanism for this loose coupling is [Events](# "Events are fired from JavaScript controller actions that are typically triggered by a user interacting with the user interface.").**
 
 
@@ -165,37 +166,35 @@
 <tr>
 <td>
 
-<b>aura component</b>
+<b>aura component code(.cmp)</b>
 </td>  
 <td>
 
-<b>JS code</b>
+<b>css code(.css)</b>
 </td>  
 </tr>    
   
 <tr>
-<td align="center">
+<td>
 
-![image](https://user-images.githubusercontent.com/63545175/169453564-580b49f8-44a6-479f-89b8-4619c15519fe.png)
+```html
+<aura:component>
+  <p>Hello Lightning!</p>
+</aura:component>  
+```  
   
 </td>
 <td>
 
-```js
-({
-    clickReimbursed: function(component, event, helper) {
-        let expense = component.get("v.expense");
-        let updateEvent = component.getEvent("updateExpense");
-        updateEvent.setParams({ "expense": expense });
-        updateEvent.fire();
-    }
-})  
+```css
+.THIS {
+}
+p.THIS {
+    font-size: 24px;
+} 
 ```
 
-- This is the component’s client-side controller, written in JavaScript. 
-- The clickReimbursed function in the component’s controller 
-  <br/> corresponds to the ``onchange="{!c.clickReimbursed}"`` attribute 
-  <br/> on the checkbox in the component’s markup.  
+- At runtime ``.THIS`` is replaced with a style scoping string named for your component. It limits style rules to only this component. 
   
 </td>   
   
@@ -204,44 +203,21 @@
 <tr>
 <td colspan="2">
 
-<b>aura component code</b>  
+<b>javaScript Code(.js)</b>  
 </td>  
 </tr>  
   
 <tr>
 <td colspan="2">
 
-```aura
-<aura:component>
-    <aura:attribute name="expense" type="Expense__c"/>
-    <aura:registerEvent name="updateExpense" type="c:expensesItemUpdate"/>
-    <!-- Color the item green if the expense is reimbursed -->
-    <lightning:card title="{!v.expense.Name}" iconName="standard:scan_card"
-                    class="{!v.expense.Reimbursed__c ?
-                           'slds-theme_success' : ''}">
-        <aura:set attribute="footer">
-            <p>Date: <lightning:formattedDateTime value="{!v.formatdate}"/></p>
-            <p class="slds-text-title"><lightning:relativeDateTime value="{!v.formatdate}"/></p>
-        </aura:set>
-        <p class="slds-text-heading_medium slds-p-horizontal_small">
-            Amount: <lightning:formattedNumber value="{!v.expense.Amount__c}" style="currency"/>
-        </p>
-        <p class="slds-p-horizontal_small">
-           Client: {!v.expense.Client__c}
-        </p>
-        <p>
-            <lightning:input type="toggle"
-                             label="Reimbursed?"
-                             name="reimbursed"
-                             class="slds-p-around_small"
-                             checked="{!v.expense.Reimbursed__c}"
-                             messageToggleActive="Yes"
-                             messageToggleInactive="No"
-                             onchange="{!c.clickReimbursed}"/>
-        </p>
-    </lightning:card>
-</aura:component>  
-``` 
+```js
+  
+```
+- This is the component’s client-side controller, written in JavaScript. 
+- The clickReimbursed function in the component’s controller 
+  <br/> corresponds to the ``onchange="{!c.clickReimbursed}"`` attribute 
+  <br/> on the checkbox in the component’s markup.   
+  
 </td>  
  
 </tr>
@@ -267,6 +243,32 @@
 > <br/>Related resources are “auto-wired” to each other, and together they make up the component bundle.  
   
   
+<br/>
+  
+<br/>  
+  
+
+## Aura Application
+- An **app uses ``<aura:application>`` tags** instead of ``<aura:component>`` tags.
+- Only an **app has a ``Preview button``** in the Developer Console.
+- components don't have dedicated url, while An **app has a standalone URL** that can be accessed while testing, and can be published to users. these standalone apps are reffered as “my.app.”  
+- components can be added to lightning experience, but apps can not be added to Lightning Experience or the Salesforce app. 
+ 
+<br/>  
+  
+> **Note:**  
+> **An Aura components app — that is, something defined in a ``<aura:application>`` — can’t be used to create Salesforce apps.**
+> <br/> ***Question:*** if an ``<aura:application>`` contains 1 or more ``<aura:components>`` then how is it different from a lightning app page that contains 0 or more components placed through lightning app builder. ????
+> - components can contain components.
+> - applications can contain components.
+> - components can't contain applications.
+> - applications can't contain applications.
+  
+
+
+  
+  
+ 
   
   
 <br/>
@@ -297,6 +299,5 @@
 1. [Aura Components Basics | Get Started with Aura Components](https://trailhead.salesforce.com/en/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_intro)  
   
   
----  
   
   
