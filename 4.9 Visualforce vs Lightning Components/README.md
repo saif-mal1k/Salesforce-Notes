@@ -8,13 +8,13 @@ It uses JavaScript on the client side and Apex on the server side.
 
 
 ### Where to Use Lightning Components
-
+- Add Lightning Components to Flow Screens(on screen flows)
+- Add Lightning Components to Lightning Pages
+- Launch a Lightning Component as a Quick Action
+- Add Lightning Components to Lightning Experience Record Pages
+- Create Stand-Alone Apps
 - Add Apps to the Lightning Experience App Launcher
 - Add Apps to Lightning Experience and Salesforce App Navigation
-- Add Lightning Components to Lightning Pages
-- Add Lightning Components to Lightning Experience Record Pages
-- Launch a Lightning Component as a Quick Action
-- Create Stand-Alone Apps
 
 
 <br/>
