@@ -34,7 +34,7 @@ An expression is basically a formula, or a calculation, which you place within e
 {!<expression>}
 ```
 
-<b><em>An expression is any set of literal values, variables, sub-expressions, or operators that can be resolved to a single value.</em></b>
+<b><em>An expression is any set of [literal values](# "they’re things like the number ``42``, or the string ``Hello``."), [variables](# "Variables are things like the ``message`` attribute."), [sub-expressions](# " sub-expressions means you can use parenthesis to group things together."), or [operators](# " Operators are things like +, -, and so on.") that can be resolved to a single value.</em></b>
 ```
 {!'Hello! ' + v.message}
 ```
@@ -50,19 +50,22 @@ An expression is basically a formula, or a calculation, which you place within e
 </aura:component>
 ```
 
+> **Note:** In Aura, Expressions are case sensitive. ????
+> <br/> **example**, if you have a custom field myNamespace__Amount__c, you must refer to it as ``{!v.myObject.myNamespace__Amount__c}``.
 
 <br/>
 
 
 ### Value Providers
 - ``v`` is something called a value provider.
-- ``v`` gives you a “hook” to access the component’s message attribute, and it’s how you access all of a component’s attributes.
+- In a component, v is a value provider for the view, which is the component itself.
+- ``v`` provides a “hook” to access the component’s attributes (such as message).
 
 <br/>
 
-When an attribute of a component is an object or other structured data (that is, not a primitive value), access the values on that attribute using the same dot notation. 
+When an attribute of a component is an object or other structured data (that is, not a primitive value), the values on that attribute are accessed using the same dot notation. 
 
-For example, {!v.account.Id} accesses the Id field of an account record. 
+**example**, ``{!v.account.Id}`` accesses the Id field of an account record. 
 
 
 <br/>
@@ -71,18 +74,18 @@ For example, {!v.account.Id} accesses the Id field of an account record.
 ### Attribute Data Types
 in above example message is a string, but there are a number of different attribute types.
 
-- <b>Primitives data types</b>, such as Boolean, Date, DateTime, Decimal, Double, Integer, Long, or String. The usual suspects in any programming language.
+- <b>Primitives data types</b>, such as Date, DateTime, Boolean, Integer, Long, Double, Decimal, or String. The usual suspects in any programming language.
 - <b>Standard and custom Salesforce objects</b>, such as Account or MyCustomObject__c.
 - <b>Collections</b>, such as List, Map, and Set.
 - <b>Custom Apex classes</b>.
-- Framework-specific types, such as Aura.Component, or Aura.Component[].
+- Framework-specific types, such as ``Aura.Component``, or ``Aura.Component[]``.
 
 
 
 <br/>
 
 
-### default value for attribute
+### default value for attributes
 ```
 <aura:attribute name="messages" type="List"
                 default="['You look nice today.',
@@ -112,8 +115,7 @@ in above example message is a string, but there are a number of different attrib
 
 ---
 
-### points to note
-
+### note:
 
 - The <aura:iteration> component repeats its body once per item in its items attribute, so the list shrinks or grows as we have fewer or more messages.
 ```
@@ -180,6 +182,9 @@ in above example message is a string, but there are a number of different attrib
 ***references:***
 
 1. [ Aura Components Basics | Attributes and Expressions](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_attributes_expressions)
+2. [Attributes](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_attributes.htm?_ga=2.124171267.865651692.1667559514-1022251765.1662354198) ????
+3. [Using Expressions](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/expr_overview.htm?_ga=2.83320735.865651692.1667559514-1022251765.1662354198) ????
+4. [Value Providers](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/expr_source.htm?_ga=2.15767359.865651692.1667559514-1022251765.1662354198) ????
 
 
 
