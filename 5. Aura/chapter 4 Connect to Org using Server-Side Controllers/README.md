@@ -65,7 +65,7 @@ public with sharing class ExpensesController {
 - JS Controller is added to component bundle to ``Send Request & Handle Response.``
 
 ```js
-    // handle 
+    // loads existing records from the database when the component starts up
     doInit: function(component, event, helper) {
     
         // point Aura Enabled method i.e contained in apex controller class
