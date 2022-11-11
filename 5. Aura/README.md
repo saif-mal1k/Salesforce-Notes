@@ -296,7 +296,9 @@ p.THIS {
   
 <b><em>references:</em></b>
   
-1. [Aura Components Basics | Get Started with Aura Components](https://trailhead.salesforce.com/en/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_intro)  
+1. [Aura Components Basics | Get Started with Aura Components](https://trailhead.salesforce.com/en/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_intro)
+2. [Aura Components Basics | Input Data Using Forms](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
+3. [Aura Components Basics | Connect Components with Events](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_events?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
   
   
   
