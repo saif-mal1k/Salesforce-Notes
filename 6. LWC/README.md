@@ -7,7 +7,7 @@
 <br/>
 
 <details>
-<summary> <b><em> example:</em></b></summary>
+<summary> <b><em> example(Hello World):</em></b></summary>
 <p>
 
 ---
@@ -64,6 +64,11 @@ input {
    color: blue;
 }
 ```
+
+### output:
+
+![image](https://user-images.githubusercontent.com/63545175/201460842-dc3e48ba-72e2-413e-af81-79a86d0ce50c.png)
+
 
 ---
 
