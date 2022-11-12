@@ -1,10 +1,11 @@
-## Example of a LWC
+## Example of a LWC Component
 
 
 ### html
 ```html
 <template>
     <div id="waiting" if:false={ready}>Loading…</div>
+    
     <div id="display" if:true={ready}>
         <div>Name: {name}</div>
         <div>Description: {description}</div>
@@ -16,6 +17,8 @@
 </template>
 ```
 
+> The identifiers in the curly braces ``{}`` are bound to the fields of the same name in the corresponding JavaScript class.
+
 <br/>
 
 
@@ -24,13 +27,16 @@
 import { LightningElement } from 'lwc';
 // declare class to expose the component
 export default class App extends LightningElement {
+   
    name = 'Electra X4';
    description = 'A sweet bike built for comfort.';
    category = 'Mountain';
    material = 'Steel';
    price = '$2,700';
    pictureUrl = 'https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg';
+   
    ready = false;
+   
    // use lifecycle hook
    connectedCallback() {
        setTimeout(() => {
@@ -38,8 +44,12 @@ export default class App extends LightningElement {
            this.ready = true;
        }, 3000);
    }
+   
 }
 ```
+
+> LightningElement is the base class for Lightning web components, which allows us to use connectedCallback().
+> <br/> The connectedCallback() method is a lifecycle hooks. the method is triggered when a component is inserted in the document object model (DOM).
 
 ### xml
 ```xml
@@ -64,17 +74,6 @@ export default class App extends LightningElement {
 
 
 
-<br/>
-
-
-<br/>
-
-
-
-## Life cycle Hooks
-***Respond to any of these lifecycle events using callback methods.*** For example, 
-- the ``connectedCallback()`` is invoked when a component is inserted into the DOM. 
-- The ``disconnectedCallback()`` is invoked when a component is removed from the DOM.
 
 
 <br/>
@@ -83,52 +82,21 @@ export default class App extends LightningElement {
 <br/>
 
 
-## using components in apps
-
-***The file structure looks like this:***
-
-![image](https://user-images.githubusercontent.com/63545175/174800585-7a8efa15-57a7-44fd-969b-5279791ec7fa.png)
+<br/>
 
 
-The app component uses the following HTML.
-```html
-<!-- app.html -->
-<template>
-<div>
-    <c-bike bike={bike}></c-bike>
-</div>
-</template>
-```
+<br/>
 
-The app component uses the following JavaScript.
-```js
-// app.js
-import { LightningElement } from 'lwc';
-export default class App extends LightningElement {
-    bike = {
-        name: 'Electra X4',
-        picture: 'https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg'
-    };
-}
-```
 
-The bike component uses the following HTML.
-```html
-<!-- bike.html -->
-<template>
-    <img src={bike.picture} alt="bike picture" />
-    <p>{bike.name}</p>
-</template>
-```
+<br/>
 
-The bike component uses the following JavaScript.
-```js
-// bike.js
-import { LightningElement, api } from 'lwc';
-export default class Bike extends LightningElement {
-    @api bike;
-}
-```
+
+<br/>
+
+
+---
+***references:***
+- [Lightning Web Components Basics | Create Lightning Web Components](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics/create-lightning-web-components?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) 
 
 
 
