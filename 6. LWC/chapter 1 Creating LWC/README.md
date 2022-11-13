@@ -48,8 +48,8 @@ export default class App extends LightningElement {
 }
 ```
 
-> LightningElement is the base class for Lightning web components, which allows us to use connectedCallback().
-> <br/> The connectedCallback() method is a lifecycle hooks. the method is triggered when a component is inserted in the document object model (DOM).
+> **LightningElement** is the base class for Lightning web components, which allows us to use connectedCallback().
+> <br/> The **connectedCallback()** method is a **lifecycle hook**. the method is triggered when a component is inserted in the document object model (DOM). The code waits 3 seconds, then sets ready to true.
 
 ### xml
 ```xml
