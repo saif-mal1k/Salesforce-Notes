@@ -12,7 +12,33 @@
 - The ``disconnectedCallback()`` is invoked when a component is removed from the DOM.
 
 
-## using components in apps
+<br/>
+
+
+<br/>
+
+## Decorators
+- Decorators are used in JavaScript to modify the behavior of a property or function.
+- To use a decorator, import it from the lwc module and place it before the property or function.
+- Js can import multiple decorators, but a single property or function can have only one decorator.
+
+### example
+```js
+import { LightningElement, api } from 'lwc';
+export default class MyComponent extends LightningElement{
+    @api message;
+}
+```
+
+- **@api**: Marks a field as public. Public properties define the API for a component. An owner component that uses the component in its HTML markup can access the component's public properties. All public properties are reactive, which means that the framework observes the property for changes. When the property's value changes, the framework reacts and rerenders the component.
+
+
+
+
+<br/>
+
+
+### example using the @api decorator to render a value from one component (bike) in another component (app).
 
 ***The file structure looks like this:***
 
