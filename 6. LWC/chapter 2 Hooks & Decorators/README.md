@@ -32,7 +32,13 @@ export default class MyComponent extends LightningElement{
 
 - **@api**: Marks a field as public. Public properties define the API for a component. An owner component that uses the component in its HTML markup can access the component's public properties. All public properties are reactive, which means that the framework observes the property for changes. When the property's value changes, the framework reacts and rerenders the component.
 
+> Field and property are almost interchangeable terms. A component author declares fields in a JavaScript class. An instance of the class has properties. To component consumers, fields are properties. In a Lightning web component, only fields that a component author decorates with ``@api`` are publicly available to consumers as object properties.
 
+- **@track**: Tells the framework to observe changes to the properties of an object or to the elements of an array. If a change occurs, the framework rerenders the component. All fields are reactive. If the value of a field changes and the field is used in a template—or in the getter of a property used in a template—the framework rerenders the component. You don't need to decorate the field with ``@track``. Use ``@track`` only if a field contains an object or an array and if you want the framework to observe changes to the properties of the object or to the elements of the array. If you want to change the value of the whole property, you don't need to use ``@track``.
+
+> Use ``@track`` only to tell the framework to observe changes to the properties of an object or to the elements of an array. using the decorator, where it isn't needed doesn't change the functionality or break the code. 
+
+- **@wire**: provides an easy way to get and bind data from a Salesforce org.
 
 
 <br/>
