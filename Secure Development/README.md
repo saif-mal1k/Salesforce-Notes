@@ -64,12 +64,36 @@
 
 <br/>
 
-### Field-Level Security
+### Field-Level Security ????
 Field-level security (FLS) is configured similarly to CRUD but lets administrators define the profiles that can see and write to most fields of standard and custom objects.
 
 - ``stripInaccessible`` method is used to enforce field- and object-level data protection. It strips the fields and relationship fields from query and subquery results that the user can’t access.
+-  The [stripInaccessible](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_System_Security.htm?&_ga=2.33828961.1591605527.1668333327-1022251765.1662354198#topic-title) method checks the source records for fields that don’t meet field-level security checks for the current user.
+- The method creates a return list of sObjects that is identical to the source records, except that the fields that are inaccessible to the current user are removed. 
 
 > **Note:** The ID field is never stripped by the stripInaccessible method to avoid issues when performing DML on the result.
+
+
+<br/>
+
+
+## prevention from SOQL injection ????
+- SOQL injection occurs when an attacker modifies the structure of the query. 
+- Queries that use variable in WHERE clouse are prone to this vulnerablity.
+
+***example:***
+```apex
+String query = 'SELECT Id, Name, Title__c FROM Books';
+String whereClause = 'Title__c like \'%'+textualTitle+'%\' ';
+List<Books> whereclause_records = database.query(query+' where '+whereClause);
+```
+> The reason why this works is because the user input is concatenated into the SOQL query without any validation
+
+### method 1: Static Query and Bind Variables
+
+
+
+
 
 <br/>
 
@@ -94,5 +118,5 @@ Field-level security (FLS) is configured similarly to CRUD but lets administrato
 ***references:***
 - [Secure Server-Side Development | Write Secure Apex Controllers](https://trailhead.salesforce.com/content/learn/modules/secure-serverside-development/write-secure-apex-controllers?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
 
-
+- [Secure Server-Side Development | Mitigate SOQL Injection](https://trailhead.salesforce.com/content/learn/modules/secure-serverside-development/mitigate-soql-injection?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
 
