@@ -1,0 +1,1 @@
+[Lightning Web Components Basics | Add Styles and Data to a Lightning Web Component](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics/add-styles-and-data-to-a-lightning-web-component?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential) ????
