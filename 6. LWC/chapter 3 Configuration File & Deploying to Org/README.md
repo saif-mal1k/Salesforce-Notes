@@ -53,6 +53,8 @@ This file provides metadata for Salesforce, including the design configuration f
 
 
 ***commands:***
+- ``SFDX: Create Project`` 
+- ``SFDX: Create Lightning Web Component`` 
 - ``SFDX: Authorize an Org`` 
 - ``SFDX: Deploy this Source to Org``
 - ``SFDX: Open Default Org``
