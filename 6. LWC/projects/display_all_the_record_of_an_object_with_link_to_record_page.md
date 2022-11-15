@@ -1,5 +1,5 @@
 ## output
-![image](https://user-images.githubusercontent.com/63545175/200552240-829faf16-d81a-4748-a17c-8c3c744eaaef.png)
+![image](https://user-images.githubusercontent.com/63545175/201847659-6596df71-1da4-4644-8e83-a95d7bb17f16.png)
 
 ### javascript
 ```js
@@ -59,22 +59,20 @@ wiredRecords({
 ```html
 <template >
     <lightning-card title="All Records of, Qlik Reports Access Controller" icon-name="standard:contact">
-        
-            <div style="display:flex;">
+    
+        <lightning-layout multiple-rows>
             <template for:each={recordsList} for:item="record">
-                <div key={record.Id} style="margin: 1% 0px 0px 1%; padding: 5px 5px 5px 5px;  width:48%; border-style: solid;   border-width: 5px;   border-radius: 5px; ">
 
-                <a data-recordidd={record.Id} onclick={navigateToRecordPage} key={record.Id}>
-                <lightning-card key={record.Id} >
-                
-                        <p style=" font-size: large;   font-weight: bolder; text-align: center; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"> {record.Name}  </p>
+                <lightning-layout-item size="6" key={record.Id} padding="around-small" >
+                    <div class="slds-box">
+                        <a data-recordidd={record.Id} onclick={navigateToRecordPage} key={record.Id}>
+                            <p style=" font-size: large;   font-weight: bolder; text-align: center; "> {record.Name}  </p>
+                        </a>    
+                    </div>
+                </lightning-layout-item>
 
-                </lightning-card>    
-                </a>
-
-                </div>
-            </template>
-            </div>
+            </template>        
+        </lightning-layout>
 
     </lightning-card>
 </template>
