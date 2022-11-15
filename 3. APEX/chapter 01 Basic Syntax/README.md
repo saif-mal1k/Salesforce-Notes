@@ -14,6 +14,7 @@
   - <a href="#logical-operators">Logical Operators</a>
 - <a href="#conditional-statements">Conditional Statements</a>
   - <a href="#if-else-statement">If else Statements</a>
+  - <a href="#ternary-operator">Ternary Operator</a>
   - <a href="#switch-statements">Switch Statements</a>
 - <a href="#looping">Looping</a>
   - <a href="#while-loop">While Loop</a>
@@ -544,6 +545,16 @@ if(waterLevel == 'empty') {
     System.debug('The tea kettle is full');
 }
 ```
+
+<br/>
+
+### ternary operator
+***example:***
+```apex
+//Using Ternary Operator
+String msg = isLeapYear ? 'It is a leap year.' : 'It is not a leap year.';
+```
+
 
 <br/>  
 
