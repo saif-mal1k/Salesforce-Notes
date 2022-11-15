@@ -187,6 +187,13 @@ input {
 <img src="https://user-images.githubusercontent.com/63545175/197392338-5100b6df-bc0a-481a-9cf7-d9f07dfa2cf0.png" width="360px">
 
 
+<br/>
+
+
+## Setup for Debugging
+- install [Apex Replay Debugger for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-apex-replay-debugger)
+- install [Apex Interactive Debugger for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-apex-debugger)
+
 
 <br/>
 
