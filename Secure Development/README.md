@@ -266,13 +266,16 @@ String query = 'select id from user where isActive='+var.replaceAll('[^\\w]','')
 - CSRF is a common web application vulnerability where a malicious application causes a client system to perform an unwanted action on a trusted site for which the client system is currently authenticated. 
 - It requires the targeted user to visit the attack page while authenticated with the targeted service, which often requires coordinated deception on the part of the attacker (this is most commonly seen in phishing campaigns).
 - For this attack to succeed, the attacker had to know the parameters name and their associated values.
+- The most simple forms of CSRF attacks use HTTP GET requests with state-changing parameters, like **GET** ``mywebsite.com?change_username=”joe”``.
+
+> By simply avoiding the use of state-changing HTTP GET requests, a large number of CSRF vulnerabilities can be eliminated. instead of **GET** make use of **POST** or **PUT** when state changes are needed. 
 
 ### Prevention (use random tokens)
 - Consider a slightly version of the page that has two required URL parameters: userId and token.
 - for attack to work, the attacker again has to correctly guess values for both parameters.
 - what if you made the token parameter value a random, unique value that changed on every request? This would make it impossible for an attacker to guess the current value, hence preventing the attack.
 
-***Note:(required implementation in server)***
+***Note: (required implementation in server)***
 - All sensitive state-changing requests (anything performing database operations) must include the token.
 - The token must be unique to the request or user’s session.
 - The token must be difficult to predict (long and random).
