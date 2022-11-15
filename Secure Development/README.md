@@ -50,6 +50,9 @@
 <br/>
 
 
+<br/>
+
+
 ## Enforcing Object and Field Permissions
 - Apex doesn't enforce object-level and field-level permissions by default, they can be enforced in **SOQL queries** by using the ``WITH SECURITY_ENFORCED`` clause.
 - Schema object can be used to check if the current user has access to:
@@ -72,6 +75,9 @@ Field-level security (FLS) is configured similarly to CRUD but lets administrato
 - The method creates a return list of sObjects that is identical to the source records, except that the fields that are inaccessible to the current user are removed. 
 
 > **Note:** The ID field is never stripped by the stripInaccessible method to avoid issues when performing DML on the result.
+
+
+<br/>
 
 
 <br/>
@@ -256,6 +262,29 @@ String query = 'select id from user where isActive='+var.replaceAll('[^\\w]','')
 <br/>
 
 
+## Mitigate Cross-Site Request Forgery
+- CSRF is a common web application vulnerability where a malicious application causes a client system to perform an unwanted action on a trusted site for which the client system is currently authenticated. 
+- It requires the targeted user to visit the attack page while authenticated with the targeted service, which often requires coordinated deception on the part of the attacker (this is most commonly seen in phishing campaigns).
+- For this attack to succeed, the attacker had to know the parameters name and their associated values.
+
+### Prevention (use random tokens)
+- Consider a slightly version of the page that has two required URL parameters: userId and token.
+- for attack to work, the attacker again has to correctly guess values for both parameters.
+- what if you made the token parameter value a random, unique value that changed on every request? This would make it impossible for an attacker to guess the current value, hence preventing the attack.
+
+***Note:(required implementation in server)***
+- All sensitive state-changing requests (anything performing database operations) must include the token.
+- The token must be unique to the request or user’s session.
+- The token must be difficult to predict (long and random).
+- The token must be validated by the server to ensure the request originated from the intended user.
+
+
+<br/>
+
+
+<br/>
+
+
 <br/>
 
 
@@ -275,3 +304,4 @@ String query = 'select id from user where isActive='+var.replaceAll('[^\\w]','')
 
 - [Secure Server-Side Development | Mitigate SOQL Injection](https://trailhead.salesforce.com/content/learn/modules/secure-serverside-development/mitigate-soql-injection?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
 
+- [Secure Server-Side Development | Mitigate Cross-Site Request Forgery](https://trailhead.salesforce.com/content/learn/modules/secure-serverside-development/mitigate-crosssite-request-forgery?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-platform-developer-i-credential)
