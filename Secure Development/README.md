@@ -77,7 +77,7 @@ Field-level security (FLS) is configured similarly to CRUD but lets administrato
 <br/>
 
 
-## prevention from SOQL injection ????
+## Prevention from SOQL injection 
 - SOQL injection occurs when an attacker modifies the structure of the query. 
 - Queries that use variable in WHERE clouse are prone to this vulnerablity.
 
@@ -89,9 +89,164 @@ List<Books> whereclause_records = database.query(query+' where '+whereClause);
 ```
 > The reason why this works is because the user input is concatenated into the SOQL query without any validation
 
-### method 1: Static Query and Bind Variables
+### Solution 1: Static Query and Bind Variables
+
+<table>
+<tr>
+<td>
+
+Wrong  
+</td>
+<td>  
+
+Right  
+</td>  
+</tr>
+<tr>
+<td>
+
+```SOQL
+String query = ‘select id from contact where firstname =\’’+var+’\’’;
+queryResult = Database.execute(query);  
+```  
+</td>
+<td>  
+
+```SOQL
+queryResult = [select id from contact where firstname =:var]
+```  
+</td>  
+</tr>  
+</table>  
+
+> make sure the user input values are valid and never escape boundary values that your usecase has for a functionality.
+
+  
+
+### Solution 2: Typecasting User Input
+- By casting all variables as strings, user input can drift outside of expectation.
+- By typecasting variables as integers or Booleans, when applicable, erroneous user input is not permitted.
+
+<table>
+<tr>
+<td>
+  
+Wrong Code  
+</td>
+<td>  
+
+Right Code  
+</td>  
+</tr>  
+<tr>
+<td>
+
+***example:***  
+  
+```apex
+whereClause+='Age__c >'+textualAge+'';
+whereclause_records = database.query(query+' where '+whereClause);
+```
+  
+***If user Inputs:***
+  
+- ``1 limit 1`` instead of interger value for age.
+  
+***result:***
+  
+```apex  
+‘Select Name, Role__c, Title__c, Age__c from Personnel__c where Age__c > 1 limit 1’
+```  
+</td>
+<td>
+
+***example:***  
+  
+```apex
+whereClause+='Age__c >'+string.valueOf(textualAge)+'';
+whereclause_records = database.query(query+' where '+whereClause);
+```
+  
+***If user Inputs:***
+  
+- ``1 limit 1``
+  
+***result:***
+  
+- **``ERROR:``** since “1 limit 1” is not considered an integer, so the SOQL injection is prevented.
+  
+</td>  
+</tr>
+</table>
 
 
+
+### Solution 3: Escaping Single Quotes
+<table>
+<tr>
+<td>
+  
+Wrong Code  
+</td>
+<td>  
+
+Right Code  
+</td>  
+</tr>  
+<tr>
+<td>
+
+***example:***  
+  
+```apex
+String query = 'SELECT Id, Name, Title__c FROM Books';
+String whereClause = 'Title__c like \'%'+textualTitle+'%\' ';
+List<Books> whereclause_records = database.query(query+' where '+whereClause);
+```
+  
+***If user Inputs:***
+  
+- ``%' and Performance_rating__c<2 and name like'%`` 
+  
+***result:***
+
+- He will be able to midify query according to him. 
+  
+  
+</td>
+<td>
+
+***example:***  
+  
+```apex
+String query = 'SELECT Id, Name, Title__c FROM Books';
+String whereClause = 'Title__c like \'%'+String.escapeSingleQuotes(textualTitle)+'%\' ';
+List<Books> whereclause_records = database.query(query+' where '+whereClause);
+```
+  
+***If user Inputs:***
+  
+- ``%' and Performance_rating__c<2 and name like'%`` 
+  
+***result:***
+  
+- user-provided single quote will be treated as data rather than code.
+  
+</td>  
+</tr>
+</table>
+
+
+### Solution 4: Allowlisting
+- Create a list of all values that the user is allowed to supply. If the user enters anything else, you reject the response. 
+
+### Solution 5: Replace Unwanted Characters
+
+***example:***
+
+```apex
+String query = 'select id from user where isActive='+var.replaceAll('[^\\w]','');
+```
 
 
 
