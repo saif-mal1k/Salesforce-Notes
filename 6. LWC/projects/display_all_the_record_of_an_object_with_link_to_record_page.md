@@ -97,4 +97,15 @@ wiredRecords({
 </LightningComponentBundle>
 ```
 
+### Class
+```apex
+public with sharing class QlikReportsAccessController {
+    @AuraEnabled(cacheable=true)
+    public static List<Qlik_Reports_Access_Controller__c> getRecordsList() {
+        return [SELECT Id, Name, Report_Link_URL__c, 
+            Report_Location_TextArea__c, Report_Name_Text__c
+            FROM Qlik_Reports_Access_Controller__c ];
+    }
+}
+```
 
