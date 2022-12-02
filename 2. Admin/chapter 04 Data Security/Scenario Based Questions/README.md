@@ -3,7 +3,7 @@
 <br/> Whether User 1 and User 2 will be able to edit/view each other's record or not?</b> </summary>
 <p>  
   
-Answer: Yes, they will be able to view/edit each other's record. Modify all will out rule private OWD.
+**Answer:** Yes, they will be able to view/edit each other's record. ``Modify all`` will out rule ``private`` OWD.
 
 </p>
 </details>
@@ -19,8 +19,9 @@ Answer: Yes, they will be able to view/edit each other's record. Modify all will
 
 <details>
 <summary> <b> If a user in ABC Inc. has public read-only access to records that he/she does not own, what all actions he can perform on the records? </b> </summary>
-<p>  
-Answer:
+<p>
+  
+**Answer:**
 
 - The user can still view the record but not edit it.
   
@@ -44,7 +45,7 @@ Answer:
 <br/> that shouldn't have view access to Account records, what should be done to achieve this? </b> </summary>
 <p>
   
-Answer: OWD for Accounts should be set to Private.
+**Answer:** OWD for Accounts should be set to Private.
 </p>
 </details>
 
@@ -62,7 +63,7 @@ Answer: OWD for Accounts should be set to Private.
 <br/> How will he/she do this?  </b> </summary>
 <p>
   
-Answer: System administrator can add the range of IP addresses to the team's profiles
+**Answer:** System administrator can add the range of IP addresses to the team's profiles
 </p>
 </details>
 
@@ -79,7 +80,7 @@ Answer: System administrator can add the range of IP addresses to the team's pro
 <summary> <b> If Field Level Security prevents a user from viewing the Credit Card field on the Opportunity record, where else the user will also be prevented from seeing this field? </b> </summary>
 <p>
   
-Answer: User will also be prevented to see this field in the related list, In search results, in reports and in list views.
+**Answer:** User will also be prevented to see this field in the related list, In search results, in reports and in list views.
 </p>
 </details>  
 
@@ -98,8 +99,8 @@ Answer: User will also be prevented to see this field in the related list, In se
 <br/> How could this be possible? </b> </summary>
 <p>
   
-Answer:
-Any permission with respect to CRUD - Create / Read / Update / Delete of the object is possible only through permission set or Profile.
+**Answer:**
+Any permission with respect to ``CRUD`` - **``Create / Read / Update / Delete``** of the object is possible only through permission set or Profile.
 If we are able to create records in an object then the Create Permission in either Profile or in Permission Set should be enabled.
 </p>
 </details>
@@ -120,7 +121,7 @@ If we are able to create records in an object then the Create Permission in eith
 <br/> How is this possible?  </b> </summary>
 <p>
   
-Answer: Create a criteria-based sharing rule where give access to "Roles and subordinates" to the head of department, this will let everyone access case regardless of hierarchy.
+**Answer:** Create a criteria-based sharing rule where give access to "Roles and subordinates" to the head of department, this will let everyone access case regardless of hierarchy.
 </p>
 </details>
 
@@ -137,7 +138,7 @@ Answer: Create a criteria-based sharing rule where give access to "Roles and sub
 <summary> <b> What happens when a user owns an opportunity record but does not have the Read permission on Opportunity Object? </b> </summary>
 <p>  
 
-Answer:User is not able to see the Opportunity Record.
+**Answer:** User is not able to see the Opportunity Record.
 </p>
 </details>
 
@@ -155,7 +156,7 @@ Answer:User is not able to see the Opportunity Record.
  </b> </summary>
 <p>
   
-Answer: The field-level security overrides the search layout, and the field will be hidden for those users.
+**Answer:** The field-level security overrides the search layout, and the field will be hidden for those users.
 </p>
 </details>  
 
@@ -175,7 +176,7 @@ Answer: The field-level security overrides the search layout, and the field will
 <br/>  Which business opportunities can Tom VIEW and EDIT? </b> </summary>
 <p>
   
-Answer:
+**Answer:**
 Tom can edit and view her own opportunities.
 Tom can edit and view Will's opportunities. Tom can View but cannot edit Adam's opportunities.
 </p>
