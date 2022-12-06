@@ -141,7 +141,9 @@
 
 ## Object Level Permissions
   - control access to standard and custom objects.
-  - i.e control permissions to create, read, edit, delete any records on an object.
+  - i.e control permissions to **create, read, edit, delete** any records on an object.
+    - **view all:** the profile user will be able to view all records of the object irrespective of the record level security.
+    - **Modify all:** the profile user will be able to view & edit all records of the object irrespective of the record level security.
   - _controlled through_ 
     - **profiles** - to manage the objects that users can access and the permissions they have for each object.
       - ``The settings`` in a user’s profile determine whether the user can see a particular app, tab, field, or record type.
@@ -194,6 +196,7 @@ _After you've created a profile, customize it to match the needs of a specific s
     - Click **Done** to return to a list of the users assigned to the permission set.
   
 <br/>
+
   
   
 ### permission set vs permission set group
@@ -220,6 +223,9 @@ _After you've created a profile, customize it to match the needs of a specific s
   
 </p>  
 </details>
+
+
+> Tip: on profile under ``system permissions``, if **``View all data``** is checked the profile user will be able to view all the data in the org. similarly if **``Modify all data``** is checked the profile user will be able to modify all the data in the org. 
 
 <br/>
 
@@ -282,7 +288,15 @@ _After you've created a profile, customize it to match the needs of a specific s
     - **sharing settings** -
       - **Org wide defaults** - 
         - specify the default level of access users have to each others’ records.
-        - ex: ``Private``, ``Public Read Only``, ``Public Read/Write``, ``Public Read/Write/Transfer``(_available for Lead & Case_), ``Controlled by Parent``(_available for child in a master detail relationship_).
+        - ex: ``Private``, ``Public Read Only``, ``Public Read/Write``, 
+          - ``Public Read/Write/Transfer``(_available for Lead & Case_), 
+          - ``Controlled by Parent``(_available for child in a master detail relationship_),
+          - ``Public Full Access``(_available only for Campaign Object_) 
+            - all users can View/Edit/Delete and report on all records.
+          - ``No Access, View Only or Use``(_available only for Price Book Object_)
+            - If the OWD for Price Book is set **Use** then, all users can access the Price Book information and as well as using the Price Book configuration for Opportunities with Products.
+            - If the OWD for Price Book is set **View** Only then, all users can access the Price Book information but not to use that Price Book detail in Opportunities with Products
+            - If the OWD for Price Book is set **No Access** then, it restricts users from accessing information for Price Book and Prices.
         - ``Private`` means records will be accessible to record owners only and soon.
       - **Sharing rules** - 
         - Sharing rules are exceptions to OWD for particular groups of users.
@@ -432,6 +446,7 @@ Say there are three roles:
 </p>
 </details>
 
+> **Note:** records can be shared using apex also, through [Apex Managed Sharing](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing.htm) ????.
 
 <br/>
 
