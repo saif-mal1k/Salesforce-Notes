@@ -235,7 +235,7 @@ Feed History tracking
 
 # types of object relationships
 
-### ***look up relationship***
+### 1. ***look up relationship***
   - child declares lookup to parent object
   - 0,1 to many
   - SOQL 
@@ -249,7 +249,7 @@ Feed History tracking
 
 <br/>
 
-### ***master detail relationship***
+### 2. ***master detail relationship***
   - child can not exist without parent
   - 1 to many
   - _important_
@@ -267,7 +267,7 @@ Feed History tracking
 
 <br/>
 
-### ***many-to-many ``junction object``***
+### 3. ***many-to-many ``junction object``***
   - many to many relationship
   - _SOQL_
     - ***child to parent*** : ????
@@ -306,13 +306,15 @@ Feed History tracking
 
 <br/>
 
-### ***Hierarchical Relationship***
+### 4. ***Hierarchical Relationship***
   - 1:1 relationship, available only on user object
   - one user is linked to another user, through Manager related list
 
 
 <br/>
   
+### 5. ***External lookup relationship***  
+  - ????
   
 ### relationship limit, relationship conversion, self relationship ????
 https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5 ????  
