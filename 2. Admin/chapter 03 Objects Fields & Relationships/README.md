@@ -267,7 +267,7 @@ Feed History tracking
 
 <br/>
 
-### ***``junction object`` a data architecture pattern***
+### ***many-to-many ``junction object``***
   - many to many relationship
   - _SOQL_
     - ***child to parent*** : ????
@@ -303,6 +303,12 @@ Feed History tracking
                        
 </p>  
 </details>
+
+<br/>
+
+### ***Hierarchical Relationship***
+  - 1:1 relationship, available only on user object
+  - one user is linked to another user, through Manager related list
 
 
 <br/>
