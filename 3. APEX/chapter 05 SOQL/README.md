@@ -90,7 +90,7 @@ FROM objectType[,...]
     ```
     - <b> name contains subString </b> :
     ```
-    WHERE name ='%test%'
+    WHERE name LIKE '%test%'
     ```
     
 </p>    
@@ -153,6 +153,9 @@ LIMIT 10
     
 - **The SELECT clause and the FROM clause are required.**    
 - Other Clauses are Optional.
+
+
+> Tip: query all the fields on an object
 
 💡💡💡💡💡 <b>tip:</b> always apply null check before making use list returned through SOQL. 
     
@@ -300,6 +303,40 @@ Requirement:
     SELECT Name, (SELECT Address__c, Price__c FROM Properties__r) FROM Broker__c
 ```
 
+
+
+
+<br/>
+
+
+<br/>
+
+
+# Working with Setup Objects: ????
+
+### Query Setup Objects 
+```apex
+
+```
+
+
+### Create a Child-to-Parent Query (both are Setup Objects)
+```apex
+
+```
+
+
+### Create a Parent-to-Child Query (both are Setup Objects)
+```apex
+
+```
+
+
+
+
+
+
+<br/>
 
 <br/>
 
