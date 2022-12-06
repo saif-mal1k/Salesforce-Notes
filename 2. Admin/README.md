@@ -143,6 +143,14 @@
 <br/>
 
 
+### Methods to login to salesforce
+- i. Web Browser through https://login.salesforce.com/ URL. 
+- ii. External API (Application Programming Interface) like Data loader. 
+- iii. Single Sign On (SSO).
+- iv. OAuth.
+
+<br/>
+
 ### Signup and Create an account on [developer.salesforce.com](https://www.developer.salesforce.com)
 
 
