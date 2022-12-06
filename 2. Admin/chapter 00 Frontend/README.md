@@ -31,20 +31,14 @@
   - there are 4 types of sandbox
     - ***developer sandbox*** : _Development, Unit testing_
       - includes a copy of your production org’s configuration (metadata), no data
-      - data space: 200 MB
-      - file space: 200 MB
     - ***developer pro sandbox*** : _Integration testing, Quality Assurance_
       - includes a copy of your production org’s configuration (metadata), no data
-      - data space: 1 GB
-      - file space: 1 GB
     - ***partial copy sandbox*** : _User Acceptance Testing, Staging_
       - includes a copy of prod org's metadata and, sample data (10k records per object)
-      - data space: 5 GB
-      - file space: 5 GB
     - ***full copy sandbox*** : _Training, Deployment_
       - exact copy of production
-      - data space: same as prod
-      - file space: same as prod
+      
+![image](https://user-images.githubusercontent.com/63545175/205821628-44378988-a24e-4576-b6dd-897a89a6b7ba.png)   
 
 ![image](https://user-images.githubusercontent.com/63545175/198032578-571b9e52-0440-4cbd-9b23-3d4fa5186122.png)
 
