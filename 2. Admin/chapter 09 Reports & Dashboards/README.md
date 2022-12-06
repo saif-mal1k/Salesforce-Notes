@@ -1,8 +1,8 @@
 
-# reports and dashboards ???
+# Reports and Dashboards ???
 
-## reports
--  a report is a list of records (like opportunities or accounts) that meet a defined criteria.
+## Reports
+-  A report is a list of records (like opportunities or accounts) that meet a defined criteria.
 
 <details>
 <summary>  <b><em> example: </em></b>  </summary>  
@@ -28,10 +28,10 @@ When Sita asked Maria which products are top sellers, Maria created a report tha
 
 <table>
 <tr>
-<td> standard report types are available on frontend, on reports tab </td>
+<td> Standard report types are available on frontend, on reports tab </td>
 <td> 
 
-if you want to create custom report type for an object, goto setup search report types create a custom report type.
+If you want to create custom report type for an object, goto setup search report types create a custom report type.
 
 </td>
 </tr>
@@ -120,7 +120,7 @@ Records returned are those where the primary object may or may not have a relate
 
 
 ### Report format
-***there are 3 types of report format***
+***There are 3 types of report format***
 ![image](https://user-images.githubusercontent.com/63545175/190897788-3686dd04-1629-491a-9e62-500d4c9a4825.png)
 
 
@@ -128,9 +128,10 @@ Records returned are those where the primary object may or may not have a relate
 <br/>
 
 
-## dashboards
+## Dashboards
   - A dashboard is a visual display of key metrics and trends for records in your org. 
-  - Each dashboard component is based on a single source report. 
+  - Each dashboard component is based on a single source report (_summary or matrix_).
+  - A dashboard is capable of displaying 20 reports at a time.
   - You can use the same or different source reports for the various components in a dashboard (for example, use the same report in a bar chart and pie chart).
   - Like reports, dashboards are stored in folders. If you have access to a folder, you can view its dashboards. 
   - To view the individual dashboard components, you also need access to the underlying reports.
