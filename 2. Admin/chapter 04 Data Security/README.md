@@ -446,7 +446,7 @@ Say there are three roles:
 </p>
 </details>
 
-> **Note:** records can be shared using apex also, through [Apex Managed Sharing](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing.htm) ????.
+> **Note:** records can be shared using apex also, through [Apex Managed Sharing](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing.htm) ???? [see also](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing_creating_with_apex.htm).
 
 <br/>
 
