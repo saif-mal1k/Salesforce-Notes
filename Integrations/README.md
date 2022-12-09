@@ -15,6 +15,8 @@
 
 # https & www ????
 
+# client server architecture & frontend vs backend ???
+
 # Request & Response cycle ????
 
 
