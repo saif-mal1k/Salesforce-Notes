@@ -168,8 +168,7 @@ Records returned are those where the primary object may or may not have a relate
 ---
 ***references:***
 
-
-https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards?trail_id=force_com_admin_beginner
-
+- https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards?trail_id=force_com_admin_beginner ????
+- https://trailhead.salesforce.com/content/learn/superbadges/superbadge-lex-rd ????
 
 
