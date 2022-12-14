@@ -12,6 +12,9 @@ Implement an Apex class (called WarehouseCalloutService) that implements the que
 </p>  
 </details>  
 
+<br/>
+
+### first authorize, in remote site settings
 
 <br/>
 
