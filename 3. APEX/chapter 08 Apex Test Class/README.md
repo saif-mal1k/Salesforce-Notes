@@ -297,6 +297,135 @@ private class Test_SMSUtils {
 <br/>
 
 
+# another example, testing callout
+
+<details>
+<summary> <b> &nbsp; callout code  </b> </summary>
+<p>
+
+---
+
+```apex
+public with sharing class WarehouseCalloutService implements Queueable {
+    
+    private static final String WAREHOUSE_URL = 'https://th-superbadge-apex.herokuapp.com/equipment';
+    
+    public static void execute (QueueableContext context){
+        doTheWork();
+    }
+    
+    @future(callout=true)
+    public static void doTheWork(){
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(WAREHOUSE_URL);
+        request.setMethod('GET');
+        HttpResponse response = http.send(request);
+        // If the request is successful, parse the JSON response.
+        
+        if(response.getStatusCode() == 200) {
+            // Deserialize the JSON string into collections of primitive data types.
+            List<object> equipments = (List<object>) JSON.deserializeUntyped(response.getBody());
+            //system.debug(equipments);           
+            List<Product2> productsToUpsert = new List<Product2>(); 
+            
+            for(Object item: equipments){
+                Product2 newProd = new Product2();
+                
+                Map<String,Object> mapjson = (Map<String,Object>) item;
+                newProd.ProductCode = (String) mapjson.get('_id');
+                newProd.cost__c = (decimal) mapjson.get('cost');
+                newProd.name = (String) mapjson.get('name');
+                newProd.lifespan_Months__c = (decimal) mapjson.get('lifespan');
+                newProd.maintenance_Cycle__c = (decimal) mapjson.get('maintenanceperiod');
+                newProd.QuantityUnitOfMeasure = (String) mapjson.get('Quantity');
+                newProd.replacement_Part__c = (Boolean) mapjson.get('replacement');
+                newProd.stockKeepingUnit = (String) mapjson.get('sku');
+                
+                //system.debug(mapjson);
+                //system.debug(mapjson.get('name'));
+                
+                productsToUpsert.add(newProd);
+                
+            }
+            
+            if(!productsToUpsert.isEmpty()){
+                upsert productsToUpsert;                
+            }
+            
+        }
+    }
+}
+```
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <b> &nbsp; mocking callout for test  </b> </summary>
+<p>
+
+---
+
+```apex
+@isTest  
+public class WarehouseCalloutServiceMock implements HttpCalloutMock {
+    
+    public HttpResponse respond(HttpRequest req) {
+        // Create a fake response
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('[{"_id":"55d66226726b611100aaf741","replacement":false,"quantity":5,"name":"Generator 1000 kW","maintenanceperiod":365,"lifespan":120,"cost":5000,"sku":"100003"},{"_id":"55d66226726b611100aaf742","replacement":true,"quantity":183,"name":"Cooling Fan","maintenanceperiod":0,"lifespan":0,"cost":300,"sku":"100004"}]');
+        res.setStatusCode(200);
+        return res;
+    }
+}
+```
+
+---
+
+</p>
+</details>
+
+
+<details>
+<summary> <b> &nbsp; test class  </b> </summary>
+<p>
+
+---
+
+```apex
+@IsTest
+private class WarehouseCalloutServiceTest {
+    
+    @IsTest
+    private static void testSendSms() {
+        
+        Test.setMock(HttpCalloutMock.class, new WarehouseCalloutServiceMock());
+        
+        Test.startTest();
+        Id jobID = System.enqueueJob(new WarehouseCalloutService());
+        Test.stopTest();
+        
+        // complete the assertion part ??????
+        System.assertEquals('success', 'success');
+    }
+    
+}
+```
+
+---
+
+</p>
+</details>
+
+
+<br/>
+  
+
 <br/>
 
 
