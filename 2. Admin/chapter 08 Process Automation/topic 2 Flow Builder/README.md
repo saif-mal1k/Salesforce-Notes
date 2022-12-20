@@ -30,7 +30,7 @@
         
 <br/>
 
-## types of flows
+## types of Flows
     
 <table class="featureTable sort_table">
     <thead class="thead sorted">
@@ -135,7 +135,7 @@
 
     
 <details>
-<summary> <h2> types of Flow Resources </h2> </summary>
+<summary> <h2> types of Flow Resources (Variables) </h2> </summary>
 <p>
 
 ---
@@ -194,6 +194,25 @@
 </tr>
 </table>
 
+
+<details>
+<summary> <b> Which flow Resource (Variable) to use when .... </b> </summary>
+<p>
+
+- In a screen flow, store the ID of the record that the flow is displayed on, so you can tell the flow which record to update at the end of the flow.
+- Store a number value that can be higher or lower depending on user choices.
+- Store the result of joining two text strings together.
+- Retrieve record values to use in calculations, copy to another record, or display to a user.
+- Assemble a collection of values that you can use to create a record.
+- Make changes to every record that meets certain criteria.
+- Delete every record that meets certain criteria.
+- Keep a running tally of how many times a loop has run.
+
+> **Note:** we don’t have to create variables for stoing every flow output. Many flow elements output their own variables, and it’s often best to use those variables. 
+
+</p>
+</details>
+
 ---
 
 </p>
@@ -201,7 +220,10 @@
 </details>
 
     
-## &nbsp; types of Flow Elements
+<details>
+<summary> <h2> types of Flow Elements </h2> </summary>
+<p>
+
 <table class="featureTable sort_table">
     <thead class="thead sorted">
       <tr>
@@ -258,7 +280,7 @@
         
     
 <details>
-<summary> <b> Which flow element to use when ... </b>   </summary>  
+<summary> <b> Which flow element to use when .... </b>   </summary>  
 <p>    
   
 ---
@@ -337,10 +359,13 @@
 </p>    
 </details>
 
-<br/>
+</p>
+</details>
+
 
 <br/>
 
+<br/>
 
 
 
@@ -448,7 +473,7 @@ Remember, data from the record that triggered the flow is stored in the $Record 
 <br/>
 
 
-## security in flow ????
+## Security in Flow ????
 very short complete quick: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_security.htm&type=5 
 
 ![image](https://user-images.githubusercontent.com/63545175/196874109-ec539e9c-1105-4651-a382-ae4a3264e1ac.png)
@@ -487,6 +512,18 @@ very short complete quick: https://trailhead.salesforce.com/content/learn/module
 - **Execute as another user:** see what happens when another user runs the flow
     - in setup type, goto ``Process Automation Settings`` check ``Let admins debug flows as other users``
 - Debug in a **sandbox org** and use ``rollback mode`` to protect data integrity
+
+
+<br/>
+
+## Keyboard Shortcuts
+| Action | Keyboard shortcut |
+|--------|-------------------|
+| Zoom in | ``CTRL+=`` |
+| Zoom out | ``CTRL+-`` |
+| Zoom to fit | ``CTRL+Alt+1`` |
+| Zoom to view | ``CTRL+Alt+0`` |
+| Switch focus to another panel | ``F6`` |
 
 
 <br/>
