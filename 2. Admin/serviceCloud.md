@@ -2,6 +2,11 @@
 https://trailhead.salesforce.com/content/learn/modules/service_lex?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential 
 
 
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-2 ????
+
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-3 ????
+
+
 <br/>
 
 ## setup the service console ????
