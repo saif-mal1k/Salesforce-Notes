@@ -4,6 +4,12 @@
 https://trailhead.salesforce.com/content/learn/modules/community_cloud_basics
 
 
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-2 ????
+
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-3 ????
+
+
+
 <br/>
 
 
