@@ -23,6 +23,9 @@ lead ------>  prospects ----------> customer
 ## basics ????
 https://trailhead.salesforce.com/content/learn/trails/discover-sales-cloud?trailmix_creator_id=ballen4&trailmix_slug=beginning-admin 
 
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-2 ????
+
+https://trailhead.salesforce.com/users/rangermegan/trailmixes/road-to-ranger-trailmix-3 ????
 
 
 <br/>
