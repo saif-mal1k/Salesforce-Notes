@@ -228,6 +228,55 @@ Discussion of upcoming business changes that could affect Salesforce.
 </details>
 
 
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+
+<details>
+<summary> <b> Karl, a new Salesforce admin at Ursa Major Solar, is excited for next week’s project kickoff with a Salesforce partner. This project will integrate Salesforce, the finance data system, and an external ERP. But first, Karl thinks it’s a good idea to review the data in Salesforce and do some data cleanup. As Karl is reviewing an accounts report he notices that there are 15 AW Computing accounts created, and 14 of them have the same address. 
+
+Sasha, a coworker who helped the previous Salesforce admin setup Salesforce, popped by Karl’s desk. She’s hoping he can get her out of a bind. With her admin privileges, she accidentally deleted all of the tasks for the sales team and she is hoping Karl can undo that.  </b> </summary>
+<p>
+  
+**Answer:**
+
+
+<details>
+<summary> <b> What is one thing Karl could put in place to prevent accounts with the same names being created? </b> </summary>
+<p>
+  
+**Answer:**
+
+Duplicate rules
+
+</p>
+</details>
+
+<details>
+<summary> <b> For Karl to fulfill Sasha’s request, what admin best practice needs to be in place? </b> </summary>
+<p>
+  
+**Answer:**
+
+A backup plan
+
+</p>
+</details>
+
+
+</p>
+</details>
+
+
 
 
 
