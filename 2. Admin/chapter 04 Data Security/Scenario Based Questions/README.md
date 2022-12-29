@@ -183,7 +183,49 @@ Tom can edit and view Will's opportunities. Tom can View but cannot edit Adam's 
 </details>
 
 
+<br/>
 
+<br/>
+
+<br/>
+
+<br/>
+
+
+<details>
+<summary> <b> Hugh is the Salesforce admin at DreamHouse Realty. Yesterday he met with Sue, a Salesforce user who was recently transferred from inbound sales to a marketing position. She is excited. During the meeting, Sue expressed her frustration that the Account and Contact screens she sees in Salesforce don’t match the ones her colleagues in marketing have, which is making it very difficult to do her job. Hugh treated Sue to a coffee and promised to look into it. 
+
+At his desk, Hugh runs Salesforce Optimizer while catching up on email, when he notices that he missed an email from a user from 2 weeks ago about them leaving the company. Within the Optimizer report Hugh notices that that user is still an active user and that the marketing director hasn’t logged in for 3 months. Hugh saves his Optimizer report and gets ready to head upstairs to his meeting with Kathy, the SVP of Marketing.  </b> </summary>
+<p>
+  
+**Answer:**
+
+<details>
+<summary> <b> Why was Sue not seeing the same thing as her marketing colleagues?</b> </summary>
+<p>
+  
+**Answer:**
+
+She has the wrong profile/permissions in Salesforce.
+
+</p>
+</details>
+
+<details>
+<summary> <b> What should be in Hugh’s agenda with Kathy? </b> </summary>
+<p>
+  
+**Answer:**
+
+Audit to deactivate Marketing users, a better alignment of profiles when employees are transferred.
+
+Discussion of upcoming business changes that could affect Salesforce.
+
+</p>
+</details>
+
+</p>
+</details>
 
 
 
