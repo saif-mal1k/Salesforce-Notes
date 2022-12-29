@@ -243,6 +243,29 @@
 
 
 
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+
+## Core Admin Responsiblities
+- User Management 
+	- who can access and also what can be accessed by them.
+- Data Management
+	- Review and Maintain Backup
+	- Cleanse Data
+	- Review and Refresh Sandboxes
+	- Maintain and Improve Your Org
+	- Data import & Exporting Data
+	- Managing Duplicate Data
+	- Data Optimization
+- Security(and Levels of Security)
+- Actionable Analytics(Reports & Dashboards)
+
 
   
   
