@@ -252,7 +252,8 @@
 <br/>
 
 
-## Core Admin Responsiblities
+## [Who is Admin, What he do, His position in team](https://www.youtube.com/watch?v=xhbMHNbjKK8)
+### Core Admin Responsiblities
 - User Management 
 	- who can access and also what can be accessed by them.
 - Data Management
