@@ -4,6 +4,7 @@
 	- Review and Refresh Sandboxes
 	- Maintain and Improve Your Org
 	
+>  validation rules, lookup filters & page layouts are three declarative methods that help ensure data quality.	
 	
 https://trailhead.salesforce.com/content/learn/projects/improve-data-quality-for-a-cleaning-supply-app ????	
 
