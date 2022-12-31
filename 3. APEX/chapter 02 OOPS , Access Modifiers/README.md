@@ -3,7 +3,8 @@
 ```apex
 
 (none)|private|protected|public|global
-[virtual | abstract | with sharing | without sharing]
+[virtual | abstract ]
+[with sharing | without sharing | with inherited sharing]
 class ClassName [implements InterfaceNameList] [extends ClassName]
 {
     // The body of the class
@@ -48,14 +49,7 @@ class ClassName [implements InterfaceNameList] [extends ClassName]
 
 - ``abstract``:
     - declares that the class contains abstract methods ( i.e methods that only have signatures, no body defined )
-
-- ``with sharing``:
-    - ensure sharing rules that apply to current user.
-
-- ``without sharing``:
-    - default value
-    - ensure that rules of current user are not enforced.
-
+    
 ---
 
 <br/>
@@ -65,10 +59,28 @@ class ClassName [implements InterfaceNameList] [extends ClassName]
     - for interfaces
 
 - ***extends***: 
-    - for inheritance
+    - for class (_inheritance_)
 
 ---
 
+<br/>
+
+- ``with sharing``: (respect record level security)
+    - ensure sharing rules that apply to current user.
+
+- ``without sharing``: (access all data)
+    - default value, by default apex code runs in system context. 
+    - ensure that rules of current user are not enforced.
+    
+- ``with inherited sharing``:
+    - to run the class in the sharing mode of the class that called it
+    - A class declared as ``inherited sharing`` runs as ``without sharing`` only when explicitly called from a ``without sharing`` context, otherwise it runs in ``with sharing`` context.
+    
+    
+> to know more goto [Salesforce-Notes/Secure Development](https://github.com/saif-mal1k/Salesforce-Notes/tree/main/Secure%20Development)    
+
+
+---
 
 <br/>
 
