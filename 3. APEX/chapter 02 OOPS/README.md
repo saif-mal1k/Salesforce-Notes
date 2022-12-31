@@ -2,7 +2,7 @@
 ## syntax
 ```apex
 
-private | public | global
+(none)|private|protected|public|global
 [virtual | abstract | with sharing | without sharing]
 class ClassName [implements InterfaceNameList] [extends ClassName]
 {
@@ -14,9 +14,17 @@ class ClassName [implements InterfaceNameList] [extends ClassName]
 
 ---
 
+<br/>
+
+
 - **private**: 
-    - default access specifier.
-    - method or variable is accessible only within the Apex code it is used.
+    - This access modifier is the default.
+    - the method or variable is accessible only within the Apex class in which it’s defined. 
+    - If you don’t specify an access modifier, the method or variable is private.
+
+- **protected**: 
+    - This means that the method or variable is visible to any inner classes in the defining Apex class, and to the classes that extend the defining Apex class. 
+    - You can only use this access modifier for instance methods and member variables. 
 
 - **public**:
     - method or variable can be used by any Apex code in this application or namespace.
@@ -26,7 +34,14 @@ class ClassName [implements InterfaceNameList] [extends ClassName]
     - This access modifier should be used for any method that needs to be referenced outside of the application, either in the SOAP API or by other Apex code.
     - If you declare a method or variable as global, you must also declare the class that contains it as global. 
 
+> _There is no difference between Public and Global if they are meant to be used in same org_.
+
+> _Global is useful when we create a package and include those classes in package and when we deploy that package into someone else's org then they will be able to use the variable and method only if they are using ``Global``_.
+
 ---
+
+<br/>
+
 
 - ``virtual``:
     - ....
@@ -42,6 +57,9 @@ class ClassName [implements InterfaceNameList] [extends ClassName]
     - ensure that rules of current user are not enforced.
 
 ---
+
+<br/>
+
 
 - ***implements***:
     - for interfaces
