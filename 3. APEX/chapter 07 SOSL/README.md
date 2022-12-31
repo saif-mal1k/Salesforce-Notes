@@ -10,6 +10,8 @@ List<List<SObject>> searchList = [FIND 'SFDC' IN ALL FIELDS
                                       RETURNING Account(Name), Contact(FirstName,LastName)];
 ```
 
+> A list of lists of sObjects is returned as a result of SOSL search.
+
 
 <br/>
 
