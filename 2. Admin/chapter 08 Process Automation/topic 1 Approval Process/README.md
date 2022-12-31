@@ -219,6 +219,14 @@
 
 
 
+
+
+<br/>
+
+
+
+> only admin & current approver can edit the record after it is locked for approval. 
+
 <br/>
 
 
