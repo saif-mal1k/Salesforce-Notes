@@ -45,6 +45,17 @@ FROM objectType[,...]
 // what fields of record   
 ```
 ![example](../../images/two.webp)
+
+```
+// query all fields
+SELECT FIELDS(ALL) FROM Account LIMIT 200
+
+// query all custom fields
+SELECT Id, FIELDS(CUSTOM) FROM Account LIMIT 200
+
+// query all standard fields
+SELECT FIELDS(STANDARD) FROM Account
+```
 </p>    
 </details>  
     
@@ -155,7 +166,7 @@ LIMIT 10
 - Other Clauses are Optional.
 
 
-> Tip: query all the fields on an object
+> a SOQL statement can evaluate only to an integer, a single sObject, or a list of sObjects.
 
 💡💡💡💡💡 <b>tip:</b> always apply null check before making use list returned through SOQL. 
     
