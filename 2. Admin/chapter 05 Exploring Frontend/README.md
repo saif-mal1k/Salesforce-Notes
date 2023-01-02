@@ -77,6 +77,17 @@
 </table>
 
 
+<br/>
+
+
+### Standard button
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/63545175/210194296-3e88fd05-afb7-450c-ac8e-ebb23101b9fa.png">
+
+- they standard buttons they can be override by visualforce page or aura, but not through LWC.
+- to use LWC at standard button, call your lwc inside aura component.
+
+
+
 
 <br/>
 
