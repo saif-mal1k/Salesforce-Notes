@@ -253,6 +253,38 @@
 
 
 ## [Who is Admin, What he do, His position in team](https://www.youtube.com/watch?v=xhbMHNbjKK8)
+
+### Where is Admin ?
+
+***People from client side***
+```
+- Business Executive Sponsor
+	- ensure project goals are aligned with company's overall stratergy
+	- communicate goals
+- IT Executive Sponsor
+	- set priority on which project to do first, and which to do later
+	- approve budget for a project
+	- removes technical road-blocks, such as subscribing to a 3rd party API
+- Subject Matter Experts(SME's)
+	- they will be explaining the day in life of various roles inside the org.
+	- assist the UI & UX development
+	- assist in User Acceptance Testing
+```
+
+***People from IT parter side***	
+```
+- Engagement Manager
+- Solution Consultant
+- Project Manager
+- Business Analyst
+- Salesforce Admin
+	- he can be working through IT parter(or Consultancy) or directly from Client Side also
+```
+
+
+
+
+
 ### Core Admin Responsiblities
 - User Management 
 	- who can access and also what can be accessed by them.
@@ -264,8 +296,8 @@
 	- Data import & Exporting Data
 	- Managing Duplicate Data
 	- Data Optimization
-- Security(and Levels of Security)
-- Actionable Analytics(Reports & Dashboards)
+- Security[(and Levels of Security)](https://github.com/saif-mal1k/Salesforce-Notes/tree/main/2.%20Admin/chapter%2004%20Data%20Security)
+- Actionable Analytics[(Reports & Dashboards)](https://github.com/saif-mal1k/Salesforce-Notes/tree/main/2.%20Admin/chapter%2009%20Reports%20%26%20Dashboards)
 
 
   
