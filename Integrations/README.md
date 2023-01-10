@@ -4,25 +4,29 @@
 
   - Stripe
   - WebRTC
-
----
-
+  - Google Forms
+  - Jira
+  - Youtube
+  - Google Maps
+  
+  
+  
+---    
+  
 </p>
 </details>
 
 
 <br/>
 
-# https & www ????
+## https & www ????
 
-# client server architecture & frontend vs backend ???
+## client server architecture & frontend vs backend ???
 
-# Request & Response cycle ????
-
-
+## Request & Response cycle ????
 
 
-
+complete it
 
 
 <br/>
