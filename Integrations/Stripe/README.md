@@ -1,5 +1,19 @@
 
 
+<details>
+<summary><b>when a customer select something, generate a payment link through stripe and send it to customer via email. without feeding stripe with products and their prices .</b></summary>
+<p>
+
+---
+  
+
+---
+  
+</p>
+</details>
+
+
+
 <br/>
 
 <br/>
