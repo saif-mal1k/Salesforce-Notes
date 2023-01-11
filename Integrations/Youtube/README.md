@@ -108,13 +108,9 @@
 import { LightningElement, track } from "lwc";
 export default class Youtube extends LightningElement {
   @track searchItem = "";
-
   @track ifVideoVisible = false;
-
   @track spaceHolder = false;
-
   @track ifListVisible = true;
-
   @track currentVideoUrl = "";
 
   handleSearchChange(event) {
@@ -150,7 +146,7 @@ export default class Youtube extends LightningElement {
     const requestUrl =
       "https://youtube.googleapis.com/youtube/v3/search?maxResults=6&q=" +
       this.searchItem +
-      "&safeSearch=strict&type=video&key=";
+      "&safeSearch=strict&type=video&key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
     fetch(requestUrl)
       .then((response) => response.json())
@@ -168,7 +164,7 @@ export default class Youtube extends LightningElement {
             item.id.videoId +
             "/maxresdefault.webp";
           item.id.videoUrl =
-            "https://www.youtube.com/embed/" +
+            "https://www.youtube-nocookie.com/embed/" +
             item.id.videoId +
             "?autoplay=1&autopause=0";
 
@@ -176,7 +172,72 @@ export default class Youtube extends LightningElement {
             "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" +
             item.id.videoId +
             "&fields=items(id%2Csnippet)&key=" +
-            "AIz";
+            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+          fetch(detailsUrl)
+            .then((response) => response.json())
+            .then((response) => {
+              //console.log("details of video:");
+              //console.log(item.id.videoId);
+              //console.log(response);
+              //this.list = response.items;
+
+              item.id.title = response.items[0].snippet.title;
+              //console.log("title:");
+              //console.log(item.id.title);
+
+              item.id.channelTitle = response.items[0].snippet.channelTitle;
+              //console.log("channel name:");
+              //console.log(item.id.channelTitle);
+            });
+        });
+
+        //console.log("####after");
+        //console.log(this.list);
+      })
+      .catch((err) => console.error(err));
+
+    //this.ifVideoVisible = false;
+    this.ifListVisible = true;
+  }
+
+  // for initial list that appears on component loading
+  // this is same as get list of videos method, currently
+  // i didn't find any solution for calling get list of videos method directly
+
+  connectedCallback() {
+    this.list = [];
+
+    //console.log("fetching list ....");
+
+    const requestUrl =
+      "https://youtube.googleapis.com/youtube/v3/search?maxResults=6&q=SFDC&safeSearch=strict&type=video&key=XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+    fetch(requestUrl)
+      .then((response) => response.json())
+      .then((response) => {
+        //console.log(response);
+        this.list = response.items;
+
+        //console.log("#### before ");
+        //console.log(this.list);
+
+        this.list.forEach((item) => {
+          //TODO : currentItem
+          item.id.imageUrl =
+            "https://i.ytimg.com/vi_webp/" +
+            item.id.videoId +
+            "/maxresdefault.webp";
+          item.id.videoUrl =
+            "https://www.youtube-nocookie.com/embed/" +
+            item.id.videoId +
+            "?autoplay=1&autopause=0";
+
+          const detailsUrl =
+            "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" +
+            item.id.videoId +
+            "&fields=items(id%2Csnippet)&key=" +
+            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
           fetch(detailsUrl)
             .then((response) => response.json())
@@ -205,7 +266,6 @@ export default class Youtube extends LightningElement {
     this.ifListVisible = true;
   }
 }
-
 ```
 
 ### CSS
