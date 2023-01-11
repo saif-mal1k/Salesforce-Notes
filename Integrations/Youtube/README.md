@@ -206,5 +206,28 @@ export default class Youtube extends LightningElement {
 
 ```
 
+### CSS
+```css
+.thumbnail{
+  aspect-ratio: 16 / 9;
+  width: 100%;  
+}
 
+.video{
+    aspect-ratio: 16 / 9;
+    width: 94%;
+    position: fixed;
+    top: 45px;
+    z-index: 1;
+    left: 8px;
+}
+
+.searchBar{
+    position: fixed;
+    top: 36px;
+    width: 102%;
+    z-index: 2;
+
+}
+```
 
