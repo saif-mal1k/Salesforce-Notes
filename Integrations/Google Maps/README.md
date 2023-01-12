@@ -316,6 +316,19 @@ export default class CreateContactRecord extends LightningElement {
 ## Find distance between two point on a map
 ![image](https://user-images.githubusercontent.com/63545175/211723058-6befed68-e2d0-4e62-ae81-c25c3a3ea5ee.png)
 
+### APEX
+```apex
+public with sharing class contactsController {
+ //@AuraEnabled is annotation enables LWC to access below apex method
+ //(cacheable=true) is for caching the data on client side storage without 
+
+    @AuraEnabled(cacheable=true)
+  public static List<Contact> getContactsWithAddress() {
+  return [SELECT Id, FirstName, LastName, MailingStreet FROM Contact WHERE MailingStreet != ''];
+  }
+}
+```
+
 ### HTML
 ```html
 <template>
