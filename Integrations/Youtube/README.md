@@ -302,6 +302,22 @@ export default class Youtube extends LightningElement {
 ![image](https://user-images.githubusercontent.com/63545175/211800516-89ee8b2e-d913-4b91-a583-918afd3eb0f8.png)
 
 
+### APEX Controller
+```apex
+public class youtubeController {
+    //method to share youtube link to chatter
+    @AuraEnabled
+    public static void shareOnChatter(string chatterText,String youTubeUrl){
+        chatterText  = chatterText == null ? '' : chatterText ;
+        FeedItem post = new FeedItem();
+        post.ParentId = userinfo.getUserId();
+        post.Body = chatterText;
+        post.LinkUrl = youTubeUrl;
+        insert post;
+    }
+}
+```
+
 ### HTML
 ```html
 <template>
