@@ -1,6 +1,14 @@
 ## Create Contact by finding current system's location
 ![image](https://user-images.githubusercontent.com/63545175/211722125-5379670c-7de5-4d47-ad23-d2adc5368f71.png)
 
+
+### Aura
+```html
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:actionOverride" access="global" >
+<c:createContact></c:createContact>
+</aura:component>
+```
+
 ### HTML
 ```html
 <template>
