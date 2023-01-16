@@ -1,3 +1,5 @@
+### Display all the records of an object with link to record page
+
 ## output
 ![image](https://user-images.githubusercontent.com/63545175/201847659-6596df71-1da4-4644-8e83-a95d7bb17f16.png)
 
