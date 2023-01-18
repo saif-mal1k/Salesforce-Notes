@@ -440,6 +440,282 @@ Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   
 ```
   
+<br/>
+
+### Summary
+<table>
+<tr>
+<td>
+
+List
+</td>
+<td>
+
+Set
+</td>
+<td>
+
+Map
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  add(listElement)
+
+  add(index, listElement)
+
+  addAll(fromList)
+
+  addAll(fromSet)
+```
+</td>
+<td>
+
+```apex
+  add(setElement)
+
+  addAll(fromList)
+
+  addAll(fromSet)
+```
+</td>
+<td>
+
+```apex
+  put(key, value)
+
+  putAll(fromMap)
+
+  putAll(sobjectArray)
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  contains(listElement)
+```
+</td>
+<td>
+
+```apex
+  contains(setElement)
+
+  containsAll(listToCompare)
+
+  containsAll(setToCompare)
+```
+</td>
+<td>
+
+```apex
+  containsKey(key)
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  remove(index)
+```
+</td>
+<td>
+
+```apex
+  remove(setElement)
+
+  removeAll(listOfElementsToRemove)
+
+  removeAll(setOfElementsToRemove)
+```
+</td>
+<td>
+
+```apex
+  remove(key)
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  clear()
+
+  clone()
+```
+
+</td>
+<td>
+
+```apex
+  clear()
+
+  clone()
+```
+</td>
+<td>
+
+```apex
+  clear()
+
+  clone()
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  deepClone(preserveId, 
+            preserveReadonlyTimestamps, 
+            preserveAutonumber)
+```
+</td>
+<td>
+
+</td>
+<td>
+
+```apex
+  deepClone()
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  equals(list2)
+```
+</td>
+<td>
+
+```apex
+  equals(set2)
+```
+
+</td>
+<td>
+
+```apex
+  equals(map2)
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  get(index)
+
+  getSObjectType()
+```
+</td>
+<td>
+
+</td>
+<td>
+
+```apex
+  get(key)
+
+  getSObjectType()
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  hashCode()
+
+  isEmpty()
+```
+</td>
+<td>
+
+```apex
+  hashCode()
+
+  isEmpty()
+```
+
+</td>
+<td>
+
+```apex
+  hashCode()
+
+  isEmpty()
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  size()
+
+  toString()
+```
+</td>
+<td>
+
+```apex
+  size()
+
+  toString()
+```
+</td>
+<td>
+
+```apex
+  size()
+
+  toString()
+```
+</td>
+</tr>
+<tr>
+<td>
+
+```apex
+  indexOf(listElement)
+
+  sort()
+
+  iterator()
+
+  set(index, listElement)
+```
+</td>
+<td>
+
+```apex
+  retainAll(listOfElementsToRetain)
+
+  retainAll(setOfElementsToRetain)
+```
+</td>
+<td>
+
+```apex
+  keySet()
+
+  values()
+```
+</td>
+</tr>
+</table>
+  
   
 <br/>
 
