@@ -319,13 +319,14 @@ export default class CreateContactRecord extends LightningElement {
 ### APEX
 ```apex
 public with sharing class contactsController {
- //@AuraEnabled is annotation enables LWC to access below apex method
- //(cacheable=true) is for caching the data on client side storage without 
-
+    //@AuraEnabled is annotation enables LWC to access below apex method
+    //(cacheable=true) is for caching the data on client side storage without 
+    
     @AuraEnabled(cacheable=true)
-  public static List<Contact> getContactsWithAddress() {
-  return [SELECT Id, FirstName, LastName, MailingStreet FROM Contact WHERE MailingStreet != ''];
-  }
+    public static List<Contact> getContactsWithAddress(String searchKey) {
+        String searchStr = '%'+searchKey + '%';
+        return [SELECT Id, FirstName, LastName, MailingStreet FROM Contact WHERE MailingStreet != '' AND FirstName LIKE : searchStr ];
+    }
 }
 ```
 
@@ -590,7 +591,7 @@ export default class CustomLookupLwc extends LightningElement {
   }
 
   // wire function property to fetch search record based on user input
-  @wire(fetchLookupData)
+  @wire(fetchLookupData,{searchKey: '$searchKey'})
   searchResult(value) {
     const { data, error } = value; // destructure the provisioned value
     this.isSearchLoading = false;
