@@ -12,7 +12,7 @@
 
 ### types of orgs
 <details>
-<summary>  <b> Production, Sandbox, Developer Edition</b>  </summary>
+<summary>  <b> Production, Scratch, Sandbox, Developer Edition, Trailhead Playground</b>  </summary>
 <p>
   
 ---
@@ -22,6 +22,13 @@
   - production org is the main org of company.
   - for login to production org you go to login.salesforce.com
   
+### Scratch org
+- They’re automatically destroyed every seven days.
+- Scratch orgs are empty without any data or metadata.
+  - you can develop new features and know that nothing else will interfere with your code. 
+  - If something’s not working, it is most definitely your code, and not someone else’s customization.
+
+
 ### Sandbox org
   - testing environment (Business logic + sample data)
   - sandbox org is an identical copy of production metadata or metadata and data.
