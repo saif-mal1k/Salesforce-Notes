@@ -102,6 +102,15 @@
 <br/>
 
 
+## List Views
+### How to control visiblity & Accessiblity of list views ?
+- through Object level security
+- through sharing setting inside gear icon on frontend
+
+
+<br/>
+
+
 ### chatter administration for lightning customization ????
 https://trailhead.salesforce.com/content/learn/modules/lex_implementation_chatter?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-salesforce-administrator-credential
 
