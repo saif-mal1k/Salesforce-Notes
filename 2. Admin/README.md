@@ -140,64 +140,7 @@
 <br/>
 
 
-<br/>
 
-
-### Methods to login to salesforce
-- i. Web Browser through https://login.salesforce.com/ URL. 
-- ii. External API (Application Programming Interface) like Data loader. 
-- iii. Single Sign On (SSO).
-- iv. OAuth.
-
-<br/>
-
-### Signup and Create an account on [developer.salesforce.com](https://www.developer.salesforce.com)
-
-
-<details>
-<summary>  Changing org url <b> My Domain </b>  </summary>
-<p>
-
-![image](https://user-images.githubusercontent.com/63545175/192521568-6e40fb7d-0aec-454b-a74c-32c35916b438.png)
-
-</p>
-</details>
-
-<details>
-<summary> <b> Restrict User Email Domains </b>  </summary>
-<p>
-
-	- From Setup, in the Quick Find box, enter Allowed Email Domains, and then select Allowed Email Domains.
-	- Click New Allowed Email Domain.
-	- Enter a Domain.
-		- You can enter a top-level domain, such as companya.org, or a subdomain, such as user.companya.org.
-	- Click Save.
-
-</p>
-</details>
-
-
-### open setup type ``company information`` to view details about the company
-
-
-<details>
-<summary> <b> installation of apps from <a href="https://appexchange.salesforce.com/"> appExchange </a> </b> </summary>
-<p>
-  
----
-  
-### what is AppExchange
-  - an online marketplace for salesforce apps, components and consulting services.
-  - link: https://appexchange.salesforce.com/
-  
-  
----  
-  
-<p>
-</details>
-
-
-<br/>
 
 <details>
 <summary> <h3> order of execution </h3> </summary>
@@ -240,6 +183,8 @@
 </details>
 
 ![image](https://user-images.githubusercontent.com/63545175/192946302-886d6927-644a-4225-a40c-7955c99f16a3.png)
+
+![full save cycle](https://user-images.githubusercontent.com/63545175/214839473-490a4c10-5343-4e65-920f-7d72ef058d7a.png)
 
 
 
