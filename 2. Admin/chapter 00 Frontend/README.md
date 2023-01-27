@@ -25,12 +25,47 @@
   - Production org is the main org of company.
   - For login to production org you go to login.salesforce.com
   
-### Scratch org
+<br/>
+
+<details>
+<summary><h3> Scratch org</h3></summary>
+<p>
+
+---
+
+### [VS code Setup for Salesforce](https://github.com/saif-mal1k/Salesforce-Notes/tree/main/6.%20LWC#setup-for-lwc-)
+
+### update salesforce CLI
+```
+update sfdx
+```
+
+### Authenticate your org
+```
+sfdx auth:web:login -d -a DevHub
+```
+
+### Create Scratch Org
+```
+sfdx force:org:create -s -f config/project-scratch-def.json -a dreamhouse-org
+```
+
+### Open scratch Org
+```
+sfdx force:org:open
+```
+
+---
+
+</p>
+</details>
+
 - They’re automatically destroyed every seven days.
 - Scratch orgs are empty without any data or metadata.
   - You can develop new features and know that nothing else will interfere with your code. 
   - If something’s not working, it is most definitely your code, and not someone else’s customization.
 
+<br/>
 
 ### Sandbox org
   - Testing environment (Business logic + sample data)
