@@ -246,6 +246,27 @@ Feed History tracking
     - Contact has a look up to Account
     - Contact can exist without Account
     - Contact can access properties of parent Account
+    
+    
+<details>   
+<summary> <b> important note: </b> </summary>
+<p>
+
+---
+
+<b>Lookup Filter:</b> Optionally, create a filter to limit the records available to users in the lookup field. 
+
+![image](https://user-images.githubusercontent.com/63545175/215242566-c23e8ffd-d63e-42bd-b2a5-6a42c7dfa73f.png)
+
+
+<b> Making a Lookup behave as a master-detail relationship </b>
+
+![image](https://user-images.githubusercontent.com/63545175/215242688-23165805-1845-4d48-9af0-2746518152e5.png)
+
+---
+
+</p>
+</details>
 
 <br/>
 
