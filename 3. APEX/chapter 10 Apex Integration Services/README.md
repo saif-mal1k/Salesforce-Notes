@@ -119,7 +119,7 @@ if(response.getStatusCode() == 200) {
 <br/>
 
 
->***💡 Tip:*** For more complex JSON structures, you can use [JSON2Apex](https://json2apex.herokuapp.com/?_ga=2.2285616.1441678755.1652070025-1740883501.1634572155). This tool generates strongly typed Apex code for parsing a JSON structure.
+>***💡 Tip:*** For more complex JSON structures, you can use [JSON2Apex](https://json2apex.herokuapp.com/?_ga=2.2285616.1441678755.1652070025-1740883501.1634572155). This tool generates strongly typed Apex code for parsing a JSON structure. this is useful in LWC. 
 
 
 <br/>
