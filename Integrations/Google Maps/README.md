@@ -12,298 +12,247 @@
 ### HTML
 ```html
 <template>
-  <lightning-card
-    variant="Narrow"
-    title="Create New Contact"
-    icon-name="standard:contact"
-  >
-    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
-      <div class="slds-col slds-size_1-of-2">
-        <div class="slds-p-around_small">
-          <lightning-record-edit-form
-            object-api-name="{contactObject}"
-            onsuccess="{handleContactCreated}"
-          >
-            <label for="fieldid">* {fieldLabel}</label>
-            <lightning-input-field
-              id="fieldid"
-              required="true"
-              variant="label-hidden"
-              field-name="{targetFieldApiName}"
-              value="{value}"
-              onchange="{handleChange}"
-              disabled="{disabled}"
-            >
-            </lightning-input-field>
-            <lightning-input-field
-              field-name="{firstNameField}"
-            ></lightning-input-field>
-            <lightning-input-field
-              field-name="{lastNameField}"
-            ></lightning-input-field>
+	<lightning-card variant="Narrow" title="Create New Contact" icon-name="standard:contact">
+		<div class="demo-only demo-only--sizing slds-grid slds-wrap">
+			<div class="slds-col slds-size_1-of-2">
+				<div class="slds-p-around_small">
+					<lightning-record-edit-form object-api-name={contactObject} onsuccess={handleContactCreated}>
+						<label for="fieldid">* {fieldLabel}</label>
+						<lightning-input-field id="fieldid" required="true" variant="label-hidden"
+							field-name={targetFieldApiName} value={value} onchange={handleChange} disabled={disabled}>
+						</lightning-input-field>
+						<lightning-input-field field-name={firstNameField}></lightning-input-field>
+						<lightning-input-field field-name={lastNameField}></lightning-input-field>
+						<lightning-input-field field-name={mailingAddress} required="true"
+							value={currentAddressFromMap}></lightning-input-field>
 
-            <lightning-input-field
-              field-name="{mailingAddress}"
-              required="true"
-              value="{currentAddressFromMap}"
-            ></lightning-input-field>
+						<br />
+						<br />
+						<br />
+						<br />
 
-            <br />
+						<lightning-button type="submit" variant="brand" label="Create Contact Record">
+						</lightning-button>
+					</lightning-record-edit-form>
+				</div>
+			</div>
 
-            <br />
 
-            <br />
+			<!-- second column i.e current address map -->
+			<div class="slds-col slds-size_1-of-2">
+				<div class="slds-p-around_small">
+					<lightning-map map-markers={lstMarkers} zoom-level={zoomlevel}></lightning-map>
 
-            <br />
+					<br />
 
-            <lightning-button
-              type="submit"
-              variant="brand"
-              label="Create Contact Record"
-            ></lightning-button>
-          </lightning-record-edit-form>
-        </div>
-      </div>
+					<lightning-button variant="brand" label="Get Current Location"
+						onclick={handleClickGetCurrentLocation} style="float: right;">
+					</lightning-button>
 
-      <!-- second column i.e current address map -->
+					<template if:true={alwaysHidden}>
+						<lightning-button variant="brand" label="add as Address" onclick={handleClickAddAddressToMap}
+							style="float: left;">
+						</lightning-button>
+					</template>
 
-      <div class="slds-col slds-size_1-of-2">
-        <div class="slds-p-around_small">
-          <lightning-map
-            map-markers="{lstMarkers}"
-            zoom-level="{zoomlevel}"
-          ></lightning-map>
+					<br />
+					<br />
 
-          <br />
+					<template if:true={alwaysHidden}>
+						<p>
+							{currentAddressFromMap}
+						</p>
+					</template>
+				</div>
+			</div>
+		</div>
+	</lightning-card>
 
-          <lightning-button
-            variant="brand"
-            label="Get Current Location"
-            onclick="{handleClickGetCurrentLocation}"
-            style="float: right"
-          >
-          </lightning-button>
-          <template if:true="{alwaysHidden}">
-            <lightning-button
-              variant="brand"
-              label="add as Address"
-              onclick="{handleClickAddAddressToMap}"
-              style="float: left"
-            >
-            </lightning-button>
-          </template>
 
-          <br />
 
-          <br />
-          <template if:true="{alwaysHidden}">
-            <p>{currentAddressFromMap}</p>
-          </template>
-        </div>
-      </div>
-    </div>
-  </lightning-card>
+	<!-- pop up to confirm when record is created -->
+	<template if:true={isShowModal}>
+		<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+			aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<!-- modal header start -->
+				<header class="slds-modal__header">
+					<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+						title="Close" onclick={hideModalBox}>
+						<lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+							size="small"></lightning-icon>
+						<span class="slds-assistive-text">Close</span>
+					</button>
+					<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Contact record created
+					</h2>
+				</header>
 
-  <!-- pop to confirm when reocrd is created -->
+				<!-- modal body start -->
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<p>Contact record is created and it is submitted for approval. </p>
+					<p>Click <b>OK</b> to go to detail page.... </p>
+				</div>
 
-  <template if:true="{isShowModal}">
-    <section
-      role="dialog"
-      tabindex="-1"
-      aria-labelledby="modal-heading-01"
-      aria-modal="true"
-      aria-describedby="modal-content-id-1"
-      class="slds-modal slds-fade-in-open"
-    >
-      <div class="slds-modal__container">
-        <!-- modal header start -->
-        <header class="slds-modal__header">
-          <button
-            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-            title="Close"
-            onclick="{hideModalBox}"
-          >
-            <lightning-icon
-              icon-name="utility:close"
-              alternative-text="close"
-              variant="inverse"
-              size="small"
-            ></lightning-icon>
-            <span class="slds-assistive-text">Close</span>
-          </button>
-          <h2
-            id="modal-heading-01"
-            class="slds-text-heading_medium slds-hyphenate"
-          >
-            Contact record created
-          </h2>
-        </header>
-
-        <!-- modal body start -->
-        <div
-          class="slds-modal__content slds-p-around_medium"
-          id="modal-content-id-1"
-        >
-          <p>Contact record is created and it is submitted for approval.</p>
-          <p>Click <b>OK</b> to go to detail page....</p>
-        </div>
-
-        <!-- modal footer start-->
-        <footer class="slds-modal__footer">
-          <a
-            href="https://meri-dev-ed.trailblaze.lightning.force.com/lightning/o/Contact/list?filterName=Recent"
-          >
-            <button
-              class="slds-button slds-button_neutral"
-              onclick="{hideModalBoxNavigateToContactHome}"
-            >
-              OK
-            </button></a
-          >
-        </footer>
-      </div>
-    </section>
-    <div class="slds-backdrop slds-backdrop_open"></div>
-  </template>
+				<!-- modal footer start-->
+				<footer class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral"
+						onclick={hideModalBoxNavigateToContactHome}>OK</button>
+				</footer>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</template>
 </template>
-
 ```
 
 
 ### JS
 ```js
-import { LightningElement, api, track } from "lwc";
-import { NavigationMixin } from "lightning/navigation";
+import { LightningElement, api, track } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
 
-import CONTACT_OBJECT from "@salesforce/schema/Contact";
-import FIRST_NAME_FIELD from "@salesforce/schema/Contact.FirstName";
-import LAST_NAME_FIELD from "@salesforce/schema/Contact.LastName";
+import CONTACT_OBJECT from '@salesforce/schema/Contact';
+import FIRST_NAME_FIELD from '@salesforce/schema/Contact.FirstName';
+import LAST_NAME_FIELD from '@salesforce/schema/Contact.LastName';
 //import USER_NAME from '@salesforce/schema/Contact.User__c.id';
-import MAILING_ADDRESS from "@salesforce/schema/Contact.MailingStreet";
+import MAILING_ADDRESS from '@salesforce/schema/Contact.MailingStreet';
 
 /**
  * Creates contact records.
  * confirm via popup modal.
  */
 
-export default class CreateContactRecord extends LightningElement {
-  // for pop up that confirms record creation
+export default class CreateContactRecord extends NavigationMixin(LightningElement) {
 
-  @track isShowModal = false;
-  @track isShowAddAddressBtn = false;
-  @track alwaysHidden = false;
+// for pop up that confirms reocrd creation
+@track isShowModal = false;
+@track isShowAddAddressBtn = false;
+@track alwaysHidden = false;
+id
 
-  showModalBox() {
+showModalBox() {
     this.isShowModal = true;
-  }
+}
 
-  hideModalBoxNavigateToContactHome() {
+
+
+
+
+hideModalBoxNavigateToContactHome() {
     this.isShowModal = false;
-
     // Navigate to the Contact home page
-    this[NavigationMixin.Navigate](
-      "https://meri-dev-ed.trailblaze.lightning.force.com/lightning/o/Contact/list?filterName=Recent"
-    );
-  }
+    //this[NavigationMixin.Navigate]("https://meri-dev-ed.trailblaze.lightning.force.com/lightning/o/Contact/list?filterName=Recent");
 
-  // end code for popup
+    this[NavigationMixin.Navigate]({
+            type:'standard__recordPage',
+        attributes:{
+        recordId:this.id,
+            objectApiName:'Contact',
+        actionName:'view' }
+        })
+    
 
-  contactObject = CONTACT_OBJECT;
+}
+// end code for popup
 
-  handleContactCreated() {
+
+
+
+
+contactObject = CONTACT_OBJECT;
+
+handleContactCreated(event) {
+    this.id=event.detail.id
+    console.log('id',this.id)
     console.log("the contact record is created, and submitted for approval");
-
     this.isShowModal = true;
-  }
 
-  @api childObjectApiName = "Contact"; //Contact is the default value
-  @api targetFieldApiName = "User__c"; //AccountId is the default value
+}
 
-  //User = targetFieldApiName;
-  //myFields = [NAME_FIELD, MAILING_ADDRESS, User];
 
-  firstNameField = FIRST_NAME_FIELD;
+@api childObjectApiName = 'Contact'; //Contact is the default value
+@api targetFieldApiName = 'User__c'; //AccountId is the default value
 
-  lastNameField = LAST_NAME_FIELD;
+//User = targetFieldApiName;
+//myFields = [NAME_FIELD, MAILING_ADDRESS, User];
 
-  mailingAddress = MAILING_ADDRESS;
+firstNameField = FIRST_NAME_FIELD;
+lastNameField = LAST_NAME_FIELD;
+mailingAddress = MAILING_ADDRESS;
 
-  @api fieldLabel = "Select User";
-  @api disabled = false;
-  @api value;
-  @api required = false;
 
-  handleChange(event) {
+@api fieldLabel = 'Select User';
+@api disabled = false;
+@api value;
+@api required = false;
+
+handleChange(event) {
     // Creates the event
-    const selectedEvent = new CustomEvent("valueselected", {
-      detail: event.detail.value,
+    const selectedEvent = new CustomEvent('valueselected', {
+        detail: event.detail.value
     });
     //dispatching the custom event
     this.dispatchEvent(selectedEvent);
-  }
-
-  @api isValid() {
-    if (this.required) {
-      this.template.querySelector("lightning-input-field").reportValidity();
-    }
-  }
-
-  //for map i.e second column
-
-  lstMarkers = [];
-  zoomlevel = "1";
-
-  @track currentAddressFromMap = "";
-
-  handleClickGetCurrentLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        // Get the Latitude and Longitude from Geolocation API
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-
-        // Add Latitude and Longitude to the markers list.
-        this.lstMarkers = [
-          {
-            location: {
-              Latitude: latitude,
-              Longitude: longitude,
-            },
-            title: "You are here",
-          },
-        ];
-        this.zoomlevel = "4";
-
-        const reverseGeocodingUrl =
-          "https://api.geoapify.com/v1/geocode/reverse?lat=" +
-          latitude +
-          "&lon=" +
-          longitude +
-          "&apiKey=" +
-          "XXXXXXXXXXXXXXXXXXXX";
-
-        // call Reverse Geocoding API - https://www.geoapify.com/reverse-geocoding-api/
-        fetch(reverseGeocodingUrl)
-          .then((result) => result.json())
-          .then((featureCollection) => {
-            console.log(featureCollection);
-
-            this.currentAddressFromMap =
-              featureCollection.features[0].properties.formatted;
-            console.log(featureCollection.features[0].properties.formatted);
-          });
-
-        console.log("lat:" + latitude + "lon:" + longitude);
-      });
-
-      // make "add as address" button visible
-      this.isShowAddAddressBtn = true;
-    }
-  }
-
-  // code for map end
 }
 
+@api isValid() {
+    if (this.required) {
+        this.template.querySelector('lightning-input-field').reportValidity();
+    }
+}
+
+
+
+
+
+//for map i.e second column
+lstMarkers = [];
+zoomlevel = "1";
+
+@track currentAddressFromMap = "";
+
+handleClickGetCurrentLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+
+            // Get the Latitude and Longitude from Geolocation API
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Add Latitude and Longitude to the markers list.
+            this.lstMarkers = [{
+                location: {
+                    Latitude: latitude,
+                    Longitude: longitude
+                },
+                title: 'You are here'
+            }];
+            this.zoomlevel = "4";
+
+            // call Reverse Geocoding API - https://www.geoapify.com/reverse-geocoding-api/
+            const reverseGeocodingUrl = "https://api.geoapify.com/v1/geocode/reverse?lat=" + latitude + "&lon=" + longitude + "&apiKey=" + "XXXXXXXXXXXXXXX";
+
+            fetch(reverseGeocodingUrl).then(result => result.json())
+                .then(featureCollection => {
+                    console.log(featureCollection);
+
+                    this.currentAddressFromMap = featureCollection.features[0].properties.formatted;
+                    console.log(featureCollection.features[0].properties.formatted);
+
+
+                });
+
+            console.log("lat:" + latitude + "lon:" + longitude)
+        });
+
+        // make "add as address" button visible
+        this.isShowAddAddressBtn = true;
+    }
+}
+
+// code for map end
+
+}
 ```
 
 <br/>
@@ -333,198 +282,131 @@ public with sharing class contactsController {
 ### HTML
 ```html
 <template>
-  <lightning-card
-    variant="Narrow"
-    title="Distance Calculator"
-    icon-name="standard:contact"
-  >
-    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
-      <div class="slds-col slds-size_1-of-1">
-        <div class="slds-p-around_small">
-          <template if:true="{invisible}">
-            <label class="slds-form-element__label" for="combobox-id-1"
-              ><b>Current contact's address:</b></label
-            >
+	<lightning-card variant="Narrow" title="Distance Calculator" icon-name="standard:contact">
+		<div class="demo-only demo-only--sizing slds-grid slds-wrap">
+			<div class="slds-col slds-size_1-of-1">
+				<div class="slds-p-around_small">
+					<template if:true={invisible}>
+						<label class="slds-form-element__label" for="combobox-id-1"><b>Current contact's
+								address:</b></label>
 
-            <template if:true="{contact.data}">
-              <div class="slds-m-around_medium">
-                <p>{currentAddress}</p>
-              </div>
-            </template>
-          </template>
+						<template if:true={contact.data}>
+							<div class="slds-m-around_medium">
+								<p>{currentAddress}</p>
+							</div>
+						</template>
+					</template>
 
-          <div
-            class="slds-form-element"
-            onmouseleave="{toggleResult}"
-            data-source="lookupContainer"
-          >
-            <div class="slds-combobox_container slds-has-selection">
-              <label class="slds-form-element__label" for="combobox-id-1"
-                ><b>{label}</b></label
-              >
-              <div
-                class="lookupInputContainer slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                role="combobox"
-              >
-                <div
-                  class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
-                  role="none"
-                >
-                  <div class="searchBoxWrapper slds-show">
-                    <!--Lookup Input Field-->
-                    <lightning-input
-                      type="search"
-                      data-source="searchInputField"
-                      onclick="{toggleResult}"
-                      onchange="{handleKeyChange}"
-                      is-loading="{isSearchLoading}"
-                      value="{searchKey}"
-                      variant="label-hidden"
-                      placeholder="{placeholder}"
-                    ></lightning-input>
-                  </div>
+					<div class="slds-form-element" onmouseleave={toggleResult} data-source="lookupContainer">
+						<div class="slds-combobox_container slds-has-selection">
+							<label class="slds-form-element__label" for="combobox-id-1"><b>{label}</b></label>
+							<div class="lookupInputContainer slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+								aria-expanded="false" aria-haspopup="listbox" role="combobox">
+								<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
+									role="none">
+									<div class="searchBoxWrapper slds-show">
+										<!--Lookup Input Field-->
+										<lightning-input type="search" data-source="searchInputField"
+											onclick={toggleResult} onchange={handleKeyChange}
+											is-loading={isSearchLoading} value={searchKey} variant="label-hidden"
+											placeholder={placeholder}></lightning-input>
+									</div>
 
-                  <!--Lookup Selected record pill container start-->
-                  <div class="pillDiv slds-hide">
-                    <span
-                      class="slds-icon_container slds-combobox__input-entity-icon"
-                    >
-                      <lightning-icon
-                        icon-name="{iconName}"
-                        size="x-small"
-                        alternative-text="icon"
-                      ></lightning-icon>
-                    </span>
-                    <input
-                      type="text"
-                      id="combobox-id-1"
-                      value="{selectedRecord.FirstName}"
-                      class="slds-input slds-combobox__input slds-combobox__input-value"
-                      readonly
-                    />
-                    <button
-                      class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-                      title="Remove selected option"
-                    >
-                      <lightning-icon
-                        icon-name="utility:close"
-                        size="x-small"
-                        alternative-text="close icon"
-                        onclick="{handleRemove}"
-                      ></lightning-icon>
-                    </button>
-                  </div>
-                </div>
+									<!--Lookup Selected record pill container start-->
+									<div class="pillDiv slds-hide">
+										<span class="slds-icon_container slds-combobox__input-entity-icon">
+											<lightning-icon icon-name={iconName} size="x-small"
+												alternative-text="icon"></lightning-icon>
+										</span>
+										<input type="text" id="combobox-id-1" value={selectedRecord.FirstName}
+											class="slds-input slds-combobox__input slds-combobox__input-value"
+											readonly />
+										<button
+											class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+											title="Remove selected option">
+											<lightning-icon icon-name="utility:close" size="x-small"
+												alternative-text="close icon" onclick={handleRemove}></lightning-icon>
+										</button>
+									</div>
+								</div>
 
-                <!-- lookup search result part start-->
-                <div
-                  style="margin-top: 0px"
-                  id="listbox-id-5"
-                  class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
-                  role="listbox"
-                >
-                  <ul
-                    class="slds-listbox slds-listbox_vertical"
-                    role="presentation"
-                  >
-                    <template for:each="{lstResult}" for:item="obj">
-                      <li
-                        key="{obj.Id}"
-                        role="presentation"
-                        class="slds-listbox__item"
-                      >
-                        <div
-                          data-recid="{obj.Id}"
-                          onclick="{handelSelectedRecord}"
-                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
-                          role="option"
-                        >
-                          <span
-                            style="pointer-events: none"
-                            class="slds-media__figure slds-listbox__option-icon"
-                          >
-                            <span class="slds-icon_container">
-                              <lightning-icon
-                                icon-name="{iconName}"
-                                size="small"
-                                alternative-text="icon"
-                              ></lightning-icon>
-                            </span>
-                          </span>
-                          <span
-                            style="pointer-events: none"
-                            class="slds-media__body"
-                          >
-                            <span
-                              class="slds-listbox__option-text slds-listbox__option-text_entity"
-                              >{obj.FirstName} {obj.LastName}</span
-                            >
-                          </span>
-                        </div>
-                      </li>
-                    </template>
+								<!-- lookup search result part start-->
+								<div style="margin-top:0px" id="listbox-id-5"
+									class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+									role="listbox">
+									<ul class="slds-listbox slds-listbox_vertical" role="presentation">
 
-                    <!--ERROR msg, if there is no records..-->
-                    <template if:false="{hasRecords}">
-                      <li
-                        class="slds-listbox__item"
-                        style="text-align: center; font-weight: bold"
-                      >
-                        No Records Found....
-                      </li>
-                    </template>
-                  </ul>
-                </div>
-              </div>
+										<template for:each={lstResult} for:item="obj">
+											<li key={obj.Id} role="presentation" class="slds-listbox__item">
+												<div data-recid={obj.Id} onclick={handelSelectedRecord}
+													class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+													role="option">
+													<span style="pointer-events: none;"
+														class="slds-media__figure slds-listbox__option-icon">
+														<span class="slds-icon_container">
+															<lightning-icon icon-name={iconName} size="small"
+																alternative-text="icon"></lightning-icon>
+														</span>
+													</span>
+													<span style="pointer-events: none;" class="slds-media__body">
+														<span
+															class="slds-listbox__option-text slds-listbox__option-text_entity">{obj.FirstName}
+															{obj.LastName}</span>
+													</span>
+												</div>
+											</li>
+										</template>
 
-              <br />
+										<!--ERROR msg, if there is no records..-->
+										<template if:false={hasRecords}>
+											<li class="slds-listbox__item"
+												style="text-align: center; font-weight: bold;">No Records Found....</li>
+										</template>
+									</ul>
+								</div>
+							</div>
 
-              <template if:true="{invisible}">
-                co: {latitude1},{longitude1}
+							<br />
 
-                <br />
+							<template if:true={invisible}>
 
-                co: {latitude2},{longitude2}
+								co: {latitude1},{longitude1}
 
-                <br />
-              </template>
+								<br />
 
-              <label class="slds-form-element__label" for="combobox-id-1"
-                ><b>Distance: </b> {distance}
-              </label>
+								co: {latitude2},{longitude2}
 
-              <br />
-              <template if:true="{invisible}">
-                <label class="slds-form-element__label" for="combobox-id-1"
-                  ><b>Selected Contact's Address:</b>
-                </label>
+								<br />
 
-                <template if:true="{contact.data}">
-                  <div class="slds-m-around_medium">
-                    <p>{selectedAddress}</p>
-                    <!--                {selectedAddressItems}-->
-                  </div>
-                </template>
-              </template>
-            </div>
-          </div>
+							</template>
+							<label class="slds-form-element__label" for="combobox-id-1"><b>Distance: </b> {distance}
+							</label>
 
-          <br />
+							<br />
 
-          <!-- show on map -->
+							<template if:true={invisible}>
+								<label class="slds-form-element__label" for="combobox-id-1"><b>Selected Contact's
+										Address:</b> </label>
 
-          <lightning-map
-            map-markers="{lstMarkers}"
-            zoom-level="{zoomlevel}"
-          ></lightning-map>
-        </div>
-      </div>
-    </div>
-  </lightning-card>
+								<template if:true={contact.data}>
+									<div class="slds-m-around_medium">
+										<p>{selectedAddress}</p>
+										<!--                {selectedAddressItems}-->
+									</div>
+								</template>
+							</template>
+						</div>
+					</div>
+
+					<br />
+
+					<!-- show on map -->
+					<lightning-map map-markers={lstMarkers} zoom-level={zoomlevel}></lightning-map>
+				</div>
+			</div>
+		</div>
+	</lightning-card>
 </template>
-
 ```
 
 ### JS
