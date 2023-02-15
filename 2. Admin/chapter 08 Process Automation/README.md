@@ -32,7 +32,7 @@
 ### when to use which tool
 - Approve records through multiple levels in your organization.
     - Approval process
-- Perform an operation for more records than scheduled-triggered flows allow.
+- Perform an operation for more records than scheduled-triggered flows allow i.e (250k records per 24 hrs).
     - Batch Apex
 - Perform CPU-intensive operations.	
     - Apex
