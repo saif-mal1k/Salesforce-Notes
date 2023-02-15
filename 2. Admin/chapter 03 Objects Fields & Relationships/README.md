@@ -331,6 +331,7 @@ Feed History tracking
   - 1:1 relationship, available only on user object
   - one user is linked to another user, through Manager related list
 
+> **NOTE:** we can link account to parent account, also there is option to link case to another case. the relationship here is self relationship.
 
 <br/>
   
