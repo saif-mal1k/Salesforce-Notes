@@ -531,7 +531,7 @@ system.debug(res.getBody());
 ***references:***
 
 1. Apex Integration Services : https://trailhead.salesforce.com/en/content/learn/modules/apex_integration_services
-
+2. Integration Patterns and Practices ???? : https://trailhead.salesforce.com/content/learn/trails/explore-integration-patterns-and-practices
 
 
 ---
