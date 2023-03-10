@@ -94,10 +94,76 @@ https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_
 
 
 
+<br/>
 
 
+<br/>
 
 
+<br/>
+
+
+<br/>
+
+
+---
+
+# 1. Requirement gathering
+
+<details>
+<summary> <b> common questions </b> </summary>  
+<p>
+
+---
+  
+```
+  
+1. Who will be the people using the org, their roles hierarchy & the licenses they will be having in the org?
+  
+2. What are the different roles and responsibilities within your sales team? 
+    1. How do they currently interact with each other and with customers? 
+
+3. What is the current sales process? 
+    1. What are the different stages of the sales process, and what are the key milestones or actions at each stage?
+  
+    1. How are leads generated, tracked, and converted into customers?
+    4. What are the possible sources of lead?
+    4. what are different stages a lead undergo?
+    5. What are the criteria for identifying a qualified lead, and how are these criteria currently tracked?
+    6. What is the current process for lead follow-up and communication?
+    8. what is the criteria for lead conversion?
+  
+    1. what type of business you are in B2B(acc with rel con) or B2C(person acc)?
+    3. Are there any external partners or vendors involved in the sales process? How do they fit into the overall sales ecosystem?
+    2. What types of products or services do you offer, Are there different sales processes for different types?
+  
+    7. How are sales opportunities currently tracked and managed?
+    8. What are the different stages an opportunity undergo?
+    9. criteria for an opportunity to be closed-won?
+    8. What are the key metrics you use to measure sales success? How do you currently track these metrics?
+    9. How is customer data collected and managed throughout the sales process, and what are the data privacy and security requirements?  
+  
+4. What are the most common email conversations?
+	- what templates you are following.
+
+5. How are you managing customer data? what tool you are using and ...  
+  
+```  
+  
+---
+  
+</p>  
+</details>
+
+
+<br/>
+
+
+<br/>
+
+
+# 2. Sales Cloud Implementation
+- [guide to sales cloud implementation pdf](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/smb_sales_impl_guide.pdf)
 
 
 
@@ -128,6 +194,10 @@ https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_
   - https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-for-your-team?trail_id=learn-admin-essentials
   - https://trailhead.salesforce.com/content/learn/modules/sales-cloud-platform-quick-look?trail_id=go-digital-fast-with-the-salesforce-customer-360
   - https://trailhead.salesforce.com/users/strailhead/trailmixes/sales-cloud
+
+
+
+
 
 
 
