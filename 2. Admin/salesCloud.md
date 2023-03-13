@@ -163,6 +163,7 @@ https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_
 
 
 # 2. Sales Cloud Implementation
+- [Sales Cloud Basics](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/sales_core.pdf)
 - [guide to sales cloud implementation pdf](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/smb_sales_impl_guide.pdf)
 
 
@@ -194,6 +195,11 @@ https://trailhead.salesforce.com/content/learn/modules/campaign_basics?trailmix_
   - https://trailhead.salesforce.com/content/learn/projects/customize-a-sales-path-for-your-team?trail_id=learn-admin-essentials
   - https://trailhead.salesforce.com/content/learn/modules/sales-cloud-platform-quick-look?trail_id=go-digital-fast-with-the-salesforce-customer-360
   - https://trailhead.salesforce.com/users/strailhead/trailmixes/sales-cloud
+  - PDF
+  	- [Sales Cloud Basics PDF](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/sales_core.pdf)
+  	- [guide to sales cloud implementation PDF](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/smb_sales_impl_guide.pdf)
+
+
 
 
 
