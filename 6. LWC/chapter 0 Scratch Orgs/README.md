@@ -8,6 +8,48 @@
 > If you are planning to use Setup for development, the changes you make are tracked automatically.
 > You can pull down the modifications you made to include them in your project and use your VCS to commit all the changes.
 
+- They’re automatically destroyed every seven days.
+- Scratch orgs are empty without any data or metadata.
+  - You can develop new features and know that nothing else will interfere with your code. 
+  - If something’s not working, it is most definitely your code, and not someone else’s customization.
+
+
+
+
+<details>
+<summary><h3>Working with Scratch org in VSCode</h3></summary>
+<p>
+
+---
+
+### [VS code Setup for Salesforce](https://github.com/saif-mal1k/Salesforce-Notes/tree/main/6.%20LWC#setup-for-lwc-)
+
+### update salesforce CLI
+```
+update sfdx
+```
+
+### Authenticate your org
+```
+sfdx auth:web:login -d -a DevHub
+```
+
+### Create Scratch Org
+```
+sfdx force:org:create -s -f config/project-scratch-def.json -a dreamhouse-org
+```
+
+### Open scratch Org
+```
+sfdx force:org:open
+```
+
+---
+
+</p>
+</details>
+
+
 
 
 
