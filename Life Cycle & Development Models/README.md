@@ -3,7 +3,7 @@
 - Create a manifest file by executing the below command
 
 ```
-sfdx force source manifest create --fromorg [aliasname] --manifestname=allMetadata --outputdir manifest
+sfdx force source manifest create --from-org [aliasname] --name=allMetadata --output-dir manifest
 ```
 
 > alias name is the alias of default org set in VS code
