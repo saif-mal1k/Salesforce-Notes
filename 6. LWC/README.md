@@ -79,9 +79,11 @@ input {
 
 <br/>
 
-### [copy lightning components from blueprints](https://www.lightningdesignsystem.com/components/cards/)
+### [Copy lightning components from blueprints](https://www.lightningdesignsystem.com/components/cards/)
 
 ### [Trailhead apps| LWC recipes](https://github.com/trailheadapps)
+
+### [LWC tutorial recipes](https://recipes.lwc.dev/)
 
 <br/>
 
