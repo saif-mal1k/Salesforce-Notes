@@ -209,7 +209,7 @@ Apex contains the built-in Database class, which provides methods that perform D
 </em> </b>	
 
 - **example**
-	- ``Database.SaveResult results[] = Database.insert(recordList, false);``
+	- ``Database.SaveResult[] results = Database.insert(recordList, false);``
 	- ``Database.UpsertResult results [ ] = Database.upsert(recordList, false);``
 	- ``Database.DeleteResult results [ ] = Database.delete(recordList, false);``
 	
